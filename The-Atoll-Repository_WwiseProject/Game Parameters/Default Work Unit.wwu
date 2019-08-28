@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{DF4FA145-A679-4276-B9D7-5ED205795645}" SchemaVersion="94">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{DF4FA145-A679-4276-B9D7-5ED205795645}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{DF4FA145-A679-4276-B9D7-5ED205795645}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="StormLevel" ID="{D49BCCF2-9952-44AB-B0EE-779C08825144}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

@@ -13,8 +13,17 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID LANDSTORM_START = 1930650448U;
+        static const AkUniqueID LANDSTORM_STOP = 2869071164U;
         static const AkUniqueID POP_HIT = 3240332696U;
+        static const AkUniqueID SEASTORM_START = 875170180U;
+        static const AkUniqueID SEASTORM_STOP = 2153236280U;
     } // namespace EVENTS
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID STORMLEVEL = 2380834754U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

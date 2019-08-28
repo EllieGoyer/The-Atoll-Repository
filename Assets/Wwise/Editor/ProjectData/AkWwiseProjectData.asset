@@ -31,7 +31,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: dda5fe95fdbb9f4bacdca2f5be159e13
     GuidInternal: 
-    m_lastTime: -8586346680478662056
+    m_lastTime: -8586346037500098183
     List:
     - name: General
       guid: 37939129dbb7ad409c491ac12bfed75b
@@ -47,8 +47,40 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 923e051643081f43bba18bf3c068d477
     GuidInternal: 
-    m_lastTime: -8586346641075439214
+    m_lastTime: -8586346043586985921
     List:
+    - name: LandStorm_Start
+      guid: d5157f71ae17054f870ec999436db5a7
+      id: 1930650448
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Storm
+        ObjectType: 4
+      - ElementName: LandStorm
+        ObjectType: 4
+      - ElementName: LandStorm_Start
+        ObjectType: 3
+      Path: Default Work Unit\Storm\LandStorm\LandStorm_Start
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: LandStorm_Stop
+      guid: 4468d492ba00f440af7e1d92d1c3c1c8
+      id: 2869071164
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Storm
+        ObjectType: 4
+      - ElementName: LandStorm
+        ObjectType: 4
+      - ElementName: LandStorm_Stop
+        ObjectType: 3
+      Path: Default Work Unit\Storm\LandStorm\LandStorm_Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: pop_hit
       guid: c5570a7e39040d48b3b7c3587efcb278
       id: 3240332696
@@ -59,15 +91,56 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\pop_hit
       maxAttenuation: 0
+      maxDuration: 1.696083
+      minDuration: 1.696083
+    - name: SeaStorm_Start
+      guid: 184099e67c08144bb510f0d5a9bb134f
+      id: 875170180
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Storm
+        ObjectType: 4
+      - ElementName: SeaStorm
+        ObjectType: 4
+      - ElementName: SeaStorm_Start
+        ObjectType: 3
+      Path: Default Work Unit\Storm\SeaStorm\SeaStorm_Start
+      maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: SeaStorm_Stop
+      guid: a89579db52f71b41a48e3dc29cc98e11
+      id: 2153236280
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Storm
+        ObjectType: 4
+      - ElementName: SeaStorm
+        ObjectType: 4
+      - ElementName: SeaStorm_Stop
+        ObjectType: 3
+      Path: Default Work Unit\Storm\SeaStorm\SeaStorm_Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 45a14fdf79a67642b9d75ed205795645
     GuidInternal: 
-    m_lastTime: -8586346688628256264
-    List: []
+    m_lastTime: -8586346043587836991
+    List:
+    - name: StormLevel
+      guid: f2cc9bd45299ab44b0ee779c08825144
+      id: 2380834754
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: StormLevel
+        ObjectType: 13
+      Path: Default Work Unit\StormLevel
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -93,6 +166,9 @@ MonoBehaviour:
   - /The-Atoll-Repository_WwiseProject
   - /The-Atoll-Repository_WwiseProject/Events
   - /The-Atoll-Repository_WwiseProject/Events/Default Work Unit
+  - /The-Atoll-Repository_WwiseProject/Events/Default Work Unit/Storm
+  - /The-Atoll-Repository_WwiseProject/Events/Default Work Unit/Storm/LandStorm
+  - /The-Atoll-Repository_WwiseProject/Events/Default Work Unit/Storm/SeaStorm
   - /The-Atoll-Repository_WwiseProject/SoundBanks
   - /The-Atoll-Repository_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1

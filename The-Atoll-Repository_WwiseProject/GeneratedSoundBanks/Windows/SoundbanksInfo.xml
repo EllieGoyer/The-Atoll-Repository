@@ -11,6 +11,36 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
+		<SoundBank Id="133642231" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\General</ObjectPath>
+			<ShortName>General</ShortName>
+			<Path>General.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1930650448" Name="LandStorm_Start" ObjectPath="\Events\Default Work Unit\Storm\LandStorm\LandStorm_Start" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2869071164" Name="LandStorm_Stop" ObjectPath="\Events\Default Work Unit\Storm\LandStorm\LandStorm_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3240332696" Name="pop_hit" ObjectPath="\Events\Default Work Unit\pop_hit" DurationType="OneShot" DurationMin="1.696083" DurationMax="1.696083"/>
+				<Event Id="875170180" Name="SeaStorm_Start" ObjectPath="\Events\Default Work Unit\Storm\SeaStorm\SeaStorm_Start" DurationType="Infinite"/>
+				<Event Id="2153236280" Name="SeaStorm_Stop" ObjectPath="\Events\Default Work Unit\Storm\SeaStorm\SeaStorm_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="125716967" Language="SFX">
+					<ShortName>PRoom 2.wav</ShortName>
+					<Path>SFX\PRoom 2_D79FB2B7.wem</Path>
+				</File>
+				<File Id="155928113" Language="SFX">
+					<ShortName>PRoom 4.wav</ShortName>
+					<Path>SFX\PRoom 4_D79FB2B7.wem</Path>
+				</File>
+				<File Id="549899415" Language="SFX">
+					<ShortName>PRoom 3.wav</ShortName>
+					<Path>SFX\PRoom 3_D79FB2B7.wem</Path>
+				</File>
+				<File Id="559282731" Language="SFX">
+					<ShortName>403570__lamamakesmusic__balloon-pop.wav</ShortName>
+					<Path>SFX\403570__lamamakesmusic__balloon-pop_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
