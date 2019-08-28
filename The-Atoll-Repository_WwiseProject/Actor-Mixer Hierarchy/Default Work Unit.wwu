@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}" SchemaVersion="94">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Pop" ID="{04833B29-0DEB-4775-818D-1EBC91B46EEF}" ShortID="204114215">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="403570__lamamakesmusic__balloon-pop" ID="{76739D36-4F6C-4CA6-84D5-D36DD5ED9819}" ShortID="559282731">
+							<Language>SFX</Language>
+							<AudioFile>403570__lamamakesmusic__balloon-pop.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="403570__lamamakesmusic__balloon-pop" ID="{76739D36-4F6C-4CA6-84D5-D36DD5ED9819}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
