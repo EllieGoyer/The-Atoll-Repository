@@ -76,6 +76,73 @@
 						</Folder>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Player" ID="{6DD55D14-F836-48D6-A6BE-170550AD1E26}" ShortID="780790784">
+					<ChildrenList>
+						<Folder Name="Footsteps" ID="{647EB007-D4DC-4187-AF88-970AD6B2E445}" ShortID="555255814">
+							<ChildrenList>
+								<Event Name="Player_Footsteps" ID="{0C658398-6F91-4F0C-BFCE-7C2CA639BDEF}">
+									<ChildrenList>
+										<Action Name="" ID="{5A5BF297-4148-458A-A201-A666F347A25F}" ShortID="572928175">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Footstep_Types" ID="{A2860F3A-9379-43B9-B3CF-6E4F31FE9B2A}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{AF570D02-AC54-4AF9-B05C-DBFD68CD7787}" ShortID="944396712">
+					<ChildrenList>
+						<Folder Name="Journal" ID="{5FC077C5-F214-4344-AEC1-6D330190E1B9}" ShortID="426191557">
+							<ChildrenList>
+								<Event Name="JournalOpen" ID="{FEB375B8-997E-4FE2-8470-BBC56802B0C9}">
+									<ChildrenList>
+										<Action Name="" ID="{8D2C5F70-20D7-49F9-8F1F-1C1D74B3CD9E}" ShortID="171542882">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Atoll_UI_Journal_Open" ID="{B19C349E-8E6C-4BCA-AA87-35E12B2B9D57}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="JournalFlip" ID="{863D5397-1B58-4095-B618-15BC193FA6C1}">
+									<ChildrenList>
+										<Action Name="" ID="{7EDA64E7-D30F-4843-861F-BC6BD38B608F}" ShortID="240452132">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Atoll_UI_Journal_Flip" ID="{8FED90A6-3467-423B-914C-B65E3DC8B449}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="JournalClose" ID="{3A21BD5E-9DAC-49C0-AB9A-80BA98F001D1}">
+									<ChildrenList>
+										<Action Name="" ID="{9766C629-6CF8-4B33-845A-1CDD262F4C31}" ShortID="837298914">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Atoll_UI_Journal_Close" ID="{10F22DDE-8017-4117-B57A-D16635F85DFD}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Menu" ID="{124C0AFC-51FF-41C3-8068-F5EF7C058A87}" ShortID="250818124">
+							<ChildrenList>
+								<Event Name="MenuSelect" ID="{426F4122-3D7B-4BBF-BA33-0A7C4DDF33BB}"/>
+								<Event Name="MenuBack" ID="{40702292-01E0-4036-8E51-5623B44A6661}"/>
+								<Event Name="MenuScroll" ID="{50152302-96C4-428D-ABD9-98B3B3C08249}"/>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
