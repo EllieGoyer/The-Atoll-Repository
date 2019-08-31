@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{16053E92-0843-431F-BBA1-8BF3C068D477}" SchemaVersion="94">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{16053E92-0843-431F-BBA1-8BF3C068D477}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="pop_hit" ID="{7E0A57C5-0439-480D-B3B7-C3587EFCB278}">
+					<ChildrenList>
+						<Action Name="" ID="{2DF7FE73-844F-4FC7-9ADA-EC781A6985F7}" ShortID="538341438">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pop" ID="{04833B29-0DEB-4775-818D-1EBC91B46EEF}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="Storm" ID="{6E13DDE7-9913-4EF3-A720-24F9A8DB4AE8}" ShortID="705077746">
+					<ChildrenList>
+						<Folder Name="SeaStorm" ID="{D5FAC948-54F7-4115-B4C5-2FF7F380A805}" ShortID="844671465">
+							<ChildrenList>
+								<Event Name="SeaStorm_Stop" ID="{DB7995A8-F752-411B-A48E-3DC29CC98E11}">
+									<ChildrenList>
+										<Action Name="" ID="{6EF7CFCE-B5DA-43E6-9256-F2F48C65C0C0}" ShortID="929468561">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Sea_Storm_Levels" ID="{0C864E5C-7C80-4134-8536-EC2E505C1514}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="SeaStorm_Start" ID="{E6994018-087C-4B14-B510-F0D5A9BB134F}">
+									<ChildrenList>
+										<Action Name="" ID="{1FBFE3CA-787A-4FDE-84D1-5E9A1C639644}" ShortID="695648582">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Sea_Storm_Levels" ID="{0C864E5C-7C80-4134-8536-EC2E505C1514}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="LandStorm" ID="{2C8A34EC-3461-491D-8BBF-4AFC45C3697E}" ShortID="469915610">
+							<ChildrenList>
+								<Event Name="LandStorm_Start" ID="{717F15D5-17AE-4F05-870E-C999436DB5A7}">
+									<ChildrenList>
+										<Action Name="" ID="{ED4876D6-C496-4C92-BE16-E211A0FDEEC6}" ShortID="685073365">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Land_Storm_Levels" ID="{E2012B81-59EF-47F7-A495-14B910F18E2B}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="LandStorm_Stop" ID="{92D46844-00BA-40F4-AF7E-1D92D1C3C1C8}">
+									<ChildrenList>
+										<Action Name="" ID="{25893787-A839-4BEE-A287-827441D336E4}" ShortID="986288686">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Land_Storm_Levels" ID="{E2012B81-59EF-47F7-A495-14B910F18E2B}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
