@@ -47,13 +47,26 @@ public class CameraFollow : MonoBehaviour
     {
         Vector3 targetPosition = Target.gameObject.transform.position;
 
+        
+
         if(Input.GetButton(DragInputName))
         {
             float verticalDrag = Input.GetAxis(DragVerticalAxisName);
             float horizontalDrag = Input.GetAxis(DragHorizontalAxisName);
-            Vector3 polarDirectionVector = new Vector3(horizontalDrag, verticalDrag, 0).normalized;
 
-            cameraPolarVelocity = Vector3.ClampMagnitude(cameraPolarVelocity + polarDirectionVector * CameraAcceleration, CameraTopSpeed);
+            Vector3 polarDirectionVector = new Vector3(horizontalDrag, verticalDrag, 0);
+            float inputMagnitude = polarDirectionVector.magnitude;
+            polarDirectionVector.Normalize();
+
+            if (!Mathf.Approximately(inputMagnitude, 0))
+            {
+                cameraPolarVelocity = Vector3.ClampMagnitude(cameraPolarVelocity + polarDirectionVector * CameraAcceleration, CameraTopSpeed);
+            }
+            else
+            {
+                float newPolarSpeed = Mathf.Clamp(cameraPolarVelocity.magnitude - CameraDeceleration, 0, CameraTopSpeed);
+                cameraPolarVelocity = cameraPolarVelocity.normalized * newPolarSpeed;
+            }
         }
         else if(!Mathf.Approximately(Target.velocity.sqrMagnitude, 0))
         {
