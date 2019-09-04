@@ -60,11 +60,11 @@ public class CameraFollow : MonoBehaviour
 
             if (!Mathf.Approximately(inputMagnitude, 0))
             {
-                cameraPolarVelocity = Vector3.ClampMagnitude(cameraPolarVelocity + polarDirectionVector * CameraAcceleration, CameraTopSpeed);
+                cameraPolarVelocity = Vector3.ClampMagnitude(cameraPolarVelocity + polarDirectionVector * CameraAcceleration, CameraTopSpeed * Mathf.Clamp01(inputMagnitude));
             }
             else
             {
-                float newPolarSpeed = Mathf.Clamp(cameraPolarVelocity.magnitude - CameraDeceleration, 0, CameraTopSpeed);
+                float newPolarSpeed = Mathf.Clamp(cameraPolarVelocity.magnitude - CameraDeceleration, 0, CameraTopSpeed * Mathf.Clamp01(inputMagnitude));
                 cameraPolarVelocity = cameraPolarVelocity.normalized * newPolarSpeed;
             }
         }
