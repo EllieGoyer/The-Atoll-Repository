@@ -375,11 +375,14 @@
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
 								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Sand" ID="{8A696EE0-D7F7-4AA5-99EF-B78A189AA985}" WorkUnitID="{55833385-208E-46DA-B714-C7CDE8AB6317}"/>
+								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
 								</Reference>
 								<Reference Name="SwitchGroupOrStateGroup">
-									<ObjectRef Name="Footsteps" ID="{F615AF5B-893E-41B7-8303-8CC0FE849264}" WorkUnitID="{630E069B-7F3A-4170-B951-A28CC2B2849B}"/>
+									<ObjectRef Name="Footsteps" ID="{CE767464-DB4B-4687-B57B-E8AEAD79646B}" WorkUnitID="{55833385-208E-46DA-B714-C7CDE8AB6317}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -692,25 +695,25 @@
 								</GroupingBehaviorList>
 								<GroupingList>
 									<Grouping>
-										<SwitchRef Name="FS_Rock" ID="{A34CBA03-AD73-4377-8CE0-5FC7AF442949}"/>
-										<ItemList>
-											<ItemRef Name="Footsteps_Rock" ID="{C40AD9E2-B3E9-4D5F-AFE7-F2CFB0DB12E3}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="FS_Grass" ID="{F44ED438-612D-4472-BECA-05AF4E4BF82D}"/>
+										<SwitchRef Name="Grass" ID="{77ACFB44-D427-404A-9E94-32B16719A437}"/>
 										<ItemList>
 											<ItemRef Name="Footsteps_Grass" ID="{CF494F18-9DE3-4DC3-9D22-B972C6094ABB}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
-										<SwitchRef Name="FS_Wood" ID="{12D23762-1758-42BC-A014-A7CC21F65B2B}"/>
+										<SwitchRef Name="Rock" ID="{2E3A38A7-0038-42C6-9E80-71AC04F6B17D}"/>
+										<ItemList>
+											<ItemRef Name="Footsteps_Rock" ID="{C40AD9E2-B3E9-4D5F-AFE7-F2CFB0DB12E3}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wood" ID="{AE2835BA-B080-4A16-B8D9-F1725D7A9324}"/>
 										<ItemList>
 											<ItemRef Name="Footsteps_Wood" ID="{DE6F1ADE-7211-4436-AEC3-8A612659C019}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
-										<SwitchRef Name="FS_Sand" ID="{3F59FA7C-F689-4FDC-87E8-78E4BFC83E91}"/>
+										<SwitchRef Name="Sand" ID="{8A696EE0-D7F7-4AA5-99EF-B78A189AA985}"/>
 										<ItemList>
 											<ItemRef Name="Footsteps_Sand" ID="{3D29C1E9-F5AD-4A0E-A140-AD1F3357B68C}"/>
 										</ItemList>
@@ -863,6 +866,110 @@
 								</Sound>
 							</ChildrenList>
 						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="NPC" ID="{242EB4AF-CD43-4F2D-A9E9-D5AC56B7E1D3}" ShortID="436439277">
+					<ChildrenList>
+						<SwitchContainer Name="H_Footstep_Types" ID="{3AA4AE4C-1BF2-464E-9A27-3BA7F1303C22}" ShortID="194554463">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Grass" ID="{77ACFB44-D427-404A-9E94-32B16719A437}" WorkUnitID="{55833385-208E-46DA-B714-C7CDE8AB6317}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="Footsteps" ID="{CE767464-DB4B-4687-B57B-E8AEAD79646B}" WorkUnitID="{55833385-208E-46DA-B714-C7CDE8AB6317}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="H_Footsteps_Grass" ID="{8344AA2C-FB09-4A62-A5FF-8E6BD353ED88}" ShortID="51534597">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="H_Footsteps_Rock" ID="{D8661DE1-8D19-46A7-91A2-F9E517A3408B}" ShortID="916948716">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="H_Footsteps_Sand" ID="{9DE917AE-CA4D-415D-B972-09B19F600B5D}" ShortID="736167818">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="H_Footsteps_Wood" ID="{B33A88F4-FC11-4E2A-93D9-9A28205609FA}" ShortID="146674715">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="H_Footsteps_Grass" ID="{8344AA2C-FB09-4A62-A5FF-8E6BD353ED88}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="H_Footsteps_Sand" ID="{9DE917AE-CA4D-415D-B972-09B19F600B5D}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="H_Footsteps_Rock" ID="{D8661DE1-8D19-46A7-91A2-F9E517A3408B}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="H_Footsteps_Wood" ID="{B33A88F4-FC11-4E2A-93D9-9A28205609FA}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Grass" ID="{77ACFB44-D427-404A-9E94-32B16719A437}"/>
+										<ItemList>
+											<ItemRef Name="H_Footsteps_Grass" ID="{8344AA2C-FB09-4A62-A5FF-8E6BD353ED88}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Rock" ID="{2E3A38A7-0038-42C6-9E80-71AC04F6B17D}"/>
+										<ItemList>
+											<ItemRef Name="H_Footsteps_Rock" ID="{D8661DE1-8D19-46A7-91A2-F9E517A3408B}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Wood" ID="{AE2835BA-B080-4A16-B8D9-F1725D7A9324}"/>
+										<ItemList>
+											<ItemRef Name="H_Footsteps_Wood" ID="{B33A88F4-FC11-4E2A-93D9-9A28205609FA}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Sand" ID="{8A696EE0-D7F7-4AA5-99EF-B78A189AA985}"/>
+										<ItemList>
+											<ItemRef Name="H_Footsteps_Sand" ID="{9DE917AE-CA4D-415D-B972-09B19F600B5D}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

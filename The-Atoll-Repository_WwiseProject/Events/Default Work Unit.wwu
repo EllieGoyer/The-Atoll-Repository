@@ -91,6 +91,17 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="H_Footsteps" ID="{4914CF63-36D0-4925-AB49-3A1B967F2227}">
+									<ChildrenList>
+										<Action Name="" ID="{7D84DB16-7408-48EA-952B-CB4203465FBB}" ShortID="741263595">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="H_Footstep_Types" ID="{3AA4AE4C-1BF2-464E-9A27-3BA7F1303C22}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>

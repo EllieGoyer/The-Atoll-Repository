@@ -24,8 +24,19 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: f349ae3dcd8ebb4b9acb1d2da29f812d
     GuidInternal: 
-    m_lastTime: -8586346688628754935
-    List: []
+    m_lastTime: -8586340637837318857
+    List:
+    - name: LP_Bus
+      guid: cd8be57418d3e94ab59967974c158953
+      id: 1654910302
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: LP_Bus
+        ObjectType: 1
+      Path: Default Work Unit\Master Audio Bus\LP_Bus
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -265,7 +276,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 9b060e633a7f7041b951a28cc2b2849b
     GuidInternal: 
-    m_lastTime: -8586343264676393620
+    m_lastTime: -8586339644446174754
     List:
     - name: Footsteps
       guid: 5baf15f63e89b74183038cc0fe849264
@@ -300,6 +311,43 @@ MonoBehaviour:
         id: 3616930680
         PathAndIcons:
         - ElementName: FS_Wood
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: NpcFootsteps
+      guid: 6c8566abfe22214c84b205e0fa3ad3be
+      id: 1160921759
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: NpcFootsteps
+        ObjectType: 11
+      Path: Default Work Unit\NpcFootsteps
+      values:
+      - name: Grass
+        guid: f670aee108c6fb41bc48efff1e01294d
+        id: 4248645337
+        PathAndIcons:
+        - ElementName: Grass
+          ObjectType: 10
+      - name: Rock
+        guid: 21c307a1cf7b404d866a7961a509237c
+        id: 2144363834
+        PathAndIcons:
+        - ElementName: Rock
+          ObjectType: 10
+      - name: Sand
+        guid: eeec9bd277dc064e83dcae57792dd08d
+        id: 803837735
+        PathAndIcons:
+        - ElementName: Sand
+          ObjectType: 10
+      - name: Wood
+        guid: ecbbc769e82e8f46b04f7b58f81692b6
+        id: 2058049674
+        PathAndIcons:
+        - ElementName: Wood
           ObjectType: 10
       ValueGuids: []
       ValueIcons: []
