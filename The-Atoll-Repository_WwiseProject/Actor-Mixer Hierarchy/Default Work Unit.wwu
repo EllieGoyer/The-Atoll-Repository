@@ -159,7 +159,290 @@
 										</BlendContainer>
 									</ChildrenList>
 								</Folder>
-								<Folder Name="Sea_Calm" ID="{6ED5E5BE-A391-4FB7-982D-094D9347353F}" ShortID="525579709"/>
+								<Folder Name="Sea_Calm" ID="{6ED5E5BE-A391-4FB7-982D-094D9347353F}" ShortID="525579709">
+									<ChildrenList>
+										<RandomSequenceContainer Name="Land_Calm_Oneshots" ID="{C7555530-EE3C-47DA-9AB1-DC32EF4A02D9}" ShortID="422772597">
+											<PropertyList>
+												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="Seagull_Wings" ID="{B31258AC-9ED3-4F2F-8157-19B3AB3022BC}" ShortID="548687238">
+													<PropertyList>
+														<Property Name="OverrideEffect" Type="bool" Value="True"/>
+														<Property Name="Pitch" Type="int32">
+															<ValueList>
+																<Value>100</Value>
+															</ValueList>
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{1A82AD3D-D6D2-46EF-9606-25750F0FE5BC}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="100"/>
+																			<Property Name="Min" Type="Real64" Value="-100"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-7</Value>
+															</ValueList>
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{A9A4A4C2-F0FD-4853-B496-D908BB21C770}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+														</Reference>
+														<Reference Name="Effect0">
+															<Custom>
+																<Effect Name="Wwise_Delay_(Custom)" ID="{EC89FA9D-0791-41AC-83E0-5683AA2A0171}" ShortID="828253992" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+																	<PropertyList>
+																		<Property Name="Feedback" Type="Real32" Value="45.5"/>
+																		<Property Name="WetDryMix" Type="Real32" Value="32"/>
+																	</PropertyList>
+																</Effect>
+															</Custom>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Atoll_Enviorment_Sea_Oneshot_1(BirdWing)" ID="{5B221D69-1636-436B-A890-0285280405FA}" ShortID="987134052">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>750</Value>
+																	</ValueList>
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{DAC035E3-C4EE-4277-8809-B0079A2CA6A4}">
+																				<PropertyList>
+																					<Property Name="Max" Type="Real64" Value="100"/>
+																					<Property Name="Min" Type="Real64" Value="-100"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>-5</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+																</Reference>
+																<Reference Name="Effect0" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+																	<ObjectRef Name="One_Tap_One_Second" ID="{5B5883FA-85A1-45CA-8A52-9DBBCF3B0A03}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Atoll_Enviorment_Sea_Oneshot_1(BirdWing)" ID="{BF9B65DF-AF28-471B-9785-2326957A1DA9}" ShortID="249002992">
+																	<Language>SFX</Language>
+																	<AudioFile>Atoll_Enviorment_Sea_Oneshot_1(BirdWing).wav</AudioFile>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Atoll_Enviorment_Sea_Oneshot_1(BirdWing)" ID="{BF9B65DF-AF28-471B-9785-2326957A1DA9}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Atoll_Enviorment_Sea_Oneshot_3(BirdWing)" ID="{52F41741-817C-47A2-B3F8-7B8DA1010068}" ShortID="858997228">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{4CECBF27-6B2F-4FC1-994E-F698622D2D2E}">
+																				<PropertyList>
+																					<Property Name="Max" Type="Real64" Value="100"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Atoll_Enviorment_Sea_Oneshot_3(BirdWing)" ID="{FED5147D-D091-41E1-95DB-FF9A108C1D8B}" ShortID="876226826">
+																	<Language>SFX</Language>
+																	<AudioFile>Atoll_Enviorment_Sea_Oneshot_3(BirdWing).wav</AudioFile>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Atoll_Enviorment_Sea_Oneshot_3(BirdWing)" ID="{FED5147D-D091-41E1-95DB-FF9A108C1D8B}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Atoll_Enviorment_Sea_Oneshot_2(BIrdWing)" ID="{87692AD7-8601-46FE-B947-4AB42AEA250C}" ShortID="489428157">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{A5205FFA-C3E9-40D9-816F-86C555A08EDE}">
+																				<PropertyList>
+																					<Property Name="Max" Type="Real64" Value="100"/>
+																					<Property Name="Min" Type="Real64" Value="-100"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Atoll_Enviorment_Sea_Oneshot_2(BIrdWing)" ID="{CBE710BD-8E05-4E73-95C4-16FC78F2BF86}" ShortID="288966919">
+																	<Language>SFX</Language>
+																	<AudioFile>Atoll_Enviorment_Sea_Oneshot_2(BIrdWing).wav</AudioFile>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Atoll_Enviorment_Sea_Oneshot_2(BIrdWing)" ID="{CBE710BD-8E05-4E73-95C4-16FC78F2BF86}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="Seagull" ID="{D1E075E0-F483-4631-91A8-037DC81731FC}" ShortID="966110747">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{22E53E6B-B0EC-4BFE-9F76-CAA30E74D463}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="100"/>
+																			<Property Name="Min" Type="Real64" Value="-100"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-6</Value>
+															</ValueList>
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{4567D299-7365-4912-9980-52CF39536F55}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Atoll_Enviorment_Sea_Oneshot_5(Seagull)" ID="{A1E9B3D0-4B03-4E9D-88DB-A2D3FF671EF7}" ShortID="995216178">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Atoll_Enviorment_Sea_Oneshot_5(Seagull)" ID="{9AF00532-6C3E-4C55-81AC-DDA7A7B6E65A}" ShortID="433092165">
+																	<Language>SFX</Language>
+																	<AudioFile>Atoll_Enviorment_Sea_Oneshot_5(Seagull).wav</AudioFile>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Atoll_Enviorment_Sea_Oneshot_5(Seagull)" ID="{9AF00532-6C3E-4C55-81AC-DDA7A7B6E65A}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Atoll_Enviorment_Sea_Oneshot_6(Seagull)" ID="{04B5A3AD-D5D4-409E-BC29-5B2562B9E6D1}" ShortID="1043937590">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+																</Reference>
+																<Reference Name="Effect0" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+																	<ObjectRef Name="One_Tap_One_Second" ID="{5B5883FA-85A1-45CA-8A52-9DBBCF3B0A03}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Atoll_Enviorment_Sea_Oneshot_6(Seagull)" ID="{EA683A4D-860E-49EB-BEA4-86FC85CED3E0}" ShortID="935822094">
+																	<Language>SFX</Language>
+																	<AudioFile>Atoll_Enviorment_Sea_Oneshot_6(Seagull).wav</AudioFile>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Atoll_Enviorment_Sea_Oneshot_6(Seagull)" ID="{EA683A4D-860E-49EB-BEA4-86FC85CED3E0}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Atoll_Enviorment_Sea_Oneshot_4(Seagull)" ID="{C69E6F09-BEE2-4A60-8315-1F097617EA7C}" ShortID="1069854115">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Atoll_Enviorment_Sea_Oneshot_4(Seagull)" ID="{699A3FFA-6FF0-410D-9C0E-CD20E13459D5}" ShortID="177788513">
+																	<Language>SFX</Language>
+																	<AudioFile>Atoll_Enviorment_Sea_Oneshot_4(Seagull).wav</AudioFile>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Atoll_Enviorment_Sea_Oneshot_4(Seagull)" ID="{699A3FFA-6FF0-410D-9C0E-CD20E13459D5}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+								</Folder>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Land" ID="{F435647F-D84C-4F7E-9EDE-00A130D7DFD3}" ShortID="708632933">
