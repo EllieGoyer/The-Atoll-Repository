@@ -24,6 +24,7 @@ namespace AK
         static const AkUniqueID MENUSELECT = 664555880U;
         static const AkUniqueID PLAYER_FOOTSTEPS = 1730208058U;
         static const AkUniqueID POP_HIT = 3240332696U;
+        static const AkUniqueID SEA_ONESHOT = 2309730339U;
         static const AkUniqueID SEASTORM_START = 875170180U;
         static const AkUniqueID SEASTORM_STOP = 2153236280U;
     } // namespace EVENTS

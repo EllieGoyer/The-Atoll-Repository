@@ -27,6 +27,7 @@
 				<Event Id="664555880" Name="MenuSelect" ObjectPath="\Events\Default Work Unit\UI\Menu\MenuSelect" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1730208058" Name="Player_Footsteps" ObjectPath="\Events\Default Work Unit\Player\Footsteps\Player_Footsteps" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3240332696" Name="pop_hit" ObjectPath="\Events\Default Work Unit\pop_hit" DurationType="OneShot" DurationMin="1.696083" DurationMax="1.696083"/>
+				<Event Id="2309730339" Name="Sea_Oneshot" ObjectPath="\Events\Default Work Unit\Envoriment\Sea_Oneshot" DurationType="OneShot" DurationMin="0.137792" DurationMax="0.655455"/>
 				<Event Id="875170180" Name="SeaStorm_Start" ObjectPath="\Events\Default Work Unit\Storm\SeaStorm\SeaStorm_Start" DurationType="Infinite"/>
 				<Event Id="2153236280" Name="SeaStorm_Stop" ObjectPath="\Events\Default Work Unit\Storm\SeaStorm\SeaStorm_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
@@ -39,9 +40,25 @@
 					<ShortName>PRoom 4.wav</ShortName>
 					<Path>SFX\PRoom 4_D79FB2B7.wem</Path>
 				</File>
+				<File Id="177788513" Language="SFX">
+					<ShortName>Atoll_Enviorment_Sea_Oneshot_4(Seagull).wav</ShortName>
+					<Path>SFX\Atoll_Enviorment_Sea_Oneshot_4(Seagull)_10C4C929.wem</Path>
+				</File>
+				<File Id="249002992" Language="SFX">
+					<ShortName>Atoll_Enviorment_Sea_Oneshot_1(BirdWing).wav</ShortName>
+					<Path>SFX\Atoll_Enviorment_Sea_Oneshot_1(BirdWing)_10C4C929.wem</Path>
+				</File>
+				<File Id="288966919" Language="SFX">
+					<ShortName>Atoll_Enviorment_Sea_Oneshot_2(BIrdWing).wav</ShortName>
+					<Path>SFX\Atoll_Enviorment_Sea_Oneshot_2(BIrdWing)_10C4C929.wem</Path>
+				</File>
 				<File Id="293950242" Language="SFX">
 					<ShortName>ambience,electricity,lab,buzz.wav</ShortName>
 					<Path>SFX\ambience,electricity,lab,buzz_D79FB2B7.wem</Path>
+				</File>
+				<File Id="433092165" Language="SFX">
+					<ShortName>Atoll_Enviorment_Sea_Oneshot_5(Seagull).wav</ShortName>
+					<Path>SFX\Atoll_Enviorment_Sea_Oneshot_5(Seagull)_10C4C929.wem</Path>
 				</File>
 				<File Id="438625089" Language="SFX">
 					<ShortName>ambience,fans,medium.wav</ShortName>
@@ -58,6 +75,14 @@
 				<File Id="559282731" Language="SFX">
 					<ShortName>403570__lamamakesmusic__balloon-pop.wav</ShortName>
 					<Path>SFX\403570__lamamakesmusic__balloon-pop_10C4C929.wem</Path>
+				</File>
+				<File Id="876226826" Language="SFX">
+					<ShortName>Atoll_Enviorment_Sea_Oneshot_3(BirdWing).wav</ShortName>
+					<Path>SFX\Atoll_Enviorment_Sea_Oneshot_3(BirdWing)_10C4C929.wem</Path>
+				</File>
+				<File Id="935822094" Language="SFX">
+					<ShortName>Atoll_Enviorment_Sea_Oneshot_6(Seagull).wav</ShortName>
+					<Path>SFX\Atoll_Enviorment_Sea_Oneshot_6(Seagull)_10C4C929.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
