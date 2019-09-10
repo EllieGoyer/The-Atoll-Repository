@@ -145,7 +145,7 @@ MonoBehaviour:
       Velocity: {x: 30, y: 25}
       Offset: {x: 0, y: 0}
       Amplitude: 15
-      Mean: 22
+      Mean: 45
     - Wavelength: {x: -56, y: -64}
       Velocity: {x: -20, y: -20}
       Offset: {x: 0, y: 0}
@@ -156,6 +156,19 @@ MonoBehaviour:
       Offset: {x: 0, y: 0}
       Amplitude: 3.75
       Mean: 0
+--- !u!114 &420141238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420141236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e792d4d53745884887f0b637946f0f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 1214327001}
 --- !u!1001 &537152596
 PrefabInstance:
   m_ObjectHideFlags: 0
