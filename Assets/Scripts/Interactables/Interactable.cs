@@ -36,8 +36,6 @@ public class Interactable : MonoBehaviour
             // if no change happens, don't invoke any events
             if (currentState == value) return;
 
-            Debug.Log(value);
-
             // invoke events based on how the states were changed
             if (value == STATE.Disabled) {
 
@@ -92,7 +90,7 @@ public class Interactable : MonoBehaviour
     private void Update() {
 
         // hard-coded player input for the moment - if the player presses E on keyboard of A on controller
-        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Joystick1Button0)) {
+        if (Input.GetButtonDown("Interact")) {
             TryActivate();
         }
     }
