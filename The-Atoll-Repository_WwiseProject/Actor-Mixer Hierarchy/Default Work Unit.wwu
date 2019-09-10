@@ -164,6 +164,47 @@
 										<RandomSequenceContainer Name="Land_Calm_Oneshots" ID="{C7555530-EE3C-47DA-9AB1-DC32EF4A02D9}" ShortID="422772597">
 											<PropertyList>
 												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{4BF59332-32D3-4865-BB17-A6E0833E6DED}" ShortID="128458662">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="StormLevel" ID="{D49BCCF2-9952-44AB-B0EE-779C08825144}" WorkUnitID="{DF4FA145-A679-4276-B9D7-5ED205795645}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{48DD1F56-E1A4-4F79-B1B2-38A31D12A3CD}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0.07208</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>Exp1</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>19.79978</XPos>
+																		<YPos>-0.20973</YPos>
+																		<Flags>0</Flags>
+																		<SegmentShape>Exp2</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>30.25584</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																		<SegmentShape>Log1</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -193,6 +234,8 @@
 																</ModifierInfo>
 															</ModifierList>
 														</Property>
+														<Property Name="PlayMechanismInfiniteOrNumberOfLoops" Type="int16" Value="0"/>
+														<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
 																<Value>-7</Value>
@@ -216,7 +259,7 @@
 															<Custom>
 																<Effect Name="Wwise_Delay_(Custom)" ID="{EC89FA9D-0791-41AC-83E0-5683AA2A0171}" ShortID="828253992" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
 																	<PropertyList>
-																		<Property Name="Feedback" Type="Real32" Value="45.5"/>
+																		<Property Name="Feedback" Type="Real32" Value="39"/>
 																		<Property Name="WetDryMix" Type="Real32" Value="32"/>
 																	</PropertyList>
 																</Effect>
@@ -229,6 +272,7 @@
 													<ChildrenList>
 														<Sound Name="Atoll_Enviorment_Sea_Oneshot_1(BirdWing)" ID="{5B221D69-1636-436B-A890-0285280405FA}" ShortID="987134052">
 															<PropertyList>
+																<Property Name="IsLoopingInfinite" Type="bool" Value="False"/>
 																<Property Name="Pitch" Type="int32">
 																	<ValueList>
 																		<Value>750</Value>
