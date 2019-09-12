@@ -46,23 +46,6 @@ namespace AK
 
     } // namespace STATES
 
-    namespace SWITCHES
-    {
-        namespace FOOTSTEPS
-        {
-            static const AkUniqueID GROUP = 2385628198U;
-
-            namespace SWITCH
-            {
-                static const AkUniqueID GRASS = 4248645337U;
-                static const AkUniqueID ROCK = 2144363834U;
-                static const AkUniqueID SAND = 803837735U;
-                static const AkUniqueID WOOD = 2058049674U;
-            } // namespace SWITCH
-        } // namespace FOOTSTEPS
-
-    } // namespace SWITCHES
-
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID STORMLEVEL = 2380834754U;
