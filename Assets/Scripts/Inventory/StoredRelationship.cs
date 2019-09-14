@@ -7,10 +7,10 @@ public class StoredRelationship
 {
     [Tooltip(tooltip: "Drag in a Relationship from Assets/Notebook Items/Relationships")]
     public Relationship relationship;
-    public float value;
+    public int amount;
 
-    public StoredRelationship(Relationship _relationship, float _value = 0.5f) {
+    public StoredRelationship(Relationship _relationship, int _amount = 50) {
         relationship = _relationship;
-        value = _value;
+        amount = _amount;
     }
 }

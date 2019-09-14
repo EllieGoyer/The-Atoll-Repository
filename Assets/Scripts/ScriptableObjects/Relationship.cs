@@ -4,9 +4,9 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Relationship", menuName = "ScriptableObject/New Relationship")]
 public class Relationship : NotebookItem {
-    public static float MAX_VALUE = 1;
-    public static float MIN_VALUE = 0;
-    public static float ClampValue(float value) {
+    public static int MAX_VALUE = 100;
+    public static int MIN_VALUE = 0;
+    public static int ClampValue(int value) {
         return Mathf.Clamp(value, MIN_VALUE, MAX_VALUE);
     }
 }

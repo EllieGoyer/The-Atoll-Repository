@@ -77,11 +77,11 @@ public class Inventory : MonoBehaviour {
     /// </summary>
     /// <param name="good"></param>
     /// <returns></returns>
-    public float? CheckRelationship(Relationship relationship) {
+    public int? CheckRelationship(Relationship relationship) {
         StoredRelationship storedRelationship = FindStoredRelationship(relationship);
 
         if (storedRelationship != null) {
-            return storedRelationship.value;
+            return storedRelationship.amount;
         }
 
         return null;
@@ -171,7 +171,7 @@ public class Inventory : MonoBehaviour {
     /// </summary>
     /// <param name="good"></param>
     /// <param name="amount"></param>
-    public void AddGood(Good good, int amount) {
+    public void AddGoodAmount(Good good, int amount) {
         StoredGood storedGood = FindStoredGood(good);
 
         if (storedGood == null) {
@@ -191,7 +191,7 @@ public class Inventory : MonoBehaviour {
     /// </summary>
     /// <param name="good"></param>
     /// <param name="amount"></param>
-    public void SubtractGood(Good good, int amount) {
+    public void SubtractGoodAmount(Good good, int amount) {
         StoredGood storedGood = FindStoredGood(good);
 
         if (storedGood == null) {
@@ -208,8 +208,8 @@ public class Inventory : MonoBehaviour {
     /// set the value of the supplied relationship
     /// </summary>
     /// <param name="relationship"></param>
-    /// <param name="value"></param>
-    public void SetRelationshipValue(Relationship relationship, float value) {
+    /// <param name="amount"></param>
+    public void SetRelationshipAmount(Relationship relationship, int amount) {
         StoredRelationship storedRelationship = FindStoredRelationship(relationship);
 
         if (storedRelationship == null) {
@@ -217,15 +217,15 @@ public class Inventory : MonoBehaviour {
             return;
         }
         
-        storedRelationship.value = Relationship.ClampValue(value);
+        storedRelationship.amount = Relationship.ClampValue(amount);
         OnInventoryUpdate.Invoke();
     }
     /// <summary>
     /// add to the value of the supplied relationship
     /// </summary>
     /// <param name="relationship"></param>
-    /// <param name="value"></param>
-    public void AddRelationshipValue(Relationship relationship, float value) {
+    /// <param name="amount"></param>
+    public void AddRelationshipAmount(Relationship relationship, int amount) {
         StoredRelationship storedRelationship = FindStoredRelationship(relationship);
 
         if (storedRelationship == null) {
@@ -233,15 +233,15 @@ public class Inventory : MonoBehaviour {
             return;
         }
         
-        storedRelationship.value = Relationship.ClampValue(storedRelationship.value + value);
+        storedRelationship.amount = Relationship.ClampValue(storedRelationship.amount + amount);
         OnInventoryUpdate.Invoke();
     }
     /// <summary>
     /// subtract from the value of the supplied relationship
     /// </summary>
     /// <param name="relationship"></param>
-    /// <param name="value"></param>
-    public void SubtractRelationshipValue(Relationship relationship, float value) {
+    /// <param name="amount"></param>
+    public void SubtractRelationshipAmount(Relationship relationship, int amount) {
         StoredRelationship storedRelationship = FindStoredRelationship(relationship);
 
         if (storedRelationship == null) {
@@ -249,7 +249,7 @@ public class Inventory : MonoBehaviour {
             return;
         }
 
-        storedRelationship.value = Relationship.ClampValue(storedRelationship.value - value);
+        storedRelationship.amount = Relationship.ClampValue(storedRelationship.amount - amount);
         OnInventoryUpdate.Invoke();
     }
 

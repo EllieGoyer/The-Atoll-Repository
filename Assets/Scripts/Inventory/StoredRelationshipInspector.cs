@@ -26,10 +26,10 @@ public class StoredRelationshipInspector : PropertyDrawer
 
         // Calculate rects
         var relationshipRect = new Rect(position.x, position.y, RECT_OFFSET, position.height);
-        var valueRect = new Rect(position.x + RECT_OFFSET + 10, position.y, position.width - RECT_OFFSET - 10, position.height);
+        var amountRect = new Rect(position.x + RECT_OFFSET + 10, position.y, position.width - RECT_OFFSET - 10, position.height);
 
         EditorGUI.PropertyField(relationshipRect, property.FindPropertyRelative("relationship"), GUIContent.none);
-        EditorGUI.PropertyField(valueRect, property.FindPropertyRelative("value"), GUIContent.none);
+        EditorGUI.PropertyField(amountRect, property.FindPropertyRelative("amount"), GUIContent.none);
 
         EditorGUI.indentLevel = indent;
 
