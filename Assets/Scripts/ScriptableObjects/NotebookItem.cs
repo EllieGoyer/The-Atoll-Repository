@@ -4,6 +4,5 @@ using UnityEngine;
 
 public abstract class NotebookItem : ScriptableObject
 {
-    public string Name;
     public string Description;
 }

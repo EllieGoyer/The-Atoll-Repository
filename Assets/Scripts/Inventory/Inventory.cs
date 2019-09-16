@@ -252,8 +252,30 @@ public class Inventory : MonoBehaviour {
         storedRelationship.amount = Relationship.ClampValue(storedRelationship.amount - amount);
         OnInventoryUpdate.Invoke();
     }
+    
+    public string DebugString() {
+        string txt = "****Inventory****\n";
 
-    public static void Foo() {
+        txt += "Tools: ";
+        foreach (Tool tool in Tools) {
+            txt += tool.name + ", ";
+        }
 
+        txt += "\nCollectibles: ";
+        foreach (Collectable collectable in Collectables) {
+            txt += collectable.name + ", ";
+        }
+
+        txt += "\nGoods:--------------";
+        foreach (StoredGood storedGood in Goods) {
+            txt += storedGood.good.name + ": " + storedGood.amount + "\n";
+        }
+
+        txt += "\nRelationships:------";
+        foreach (StoredRelationship storedRelationship in Relationships) {
+            txt += storedRelationship.relationship.name + ": " + storedRelationship.amount + "\n";
+        }
+
+        return txt;
     }
 }
