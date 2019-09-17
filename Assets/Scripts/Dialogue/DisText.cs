@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XNode.Examples.StateGraph;
 
 public class DisText : MonoBehaviour
 {
     public TextMesh textComponent;
     public string text;
     public float timeLapse;
+
 
     // Start is called before the first frame update
     void Start()

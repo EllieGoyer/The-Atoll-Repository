@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XNode.Examples.StateGraph;
 
 public class NPC : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class NPC : MonoBehaviour
     private static int trust;
     private static int speakingSpeed;
 
-    private string text = "Hey There!";
+    StateGraph sg;
 
     private TextMesh text_tap;
 
@@ -16,8 +17,9 @@ public class NPC : MonoBehaviour
     void Start()
     {
         text_tap = GameObject.Find("text").GetComponent<TextMesh>();
-        text_tap.gameObject.SetActive(false);
-        text_tap.text = text;
+        sg = (StateGraph) Resources.Load("New State Graph");//GameObject.Find("New State Graph").GetComponent<StateGraph>()
+       
+        text_tap.text = sg.current.text;
 
     }
 
@@ -26,7 +28,9 @@ public class NPC : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.E))
         {
-            text_tap.gameObject.SetActive(true);
+            text_tap.text = sg.current.text;
+            sg.Continue();
+
         }
     }
 }
