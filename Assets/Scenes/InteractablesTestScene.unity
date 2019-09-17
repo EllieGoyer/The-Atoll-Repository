@@ -208,11 +208,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: fb6dc65e865e06a46b3eed66a4195aa7,
-        type: 3}
-      propertyPath: m_Name
-      value: atoll_Dock01
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: fb6dc65e865e06a46b3eed66a4195aa7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -267,6 +262,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: fb6dc65e865e06a46b3eed66a4195aa7,
+        type: 3}
+      propertyPath: m_Name
+      value: atoll_Dock01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb6dc65e865e06a46b3eed66a4195aa7, type: 3}
@@ -1101,6 +1101,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallOcean
       objectReference: {fileID: 0}
+    - target: {fileID: 4540822766897099058, guid: f7c9c944f9661ac4196d4cfc27ce8946,
+        type: 3}
+      propertyPath: GenerationModel.wavelets.Array.data[0].Mean
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 8826645088847334655, guid: f7c9c944f9661ac4196d4cfc27ce8946,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1473,11 +1478,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 76fd01f84261e3e42b3878f6dfe9662c,
-        type: 3}
-      propertyPath: m_Name
-      value: atoll_bush_02
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 76fd01f84261e3e42b3878f6dfe9662c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1532,6 +1532,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 76fd01f84261e3e42b3878f6dfe9662c,
+        type: 3}
+      propertyPath: m_Name
+      value: atoll_bush_02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76fd01f84261e3e42b3878f6dfe9662c, type: 3}
