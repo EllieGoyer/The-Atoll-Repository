@@ -74,7 +74,7 @@ public class OceanMovement : Movement
         {
             Vector3 pos = transform.position;
 
-            Vector3 left = pos - tempRight, right2 = pos + tempRight, front = pos + tempForward, back = pos - tempForward;
+            Vector3 left = pos - 3 * tempRight, right2 = pos + 3 * tempRight, front = pos + 3 * tempForward, back = pos - 3 * tempForward;
 
             float leftHeight = ComputeHeight(left.x, left.z), rightHeight = ComputeHeight(right2.x, right2.z), forwardHeight = ComputeHeight(front.x, front.z), backHeight = ComputeHeight(back.x, back.z);
 
@@ -84,6 +84,8 @@ public class OceanMovement : Movement
             back.y = backHeight;
 
             transform.forward = (front - back).normalized;
+
+            if(angularVelocity > 0)
             transform.right = (right2 - left).normalized;
         }
     }
