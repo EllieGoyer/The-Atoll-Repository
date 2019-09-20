@@ -49,54 +49,21 @@ public class OceanMovement : Movement
 
         Transform transform = gameObject.transform;
 
+        transform.Rotate(0, angularVelocity * Time.deltaTime, 0, Space.Self);
+
         Vector3 moveVector = forwardVelocity * transform.forward;
         moveVector.y += ComputeBuoyancy();
         moveVector.y -= GravityStrength;
 
-        Quaternion rotationQuat = Quaternion.Euler(0, angularVelocity * Time.deltaTime, 0);
-        Vector3 right = rotationQuat * transform.right, forward = rotationQuat * transform.forward;
-        Vector3 tempRight = right, tempForward = forward;
-        tempRight.y = 0;
-        tempForward.y = 0;
-        tempRight.Normalize();
-        tempForward.Normalize();
-
-        transform.forward = tempForward;
-        transform.right = tempRight;
-
         controller.Move(moveVector * Time.deltaTime);
-
-        transform.forward = forward;
-        transform.right = right;
-
-        float depth = ComputeDepth();
-        if (Mathf.Abs(depth) <= 10)
-        {
-            Vector3 pos = transform.position;
-
-            Vector3 left = pos - 3 * tempRight, right2 = pos + 3 * tempRight, front = pos + 3 * tempForward, back = pos - 3 * tempForward;
-
-            float leftHeight = ComputeHeight(left.x, left.z), rightHeight = ComputeHeight(right2.x, right2.z), forwardHeight = ComputeHeight(front.x, front.z), backHeight = ComputeHeight(back.x, back.z);
-
-            left.y = leftHeight;
-            right2.y = rightHeight;
-            front.y = forwardHeight;
-            back.y = backHeight;
-
-            transform.forward = (front - back).normalized;
-
-            if(angularVelocity > 0)
-            transform.right = (right2 - left).normalized;
-        }
     }
 
     public float ComputeBuoyancy()
     {
         float shipHeight = transform.position.y;
-        float waterHeight = ComputeHeight(transform.position.x, transform.position.z);
-        float depth = ComputeDepth();
+        float waterHeight = model.HeightAt(new Vector2(transform.position.x, transform.position.z), Time.time);
 
-        if (depth < 0)
+        if (shipHeight >= waterHeight)
         {
             return 0;
         }
@@ -104,18 +71,5 @@ public class OceanMovement : Movement
         {
             return BuoyancyStrength * Mathf.Min(MaxDisplacement, waterHeight - shipHeight);
         }
-    }
-
-    public float ComputeDepth()
-    {
-        float shipHeight = transform.position.y - 1;
-        float waterHeight = ComputeHeight(transform.position.x, transform.position.z);
-
-        return waterHeight - shipHeight;
-    }
-
-    public float ComputeHeight(float x, float z)
-    {
-        return model.HeightAt(new Vector2(x, z), Time.time);
     }
 }
