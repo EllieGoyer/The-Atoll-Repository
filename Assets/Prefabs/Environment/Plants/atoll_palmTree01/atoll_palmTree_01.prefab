@@ -555,6 +555,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5295003539661618830}
+  - component: {fileID: 5746674097396189778}
   m_Layer: 0
   m_Name: atoll_palmTree_01
   m_TagString: Untagged
@@ -587,6 +588,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5746674097396189778
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5295003539661185710}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.63, y: 5.21, z: 1.17}
+  m_Center: {x: -0.38, y: 2.57, z: -0.03}
 --- !u!1 &5295003539661185720
 GameObject:
   m_ObjectHideFlags: 0
