@@ -6,8 +6,8 @@ using UnityEngine;
 public class CheckTool : Check {
 
     public enum Type { Has, DoesNotHave };
-    public Type toolCheckType;
     public Tool tool;
+    public Type toolCheckType;
 
     public override bool Perform() {
         if(toolCheckType == Type.Has) return Inventory.Instance.CheckTool(tool);
