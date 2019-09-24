@@ -14,6 +14,8 @@ public enum TOOL {
 [RequireComponent(typeof(Collider))]
 public class Interactable : MonoBehaviour 
 {
+    [HideInInspector] public Check[] Checks;
+
     public UnityEvent OnEnabled; // invoked when leaving the "disabled" state
     public UnityEvent OnDisabled; // invoked when entering the "disabled" state
     public UnityEvent OnActivated; // invoked when entering the "activate" state
@@ -59,6 +61,7 @@ public class Interactable : MonoBehaviour
                 OnActivated.Invoke();
             }
             else { // if (value == STATE.Performing) {
+                OnDeactivated.Invoke();
                 OnPerforming.Invoke();
             }
 
@@ -71,13 +74,14 @@ public class Interactable : MonoBehaviour
 
     private void Awake() {
         CurrentState = STATE.Inactive;
+        Checks = GetComponents<Check>();
     }
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
             // the player entered the trigger, we should try setting the interactable to active
             isPlayerInside = true;
-            if (CurrentState == STATE.Inactive) CurrentState = STATE.Active;
+            if (CurrentState == STATE.Inactive && CanActivate()) CurrentState = STATE.Active;
         }
     }
     private void OnTriggerExit(Collider other) {
@@ -125,6 +129,24 @@ public class Interactable : MonoBehaviour
         if( CurrentState == STATE.Active) {
             CurrentState = STATE.Performing;
         }
+    }
+
+    /// <summary>
+    /// whether or not this interactable can be activated right now
+    /// </summary>
+    /// <returns></returns>
+    public bool CanActivate() {
+        
+        //if we're disabled, we can't get activated
+        if (CurrentState == STATE.Disabled) return false;
+
+        //if one of our checks fails, we can't get activated
+        foreach(Check check in Checks) {
+            if (!check.Perform()) return false;
+        }
+
+        //otherwise, we are good to get activated
+        return true;
     }
 
 }

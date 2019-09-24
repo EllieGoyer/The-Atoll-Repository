@@ -266,12 +266,12 @@ public class Inventory : MonoBehaviour {
             txt += collectable.name + ", ";
         }
 
-        txt += "\nGoods:--------------";
+        txt += "\nGoods:--------------\n";
         foreach (StoredGood storedGood in Goods) {
             txt += storedGood.good.name + ": " + storedGood.amount + "\n";
         }
 
-        txt += "\nRelationships:------";
+        txt += "\nRelationships:------\n";
         foreach (StoredRelationship storedRelationship in Relationships) {
             txt += storedRelationship.relationship.name + ": " + storedRelationship.amount + "\n";
         }
