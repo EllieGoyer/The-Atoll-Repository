@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2443298995610541109}
   - component: {fileID: 2443298995609213973}
   - component: {fileID: 2443298995608116949}
+  - component: {fileID: 5284082611109055689}
   m_Layer: 0
   m_Name: atoll_rockSmall_01
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5284082611109055689
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2443298995610107925}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.02795363, z: 0.09}
+  m_Center: {x: 0.0016595963, y: 0.0129074035, z: 0}

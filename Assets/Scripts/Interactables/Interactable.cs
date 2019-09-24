@@ -22,7 +22,7 @@ public class Interactable : MonoBehaviour
     public UnityEvent OnDeactivated; // invoked when entering the "inactive" state
     public UnityEvent OnPerforming; // invoked when entering the "performing" state
 
-    bool isPlayerInside = false;
+    Collider InsidePlayer = null;
 
         public enum STATE {
         Disabled, // the interactable cannot be triggered
@@ -61,6 +61,7 @@ public class Interactable : MonoBehaviour
                 OnActivated.Invoke();
             }
             else { // if (value == STATE.Performing) {
+                OnDeactivated.Invoke();
                 OnPerforming.Invoke();
             }
 
@@ -79,22 +80,38 @@ public class Interactable : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
             // the player entered the trigger, we should try setting the interactable to active
-            isPlayerInside = true;
+            InsidePlayer = other;
             if (CurrentState == STATE.Inactive && CanActivate()) CurrentState = STATE.Active;
         }
     }
     private void OnTriggerExit(Collider other) {
         if (other.CompareTag("Player")) {
             // the player left the trigger, we should try setting the interactable to inactive
-            isPlayerInside = false;
-            if (CurrentState == STATE.Active) CurrentState = STATE.Inactive;
+            if(InsidePlayer != other) {
+                CheckInsidePlayer();
+            }
+            else {
+                InsidePlayer = null;
+                if (CurrentState == STATE.Active) CurrentState = STATE.Inactive;
+            }
         }
     }
     private void Update() {
 
+        CheckInsidePlayer();
+
         // hard-coded player input for the moment - if the player presses E on keyboard of A on controller
         if (Input.GetButtonDown("Interact")) {
             TryActivate();
+        }
+    }
+
+    private void CheckInsidePlayer() {
+        if (InsidePlayer == null) return;
+
+        if(!InsidePlayer.gameObject.activeInHierarchy || !InsidePlayer.CompareTag("Player") ) {
+            InsidePlayer = null;
+            if (CurrentState == STATE.Active) CurrentState = STATE.Inactive;
         }
     }
 
@@ -111,23 +128,26 @@ public class Interactable : MonoBehaviour
     /// set the interactable to the disabled state
     /// </summary>
     public void Disable() {
-
+        CurrentState = STATE.Disabled;
     }
     /// <summary>
     /// set the interactable to the Inactive state
     /// </summary>
     public void Enable() {
-        if (isPlayerInside) {
+        if (InsidePlayer != null) {
             CurrentState = STATE.Active;
         }
         else {
             CurrentState = STATE.Inactive;
         }
     }
-    public void TryActivate() {
+    void TryActivate() {
         if( CurrentState == STATE.Active) {
             CurrentState = STATE.Performing;
         }
+    }
+    public void Reset() {
+        CurrentState = STATE.Inactive;
     }
 
     /// <summary>
@@ -147,5 +167,6 @@ public class Interactable : MonoBehaviour
         //otherwise, we are good to get activated
         return true;
     }
+
 
 }

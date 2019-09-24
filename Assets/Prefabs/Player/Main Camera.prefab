@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 577427505857984565}
   - component: {fileID: 577427505857984564}
   - component: {fileID: 577427505857984567}
-  - component: {fileID: -4028837003887422234}
+  - component: {fileID: 9090732035834764335}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -109,7 +109,7 @@ MonoBehaviour:
   DragInputName: Fire2
   DragVerticalAxisName: Mouse Y
   DragHorizontalAxisName: Mouse X
---- !u!114 &-4028837003887422234
+--- !u!114 &9090732035834764335
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,10 +122,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LandTarget: {fileID: 0}
+  LandPrefab: {fileID: 2299415529084659075, guid: 8f02488a07bc9f34fa6794a5eaa53de7,
+    type: 3}
+  ShipDropoffOffset: {x: 0, y: 8, z: 16}
   OceanTarget: {fileID: 0}
   IsOceanMode: 0
-  TransitionButton: Transition
+  TransitionButton: 
   OceanDistance: 40
   OceanAngle: 37.5
   LandDistance: 12
-  LandAngle: 37.5
+  LandAngle: 45
