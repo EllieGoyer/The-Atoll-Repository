@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 577427505857984565}
   - component: {fileID: 577427505857984564}
   - component: {fileID: 577427505857984567}
+  - component: {fileID: 9090732035834764335}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -108,3 +109,23 @@ MonoBehaviour:
   DragInputName: Fire2
   DragVerticalAxisName: Mouse Y
   DragHorizontalAxisName: Mouse X
+--- !u!114 &9090732035834764335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577427505857984563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fc259ff31ab7d44684bf8ce8a347009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LandTarget: {fileID: 0}
+  OceanTarget: {fileID: 0}
+  IsOceanMode: 0
+  TransitionButton: 
+  OceanDistance: 40
+  OceanAngle: 37.5
+  LandDistance: 12
+  LandAngle: 45

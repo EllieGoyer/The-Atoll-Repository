@@ -23,6 +23,16 @@ public class FakeTransition : MonoBehaviour
 
     public void ToggleMode()
     {
+        if(IsOceanMode)
+        {
+            LandTarget.gameObject.tag = "Player";
+            OceanTarget.gameObject.tag = "Untagged";
+        }
+        else
+        {
+            LandTarget.gameObject.tag = "Untagged";
+            OceanTarget.gameObject.tag = "Player";
+        }
         IsOceanMode = !IsOceanMode;
         UpdateControllers();
     }
