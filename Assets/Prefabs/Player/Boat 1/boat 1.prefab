@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 7034080927656558998}
   - component: {fileID: 39681370175962453}
   - component: {fileID: 3630373680005908499}
+  - component: {fileID: 440449823612286945}
   m_Layer: 0
   m_Name: Boat Interactable
   m_TagString: Untagged
@@ -269,6 +270,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 440449823612286945}
+        m_MethodName: DoTrigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &39681370175962453
@@ -283,7 +295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bda6eca06629f84eb088137851d95b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fakeTransition: {fileID: 0}
   checkType: 1
 --- !u!114 &3630373680005908499
 MonoBehaviour:
@@ -314,6 +325,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &440449823612286945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6633866828282480852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2214aa4be8b3894dbfd08853a228964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  TransitionType: 0
+  LandSpawnPoint: {fileID: 0}
 --- !u!1 &6933825526037972340
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +512,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9219353242899759510}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c782c22cad04b64eb652926a7f5b186, type: 3}
   m_Name: 

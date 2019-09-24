@@ -1,9 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class FakeTransition : MonoBehaviour
-{
+public class BoatTransitionHandler : MonoBehaviour {
+
+    public static BoatTransitionHandler Instance; // singleton design pattern
+
+    //public UnityEvent OnEnterOceanMode;
+    //public UnityEvent OnEnterLandMode;
+
     [HideInInspector]
     protected CameraFollow cameraFollow;
     public WalkingMovement LandTarget;
@@ -17,28 +23,40 @@ public class FakeTransition : MonoBehaviour
     public float LandDistance;
     public float LandAngle;
 
-    void Start()
+    void Awake()
     {
+        // set object up as a singleton
+        if (Instance != null) {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
         cameraFollow = gameObject.GetComponent<CameraFollow>();
         UpdateControllers();
     }
 
-    public void ToggleMode()
-    {
-        if(IsOceanMode)
-        {
-            LandTarget = Instantiate(LandPrefab).GetComponent<WalkingMovement>();
-            LandTarget.transform.position = OceanTarget.transform.rotation * ShipDropoffOffset + OceanTarget.transform.position;
-            LandTarget.gameObject.tag = "Player";
-            OceanTarget.gameObject.tag = "Untagged";
-        }
-        else
-        {
-            LandTarget.gameObject.tag = "Untagged";
-            OceanTarget.gameObject.tag = "Player";
-            Destroy(LandTarget.gameObject);
-        }
-        IsOceanMode = !IsOceanMode;
+    public void EnterOceanMode() {
+        if (IsOceanMode) return;
+
+        LandTarget.gameObject.tag = "Untagged";
+        OceanTarget.gameObject.tag = "Player";
+        Destroy(LandTarget.gameObject);
+
+        IsOceanMode = true;
+        UpdateControllers();
+    }
+
+    public void EnterLandMode(Transform LandSpawnPoint) {
+        if (!IsOceanMode) return;
+
+        LandTarget = Instantiate(LandPrefab).GetComponent<WalkingMovement>();
+        LandTarget.transform.position = LandSpawnPoint.position;
+        LandTarget.transform.rotation = LandSpawnPoint.rotation;
+        LandTarget.gameObject.tag = "Player";
+        OceanTarget.gameObject.tag = "Untagged";
+
+        IsOceanMode = false;
         UpdateControllers();
     }
 

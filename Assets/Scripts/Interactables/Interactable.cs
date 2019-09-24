@@ -3,14 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public enum TOOL {
-    none,
-    shovel,
-    fishingRod,
-    axe,
-    net
-}
-
 [RequireComponent(typeof(Collider))]
 public class Interactable : MonoBehaviour 
 {
@@ -22,16 +14,18 @@ public class Interactable : MonoBehaviour
     public UnityEvent OnDeactivated; // invoked when entering the "inactive" state
     public UnityEvent OnPerforming; // invoked when entering the "performing" state
 
-    Collider InsidePlayer = null;
 
-        public enum STATE {
+    public enum STATE {
         Disabled, // the interactable cannot be triggered
         Inactive, // the interactable is invisible
         Active, // the interactable is visible
         Performing, // the interactable is being used
     }
+
     // the state machine for the interactable, ONLY change state through the property
-    STATE currentState;
+
+    [SerializeField] Collider InsidePlayer = null;
+    [SerializeField] STATE currentState;
     public STATE CurrentState {
         get { return currentState; }
         set {
@@ -96,6 +90,7 @@ public class Interactable : MonoBehaviour
             }
         }
     }
+
     private void Update() {
 
         CheckInsidePlayer();
