@@ -14,7 +14,7 @@ public class TriggerModifyGoodInspector : Editor
 
         base.OnInspectorGUI();
 
-        // if the scripter chooses any type other than 
+        // should only ask for the amount if our trigger type is of the appropriate type
         if(self.ModificationType != TriggerModifyGood.Type.Unlock) {
             self.amount = EditorGUILayout.IntField("Amount", self.amount);
         }
