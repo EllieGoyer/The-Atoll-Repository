@@ -21,15 +21,10 @@ public class FakeTransition : MonoBehaviour
         UpdateControllers();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ToggleMode()
     {
-        if(Input.GetButtonDown(TransitionButton))
-        {
-            IsOceanMode = !IsOceanMode;
-
-            UpdateControllers();
-        }
+        IsOceanMode = !IsOceanMode;
+        UpdateControllers();
     }
 
     public void UpdateControllers()
