@@ -61,6 +61,7 @@ public class Interactable : MonoBehaviour
                 OnActivated.Invoke();
             }
             else { // if (value == STATE.Performing) {
+                OnDeactivated.Invoke();
                 OnPerforming.Invoke();
             }
 
