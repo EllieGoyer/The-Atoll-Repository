@@ -112,7 +112,7 @@ public class Interactable : MonoBehaviour
     /// set the interactable to the disabled state
     /// </summary>
     public void Disable() {
-
+        CurrentState = STATE.Disabled;
     }
     /// <summary>
     /// set the interactable to the Inactive state
@@ -125,10 +125,13 @@ public class Interactable : MonoBehaviour
             CurrentState = STATE.Inactive;
         }
     }
-    public void TryActivate() {
+    void TryActivate() {
         if( CurrentState == STATE.Active) {
             CurrentState = STATE.Performing;
         }
+    }
+    public void Reset() {
+        CurrentState = STATE.Inactive;
     }
 
     /// <summary>
@@ -148,5 +151,6 @@ public class Interactable : MonoBehaviour
         //otherwise, we are good to get activated
         return true;
     }
+
 
 }
