@@ -6,11 +6,28 @@ Event	ID	Name			Wwise Object Path	Notes
 	1738215602	JournalOpen			\Default Work Unit\UI\Journal\JournalOpen	
 	1930650448	LandStorm_Start			\Default Work Unit\Storm\LandStorm\LandStorm_Start	
 	2153236280	SeaStorm_Stop			\Default Work Unit\Storm\SeaStorm\SeaStorm_Stop	
+<<<<<<< HEAD
+	2475524499	ShipStorm_Start			\Default Work Unit\Storm\ShipStorm\ShipStorm_Start	
+=======
 	2309730339	Sea_Oneshot			\Default Work Unit\Envoriment\Sea_Oneshot	
+>>>>>>> wwise2
 	2634859593	MenuBack			\Default Work Unit\UI\Menu\MenuBack	
 	2690803159	JournalFlip			\Default Work Unit\UI\Journal\JournalFlip	
 	2869071164	LandStorm_Stop			\Default Work Unit\Storm\LandStorm\LandStorm_Stop	
 	3240332696	pop_hit			\Default Work Unit\pop_hit	
+<<<<<<< HEAD
+	3987853926	JournalClose			\Default Work Unit\UI\Journal\JournalClose	
+	4008905809	ShipStorm_Stop			\Default Work Unit\Storm\ShipStorm\ShipStorm_Stop	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2385628198	Footsteps			\Default Work Unit\Footsteps	
+
+Switch	ID	Name	Switch Group			Notes
+	83925039	FS_Grass	Footsteps			
+	2362027121	FS_Sand	Footsteps			
+	3616930680	FS_Wood	Footsteps			
+	3837465724	FS_Rock	Footsteps			
+=======
 	3575671711	H_Footsteps			\Default Work Unit\Player\Footsteps\H_Footsteps	
 	3987853926	JournalClose			\Default Work Unit\UI\Journal\JournalClose	
 
@@ -23,6 +40,7 @@ State	ID	Name	State Group			Notes
 	2058049674	Wood	Footsteps			
 	2144363834	Rock	Footsteps			
 	4248645337	Grass	Footsteps			
+>>>>>>> wwise2
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	2380834754	StormLevel			\Default Work Unit\StormLevel	
@@ -31,6 +49,15 @@ Effect plug-ins	ID	Name	Type				Notes
 	828253992	Wwise_Delay_(Custom)	Wwise Delay			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+<<<<<<< HEAD
+	125716967	Atoll_Storm_Sea_1	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Mac\SFX\PRoom 2_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enviorment\Sea\Sea_Storm\Sea_Storm_Levels\Atoll_Storm_Sea_1		1790180
+	155928113	Atoll_Storm_Sea_3	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Mac\SFX\PRoom 4_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enviorment\Sea\Sea_Storm\Sea_Storm_Levels\Atoll_Storm_Sea_3		2962132
+	293950242	Atoll_Storm_Land_1	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Mac\SFX\ambience,electricity,lab,buzz_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enviorment\Land\Land_Storm\Land_Storm_Levels\Atoll_Storm_Land_1		2706244
+	438625089	Atoll_Storm_Land_2	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Mac\SFX\ambience,fans,medium_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enviorment\Land\Land_Storm\Land_Storm_Levels\Atoll_Storm_Land_2		3265420
+	438812705	Atoll_Storm_Land_3	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Mac\SFX\ambience,wind,heavyMachines_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enviorment\Land\Land_Storm\Land_Storm_Levels\Atoll_Storm_Land_3		57657348
+	549899415	Atoll_Storm_Sea_2	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Mac\SFX\PRoom 3_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enviorment\Sea\Sea_Storm\Sea_Storm_Levels\Atoll_Storm_Sea_2		1705696
+	559282731	Pop	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Mac\SFX\403570__lamamakesmusic__balloon-pop_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pop		162888
+=======
 	48910509	Atoll_Footsteps_Wood_1	D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Mac\SFX\Atoll_Footsteps_Wood_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footstep_Types\Footsteps_Wood\Atoll_Footsteps_Wood_1		117128
 	125716967	Atoll_Storm_Sea_1	D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Mac\SFX\PRoom 2_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enviorment\Sea\Sea_Storm\Sea_Storm_Levels\Atoll_Storm_Sea_1		1790180
 	155928113	Atoll_Storm_Sea_3	D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Mac\SFX\PRoom 4_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enviorment\Sea\Sea_Storm\Sea_Storm_Levels\Atoll_Storm_Sea_3		2962132
@@ -50,4 +77,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	559282731	Pop	D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Mac\SFX\403570__lamamakesmusic__balloon-pop_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pop		162888
 	876226826	Atoll_Enviorment_Sea_Oneshot_3(BirdWing)	D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Mac\SFX\Atoll_Enviorment_Sea_Oneshot_3(BirdWing)_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enviorment\Sea\Sea_Calm\Land_Calm_Oneshots\Seagull_Wings\Atoll_Enviorment_Sea_Oneshot_3(BirdWing)		29760
 	935822094	Atoll_Enviorment_Sea_Oneshot_6(Seagull)	D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Mac\SFX\Atoll_Enviorment_Sea_Oneshot_6(Seagull)_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enviorment\Sea\Sea_Calm\Land_Calm_Oneshots\Seagull\Atoll_Enviorment_Sea_Oneshot_6(Seagull)		112704
+>>>>>>> wwise2
 

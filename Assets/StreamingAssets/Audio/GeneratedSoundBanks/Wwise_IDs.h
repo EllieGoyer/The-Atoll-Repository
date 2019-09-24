@@ -13,6 +13,13 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID ANCHORDEPLOY = 4026671431U;
+        static const AkUniqueID ANCHORHIT = 1339769741U;
+        static const AkUniqueID AXESELECT = 14522843U;
+        static const AkUniqueID AXESWING = 2157426783U;
+        static const AkUniqueID AXEWOOD = 3604088180U;
+        static const AkUniqueID DOORCLOSE = 3638457343U;
+        static const AkUniqueID DOOROPEN = 1404805401U;
         static const AkUniqueID H_FOOTSTEPS = 3575671711U;
         static const AkUniqueID JOURNALCLOSE = 3987853926U;
         static const AkUniqueID JOURNALFLIP = 2690803159U;
@@ -27,6 +34,8 @@ namespace AK
         static const AkUniqueID SEA_ONESHOT = 2309730339U;
         static const AkUniqueID SEASTORM_START = 875170180U;
         static const AkUniqueID SEASTORM_STOP = 2153236280U;
+        static const AkUniqueID SHIPSTORM_START = 2475524499U;
+        static const AkUniqueID SHIPSTORM_STOP = 4008905809U;
     } // namespace EVENTS
 
     namespace STATES
@@ -54,7 +63,7 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID GENERAL = 133642231U;
+        static const AkUniqueID MAIN = 3161908922U;
     } // namespace BANKS
 
     namespace BUSSES
