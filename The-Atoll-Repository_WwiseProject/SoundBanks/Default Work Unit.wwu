@@ -5,7 +5,25 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{E8ADFC8A-915E-4100-A92E-6783322AB0BA}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Default Work Unit" ID="{16053E92-0843-431F-BBA1-8BF3C068D477}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Interact" ID="{5BAD59B2-8D63-41A5-9806-774FEE1F24BB}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Player" ID="{6A9FB911-89C0-4499-99C7-D9BA0D952FFC}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="UI" ID="{F11FA237-B96C-497E-9C11-8AC7D2E4B852}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="NPC" ID="{242EB4AF-CD43-4F2D-A9E9-D5AC56B7E1D3}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Land_Storm" ID="{6AAF81F6-35E4-4583-AC85-854696ECC6D5}">
+					<ObjectInclusionList>
+						<ObjectRef Name="LandStorm" ID="{2C8A34EC-3461-491D-8BBF-4AFC45C3697E}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Sea_Storm" ID="{B4F211D0-6073-427C-AED5-901A49C341A4}">
+					<ObjectInclusionList>
+						<ObjectRef Name="SeaStorm" ID="{D5FAC948-54F7-4115-B4C5-2FF7F380A805}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ShipStorm" ID="{083A0F8A-9AAE-441C-9B68-0DEC67A5673C}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

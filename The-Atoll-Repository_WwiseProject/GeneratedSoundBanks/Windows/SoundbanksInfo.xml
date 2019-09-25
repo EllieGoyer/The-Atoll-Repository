@@ -16,26 +16,18 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="1686739424" Language="SFX">
-			<ObjectPath>\SoundBanks\Default Work Unit\Storm</ObjectPath>
-			<ShortName>Storm</ShortName>
-			<Path>Storm.bnk</Path>
+		<SoundBank Id="1595190680" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Land_Storm</ObjectPath>
+			<ShortName>Land_Storm</ShortName>
+			<Path>Land_Storm.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1930650448" Name="LandStorm_Start" ObjectPath="\Events\Default Work Unit\Storm\LandStorm\LandStorm_Start" DurationType="Infinite"/>
 				<Event Id="2869071164" Name="LandStorm_Stop" ObjectPath="\Events\Default Work Unit\Storm\LandStorm\LandStorm_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="875170180" Name="SeaStorm_Start" ObjectPath="\Events\Default Work Unit\Storm\SeaStorm\SeaStorm_Start" DurationType="OneShot" DurationMin="110.080002" DurationMax="110.080002"/>
-				<Event Id="2153236280" Name="SeaStorm_Stop" ObjectPath="\Events\Default Work Unit\Storm\SeaStorm\SeaStorm_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2475524499" Name="ShipStorm_Start" ObjectPath="\Events\Default Work Unit\Storm\ShipStorm\ShipStorm_Start" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="4008905809" Name="ShipStorm_Stop" ObjectPath="\Events\Default Work Unit\Storm\ShipStorm\ShipStorm_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="293950242" Language="SFX">
 					<ShortName>ambience,electricity,lab,buzz.wav</ShortName>
 					<Path>SFX\ambience,electricity,lab,buzz_D79FB2B7.wem</Path>
-				</File>
-				<File Id="335424453" Language="SFX">
-					<ShortName>Atoll_Storm_Sea_2 .wav</ShortName>
-					<Path>SFX\Atoll_Storm_Sea_2 _10C4C929.wem</Path>
 				</File>
 				<File Id="438625089" Language="SFX">
 					<ShortName>ambience,fans,medium.wav</ShortName>
@@ -44,14 +36,6 @@
 				<File Id="438812705" Language="SFX">
 					<ShortName>ambience,wind,heavyMachines.wav</ShortName>
 					<Path>SFX\ambience,wind,heavyMachines_D79FB2B7.wem</Path>
-				</File>
-				<File Id="937912693" Language="SFX">
-					<ShortName>Atoll_Storm_Sea_3.wav</ShortName>
-					<Path>SFX\Atoll_Storm_Sea_3_10C4C929.wem</Path>
-				</File>
-				<File Id="988736871" Language="SFX">
-					<ShortName>Atoll_Storm_Sea_1.wav</ShortName>
-					<Path>SFX\Atoll_Storm_Sea_1_10C4C929.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -71,11 +55,7 @@
 				<Event Id="3987853926" Name="JournalClose" ObjectPath="\Events\Default Work Unit\UI\Journal\JournalClose" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2690803159" Name="JournalFlip" ObjectPath="\Events\Default Work Unit\UI\Journal\JournalFlip" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1738215602" Name="JournalOpen" ObjectPath="\Events\Default Work Unit\UI\Journal\JournalOpen" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2634859593" Name="MenuBack" ObjectPath="\Events\Default Work Unit\UI\Menu\MenuBack" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="274288443" Name="MenuScroll" ObjectPath="\Events\Default Work Unit\UI\Menu\MenuScroll" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="664555880" Name="MenuSelect" ObjectPath="\Events\Default Work Unit\UI\Menu\MenuSelect" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1730208058" Name="Player_Footsteps" ObjectPath="\Events\Default Work Unit\Player\Footsteps\Player_Footsteps" DurationType="OneShot" DurationMin="0.000000" DurationMax="1.220271"/>
-				<Event Id="2309730339" Name="Sea_Oneshot" ObjectPath="\Events\Default Work Unit\Envoriment\Sea_Oneshot" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.655455"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="7304331" Language="SFX">
@@ -122,10 +102,6 @@
 					<ShortName>Atoll_Footsteps_Hooves_Wood_4.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Hooves_Wood_4_10C4C929.wem</Path>
 				</File>
-				<File Id="177788513" Language="SFX">
-					<ShortName>Atoll_Enviorment_Sea_Oneshot_4(Seagull).wav</ShortName>
-					<Path>SFX\Atoll_Enviorment_Sea_Oneshot_4(Seagull)_10C4C929.wem</Path>
-				</File>
 				<File Id="228086549" Language="SFX">
 					<ShortName>Atoll_Footsteps_Wood_5.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Wood_5_10C4C929.wem</Path>
@@ -133,10 +109,6 @@
 				<File Id="244759577" Language="SFX">
 					<ShortName>Atoll_Tool_Axe_Swing.wav</ShortName>
 					<Path>SFX\Atoll_Tool_Axe_Swing_10C4C929.wem</Path>
-				</File>
-				<File Id="249002992" Language="SFX">
-					<ShortName>Atoll_Enviorment_Sea_Oneshot_1(BirdWing).wav</ShortName>
-					<Path>SFX\Atoll_Enviorment_Sea_Oneshot_1(BirdWing)_10C4C929.wem</Path>
 				</File>
 				<File Id="266551798" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Grass_3.wav</ShortName>
@@ -149,10 +121,6 @@
 				<File Id="276612945" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Sand_1.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Hooves_Sand_1_10C4C929.wem</Path>
-				</File>
-				<File Id="288966919" Language="SFX">
-					<ShortName>Atoll_Enviorment_Sea_Oneshot_2(BIrdWing).wav</ShortName>
-					<Path>SFX\Atoll_Enviorment_Sea_Oneshot_2(BIrdWing)_10C4C929.wem</Path>
 				</File>
 				<File Id="300022249" Language="SFX">
 					<ShortName>Atoll_Footsteps_Wood_2.wav</ShortName>
@@ -173,10 +141,6 @@
 				<File Id="432380765" Language="SFX">
 					<ShortName>Atoll_Footsteps_Wood_6.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Wood_6_10C4C929.wem</Path>
-				</File>
-				<File Id="433092165" Language="SFX">
-					<ShortName>Atoll_Enviorment_Sea_Oneshot_5(Seagull).wav</ShortName>
-					<Path>SFX\Atoll_Enviorment_Sea_Oneshot_5(Seagull)_10C4C929.wem</Path>
 				</File>
 				<File Id="495743890" Language="SFX">
 					<ShortName>Atoll_Footsteps_Wood_3.wav</ShortName>
@@ -242,10 +206,6 @@
 					<ShortName>Atoll_Footsteps_Hooves_Wood_5.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Hooves_Wood_5_10C4C929.wem</Path>
 				</File>
-				<File Id="876226826" Language="SFX">
-					<ShortName>Atoll_Enviorment_Sea_Oneshot_3(BirdWing).wav</ShortName>
-					<Path>SFX\Atoll_Enviorment_Sea_Oneshot_3(BirdWing)_10C4C929.wem</Path>
-				</File>
 				<File Id="880753549" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Sand_3.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Hooves_Sand_3_10C4C929.wem</Path>
@@ -253,10 +213,6 @@
 				<File Id="886126818" Language="SFX">
 					<ShortName>Atoll_Tool_Axe_Select_1.wav</ShortName>
 					<Path>SFX\Atoll_Tool_Axe_Select_1_10C4C929.wem</Path>
-				</File>
-				<File Id="935822094" Language="SFX">
-					<ShortName>Atoll_Enviorment_Sea_Oneshot_6(Seagull).wav</ShortName>
-					<Path>SFX\Atoll_Enviorment_Sea_Oneshot_6(Seagull)_10C4C929.wem</Path>
 				</File>
 				<File Id="939921997" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Rock_2.wav</ShortName>
@@ -269,6 +225,31 @@
 				<File Id="1022711718" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Wood_2.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Hooves_Wood_2_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="3454633060" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Sea_Storm</ObjectPath>
+			<ShortName>Sea_Storm</ShortName>
+			<Path>Sea_Storm.bnk</Path>
+			<IncludedEvents>
+				<Event Id="875170180" Name="SeaStorm_Start" ObjectPath="\Events\Default Work Unit\Storm\SeaStorm\SeaStorm_Start" DurationType="OneShot" DurationMin="110.080002" DurationMax="110.080002"/>
+				<Event Id="2153236280" Name="SeaStorm_Stop" ObjectPath="\Events\Default Work Unit\Storm\SeaStorm\SeaStorm_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2475524499" Name="ShipStorm_Start" ObjectPath="\Events\Default Work Unit\Storm\ShipStorm\ShipStorm_Start" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4008905809" Name="ShipStorm_Stop" ObjectPath="\Events\Default Work Unit\Storm\ShipStorm\ShipStorm_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="335424453" Language="SFX">
+					<ShortName>Atoll_Storm_Sea_2 .wav</ShortName>
+					<Path>SFX\Atoll_Storm_Sea_2 _10C4C929.wem</Path>
+				</File>
+				<File Id="937912693" Language="SFX">
+					<ShortName>Atoll_Storm_Sea_3.wav</ShortName>
+					<Path>SFX\Atoll_Storm_Sea_3_10C4C929.wem</Path>
+				</File>
+				<File Id="988736871" Language="SFX">
+					<ShortName>Atoll_Storm_Sea_1.wav</ShortName>
+					<Path>SFX\Atoll_Storm_Sea_1_10C4C929.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
