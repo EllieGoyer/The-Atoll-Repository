@@ -1,16 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
+		<SoundBank Id="284967655" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Ship</ObjectPath>
+			<ShortName>Ship</ShortName>
+			<Path>Ship.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3825949625" Name="DockLanding" ObjectPath="\Events\Default Work Unit\Ship\Landing\DockLanding" DurationType="OneShot" DurationMin="0.624000" DurationMax="0.624000"/>
+				<Event Id="2557820305" Name="ShipCreak" ObjectPath="\Events\Default Work Unit\Ship\Other\ShipCreak" DurationType="OneShot" DurationMin="65.493332" DurationMax="65.493332"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="270062226" Language="SFX">
+					<ShortName>Atoll_Ship_Creak.wav</ShortName>
+					<Path>SFX\Atoll_Ship_Creak_10C4C929.wem</Path>
+				</File>
+				<File Id="756840420" Language="SFX">
+					<ShortName>Atoll_Ship_Landing_Dock.wav</ShortName>
+					<Path>SFX\Atoll_Ship_Landing_Dock_10C4C929.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
@@ -110,6 +129,10 @@
 					<ShortName>Atoll_Tool_Axe_Swing.wav</ShortName>
 					<Path>SFX\Atoll_Tool_Axe_Swing_10C4C929.wem</Path>
 				</File>
+				<File Id="248004940" Language="SFX">
+					<ShortName>Atoll_Footsteps_Grass_6.wav</ShortName>
+					<Path>SFX\Atoll_Footsteps_Grass_6_10C4C929.wem</Path>
+				</File>
 				<File Id="266551798" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Grass_3.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Hooves_Grass_3_10C4C929.wem</Path>
@@ -122,9 +145,17 @@
 					<ShortName>Atoll_Footsteps_Hooves_Sand_1.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Hooves_Sand_1_10C4C929.wem</Path>
 				</File>
+				<File Id="287700216" Language="SFX">
+					<ShortName>Atoll_Footsteps_Grass_3.wav</ShortName>
+					<Path>SFX\Atoll_Footsteps_Grass_3_10C4C929.wem</Path>
+				</File>
 				<File Id="300022249" Language="SFX">
 					<ShortName>Atoll_Footsteps_Wood_2.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Wood_2_10C4C929.wem</Path>
+				</File>
+				<File Id="375539328" Language="SFX">
+					<ShortName>Atoll_Footsteps_Grass_5.wav</ShortName>
+					<Path>SFX\Atoll_Footsteps_Grass_5_10C4C929.wem</Path>
 				</File>
 				<File Id="390281571" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Sand_5.wav</ShortName>
@@ -150,9 +181,17 @@
 					<ShortName>Atoll_Footsteps_Hooves_Wood_1.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Hooves_Wood_1_10C4C929.wem</Path>
 				</File>
+				<File Id="534428675" Language="SFX">
+					<ShortName>Atoll_Footsteps_Grass_2.wav</ShortName>
+					<Path>SFX\Atoll_Footsteps_Grass_2_10C4C929.wem</Path>
+				</File>
 				<File Id="563495648" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Grass_6.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Hooves_Grass_6_10C4C929.wem</Path>
+				</File>
+				<File Id="580597991" Language="SFX">
+					<ShortName>Atoll_Footsteps_Grass_4.wav</ShortName>
+					<Path>SFX\Atoll_Footsteps_Grass_4_10C4C929.wem</Path>
 				</File>
 				<File Id="591976748" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Grass_5.wav</ShortName>
@@ -217,6 +256,10 @@
 				<File Id="939921997" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Rock_2.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Hooves_Rock_2_10C4C929.wem</Path>
+				</File>
+				<File Id="973321578" Language="SFX">
+					<ShortName>Atoll_Footsteps_Grass_1.wav</ShortName>
+					<Path>SFX\Atoll_Footsteps_Grass_1_10C4C929.wem</Path>
 				</File>
 				<File Id="1014999919" Language="SFX">
 					<ShortName>Atoll_Tool_Axe_Wood_1.wav</ShortName>
