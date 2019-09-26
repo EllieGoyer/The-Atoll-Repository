@@ -28,6 +28,13 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="Ship" ID="{36C0511F-8433-4C96-9633-184515CAE21F}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Ship" ID="{8D7D1C76-0117-4A08-B190-854C938F121F}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>
