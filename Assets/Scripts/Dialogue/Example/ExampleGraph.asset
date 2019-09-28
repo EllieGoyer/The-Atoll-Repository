@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Chat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 81.36576, y: -87.10283}
+  position: {x: -616, y: -104}
   ports:
     keys:
     - answers
@@ -43,7 +43,10 @@ MonoBehaviour:
       _node: {fileID: -1616745201545093259}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: input
+        node: {fileID: 6902977089865452926}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -84,7 +87,7 @@ MonoBehaviour:
   m_Name: Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 88, y: 104}
+  position: {x: 72, y: 104}
   ports:
     keys:
     - input
@@ -124,10 +127,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2002517843e69414b8995002eefa66e1, type: 3}
-  m_Name: Branch
+  m_Name: 
   m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 392, y: -56}
+  graph: {fileID: 0}
+  position: {x: 200, y: -88}
   ports:
     keys:
     - pass
@@ -157,13 +160,7 @@ MonoBehaviour:
       _node: {fileID: 114549059752335612}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-        node: {fileID: 114764587866609370}
-      - fieldName: answers 1
-        reroutePoints: []
-        node: {fileID: 114764587866609370}
-        reroutePoints: []
-      - fieldName: answers 0
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 1
@@ -192,17 +189,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7d4b035e8545a04ca8b7c9c33635bcb, type: 3}
-  m_Name: Chat
+  m_Name: 
   m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -280, y: -40}
+  graph: {fileID: 0}
+  position: {x: -152, y: -104}
   ports:
     keys:
     - answers
     - input
     - output
-    - answers 0
-    - answers 1
     values:
     - _fieldName: answers
       _node: {fileID: 6902977089865452926}
@@ -218,7 +213,10 @@ MonoBehaviour:
       _node: {fileID: 6902977089865452926}
       _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: output
+        node: {fileID: -1616745201545093259}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 1
@@ -232,36 +230,8 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-    - _fieldName: answers 0
-      _node: {fileID: 114764587866609370}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: 114122190655095816}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 1
-      _typeConstraint: 0
-      _dynamic: 1
-    - _fieldName: answers 1
-      _node: {fileID: 114764587866609370}
-      _typeQualifiedName: Dialogue.DialogueBaseNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: input
-        node: {fileID: 114549059752335612}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 1
-      _typeConstraint: 0
-      _dynamic: 1
   input: {fileID: 0}
   output: {fileID: 0}
-    voiceClip: {fileID: 0}
-  - text: No :<
-    voiceClip: {fileID: 0}
-  - text: Yes :3
-  answers:
-  text: are u ok?
-  character: {fileID: 11400000, guid: 89733cd8ccd19284f80a50305c266aae, type: 2}
+  character: {fileID: 0}
+  text: 
+  answers: []
