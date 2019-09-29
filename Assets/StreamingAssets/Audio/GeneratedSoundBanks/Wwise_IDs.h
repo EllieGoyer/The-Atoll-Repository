@@ -26,11 +26,7 @@ namespace AK
         static const AkUniqueID JOURNALOPEN = 1738215602U;
         static const AkUniqueID LANDSTORM_START = 1930650448U;
         static const AkUniqueID LANDSTORM_STOP = 2869071164U;
-        static const AkUniqueID MENUBACK = 2634859593U;
-        static const AkUniqueID MENUSCROLL = 274288443U;
-        static const AkUniqueID MENUSELECT = 664555880U;
         static const AkUniqueID PLAYER_FOOTSTEPS = 1730208058U;
-        static const AkUniqueID SEA_ONESHOT = 2309730339U;
         static const AkUniqueID SEASTORM_START = 875170180U;
         static const AkUniqueID SEASTORM_STOP = 2153236280U;
         static const AkUniqueID SHIPSTORM_START = 2475524499U;
@@ -62,8 +58,9 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
+        static const AkUniqueID LAND_STORM = 1595190680U;
         static const AkUniqueID MAIN = 3161908922U;
-        static const AkUniqueID STORM = 1686739424U;
+        static const AkUniqueID SEA_STORM = 3454633060U;
     } // namespace BANKS
 
     namespace BUSSES

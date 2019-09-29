@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{CCAC6D5F-B7FE-43A0-9998-453B1D36A253}" SchemaVersion="94">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{CCAC6D5F-B7FE-43A0-9998-453B1D36A253}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{CCAC6D5F-B7FE-43A0-9998-453B1D36A253}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Atoll_Soundcast_Main" ID="{16690A00-2291-4E4B-A4C1-75392C34B795}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Sea_Oneshot" ID="{AF84820C-32B3-497F-B6FC-F2E83AA6C638}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="AnchorDeploy" ID="{54A0411A-A684-4533-AA1F-5FA91E2F2A33}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="AnchorHit" ID="{15921C24-84E5-43E0-9797-C89307E0C33B}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="StormLevel" ID="{D49BCCF2-9952-44AB-B0EE-779C08825144}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>
