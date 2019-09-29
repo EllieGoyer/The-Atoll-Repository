@@ -927,23 +927,7 @@ PrefabInstance:
       propertyPath: Target
       value: 
       objectReference: {fileID: 1757617481}
-    - target: {fileID: 577427505857984567, guid: 0df0e7f5dbdf59043941ffd9d8aa304d,
-        type: 3}
-      propertyPath: DragInputName
-      value: Camera Drag
-      objectReference: {fileID: 0}
-    - target: {fileID: 577427505857984567, guid: 0df0e7f5dbdf59043941ffd9d8aa304d,
-        type: 3}
-      propertyPath: MaxElevation
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 577427505857984567, guid: 0df0e7f5dbdf59043941ffd9d8aa304d,
-        type: 3}
-      propertyPath: FollowElevation
-      value: 37.5
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 577427505857984564, guid: 0df0e7f5dbdf59043941ffd9d8aa304d, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0df0e7f5dbdf59043941ffd9d8aa304d, type: 3}
 --- !u!1001 &29707827
 PrefabInstance:
@@ -5000,48 +4984,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 144567986}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &145087280 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 577427505857984563, guid: 0df0e7f5dbdf59043941ffd9d8aa304d,
-    type: 3}
-  m_PrefabInstance: {fileID: 29367394}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &145087281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145087280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bce49cd8b6c99e44b99cca2d14ccdc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  listenerId: 0
---- !u!114 &145087282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145087280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25787e094866428419d7d9abf8ab7099, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 0
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!1001 &146185250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44192,7 +44134,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 29367394}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145087280}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9fc259ff31ab7d44684bf8ce8a347009, type: 3}
