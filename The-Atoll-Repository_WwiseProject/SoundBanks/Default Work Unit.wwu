@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{95FEA5DD-BBFD-4B9F-ACDC-A2F5BE159E13}" SchemaVersion="94">
+<WwiseDocument Type="WorkUnit" ID="{FF751CF2-9826-40AC-9430-52D9F6CD2210}" SchemaVersion="94">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{95FEA5DD-BBFD-4B9F-ACDC-A2F5BE159E13}" PersistMode="Standalone">
+		<WorkUnit Name="Default Work Unit" ID="{FF751CF2-9826-40AC-9430-52D9F6CD2210}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundBank Name="General" ID="{29919337-B7DB-40AD-9C49-1AC12BFED75B}">
+				<SoundBank Name="Main" ID="{E8ADFC8A-915E-4100-A92E-6783322AB0BA}">
 					<ObjectInclusionList>
-						<ObjectRef Name="pop_hit" ID="{7E0A57C5-0439-480D-B3B7-C3587EFCB278}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Player" ID="{6DD55D14-F836-48D6-A6BE-170550AD1E26}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="UI" ID="{AF570D02-AC54-4AF9-B05C-DBFD68CD7787}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Envoriment" ID="{B9D6A7DC-7010-4B07-9500-F8055029CE96}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Storm" ID="{6E13DDE7-9913-4EF3-A720-24F9A8DB4AE8}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Interact" ID="{5BAD59B2-8D63-41A5-9806-774FEE1F24BB}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Player" ID="{6A9FB911-89C0-4499-99C7-D9BA0D952FFC}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="UI" ID="{F11FA237-B96C-497E-9C11-8AC7D2E4B852}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="NPC" ID="{242EB4AF-CD43-4F2D-A9E9-D5AC56B7E1D3}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Land_Storm" ID="{6AAF81F6-35E4-4583-AC85-854696ECC6D5}">
+					<ObjectInclusionList>
+						<ObjectRef Name="LandStorm" ID="{2C8A34EC-3461-491D-8BBF-4AFC45C3697E}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Sea_Storm" ID="{B4F211D0-6073-427C-AED5-901A49C341A4}">
+					<ObjectInclusionList>
+						<ObjectRef Name="SeaStorm" ID="{D5FAC948-54F7-4115-B4C5-2FF7F380A805}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ShipStorm" ID="{083A0F8A-9AAE-441C-9B68-0DEC67A5673C}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

@@ -13,20 +13,26 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID ANCHORDEPLOY = 4026671431U;
+        static const AkUniqueID ANCHORHIT = 1339769741U;
+        static const AkUniqueID AXESELECT = 14522843U;
+        static const AkUniqueID AXESWING = 2157426783U;
+        static const AkUniqueID AXEWOOD = 3604088180U;
+        static const AkUniqueID DOCKLANDING = 3825949625U;
+        static const AkUniqueID DOORCLOSE = 3638457343U;
+        static const AkUniqueID DOOROPEN = 1404805401U;
         static const AkUniqueID H_FOOTSTEPS = 3575671711U;
         static const AkUniqueID JOURNALCLOSE = 3987853926U;
         static const AkUniqueID JOURNALFLIP = 2690803159U;
         static const AkUniqueID JOURNALOPEN = 1738215602U;
         static const AkUniqueID LANDSTORM_START = 1930650448U;
         static const AkUniqueID LANDSTORM_STOP = 2869071164U;
-        static const AkUniqueID MENUBACK = 2634859593U;
-        static const AkUniqueID MENUSCROLL = 274288443U;
-        static const AkUniqueID MENUSELECT = 664555880U;
         static const AkUniqueID PLAYER_FOOTSTEPS = 1730208058U;
-        static const AkUniqueID POP_HIT = 3240332696U;
-        static const AkUniqueID SEA_ONESHOT = 2309730339U;
         static const AkUniqueID SEASTORM_START = 875170180U;
         static const AkUniqueID SEASTORM_STOP = 2153236280U;
+        static const AkUniqueID SHIPCREAK = 2557820305U;
+        static const AkUniqueID SHIPSTORM_START = 2475524499U;
+        static const AkUniqueID SHIPSTORM_STOP = 4008905809U;
     } // namespace EVENTS
 
     namespace STATES
@@ -54,7 +60,10 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID GENERAL = 133642231U;
+        static const AkUniqueID LAND_STORM = 1595190680U;
+        static const AkUniqueID MAIN = 3161908922U;
+        static const AkUniqueID SEA_STORM = 3454633060U;
+        static const AkUniqueID SHIP = 284967655U;
     } // namespace BANKS
 
     namespace BUSSES
