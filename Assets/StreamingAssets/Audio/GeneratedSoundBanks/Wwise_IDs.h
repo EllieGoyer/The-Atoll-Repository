@@ -33,6 +33,7 @@ namespace AK
         static const AkUniqueID SHIPCREAK = 2557820305U;
         static const AkUniqueID SHIPSTORM_START = 2475524499U;
         static const AkUniqueID SHIPSTORM_STOP = 4008905809U;
+        static const AkUniqueID TREECUT = 1939418267U;
     } // namespace EVENTS
 
     namespace STATES
@@ -63,10 +64,7 @@ namespace AK
         static const AkUniqueID LAND_STORM = 1595190680U;
         static const AkUniqueID MAIN = 3161908922U;
         static const AkUniqueID SEA_STORM = 3454633060U;
-<<<<<<< HEAD
-=======
         static const AkUniqueID SHIP = 284967655U;
->>>>>>> wwis_i
     } // namespace BANKS
 
     namespace BUSSES

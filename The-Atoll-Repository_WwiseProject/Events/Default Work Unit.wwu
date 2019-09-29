@@ -302,6 +302,21 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Tree" ID="{00456997-0C9A-48DA-9653-D70F04A227B0}" ShortID="550475613">
+							<ChildrenList>
+								<Event Name="TreeCut" ID="{3399E1A9-D566-4CC6-9C9C-50F406CA0458}">
+									<ChildrenList>
+										<Action Name="" ID="{14E34E6E-20F9-41F4-9C3A-B308332CE818}" ShortID="1010006798">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Tree_Cut" ID="{15A2B245-A5EB-442F-AFFC-0544E51E75CB}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ship" ID="{8D7D1C76-0117-4A08-B190-854C938F121F}" ShortID="974174486">

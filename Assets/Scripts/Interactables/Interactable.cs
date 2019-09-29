@@ -22,6 +22,9 @@ public class Interactable : MonoBehaviour
     public UnityEvent OnDeactivated; // invoked when entering the "inactive" state
     public UnityEvent OnPerforming; // invoked when entering the "performing" state
 
+
+    public AK.Wwise.Event AxePickup;
+
     Collider InsidePlayer = null;
 
         public enum STATE {
@@ -144,6 +147,8 @@ public class Interactable : MonoBehaviour
     void TryActivate() {
         if( CurrentState == STATE.Active) {
             CurrentState = STATE.Performing;
+
+            AxePickup.Post(gameObject);
         }
     }
     public void Reset() {
