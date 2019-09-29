@@ -7,6 +7,8 @@ public class FakeTransition : MonoBehaviour
     [HideInInspector]
     protected CameraFollow cameraFollow;
     public WalkingMovement LandTarget;
+    public GameObject LandPrefab;
+    public Vector3 ShipDropoffOffset;
     public OceanMovement OceanTarget;
     public bool IsOceanMode;
     public string TransitionButton;
@@ -21,15 +23,23 @@ public class FakeTransition : MonoBehaviour
         UpdateControllers();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ToggleMode()
     {
-        if(Input.GetButtonDown(TransitionButton))
+        if(IsOceanMode)
         {
-            IsOceanMode = !IsOceanMode;
-
-            UpdateControllers();
+            LandTarget = Instantiate(LandPrefab).GetComponent<WalkingMovement>();
+            LandTarget.transform.position = OceanTarget.transform.rotation * ShipDropoffOffset + OceanTarget.transform.position;
+            LandTarget.gameObject.tag = "Player";
+            OceanTarget.gameObject.tag = "Untagged";
         }
+        else
+        {
+            LandTarget.gameObject.tag = "Untagged";
+            OceanTarget.gameObject.tag = "Player";
+            Destroy(LandTarget.gameObject);
+        }
+        IsOceanMode = !IsOceanMode;
+        UpdateControllers();
     }
 
     public void UpdateControllers()
