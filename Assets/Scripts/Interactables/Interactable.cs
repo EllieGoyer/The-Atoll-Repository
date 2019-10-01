@@ -14,6 +14,8 @@ public class Interactable : MonoBehaviour
     public UnityEvent OnDeactivated; // invoked when entering the "inactive" state
     public UnityEvent OnPerforming; // invoked when entering the "performing" state
 
+    [SerializeField]Collider InsidePlayer = null;
+    new Collider collider;
 
     public enum STATE {
         Disabled, // the interactable cannot be triggered
@@ -23,9 +25,8 @@ public class Interactable : MonoBehaviour
     }
 
     // the state machine for the interactable, ONLY change state through the property
-
-    [SerializeField] Collider InsidePlayer = null;
-    [SerializeField] STATE currentState;
+    [SerializeField]STATE currentState;
+    
     public STATE CurrentState {
         get { return currentState; }
         set {
@@ -69,6 +70,7 @@ public class Interactable : MonoBehaviour
     private void Awake() {
         CurrentState = STATE.Inactive;
         Checks = GetComponents<Check>();
+        collider = GetComponent<Collider>();
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -108,6 +110,12 @@ public class Interactable : MonoBehaviour
             InsidePlayer = null;
             if (CurrentState == STATE.Active) CurrentState = STATE.Inactive;
         }
+    }
+    public void ResetTrigger() {
+        if (CurrentState == STATE.Active) CurrentState = STATE.Inactive;
+        InsidePlayer = null;
+        collider.enabled = false;
+        collider.enabled = true;
     }
 
     /// <summary>

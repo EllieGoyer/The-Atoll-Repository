@@ -45,6 +45,8 @@ public class BoatTransitionHandler : MonoBehaviour {
 
         IsOceanMode = true;
         UpdateControllers();
+
+        OceanTarget.gameObject.GetComponent<InteractableTriggerResetter>().FixTouchedInteractables();
     }
 
     public void EnterLandMode(Transform LandSpawnPoint) {
@@ -58,6 +60,8 @@ public class BoatTransitionHandler : MonoBehaviour {
 
         IsOceanMode = false;
         UpdateControllers();
+
+        OceanTarget.gameObject.GetComponent<InteractableTriggerResetter>().FixTouchedInteractables();
     }
 
     public void UpdateControllers()
