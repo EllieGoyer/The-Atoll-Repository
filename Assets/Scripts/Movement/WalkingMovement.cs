@@ -8,6 +8,7 @@ public class WalkingMovement : Movement
 {
     [HideInInspector]
     protected CharacterController controller;
+    public Animator Animator;
     [HideInInspector]
     protected float forwardVelocity;
     [HideInInspector]
@@ -39,6 +40,16 @@ public class WalkingMovement : Movement
         Vector3 moveVector = forwardVelocity * transform.forward;
 
         controller.SimpleMove(moveVector);
+
+        
+        if(Mathf.Approximately(0, moveVector.magnitude))
+        {
+            Animator.SetBool("IsWalking", false);
+        }
+        else
+        {
+            Animator.SetBool("IsWalking", true);
+        }
     }
 
     public void ReloadCharacterController()
