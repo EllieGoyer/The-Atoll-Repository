@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 381592803668180305}
   - component: {fileID: 381592803668180304}
   - component: {fileID: 381592803668180307}
+  - component: {fileID: 240852968635078204}
   m_Layer: 0
   m_Name: Sailor
   m_TagString: Player
@@ -73,13 +74,13 @@ MonoBehaviour:
   ForwardAxisInputName: Vertical
   SideAxisInputName: Horizontal
   Animator: {fileID: 3367293587033412718}
---- !u!54 &381592805394432451
+--- !u!54 &240852968635078204
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8532735473763846919}
+  m_GameObject: {fileID: 381592803668180306}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0

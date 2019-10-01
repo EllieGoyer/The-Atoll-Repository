@@ -14,8 +14,10 @@ GameObject:
   - component: {fileID: 73994887632731750}
   - component: {fileID: 2645652512422044639}
   - component: {fileID: 5209462321340477558}
+  - component: {fileID: 3963246671588307263}
+  - component: {fileID: 567340977815790769}
   m_Layer: 0
-  m_Name: atoll_deciduousTree_01
+  m_Name: ChoppableTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,6 +153,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3963246671588307263}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2645652512422044639
@@ -183,6 +196,45 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: af6b5e41047ad674a8bbdbd367aab8a7, type: 2}
   ModificationType: 2
   amount: 1
+--- !u!114 &3963246671588307263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3553970362272207372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38cbd7b6f8c5f1b4f9384f5ac44c70df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ceeeaf88f56c73440aae38b740a3598d,
+      type: 2}
+--- !u!114 &567340977815790769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3553970362272207372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25787e094866428419d7d9abf8ab7099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &6660226137153227687
 GameObject:
   m_ObjectHideFlags: 0
