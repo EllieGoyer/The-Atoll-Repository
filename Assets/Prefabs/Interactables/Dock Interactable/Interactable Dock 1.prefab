@@ -472,8 +472,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4223127546984524531}
-        m_MethodName: DoTrigger
+      - m_Target: {fileID: 0}
+        m_MethodName: ToggleMode
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -486,7 +486,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   InsidePlayer: {fileID: 0}
-  currentState: 0
+  currentState: 1
 --- !u!114 &8442940008663194715
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 381592803668180304}
   - component: {fileID: 381592803668180307}
   - component: {fileID: 240852968635078204}
+  - component: {fileID: 6256446599024189404}
   m_Layer: 0
   m_Name: Sailor
   m_TagString: Player
@@ -90,6 +91,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6256446599024189404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381592803668180306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002a3d06445a80545bf06648d5726ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &381592805394432450
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -120,16 +133,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: f3f4b73ee8b5c064a9f2e845cd4d8505, type: 2}
-    - target: {fileID: -6057140222963153312, guid: c08c95d96bd8b514589b21d6b20ffde9,
-        type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: c08c95d96bd8b514589b21d6b20ffde9,
-        type: 3}
-      propertyPath: m_UpdateMode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: c08c95d96bd8b514589b21d6b20ffde9,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -8,13 +8,16 @@ public class Interactable : MonoBehaviour
 {
     [HideInInspector] public Check[] Checks;
 
+    [HideInInspector] public bool AutoReset = false;
+    [HideInInspector] public float ResetCooldownTime = 0;
+
     public UnityEvent OnEnabled; // invoked when leaving the "disabled" state
     public UnityEvent OnDisabled; // invoked when entering the "disabled" state
     public UnityEvent OnActivated; // invoked when entering the "activate" state
     public UnityEvent OnDeactivated; // invoked when entering the "inactive" state
     public UnityEvent OnPerforming; // invoked when entering the "performing" state
 
-    [SerializeField]Collider InsidePlayer = null;
+    Collider InsidePlayer = null;
     new Collider collider;
 
     public enum STATE {
@@ -25,7 +28,7 @@ public class Interactable : MonoBehaviour
     }
 
     // the state machine for the interactable, ONLY change state through the property
-    [SerializeField]STATE currentState;
+    STATE currentState;
     
     public STATE CurrentState {
         get { return currentState; }
@@ -68,10 +71,15 @@ public class Interactable : MonoBehaviour
     // DEFAULT UNITY METHODS
 
     private void Awake() {
-        CurrentState = STATE.Inactive;
         Checks = GetComponents<Check>();
         collider = GetComponent<Collider>();
+        currentState = STATE.Inactive;
+        if(AutoReset) {
+            OnPerforming.AddListener(delegate { ResetDelayed(ResetCooldownTime); });
+        }
     }
+
+
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
@@ -148,6 +156,19 @@ public class Interactable : MonoBehaviour
         if( CurrentState == STATE.Active) {
             CurrentState = STATE.Performing;
         }
+    }
+
+    public void ResetDelayed(float delayTime) {
+        StartCoroutine(ResetAfterDelay(delayTime));
+    }
+    IEnumerator ResetAfterDelay(float delayTime) {
+        if(delayTime > 0) {
+            yield return new WaitForSeconds(delayTime);
+        }
+        else {
+            yield return new WaitForEndOfFrame();
+        }
+        Reset();
     }
     public void Reset() {
         CurrentState = STATE.Inactive;
