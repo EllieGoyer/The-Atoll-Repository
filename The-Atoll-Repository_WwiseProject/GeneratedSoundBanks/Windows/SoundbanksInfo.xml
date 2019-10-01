@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -17,12 +17,14 @@
 			<Path>Ship.bnk</Path>
 			<IncludedEvents>
 				<Event Id="3825949625" Name="DockLanding" ObjectPath="\Events\Default Work Unit\Ship\Landing\DockLanding" DurationType="OneShot" DurationMin="0.624000" DurationMax="0.624000"/>
-				<Event Id="2557820305" Name="ShipCreak" ObjectPath="\Events\Default Work Unit\Ship\Other\ShipCreak" DurationType="OneShot" DurationMin="65.493332" DurationMax="65.493332"/>
+				<Event Id="2557820305" Name="ShipCreak" ObjectPath="\Events\Default Work Unit\Ship\Other\ShipCreak" MaxAttenuation="100.000000" DurationType="Infinite"/>
+				<Event Id="2475524499" Name="ShipStorm_Start" ObjectPath="\Events\Default Work Unit\Storm\ShipStorm\ShipStorm_Start" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4008905809" Name="ShipStorm_Stop" ObjectPath="\Events\Default Work Unit\Storm\ShipStorm\ShipStorm_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="270062226" Language="SFX">
 					<ShortName>Atoll_Ship_Creak.wav</ShortName>
-					<Path>SFX\Atoll_Ship_Creak_10C4C929.wem</Path>
+					<Path>SFX\Atoll_Ship_Creak_D79FB2B7.wem</Path>
 				</File>
 				<File Id="756840420" Language="SFX">
 					<ShortName>Atoll_Ship_Landing_Dock.wav</ShortName>

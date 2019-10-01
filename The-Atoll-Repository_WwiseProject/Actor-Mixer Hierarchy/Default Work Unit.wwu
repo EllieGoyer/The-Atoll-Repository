@@ -1560,7 +1560,13 @@
 						<Folder Name="Other_Ship" ID="{C84DE6CE-6076-4824-8936-EC4B9B7BAAF3}" ShortID="541820961">
 							<ChildrenList>
 								<Sound Name="Atoll_Ship_Creak" ID="{12A6AE7E-1BFA-4DBA-AD24-46C375CA22EA}" ShortID="135869741">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="ShipAttenuation" ID="{69564466-2918-4520-BA5A-C7056037EBCF}" WorkUnitID="{50340E82-D163-4027-BB2D-BD73FD5AEE4D}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
 										</Reference>
