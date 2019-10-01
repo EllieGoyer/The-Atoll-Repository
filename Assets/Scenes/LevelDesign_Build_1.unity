@@ -17675,7 +17675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Storm: StormLevel
-  valueSlider: 49.6
+  valueSlider: 0
 --- !u!114 &645033484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17696,7 +17696,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 7233e4e84e22832409e2ad20c3bd4069,
+    WwiseObjectReference: {fileID: 11400000, guid: d0f686ad1e30a384981a5dee60ddd007,
       type: 2}
   useCallbacks: 0
   Callbacks: []
@@ -51198,6 +51198,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5944605474794488961, guid: cfe1145261606bc48aafb1206afa4b96,
+        type: 3}
+      propertyPath: Tree.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 7f8179f562c401d488243ece2156f797,
+        type: 2}
+    - target: {fileID: 5944605474794488961, guid: cfe1145261606bc48aafb1206afa4b96,
+        type: 3}
+      propertyPath: AxePickup.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: be32037a130e7d34dafc04724b45f830,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfe1145261606bc48aafb1206afa4b96, type: 3}
 --- !u!1 &1751896537

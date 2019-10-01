@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{CCAC6D5F-B7FE-43A0-9998-453B1D36A253}" SchemaVersion="94">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{CCAC6D5F-B7FE-43A0-9998-453B1D36A253}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{CCAC6D5F-B7FE-43A0-9998-453B1D36A253}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Atoll_Soundcast_Main" ID="{16690A00-2291-4E4B-A4C1-75392C34B795}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Sea_Oneshot" ID="{AF84820C-32B3-497F-B6FC-F2E83AA6C638}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Land_Storm_Levels" ID="{E2012B81-59EF-47F7-A495-14B910F18E2B}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="AnchorDeploy" ID="{54A0411A-A684-4533-AA1F-5FA91E2F2A33}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="LandStorm_Start" ID="{717F15D5-17AE-4F05-870E-C999436DB5A7}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="AnchorHit" ID="{15921C24-84E5-43E0-9797-C89307E0C33B}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="TreeCut" ID="{3399E1A9-D566-4CC6-9C9C-50F406CA0458}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="StormLevel" ID="{D49BCCF2-9952-44AB-B0EE-779C08825144}"/>
+							<Value>13</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>
