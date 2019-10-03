@@ -61,7 +61,7 @@ public class CameraFollow : MonoBehaviour
 
         if(Input.GetButton(DragInputName))
         {
-            float verticalDrag = Input.GetAxis(DragVerticalAxisName);
+            float verticalDrag = Input.GetAxis(DragVerticalAxisName) * -1;
             float horizontalDrag = Input.GetAxis(DragHorizontalAxisName);
 
             Vector3 polarDirectionVector = new Vector3(horizontalDrag, verticalDrag, 0);
