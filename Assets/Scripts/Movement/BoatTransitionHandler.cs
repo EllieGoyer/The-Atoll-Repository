@@ -20,8 +20,10 @@ public class BoatTransitionHandler : MonoBehaviour {
     public string TransitionButton;
     public float OceanDistance;
     public float OceanAngle;
+    public float OceanHeightOffset;
     public float LandDistance;
     public float LandAngle;
+    public float LandHeightOffset;
 
     void Awake()
     {
@@ -71,6 +73,7 @@ public class BoatTransitionHandler : MonoBehaviour {
             cameraFollow.Target = OceanTarget.gameObject.GetComponent<CharacterController>();
             cameraFollow.FollowDistance = OceanDistance;
             cameraFollow.FollowElevation = OceanAngle;
+            cameraFollow.FollowHeightOffset = OceanHeightOffset;
             OceanTarget.enabled = true;
             LandTarget.enabled = false;
         }
@@ -79,6 +82,7 @@ public class BoatTransitionHandler : MonoBehaviour {
             cameraFollow.Target = LandTarget.gameObject.GetComponent<CharacterController>();
             cameraFollow.FollowDistance = LandDistance;
             cameraFollow.FollowElevation = LandAngle;
+            cameraFollow.FollowHeightOffset = LandHeightOffset;
             OceanTarget.enabled = false;
             LandTarget.enabled = true;
         }

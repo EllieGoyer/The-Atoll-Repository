@@ -285,7 +285,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  currentState: 1
 --- !u!114 &39681370175962453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,6 +529,7 @@ MonoBehaviour:
   TurningRate: 45
   ForwardAxisInputName: Vertical
   SideAxisInputName: Horizontal
+  CameraFocusPoint: {fileID: 0}
   BuoyancyStrength: 20.5
   GravityStrength: 9.8
   MaxDisplacement: 1

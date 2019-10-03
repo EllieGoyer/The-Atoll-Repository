@@ -16,8 +16,18 @@ public class CameraFollow : MonoBehaviour
     public float CameraAcceleration;
     public float CameraDeceleration;
 
+    /// <summary>
+    /// how far from the target to follow from
+    /// </summary>
     public float FollowDistance;
+    /// <summary>
+    /// what angle should the camera prefer
+    /// </summary>
     public float FollowElevation;
+    /// <summary>
+    /// how far above the bottom of our character controller should the camera look?
+    /// </summary>
+    public float FollowHeightOffset;
 
     /// <summary>
     /// Maximum snap of the camera in terms of degrees per second.
@@ -45,7 +55,7 @@ public class CameraFollow : MonoBehaviour
 
     void Update()
     {
-        Vector3 targetPosition = Target.gameObject.transform.position;
+        Vector3 targetPosition = Target.transform.position + Vector3.up * FollowHeightOffset;
 
         
 
