@@ -36,6 +36,9 @@ public class NPC_D : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.E))
         {
+            sg.AnswerQuestion(0);
+            Itext = sg.current.text;
+
             if (!startCou)
             {
                 StartCoroutine("BuildText");
@@ -46,8 +49,6 @@ public class NPC_D : MonoBehaviour
             }
 
             startCou = !startCou;
-            sg.AnswerQuestion(0);
-            Itext = sg.current.text;
 
         }
     }
