@@ -8,28 +8,30 @@ namespace Dialogue {
     public class QuestionNode : TextNode {
         static int MAX_ANSWERS = 3;
 
-        [Output(dynamicPortList = true)] public BranchNode[] Branches;
-        private BranchNode[] ActiveBranches;
+        [Output(dynamicPortList = true)] public QuestionBranchNode[] Branches;
+        private QuestionBranchNode[] ActiveBranches;
         private int activeBranchCount;
 
-        public override void OnEnter() {
-            base.OnEnter();
-            
+        public override DialogueFlowNode OnEnter() {
+            DialogueFlowNode d = base.OnEnter();
+
             SetupBranches();
 
             DisplayActiveBranches();
+
+            return d;
         }
 
         /// <summary>
         /// create our array of possible answers
         /// </summary>
         public void SetupBranches() {
-            ActiveBranches = new BranchNode[MAX_ANSWERS];
+            ActiveBranches = new QuestionBranchNode[MAX_ANSWERS];
             activeBranchCount = 0;
 
             // for each possible branch...
-            foreach(BranchNode branch in Branches) {
-
+            for(int n = 0; n < Branches.Length; n++) {
+                QuestionBranchNode branch = GetOutputPort("Branches " + n).Connection.node as QuestionBranchNode;
                 // if our checks pass
                 if (branch.CanTakeBranch()) {
 
@@ -52,8 +54,14 @@ namespace Dialogue {
 
         public void DisplayActiveBranches() {
             for(int n = 0; n < activeBranchCount; n++) {
-                Debug.Log(n + ": " + ActiveBranches[n].promptText);
+                Debug.Log((n + 1) + ": " + ActiveBranches[n].promptText);
             }
+        }
+
+        public override DialogueFlowNode Answer(int answerNumber) {
+            if (answerNumber >= activeBranchCount) return null;
+
+            return ActiveBranches[answerNumber];
         }
     }
 }

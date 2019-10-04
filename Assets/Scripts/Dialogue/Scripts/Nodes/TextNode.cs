@@ -8,13 +8,13 @@ namespace Dialogue {
         [TextArea] public string text;
         public float displayRate = 0.1f;
 
-        public override void OnEnter() {
+        public override DialogueFlowNode OnEnter() {
             DisplayText();
-            base.OnEnter();
+            return base.OnEnter();
         }
 
-        public void DisplayText() {
-            Debug.Log("TEXTNODE: " + text);
+        public virtual void DisplayText() {
+            Debug.Log("NPC: " + text);
         }
     }
 }

@@ -6,11 +6,18 @@ using XNode;
 
 namespace Dialogue {
     [CreateAssetMenu(menuName = "Dialogue/Graph", order = 0)]
-    public class DialogueController : NodeGraph {
+    public class DialogueGraph : NodeGraph {
         [HideInInspector]
         public DialogueFlowNode current;
+        public DialogueController dialogueController;
 
-        public void Initialize() {
+        public void Initialize(DialogueController _dialogueController) {
+            dialogueController = _dialogueController;
+
+            Reset();
+        }
+
+        public void Reset() {
             // Find our start node
             StartNode startNode = nodes.Find(x => x is StartNode) as StartNode;
 
@@ -19,7 +26,11 @@ namespace Dialogue {
         }
 
         public void PerformCurrent() {
-            current.OnEnter();
+            DialogueFlowNode nextNode = current.OnEnter();
+            if(nextNode != null) {
+                current = nextNode;
+                PerformCurrent();
+            }
         }
 
         public void TryAdvance() {

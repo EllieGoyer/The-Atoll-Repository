@@ -8,10 +8,14 @@ namespace Dialogue {
 
         [Input] public DialogueFlowNode previousNode;
 
+        //DialogueGraph dGraph = graph as DialogueGraph;
+
         /// <summary>
         /// called when this node is set as the new active node
         /// </summary>
-        public virtual void OnEnter() { }
+        public virtual DialogueFlowNode OnEnter() {
+            return null;
+        }
 
         /// <summary>
         /// returns a dialogueflownode to go to when the conversation should advance,
@@ -27,6 +31,10 @@ namespace Dialogue {
         /// </summary>
         /// <returns></returns>
         public virtual DialogueFlowNode Answer(int answerNumber) {
+            return null;
+        }
+
+        public override object GetValue(NodePort port) {
             return null;
         }
     }

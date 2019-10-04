@@ -9,7 +9,7 @@ namespace Dialogue {
         [Output] public DialogueFlowNode nextNode;
 
         public override DialogueFlowNode Advance() {
-            return nextNode;
+            return GetOutputPort("nextNode").Connection.node as DialogueFlowNode;
         }
     }
 }

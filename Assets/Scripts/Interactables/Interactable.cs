@@ -172,6 +172,7 @@ public class Interactable : MonoBehaviour
     }
     public void Reset() {
         CurrentState = STATE.Inactive;
+        ResetTrigger();
     }
 
     /// <summary>
