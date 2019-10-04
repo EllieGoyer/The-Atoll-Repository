@@ -1,8 +1,10 @@
 ﻿Shader "TranslucentWater" {
 	Properties
 	{
-		_Color1("Color 1", Color) = (0,0,0,1)
-		_Color2("Color 2 ", Color) = (1,1,1,1)
+		_WaterColor("Water Color", Color) = (0,0,0,1)
+		_WaterDepth("Water Depth", Range(0,1)) = 0.75
+		_FoamColor("Foam Color", Color) = (1,1,1,1)
+		_FoamDepth("Foam Depth", Range(0,1)) = 0.05
 	}
 
 		SubShader{
@@ -12,20 +14,21 @@
 			ZWrite Off
 			Blend SrcAlpha OneMinusSrcAlpha
 
+			GrabPass { "_WaterBackground" }
+
 			Pass {
 				CGPROGRAM
 				#pragma vertex vert
 				#pragma fragment frag
 				#include "UnityCG.cginc"
 
-
-
 				float4 _CameraDepthTexture_TexelSize;
-				sampler2D _CameraDepthTexture;
+				sampler2D _CameraDepthTexture, _WaterBackground;
 
-				float4 _Color1;
-				float4 _Color2;
-
+				float4 _WaterColor;
+				float4 _FoamColor;
+				float _WaterDepth;
+				float _FoamDepth;
 
 				struct appdata {
 					float4 vertex : POSITION;
@@ -35,18 +38,15 @@
 					float4 screen_pos : TEXCOORD0;
 					float4 eye_pos : TEXCOORD1;
 					float4 vertex : SV_POSITION;
+					float2 depth : TEXCOORD2;
 				};
-
-
-
 
 				v2f vert(appdata v) {
 					v2f o;
 					o.vertex = UnityObjectToClipPos(v.vertex);
-
+					UNITY_TRANSFER_DEPTH(o.depth);
 					o.eye_pos = mul(UNITY_MATRIX_MV, v.vertex);
 					o.screen_pos = ComputeScreenPos(o.vertex);
-
 					return o;
 				}
 
@@ -60,14 +60,20 @@
 					}
 					#endif
 
-					float surface_depth = -i.eye_pos.z;
-					float bg_depth = LinearEyeDepth(tex2D(_CameraDepthTexture, screen_uv));
-					float fog_depth = bg_depth - surface_depth;
+					//	Depth Coloring
+					float clip_depth = UNITY_Z_0_FAR_FROM_CLIPSPACE(i.screen_pos.z);
+					float back_depth = LinearEyeDepth(SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, screen_uv));
+					float fade_depth = saturate((back_depth - clip_depth) / (_WaterDepth * 100));
+					float4 col = lerp(tex2D(_WaterBackground, screen_uv), _WaterColor, fade_depth);
 
-					fog_depth = ceil(fog_depth - 0.5);
-					fog_depth = saturate(fog_depth);
-					float4 real_color = lerp(_Color2, _Color1, fog_depth);
-					return real_color;
+					//	Foam Coloring
+					float foam_depth = saturate(fade_depth - (1 - _FoamDepth));
+					if (fade_depth < _FoamDepth)
+					{
+						col = _FoamColor;
+					}
+
+					return col;
 				}
 				ENDCG
 			}
