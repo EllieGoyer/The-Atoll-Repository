@@ -6,7 +6,6 @@ using XNode;
 namespace Dialogue {
     [NodeTint("FFFFFF")]
     public class EndNode : DialogueFlowNode {
-        [Input] public DialogueFlowNode input;
 
         public override DialogueFlowNode OnEnter() {
             DialogueGraph dgraph = graph as DialogueGraph;
