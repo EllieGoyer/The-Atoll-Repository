@@ -34,6 +34,8 @@ namespace Dialogue {
         }
 
         public override Color GetTint() {
+            return Color.white;
+            /*
             Chat node = target as Chat;
             if (node.character == null) return base.GetTint();
             else {
@@ -41,6 +43,7 @@ namespace Dialogue {
                 col.a = 1;
                 return col;
             }
+            */
         }
     }
 }
