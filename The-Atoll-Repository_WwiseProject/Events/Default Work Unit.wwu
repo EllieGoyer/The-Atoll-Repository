@@ -349,8 +349,34 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="ShipEnter" ID="{CFE05D11-253F-4586-B234-9172364C1906}">
+									<ChildrenList>
+										<Action Name="" ID="{A4CCEFF7-A413-48CD-A2A4-EBFB9A57844D}" ShortID="1042651099">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Enter_Ship" ID="{C5EF47FA-BE56-4436-9113-E906062601AE}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="NPC" ID="{D058BD60-767E-4332-9D09-AA56C9429EDD}" ShortID="942187130">
+					<ChildrenList>
+						<Event Name="Dialogue" ID="{4C3EC910-D0CA-4EE7-A149-6D1755AD2B76}">
+							<ChildrenList>
+								<Action Name="" ID="{DF8E0CA2-0316-4C0B-AB00-D78671552EA1}" ShortID="630414557">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Alpha_Dialogue" ID="{91DF5EA4-6F9E-4D6B-8842-8505AEB9781B}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
