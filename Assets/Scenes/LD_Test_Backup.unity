@@ -13379,8 +13379,8 @@ PrefabInstance:
       propertyPath: OnPerforming.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: [{fileID: 8442940008663194715, guid: bd8ed6bbe0fb10d42b9ab7a519239cd0,
-        type: 3}]
+    m_RemovedComponents:
+    - {fileID: 8442940008663194715, guid: bd8ed6bbe0fb10d42b9ab7a519239cd0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bd8ed6bbe0fb10d42b9ab7a519239cd0, type: 3}
 --- !u!1001 &461488090
 PrefabInstance:
@@ -29679,8 +29679,8 @@ PrefabInstance:
       propertyPath: OnPerforming.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: [{fileID: 3630373680005908499, guid: 9f6030b07862b9643afa88c15d602446,
-        type: 3}]
+    m_RemovedComponents:
+    - {fileID: 3630373680005908499, guid: 9f6030b07862b9643afa88c15d602446, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9f6030b07862b9643afa88c15d602446, type: 3}
 --- !u!1001 &1018120772
 PrefabInstance:
@@ -31261,9 +31261,9 @@ PrefabInstance:
       propertyPath: OnPerforming.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: [{fileID: 7377662168263701921, guid: bd8ed6bbe0fb10d42b9ab7a519239cd0,
-        type: 3}, {fileID: 8442940008663194715, guid: bd8ed6bbe0fb10d42b9ab7a519239cd0,
-        type: 3}]
+    m_RemovedComponents:
+    - {fileID: 7377662168263701921, guid: bd8ed6bbe0fb10d42b9ab7a519239cd0, type: 3}
+    - {fileID: 8442940008663194715, guid: bd8ed6bbe0fb10d42b9ab7a519239cd0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bd8ed6bbe0fb10d42b9ab7a519239cd0, type: 3}
 --- !u!1001 &1063965154
 PrefabInstance:
@@ -35194,6 +35194,7 @@ GameObject:
   - component: {fileID: 1180349216}
   - component: {fileID: 1180349218}
   - component: {fileID: 1180349217}
+  - component: {fileID: 1180349219}
   m_Layer: 0
   m_Name: NPC Interactable
   m_TagString: Untagged
@@ -35287,6 +35288,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1180349219}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!65 &1180349218
@@ -35302,6 +35314,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.2273717, y: 5.247631, z: 5.182513}
   m_Center: {x: 0.11368418, y: -1.487215, z: 0.59125733}
+--- !u!114 &1180349219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180349215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38cbd7b6f8c5f1b4f9384f5ac44c70df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b385416f71ce29246bf92eae9f6bbad7,
+      type: 2}
 --- !u!4 &1187802571 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4449748993812666257, guid: 4e63399382e058e4e94a006eee5f4674,
@@ -45966,8 +45995,8 @@ PrefabInstance:
       propertyPath: OnPerforming.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: [{fileID: 8442940008663194715, guid: bd8ed6bbe0fb10d42b9ab7a519239cd0,
-        type: 3}]
+    m_RemovedComponents:
+    - {fileID: 8442940008663194715, guid: bd8ed6bbe0fb10d42b9ab7a519239cd0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bd8ed6bbe0fb10d42b9ab7a519239cd0, type: 3}
 --- !u!1001 &1501870995
 PrefabInstance:
@@ -58017,8 +58046,8 @@ PrefabInstance:
       propertyPath: OnPerforming.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: [{fileID: 8442940008663194715, guid: bd8ed6bbe0fb10d42b9ab7a519239cd0,
-        type: 3}]
+    m_RemovedComponents:
+    - {fileID: 8442940008663194715, guid: bd8ed6bbe0fb10d42b9ab7a519239cd0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bd8ed6bbe0fb10d42b9ab7a519239cd0, type: 3}
 --- !u!1001 &1944615053
 PrefabInstance:
