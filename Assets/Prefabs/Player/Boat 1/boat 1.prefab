@@ -164,7 +164,10 @@ GameObject:
   - component: {fileID: 6155248029429576985}
   - component: {fileID: 7034080927656558998}
   - component: {fileID: 39681370175962453}
-  - component: {fileID: 3630373680005908499}
+  - component: {fileID: 440449823612286945}
+  - component: {fileID: 6902785336282580119}
+  - component: {fileID: 6166524277895763333}
+  - component: {fileID: 7632896703608967618}
   m_Layer: 0
   m_Name: Boat Interactable
   m_TagString: Untagged
@@ -213,6 +216,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Checks: []
+  AutoReset: 1
+  ResetCooldownTime: 0.01
   OnEnabled:
     m_PersistentCalls:
       m_Calls: []
@@ -258,8 +263,19 @@ MonoBehaviour:
   OnPerforming:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3630373680005908499}
+      - m_Target: {fileID: 440449823612286945}
         m_MethodName: DoTrigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6902785336282580119}
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -283,9 +299,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bda6eca06629f84eb088137851d95b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fakeTransition: {fileID: 0}
   checkType: 1
---- !u!114 &3630373680005908499
+--- !u!114 &440449823612286945
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -294,26 +309,67 @@ MonoBehaviour:
   m_GameObject: {fileID: 6633866828282480852}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28c8844ce26077545a81da2853c30cda, type: 3}
+  m_Script: {fileID: 11500000, guid: a2214aa4be8b3894dbfd08853a228964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Delay: 1
-  OnTrigger:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7034080927656558998}
-        m_MethodName: Reset
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  Delay: 0
+  TransitionType: 0
+  LandSpawnPoint: {fileID: 0}
+--- !u!114 &6902785336282580119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6633866828282480852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38cbd7b6f8c5f1b4f9384f5ac44c70df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4f29ac1b5ef60b04cb652584e67292e4,
+      type: 2}
+--- !u!114 &6166524277895763333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6633866828282480852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25787e094866428419d7d9abf8ab7099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!54 &7632896703608967618
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6633866828282480852}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6933825526037972340
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,9 +491,10 @@ GameObject:
   - component: {fileID: 5308302730479285125}
   - component: {fileID: 923332462627049649}
   - component: {fileID: 923332462627049655}
+  - component: {fileID: 832547509666276251}
   m_Layer: 0
   m_Name: boat 1
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -486,7 +543,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9219353242899759510}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4c782c22cad04b64eb652926a7f5b186, type: 3}
   m_Name: 
@@ -504,6 +561,18 @@ MonoBehaviour:
   GravityStrength: 9.8
   MaxDisplacement: 1
   WaveRenderer: {fileID: 0}
+--- !u!114 &832547509666276251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9219353242899759510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002a3d06445a80545bf06648d5726ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1219770040122234141
 PrefabInstance:
   m_ObjectHideFlags: 0
