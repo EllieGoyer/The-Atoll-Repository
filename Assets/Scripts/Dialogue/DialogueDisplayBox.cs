@@ -12,26 +12,35 @@ public class DialogueDisplayBox : MonoBehaviour
     string text;
     float characterInsertDelay;
 
-    bool isBuildingText = false;
+    public bool isBuildingText = false;
     
     public void DisplayText(string _text, float _characterInsertDelay) {
         text = _text;
         characterInsertDelay = _characterInsertDelay;
 
-        StartCoroutine(BuildText());
+        if(!isBuildingText)
+        {
+            StartCoroutine("BuildText");
+
+        }
+        else
+        {
+            StopCoroutine("BuildText");
+        }
+        isBuildingText = !isBuildingText;
+
+
     }
 
     public void ForceCompleteText() {
-        if (!isBuildingText) return;
-
-        StopCoroutine(BuildText());
+        StopCoroutine("BuildText");
         isBuildingText = false;
         textComponent.text = text;
     }
 
     private IEnumerator BuildText()
     {
-        isBuildingText = true;
+     //   isBuildingText = true;
         textComponent.text = "";
         for (int i = 0; i < text.Length; i++)
         {
@@ -40,6 +49,6 @@ public class DialogueDisplayBox : MonoBehaviour
             yield return new WaitForSecondsRealtime(characterInsertDelay);
         }
         OnDisplayComplete.Invoke();
-        isBuildingText = false;
+       /// isBuildingText = false;
     }
 }
