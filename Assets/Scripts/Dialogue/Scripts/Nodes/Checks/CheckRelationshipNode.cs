@@ -14,10 +14,10 @@ namespace Dialogue {
             int? amount = Inventory.Instance.CheckRelationship(relationship);
 
             if (relationshipCheckType == Type.Unlocked) {
-                return (amount == null);
+                return (amount != null);
             }
             else if (relationshipCheckType == Type.NotUnlocked) {
-                return (amount != null);
+                return (amount == null);
             }
             if (relationshipCheckType == Type.GreaterThanOrEqualTo) {
                 return (amount != null && amount >= CheckAmount);

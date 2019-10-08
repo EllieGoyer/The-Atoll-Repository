@@ -16,7 +16,9 @@ namespace Dialogue {
 
             for (int n = 0; n < Checks.Length; n++) {
                 CheckNode check = GetInputPort("Checks " + n).Connection.node as CheckNode;
-                if (!check.Perform()) return GetOutputPort("FailPath").Connection.node as DialogueFlowNode;
+                if (!check.Perform()) {
+                    return GetOutputPort("FailPath").Connection.node as DialogueFlowNode;
+                }
             }
 
             return GetOutputPort("PassPath").Connection.node as DialogueFlowNode;
