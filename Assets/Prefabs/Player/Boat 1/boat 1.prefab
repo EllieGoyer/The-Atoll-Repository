@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2497563564108599583}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: transform3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2902460776038553686}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5085734992801036214}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: transform2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5354949435321546780}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7358459469849617268}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: transform1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 6902785336282580119}
   - component: {fileID: 6166524277895763333}
   - component: {fileID: 7632896703608967618}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Boat Interactable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6102758173790588477}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: boat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 7791486888432431602}
   - component: {fileID: 7805780921171896053}
   - component: {fileID: 8151268272126065063}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pCube3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -492,7 +492,7 @@ GameObject:
   - component: {fileID: 923332462627049649}
   - component: {fileID: 923332462627049655}
   - component: {fileID: 832547509666276251}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: boat 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -584,6 +584,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Debug Interactable Visualizer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2459733140224072237, guid: 2dfe244af4ed1f042a8076e5f4af9360,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2459733140224072234, guid: 2dfe244af4ed1f042a8076e5f4af9360,
         type: 3}
