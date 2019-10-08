@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 381592803668180307}
   - component: {fileID: 240852968635078204}
   - component: {fileID: 6256446599024189404}
+  - component: {fileID: 6578609200792138663}
   m_Layer: 0
   m_Name: Sailor
   m_TagString: Player
@@ -74,7 +75,6 @@ MonoBehaviour:
   TurningRate: 90
   ForwardAxisInputName: Vertical
   SideAxisInputName: Horizontal
-  CameraFocusPoint: {fileID: 0}
   Animator: {fileID: 3367293587033412718}
 --- !u!54 &240852968635078204
 Rigidbody:
@@ -104,6 +104,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002a3d06445a80545bf06648d5726ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6578609200792138663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381592803668180306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59832d4e604200143b7c19f481b7c315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogueBoxPositionOffset: {x: 0, y: 2.5, z: 0}
+  DialogueDisplayBoxPrefab: {fileID: 4174129742870688660, guid: c6d9bc48bc340db499c858c0990a68bf,
+    type: 3}
 --- !u!65 &381592805394432450
 BoxCollider:
   m_ObjectHideFlags: 0
