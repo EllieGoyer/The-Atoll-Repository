@@ -99,6 +99,7 @@ MonoBehaviour:
   CameraDeceleration: 20
   FollowDistance: 12
   FollowElevation: 37.5
+  FollowHeightOffset: 0
   SnapSpeed: 180
   DragInputName: Camera Drag
   DragVerticalAxisName: Mouse Y
@@ -123,9 +124,11 @@ MonoBehaviour:
   IsOceanMode: 0
   TransitionButton: 
   OceanDistance: 40
-  OceanAngle: 37.5
+  OceanAngle: 20
+  OceanHeightOffset: 4
   LandDistance: 12
-  LandAngle: 45
+  LandAngle: 20
+  LandHeightOffset: 4
 --- !u!114 &6249562646937895974
 MonoBehaviour:
   m_ObjectHideFlags: 0

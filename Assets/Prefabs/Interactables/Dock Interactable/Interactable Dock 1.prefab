@@ -363,6 +363,7 @@ GameObject:
   - component: {fileID: 7845854780846802746}
   - component: {fileID: 8442940008663194715}
   - component: {fileID: 7377662168263701921}
+  - component: {fileID: 4223127546984524531}
   m_Layer: 0
   m_Name: Interactable Dock 1
   m_TagString: Untagged
@@ -400,8 +401,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 16, y: 8, z: 16}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 16, y: 61.18754, z: 16}
+  m_Center: {x: 0, y: -26.59377, z: 0}
 --- !u!114 &7845854780846802746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -471,8 +472,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: ToggleMode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  InsidePlayer: {fileID: 0}
+  currentState: 1
 --- !u!114 &8442940008663194715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,7 +499,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bda6eca06629f84eb088137851d95b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fakeTransition: {fileID: 0}
   checkType: 0
 --- !u!114 &7377662168263701921
 MonoBehaviour:
@@ -499,7 +512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28c8844ce26077545a81da2853c30cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Delay: 1
+  Delay: 0.01
   OnTrigger:
     m_PersistentCalls:
       m_Calls:
@@ -516,6 +529,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &4223127546984524531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3537815280694092427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2214aa4be8b3894dbfd08853a228964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Delay: 0
+  TransitionType: 1
+  LandSpawnPoint: {fileID: 3629866406005292505}
 --- !u!1 &4470647172219210816
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,18 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public enum TOOL {
-    none,
-    shovel,
-    fishingRod,
-    axe,
-    net
-}
-
 [RequireComponent(typeof(Collider))]
 public class Interactable : MonoBehaviour 
 {
     [HideInInspector] public Check[] Checks;
+
+    [HideInInspector] public bool AutoReset = false;
+    [HideInInspector] public float ResetCooldownTime = 0;
 
     public UnityEvent OnEnabled; // invoked when leaving the "disabled" state
     public UnityEvent OnDisabled; // invoked when entering the "disabled" state
@@ -23,15 +18,18 @@ public class Interactable : MonoBehaviour
     public UnityEvent OnPerforming; // invoked when entering the "performing" state
 
     Collider InsidePlayer = null;
+    new Collider collider;
 
-        public enum STATE {
+    public enum STATE {
         Disabled, // the interactable cannot be triggered
         Inactive, // the interactable is invisible
         Active, // the interactable is visible
         Performing, // the interactable is being used
     }
+
     // the state machine for the interactable, ONLY change state through the property
     STATE currentState;
+    
     public STATE CurrentState {
         get { return currentState; }
         set {
@@ -73,9 +71,15 @@ public class Interactable : MonoBehaviour
     // DEFAULT UNITY METHODS
 
     private void Awake() {
-        CurrentState = STATE.Inactive;
         Checks = GetComponents<Check>();
+        collider = GetComponent<Collider>();
+        currentState = STATE.Inactive;
+        if(AutoReset) {
+            OnPerforming.AddListener(delegate { ResetDelayed(ResetCooldownTime); });
+        }
     }
+
+
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
@@ -96,6 +100,7 @@ public class Interactable : MonoBehaviour
             }
         }
     }
+
     private void Update() {
 
         CheckInsidePlayer();
@@ -113,6 +118,12 @@ public class Interactable : MonoBehaviour
             InsidePlayer = null;
             if (CurrentState == STATE.Active) CurrentState = STATE.Inactive;
         }
+    }
+    public void ResetTrigger() {
+        if (CurrentState == STATE.Active) CurrentState = STATE.Inactive;
+        InsidePlayer = null;
+        collider.enabled = false;
+        collider.enabled = true;
     }
 
     /// <summary>
@@ -146,8 +157,22 @@ public class Interactable : MonoBehaviour
             CurrentState = STATE.Performing;
         }
     }
+
+    public void ResetDelayed(float delayTime) {
+        StartCoroutine(ResetAfterDelay(delayTime));
+    }
+    IEnumerator ResetAfterDelay(float delayTime) {
+        if(delayTime > 0) {
+            yield return new WaitForSeconds(delayTime);
+        }
+        else {
+            yield return new WaitForEndOfFrame();
+        }
+        Reset();
+    }
     public void Reset() {
         CurrentState = STATE.Inactive;
+        ResetTrigger();
     }
 
     /// <summary>

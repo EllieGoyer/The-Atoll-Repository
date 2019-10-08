@@ -8,16 +8,45 @@ namespace Dialogue {
     [CreateAssetMenu(menuName = "Dialogue/Graph", order = 0)]
     public class DialogueGraph : NodeGraph {
         [HideInInspector]
-        public Chat current;
+        public DialogueFlowNode current;
+        public DialogueController dialogueController;
 
-        public void Restart() {
-            //Find the first DialogueNode without any inputs. This is the starting node.
-            current = nodes.Find(x => x is Chat && x.Inputs.All(y => !y.IsConnected)) as Chat;
+        public void Initialize(DialogueController _dialogueController) {
+            dialogueController = _dialogueController;
+
+            Reset();
         }
 
-        public Chat AnswerQuestion(int i) {
-            current.AnswerQuestion(i);
-            return current;
+        public void Reset() {
+            // Find our start node
+            StartNode startNode = nodes.Find(x => x is StartNode) as StartNode;
+
+            // Set our current node to the start node's output
+            current = startNode.GetStartingFlowNode();
+        }
+
+        public void PerformCurrent() {
+            DialogueFlowNode nextNode = current.OnEnter();
+            if(nextNode != null) {
+                current = nextNode;
+                PerformCurrent();
+            }
+        }
+
+        public void TryAdvance() {
+            DialogueFlowNode nextNode = current.Advance();
+            if(nextNode != null) {
+                current = nextNode;
+                PerformCurrent();
+            }
+        }
+
+        public void TryAnswer(int answerNumber) {
+            DialogueFlowNode nextNode = current.Answer(answerNumber);
+            if(nextNode != null) {
+                current = nextNode;
+                PerformCurrent();
+            }
         }
     }
 }
