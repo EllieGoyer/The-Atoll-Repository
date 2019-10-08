@@ -166,6 +166,9 @@ GameObject:
   - component: {fileID: 39681370175962453}
   - component: {fileID: 3630373680005908499}
   - component: {fileID: 440449823612286945}
+  - component: {fileID: 6902785336282580119}
+  - component: {fileID: 6166524277895763333}
+  - component: {fileID: 7632896703608967618}
   m_Layer: 0
   m_Name: Boat Interactable
   m_TagString: Untagged
@@ -261,7 +264,7 @@ MonoBehaviour:
   OnPerforming:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3630373680005908499}
+      - m_Target: {fileID: 440449823612286945}
         m_MethodName: DoTrigger
         m_Mode: 1
         m_Arguments:
@@ -272,8 +275,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 440449823612286945}
-        m_MethodName: DoTrigger
+      - m_Target: {fileID: 6902785336282580119}
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -342,6 +345,61 @@ MonoBehaviour:
   Delay: 0
   TransitionType: 0
   LandSpawnPoint: {fileID: 0}
+--- !u!114 &6902785336282580119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6633866828282480852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38cbd7b6f8c5f1b4f9384f5ac44c70df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4f29ac1b5ef60b04cb652584e67292e4,
+      type: 2}
+--- !u!114 &6166524277895763333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6633866828282480852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25787e094866428419d7d9abf8ab7099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!54 &7632896703608967618
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6633866828282480852}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6933825526037972340
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,7 +587,6 @@ MonoBehaviour:
   TurningRate: 45
   ForwardAxisInputName: Vertical
   SideAxisInputName: Horizontal
-  CameraFocusPoint: {fileID: 0}
   BuoyancyStrength: 20.5
   GravityStrength: 9.8
   MaxDisplacement: 1
