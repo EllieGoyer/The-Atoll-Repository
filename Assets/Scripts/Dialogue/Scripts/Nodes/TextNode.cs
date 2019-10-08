@@ -14,7 +14,10 @@ namespace Dialogue {
         }
 
         public virtual void DisplayText() {
-            Debug.Log("NPC: " + text);
+            DialogueGraph dgraph = graph as DialogueGraph;
+
+            dgraph.dialogueController.RemovePlayerText();
+            dgraph.dialogueController.DisplayNPCText(text, displayRate);
         }
     }
 }
