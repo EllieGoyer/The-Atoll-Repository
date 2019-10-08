@@ -14,10 +14,10 @@ namespace Dialogue {
             int? amount = Inventory.Instance.CheckGood(good);
 
             if (goodCheckType == Type.Unlocked) {
-                return (amount == null);
+                return (amount != null);
             }
             else if (goodCheckType == Type.NotUnlocked) {
-                return (amount != null);
+                return (amount == null);
             }
             if (goodCheckType == Type.GreaterThanOrEqualTo) {
                 return (amount != null && amount >= CheckAmount);
