@@ -13,11 +13,12 @@ public class NPC_D : MonoBehaviour
 
     Dialogue.DialogueGraph sg;
 
-    public bool startCou;
+    bool startCou;
 
     private TextMeshProUGUI text_tap;
 
     private string Itext;
+
 
 
     // Start is called before the first frame update
@@ -25,12 +26,13 @@ public class NPC_D : MonoBehaviour
     {
         text_tap = GameObject.Find("Dialog_Text").GetComponent<TextMeshProUGUI>();
         sg = (DialogueGraph) Resources.Load("NPC_DT");
-        sg.Restart();
+        //sg.Restart();
         print(sg.current);
-        text_tap.text = sg.current.text;
+        //text_tap.text = sg.current.text;
 
     }
 
+<<<<<<< HEAD
     // Update is called once per frame
     void Update()
     {
@@ -49,12 +51,27 @@ public class NPC_D : MonoBehaviour
             }
 
             startCou = !startCou;
+=======
+    public void AdvanceDialog() {
+>>>>>>> dev
 
+        //sg.AnswerQuestion(0);
+        //Itext = sg.current.text;
+
+        if (!startCou) {
+            StartCoroutine("BuildText");
         }
+        else {
+            StopCoroutine("BuildText");
+        }
+
+        startCou = !startCou;
     }
 
     private IEnumerator BuildText()
     {
+        yield return new WaitForSecondsRealtime(.5f);
+        /*
         text_tap.text = "";
         for (int i = 0; i < sg.current.text.Length; i++)
         {
@@ -63,5 +80,6 @@ public class NPC_D : MonoBehaviour
             yield return new WaitForSecondsRealtime(.5f);
             
         }
+        */
     }
 }
