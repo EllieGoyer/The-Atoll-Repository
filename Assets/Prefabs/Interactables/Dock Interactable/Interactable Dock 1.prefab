@@ -362,7 +362,6 @@ GameObject:
   - component: {fileID: 6696127244372661086}
   - component: {fileID: 7845854780846802746}
   - component: {fileID: 8442940008663194715}
-  - component: {fileID: 7377662168263701921}
   - component: {fileID: 4223127546984524531}
   - component: {fileID: 4112030446914911001}
   - component: {fileID: 1828612397425675131}
@@ -420,7 +419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Checks: []
   AutoReset: 1
-  ResetCooldownTime: 0
+  ResetCooldownTime: 0.01
   OnEnabled:
     m_PersistentCalls:
       m_Calls: []
@@ -503,35 +502,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkType: 0
---- !u!114 &7377662168263701921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3537815280694092427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28c8844ce26077545a81da2853c30cda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Delay: 0.01
-  OnTrigger:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7845854780846802746}
-        m_MethodName: Reset
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &4223127546984524531
 MonoBehaviour:
   m_ObjectHideFlags: 0
