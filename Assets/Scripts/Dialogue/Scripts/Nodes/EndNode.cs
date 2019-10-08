@@ -10,9 +10,7 @@ namespace Dialogue {
         public override DialogueFlowNode OnEnter() {
             DialogueGraph dgraph = graph as DialogueGraph;
 
-            Debug.Log("The NPC turns their attention away from you");
-
-            dgraph.Reset();
+            dgraph.dialogueController.EndDialogue();
 
             return null;
         }

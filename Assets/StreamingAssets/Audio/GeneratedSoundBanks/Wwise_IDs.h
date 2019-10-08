@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID AXESELECT = 14522843U;
         static const AkUniqueID AXESWING = 2157426783U;
         static const AkUniqueID AXEWOOD = 3604088180U;
+        static const AkUniqueID DIALOGUE = 3930136735U;
         static const AkUniqueID DOCKLANDING = 3825949625U;
         static const AkUniqueID DOORCLOSE = 3638457343U;
         static const AkUniqueID DOOROPEN = 1404805401U;
@@ -31,8 +32,10 @@ namespace AK
         static const AkUniqueID SEASTORM_START = 875170180U;
         static const AkUniqueID SEASTORM_STOP = 2153236280U;
         static const AkUniqueID SHIPCREAK = 2557820305U;
+        static const AkUniqueID SHIPENTER = 2585523711U;
         static const AkUniqueID SHIPSTORM_START = 2475524499U;
         static const AkUniqueID SHIPSTORM_STOP = 4008905809U;
+        static const AkUniqueID TREECUT = 1939418267U;
     } // namespace EVENTS
 
     namespace STATES
@@ -62,6 +65,7 @@ namespace AK
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID LAND_STORM = 1595190680U;
         static const AkUniqueID MAIN = 3161908922U;
+        static const AkUniqueID NPC = 662417162U;
         static const AkUniqueID SEA_STORM = 3454633060U;
         static const AkUniqueID SHIP = 284967655U;
     } // namespace BANKS

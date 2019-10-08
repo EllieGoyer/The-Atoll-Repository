@@ -19,7 +19,7 @@ public class Inventory : MonoBehaviour {
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     StoredGood FindStoredGood(Good good) {
@@ -273,7 +273,9 @@ public class Inventory : MonoBehaviour {
 
         txt += "\nRelationships:------\n";
         foreach (StoredRelationship storedRelationship in Relationships) {
-            txt += storedRelationship.relationship.name + ": " + storedRelationship.amount + "\n";
+            //HACK null check just to deal with some uninitialized relation???
+            if(storedRelationship != null && storedRelationship.relationship != null)
+                txt += storedRelationship.relationship.name + ": " + storedRelationship.amount + "\n";
         }
 
         return txt;

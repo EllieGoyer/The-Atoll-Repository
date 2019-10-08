@@ -10,11 +10,10 @@ namespace Dialogue {
         [HideInInspector]
         public DialogueFlowNode current;
         public DialogueController dialogueController;
+        public bool Active;
 
         public void Initialize(DialogueController _dialogueController) {
             dialogueController = _dialogueController;
-
-            Reset();
         }
 
         public void Reset() {
@@ -23,6 +22,7 @@ namespace Dialogue {
 
             // Set our current node to the start node's output
             current = startNode.GetStartingFlowNode();
+            PerformCurrent();
         }
 
         public void PerformCurrent() {
