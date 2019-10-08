@@ -24,7 +24,11 @@ namespace Dialogue {
         }
 
         public override void DisplayText() {
-            Debug.Log("You: " + text);
+            DialogueGraph dgraph = graph as DialogueGraph;
+
+            dgraph.dialogueController.RemovePlayerChoice();
+            dgraph.dialogueController.RemoveNPCText();
+            dgraph.dialogueController.DisplayPlayerText(text, displayRate);
         }
     }
 }

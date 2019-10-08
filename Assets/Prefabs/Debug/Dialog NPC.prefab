@@ -107,7 +107,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8570017500868300475}
-        m_MethodName: TryAdvance
+        m_MethodName: Interact
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -147,7 +147,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8570017500868300468}
-  m_LocalRotation: {x: -0, y: 0.9976313, z: -0, w: -0.068788}
+  m_LocalRotation: {x: 0, y: 0.9976312, z: -0, w: -0.06879013}
   m_LocalPosition: {x: 519.02, y: 92.25, z: 691.82}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
@@ -243,6 +243,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueGraph: {fileID: 11400000, guid: e105b2d72a0954b43a963d002e30e083, type: 2}
+  DialogueDisplayBoxPrefab: {fileID: 4174129742870688660, guid: c6d9bc48bc340db499c858c0990a68bf,
+    type: 3}
+  ResponsePromptBoxesPrefab: {fileID: 4854483509072992115, guid: f46573def3fb9ec439603befd7182c53,
+    type: 3}
+  DialogueBoxPositionOffset: {x: 0, y: 1.5, z: 0}
 --- !u!1001 &8570017500610015456
 PrefabInstance:
   m_ObjectHideFlags: 0
