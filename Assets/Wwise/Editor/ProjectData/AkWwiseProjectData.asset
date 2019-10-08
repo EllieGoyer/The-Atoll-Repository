@@ -1,0 +1,372 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07db4d43853ad5d4685ac682b2eada48, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 8872e6b8863b104594023e9e84600802
+    GuidInternal: 
+    m_lastTime: -8586346688627649007
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: f349ae3dcd8ebb4b9acb1d2da29f812d
+    GuidInternal: 
+    m_lastTime: -8586340637837318857
+    List:
+    - name: LP_Bus
+      guid: cd8be57418d3e94ab59967974c158953
+      id: 1654910302
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: LP_Bus
+        ObjectType: 1
+      Path: Default Work Unit\Master Audio Bus\LP_Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: dda5fe95fdbb9f4bacdca2f5be159e13
+    GuidInternal: 
+    m_lastTime: -8586346037500098183
+    List:
+    - name: General
+      guid: 37939129dbb7ad409c491ac12bfed75b
+      id: 133642231
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: General
+        ObjectType: 7
+      Path: Default Work Unit\General
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 923e051643081f43bba18bf3c068d477
+    GuidInternal: 
+    m_lastTime: -8586343225791972156
+    List:
+    - name: JournalClose
+      guid: 5ebd213aac9dc049ab9a80ba98f001d1
+      id: 3987853926
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Journal
+        ObjectType: 4
+      - ElementName: JournalClose
+        ObjectType: 3
+      Path: Default Work Unit\UI\Journal\JournalClose
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: JournalFlip
+      guid: 97533d86581b9540b61815bc193fa6c1
+      id: 2690803159
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Journal
+        ObjectType: 4
+      - ElementName: JournalFlip
+        ObjectType: 3
+      Path: Default Work Unit\UI\Journal\JournalFlip
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: JournalOpen
+      guid: b875b3fe7e99e24f8470bbc56802b0c9
+      id: 1738215602
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Journal
+        ObjectType: 4
+      - ElementName: JournalOpen
+        ObjectType: 3
+      Path: Default Work Unit\UI\Journal\JournalOpen
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: LandStorm_Start
+      guid: d5157f71ae17054f870ec999436db5a7
+      id: 1930650448
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Storm
+        ObjectType: 4
+      - ElementName: LandStorm
+        ObjectType: 4
+      - ElementName: LandStorm_Start
+        ObjectType: 3
+      Path: Default Work Unit\Storm\LandStorm\LandStorm_Start
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: LandStorm_Stop
+      guid: 4468d492ba00f440af7e1d92d1c3c1c8
+      id: 2869071164
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Storm
+        ObjectType: 4
+      - ElementName: LandStorm
+        ObjectType: 4
+      - ElementName: LandStorm_Stop
+        ObjectType: 3
+      Path: Default Work Unit\Storm\LandStorm\LandStorm_Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MenuBack
+      guid: 92227040e00136408e515623b44a6661
+      id: 2634859593
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Menu
+        ObjectType: 4
+      - ElementName: MenuBack
+        ObjectType: 3
+      Path: Default Work Unit\UI\Menu\MenuBack
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MenuScroll
+      guid: 02231550c4968d42abd998b3b3c08249
+      id: 274288443
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Menu
+        ObjectType: 4
+      - ElementName: MenuScroll
+        ObjectType: 3
+      Path: Default Work Unit\UI\Menu\MenuScroll
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: MenuSelect
+      guid: 22416f427b3dbf4bba330a7c4ddf33bb
+      id: 664555880
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
+      - ElementName: Menu
+        ObjectType: 4
+      - ElementName: MenuSelect
+        ObjectType: 3
+      Path: Default Work Unit\UI\Menu\MenuSelect
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_Footsteps
+      guid: 9883650c916f0c4fbfce7c2ca639bdef
+      id: 1730208058
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: Footsteps
+        ObjectType: 4
+      - ElementName: Player_Footsteps
+        ObjectType: 3
+      Path: Default Work Unit\Player\Footsteps\Player_Footsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: pop_hit
+      guid: c5570a7e39040d48b3b7c3587efcb278
+      id: 3240332696
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: pop_hit
+        ObjectType: 3
+      Path: Default Work Unit\pop_hit
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SeaStorm_Start
+      guid: 184099e67c08144bb510f0d5a9bb134f
+      id: 875170180
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Storm
+        ObjectType: 4
+      - ElementName: SeaStorm
+        ObjectType: 4
+      - ElementName: SeaStorm_Start
+        ObjectType: 3
+      Path: Default Work Unit\Storm\SeaStorm\SeaStorm_Start
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SeaStorm_Stop
+      guid: a89579db52f71b41a48e3dc29cc98e11
+      id: 2153236280
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Storm
+        ObjectType: 4
+      - ElementName: SeaStorm
+        ObjectType: 4
+      - ElementName: SeaStorm_Stop
+        ObjectType: 3
+      Path: Default Work Unit\Storm\SeaStorm\SeaStorm_Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 45a14fdf79a67642b9d75ed205795645
+    GuidInternal: 
+    m_lastTime: -8586346043587836991
+    List:
+    - name: StormLevel
+      guid: f2cc9bd45299ab44b0ee779c08825144
+      id: 2380834754
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: StormLevel
+        ObjectType: 13
+      Path: Default Work Unit\StormLevel
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 853383558e20da46b714c7cde8ab6317
+    GuidInternal: 
+    m_lastTime: -8586343264676283633
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 9b060e633a7f7041b951a28cc2b2849b
+    GuidInternal: 
+    m_lastTime: -8586339644446174754
+    List:
+    - name: Footsteps
+      guid: 5baf15f63e89b74183038cc0fe849264
+      id: 2385628198
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Footsteps
+        ObjectType: 11
+      Path: Default Work Unit\Footsteps
+      values:
+      - name: FS_Grass
+        guid: 38d44ef42d617244beca05af4e4bf82d
+        id: 83925039
+        PathAndIcons:
+        - ElementName: FS_Grass
+          ObjectType: 10
+      - name: FS_Rock
+        guid: 03ba4ca373ad77438ce05fc7af442949
+        id: 3837465724
+        PathAndIcons:
+        - ElementName: FS_Rock
+          ObjectType: 10
+      - name: FS_Sand
+        guid: 7cfa593f89f6dc4f87e878e4bfc83e91
+        id: 2362027121
+        PathAndIcons:
+        - ElementName: FS_Sand
+          ObjectType: 10
+      - name: FS_Wood
+        guid: 6237d2125817bc42a014a7cc21f65b2b
+        id: 3616930680
+        PathAndIcons:
+        - ElementName: FS_Wood
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: NpcFootsteps
+      guid: 6c8566abfe22214c84b205e0fa3ad3be
+      id: 1160921759
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: NpcFootsteps
+        ObjectType: 11
+      Path: Default Work Unit\NpcFootsteps
+      values:
+      - name: Grass
+        guid: f670aee108c6fb41bc48efff1e01294d
+        id: 4248645337
+        PathAndIcons:
+        - ElementName: Grass
+          ObjectType: 10
+      - name: Rock
+        guid: 21c307a1cf7b404d866a7961a509237c
+        id: 2144363834
+        PathAndIcons:
+        - ElementName: Rock
+          ObjectType: 10
+      - name: Sand
+        guid: eeec9bd277dc064e83dcae57792dd08d
+        id: 803837735
+        PathAndIcons:
+        - ElementName: Sand
+          ObjectType: 10
+      - name: Wood
+        guid: ecbbc769e82e8f46b04f7b58f81692b6
+        id: 2058049674
+        PathAndIcons:
+        - ElementName: Wood
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: c97d28393156bc4b9ed96e98721e6169
+    GuidInternal: 
+    m_lastTime: -8586346688627728803
+    List: []
+  ExpandedItems:
+  - /The-Atoll-Repository_WwiseProject
+  - /The-Atoll-Repository_WwiseProject/Events
+  - /The-Atoll-Repository_WwiseProject/Events/Default Work Unit
+  - /The-Atoll-Repository_WwiseProject/Events/Default Work Unit/Storm
+  - /The-Atoll-Repository_WwiseProject/Events/Default Work Unit/Storm/LandStorm
+  - /The-Atoll-Repository_WwiseProject/Events/Default Work Unit/Storm/SeaStorm
+  - /The-Atoll-Repository_WwiseProject/SoundBanks
+  - /The-Atoll-Repository_WwiseProject/SoundBanks/Default Work Unit
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 
