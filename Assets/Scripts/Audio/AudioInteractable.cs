@@ -8,7 +8,6 @@ public class AudioInteractable : MonoBehaviour
 
     public void Play()
     {
-        Debug.Log("Play");
         AudioEvent.Post(gameObject);
     }
 }
