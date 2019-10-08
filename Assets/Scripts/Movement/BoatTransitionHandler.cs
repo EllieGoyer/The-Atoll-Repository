@@ -33,7 +33,7 @@ public class BoatTransitionHandler : MonoBehaviour {
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
         cameraFollow = gameObject.GetComponent<CameraFollow>();
         UpdateControllers();
     }

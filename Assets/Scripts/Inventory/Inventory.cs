@@ -19,7 +19,7 @@ public class Inventory : MonoBehaviour {
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     StoredGood FindStoredGood(Good good) {
