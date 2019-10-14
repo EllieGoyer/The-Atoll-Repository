@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Checks: []
   AutoReset: 1
-  ResetCooldownTime: 0.01
+  ResetCooldownTime: 0
   OnEnabled:
     m_PersistentCalls:
       m_Calls: []
@@ -93,6 +93,17 @@ MonoBehaviour:
       - m_Target: {fileID: 6110377269160733389}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8570017500868300475}
+        m_MethodName: EndDialogue
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -134,7 +145,7 @@ GameObject:
   - component: {fileID: 8570017500868300474}
   - component: {fileID: 8570017500868300475}
   m_Layer: 0
-  m_Name: NPC
+  m_Name: Dialog NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

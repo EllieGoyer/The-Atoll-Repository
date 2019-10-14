@@ -56,6 +56,7 @@ public class DialogueController : MonoBehaviour
     public void EndDialogue() {
         RemoveNPCText();
         RemovePlayerText();
+        RemovePlayerChoice();
         Active = false;
     }
     

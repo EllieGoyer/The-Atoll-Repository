@@ -18,9 +18,16 @@ public class InteractableInspector : Editor
 
         base.OnInspectorGUI();
 
-        self.AutoReset = EditorGUILayout.Toggle(new GUIContent("Auto Reset","Should the interactable return to its idle state after use?"),self.AutoReset);
+        bool toggle = self.AutoReset;
+        float cooldown = self.ResetCooldownTime;
+
+        self.AutoReset = EditorGUILayout.Toggle(new GUIContent("Auto Reset", "Should the interactable return to its idle state after use?"), self.AutoReset);
         if (self.AutoReset) {
             self.ResetCooldownTime = Mathf.Max(0, EditorGUILayout.FloatField(new GUIContent("Reset Cooldown Time", "must be >=0. Set to 0 to reset next frame."), self.ResetCooldownTime));
+        }
+
+        if(toggle != self.AutoReset || cooldown != self.ResetCooldownTime) {
+            EditorUtility.SetDirty(self);
         }
     }
 }
