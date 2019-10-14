@@ -33,7 +33,7 @@ public class BoatTransitionHandler : MonoBehaviour {
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
         cameraFollow = gameObject.GetComponent<CameraFollow>();
         UpdateControllers();
     }
@@ -54,9 +54,10 @@ public class BoatTransitionHandler : MonoBehaviour {
     public void EnterLandMode(Transform LandSpawnPoint) {
         if (!IsOceanMode) return;
 
-        LandTarget = Instantiate(LandPrefab).GetComponent<WalkingMovement>();
-        LandTarget.transform.position = LandSpawnPoint.position;
-        LandTarget.transform.rotation = LandSpawnPoint.rotation;
+        LandTarget = Instantiate(LandPrefab, LandSpawnPoint.transform.position, LandSpawnPoint.transform.rotation).GetComponent<WalkingMovement>();
+        Debug.Log(LandSpawnPoint.position);
+        //LandTarget.transform.position = LandSpawnPoint.position;
+        //LandTarget.transform.rotation = LandSpawnPoint.rotation;
         LandTarget.gameObject.tag = "Player";
         OceanTarget.gameObject.tag = "Untagged";
 
