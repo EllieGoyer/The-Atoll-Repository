@@ -75,8 +75,8 @@ public class BoatTransitionHandler : MonoBehaviour {
             cameraFollow.FollowDistance = OceanDistance;
             cameraFollow.FollowElevation = OceanAngle;
             cameraFollow.FollowHeightOffset = OceanHeightOffset;
-            OceanTarget.enabled = true;
-            LandTarget.enabled = false;
+            OceanTarget.AcceptingInput = true;
+            LandTarget.AcceptingInput = false;
         }
         else
         {
@@ -84,8 +84,8 @@ public class BoatTransitionHandler : MonoBehaviour {
             cameraFollow.FollowDistance = LandDistance;
             cameraFollow.FollowElevation = LandAngle;
             cameraFollow.FollowHeightOffset = LandHeightOffset;
-            OceanTarget.enabled = false;
-            LandTarget.enabled = true;
+            OceanTarget.AcceptingInput = false;
+            LandTarget.AcceptingInput = true;
         }
     }
 }
