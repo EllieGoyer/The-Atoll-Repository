@@ -37,7 +37,16 @@ public class DialogueController : MonoBehaviour
 
     public void Interact() {
         if(Active) {
-            TryAdvance();
+            if(!npcTextBox.isBuildingText)
+            {
+                TryAdvance();
+            }
+            else
+            {
+                npcTextBox.ForceCompleteText();
+            }
+            
+            
         }
         else {
             StartDialogue();
@@ -45,6 +54,7 @@ public class DialogueController : MonoBehaviour
     }
 
     public void TryAdvance() {
+
         dialogueGraph.TryAdvance();
     }
 
@@ -71,16 +81,8 @@ public class DialogueController : MonoBehaviour
             npcTextBox = MakeNewNPCDisplayBox();
         }
 
-        if(npcTextBox.isBuildingText)
-        {
-            npcTextBox.ForceCompleteText();
-            npcTextBox.DisplayText(text, displayRate);
-        }
-        else
-        {
-            npcTextBox.DisplayText(text, displayRate);
-        }
-        
+       
+        npcTextBox.DisplayText(text, displayRate);
         return npcTextBox.OnDisplayComplete;
     }
     public void RemoveNPCText() {
@@ -104,15 +106,6 @@ public class DialogueController : MonoBehaviour
     public void DisplayPlayerText(string text, float displayRate) {
         if(playerTextBox == null) {
             playerTextBox = MakeNewPlayerDisplayBox();
-        }
-
-        if (playerTextBox.isBuildingText)
-        {
-            playerTextBox.ForceCompleteText();
-        }
-        else
-        {
-            playerTextBox.DisplayText(text, displayRate);
         }
 
 

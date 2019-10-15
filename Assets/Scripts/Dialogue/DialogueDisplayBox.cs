@@ -28,6 +28,7 @@ public class DialogueDisplayBox : MonoBehaviour
             StopCoroutine("BuildText");
         }
         isBuildingText = !isBuildingText;
+       
 
 
     }
@@ -36,6 +37,7 @@ public class DialogueDisplayBox : MonoBehaviour
         StopCoroutine("BuildText");
         isBuildingText = false;
         textComponent.text = text;
+        OnDisplayComplete.Invoke();
     }
 
     private IEnumerator BuildText()
