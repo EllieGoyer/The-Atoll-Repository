@@ -49,6 +49,14 @@ public class WalkingMovement : Movement
         else
         {
             Animator.SetBool("IsWalking", true);
+            if(forwardVelocity > 0)
+            {
+                Animator.SetBool("Forwards", true);
+            }
+            else
+            {
+                Animator.SetBool("Forwards", false);
+            }
         }
     }
 
