@@ -11,6 +11,7 @@ public class DialogueDisplayBox : MonoBehaviour
     public TextMeshProUGUI textComponent;
     string text;
     float characterInsertDelay;
+    [HideInInspector] IEnumerator textBuilder;
 
     public bool isBuildingText = false;
     
@@ -18,6 +19,7 @@ public class DialogueDisplayBox : MonoBehaviour
         text = _text;
         characterInsertDelay = _characterInsertDelay;
 
+<<<<<<< HEAD
         if(!isBuildingText)
         {
             StartCoroutine("BuildText");
@@ -31,10 +33,17 @@ public class DialogueDisplayBox : MonoBehaviour
        
 
 
+=======
+        ForceCompleteText();
+        textBuilder = BuildText();
+        StartCoroutine(textBuilder);
+>>>>>>> dev
     }
 
     public void ForceCompleteText() {
-        StopCoroutine("BuildText");
+        if (!isBuildingText) return;
+
+        StopCoroutine(textBuilder);
         isBuildingText = false;
         textComponent.text = text;
         OnDisplayComplete.Invoke();
