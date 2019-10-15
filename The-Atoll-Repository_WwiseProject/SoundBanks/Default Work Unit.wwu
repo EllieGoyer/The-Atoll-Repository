@@ -5,9 +5,9 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{E8ADFC8A-915E-4100-A92E-6783322AB0BA}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Interact" ID="{5BAD59B2-8D63-41A5-9806-774FEE1F24BB}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Player" ID="{6A9FB911-89C0-4499-99C7-D9BA0D952FFC}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Player" ID="{6DD55D14-F836-48D6-A6BE-170550AD1E26}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="UI" ID="{F11FA237-B96C-497E-9C11-8AC7D2E4B852}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Interact" ID="{CA23AE3A-A1B9-4DA9-A0B1-894FC4610FED}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="NPC" ID="{242EB4AF-CD43-4F2D-A9E9-D5AC56B7E1D3}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
@@ -24,6 +24,21 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="SeaStorm" ID="{D5FAC948-54F7-4115-B4C5-2FF7F380A805}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="ShipStorm" ID="{083A0F8A-9AAE-441C-9B68-0DEC67A5673C}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Ship" ID="{36C0511F-8433-4C96-9633-184515CAE21F}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Enter_Ship" ID="{C5EF47FA-BE56-4436-9113-E906062601AE}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Ship" ID="{7069FB5A-2241-4A0D-A6A6-12817C1DC333}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="NPC" ID="{817A9FDD-8CBF-4276-A50D-5D7D0E286DDF}">
+					<ObjectInclusionList>
+						<ObjectRef Name="NPC" ID="{D058BD60-767E-4332-9D09-AA56C9429EDD}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
