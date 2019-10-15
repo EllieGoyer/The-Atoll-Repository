@@ -13,7 +13,7 @@ public class DialogueDisplayBox : MonoBehaviour
     float characterInsertDelay;
     [HideInInspector] IEnumerator textBuilder;
 
-    bool isBuildingText = false;
+    public bool isBuildingText = false;
     
     public void DisplayText(string _text, float _characterInsertDelay) {
         text = _text;
@@ -34,7 +34,7 @@ public class DialogueDisplayBox : MonoBehaviour
 
     private IEnumerator BuildText()
     {
-        isBuildingText = true;
+     //   isBuildingText = true;
         textComponent.text = "";
         for (int i = 0; i < text.Length; i++)
         {
@@ -43,6 +43,6 @@ public class DialogueDisplayBox : MonoBehaviour
             yield return new WaitForSecondsRealtime(characterInsertDelay);
         }
         OnDisplayComplete.Invoke();
-        isBuildingText = false;
+       /// isBuildingText = false;
     }
 }

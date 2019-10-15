@@ -72,7 +72,16 @@ public class DialogueController : MonoBehaviour
             npcTextBox = MakeNewNPCDisplayBox();
         }
 
-        npcTextBox.DisplayText(text, displayRate);
+        if(npcTextBox.isBuildingText)
+        {
+            npcTextBox.ForceCompleteText();
+            npcTextBox.DisplayText(text, displayRate);
+        }
+        else
+        {
+            npcTextBox.DisplayText(text, displayRate);
+        }
+        
         return npcTextBox.OnDisplayComplete;
     }
     public void RemoveNPCText() {
@@ -97,6 +106,16 @@ public class DialogueController : MonoBehaviour
         if(playerTextBox == null) {
             playerTextBox = MakeNewPlayerDisplayBox();
         }
+
+        if (playerTextBox.isBuildingText)
+        {
+            playerTextBox.ForceCompleteText();
+        }
+        else
+        {
+            playerTextBox.DisplayText(text, displayRate);
+        }
+
 
         playerTextBox.DisplayText(text, displayRate);
     }
