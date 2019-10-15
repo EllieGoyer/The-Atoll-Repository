@@ -18,8 +18,6 @@ public class DialogueDisplayBox : MonoBehaviour
     public void DisplayText(string _text, float _characterInsertDelay) {
         text = _text;
         characterInsertDelay = _characterInsertDelay;
-
-<<<<<<< HEAD
         if(!isBuildingText)
         {
             StartCoroutine("BuildText");
@@ -33,17 +31,12 @@ public class DialogueDisplayBox : MonoBehaviour
        
 
 
-=======
-        ForceCompleteText();
-        textBuilder = BuildText();
-        StartCoroutine(textBuilder);
->>>>>>> dev
+
     }
 
     public void ForceCompleteText() {
-        if (!isBuildingText) return;
 
-        StopCoroutine(textBuilder);
+        StopCoroutine("BuildText");
         isBuildingText = false;
         textComponent.text = text;
         OnDisplayComplete.Invoke();
