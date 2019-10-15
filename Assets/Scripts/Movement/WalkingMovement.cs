@@ -37,12 +37,22 @@ public class WalkingMovement : Movement
 
         transform.Rotate(0, angularVelocity * Time.deltaTime, 0, Space.Self);
 
-        Vector3 moveVector = forwardVelocity * transform.forward;
+        //HACK
+        Vector3 moveVector = forwardVelocity * transform.forward * (Input.GetKey(KeyCode.LeftShift) ? 2 : 1);
 
         controller.SimpleMove(moveVector);
 
-        
-        if(Mathf.Approximately(0, moveVector.magnitude))
+        //HACK
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            Animator.SetBool("Running", true);
+        }
+        else
+        {
+            Animator.SetBool("Running", false);
+        }
+
+        if (Mathf.Approximately(0, moveVector.magnitude))
         {
             Animator.SetBool("IsWalking", false);
         }
