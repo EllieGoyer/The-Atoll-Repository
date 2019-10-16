@@ -230,7 +230,7 @@
 						</Folder>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="Envoriment" ID="{B9D6A7DC-7010-4B07-9500-F8055029CE96}" ShortID="911091591">
+				<Folder Name="Enviornment" ID="{B9D6A7DC-7010-4B07-9500-F8055029CE96}" ShortID="911091591">
 					<ChildrenList>
 						<Event Name="Sea_Oneshot" ID="{AF84820C-32B3-497F-B6FC-F2E83AA6C638}">
 							<ChildrenList>
@@ -246,6 +246,35 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Folder Name="Enviornment_Outside" ID="{F731B393-7C5B-49C8-9253-61BEF3BF0D97}" ShortID="525241174">
+							<ChildrenList>
+								<Event Name="Enviornment_Outside_Start" ID="{B7BFADC0-F4E5-478E-8446-E141EC76BD4F}">
+									<ChildrenList>
+										<Action Name="" ID="{8944CD78-E46C-48F6-AD3D-02EB195C48A2}" ShortID="737913055">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Outside Enviorment" ID="{DE6805D6-963E-448F-A184-9EE6FF2AC2E3}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Enviornment_Outside_Stop" ID="{0E4AFC83-767C-4E07-B88D-06653CF8EBEB}">
+									<ChildrenList>
+										<Action Name="" ID="{A3A8B903-08C0-4635-83B1-BE833C8ACD1F}" ShortID="52503204">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Outside Enviorment" ID="{DE6805D6-963E-448F-A184-9EE6FF2AC2E3}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Interact" ID="{CA23AE3A-A1B9-4DA9-A0B1-894FC4610FED}" ShortID="557901276">

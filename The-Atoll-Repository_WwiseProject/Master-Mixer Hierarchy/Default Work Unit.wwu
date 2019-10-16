@@ -13,6 +13,20 @@
 						<AuxBus Name="LP_Bus" ID="{74E58BCD-D318-4AE9-B599-67974C158953}"/>
 					</ChildrenList>
 				</Bus>
+				<Bus Name="Enviorment" ID="{EE70FE53-0DC6-4933-AA14-2DA73CA34EDC}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{DFC0B8D6-471C-4F92-98CE-E286C66F2A73}" WorkUnitID="{55B3FC63-32BA-49B1-9CE3-94770039FA79}"/>
+						</Reference>
+					</ReferenceList>
+				</Bus>
+				<Bus Name="Dialogue" ID="{8A814FAB-108B-4FFE-B3E4-5EDFE9154768}">
+					<ReferenceList>
+						<Reference Name="AudioDevice">
+							<ObjectRef Name="System" ID="{DFC0B8D6-471C-4F92-98CE-E286C66F2A73}" WorkUnitID="{55B3FC63-32BA-49B1-9CE3-94770039FA79}"/>
+						</Reference>
+					</ReferenceList>
+				</Bus>
 			</ChildrenList>
 		</WorkUnit>
 	</Busses>

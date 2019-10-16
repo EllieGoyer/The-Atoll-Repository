@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -54,7 +54,7 @@
 			<ShortName>NPC</ShortName>
 			<Path>NPC.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3930136735" Name="Dialogue" ObjectPath="\Events\Default Work Unit\NPC\Dialogue" DurationType="OneShot" DurationMin="0.285486" DurationMax="0.355379"/>
+				<Event Id="3930136735" Name="Dialogue" ObjectPath="\Events\Default Work Unit\NPC\Dialogue" DurationType="OneShot" DurationMin="0.269462" DurationMax="0.335434"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="152071147" Language="SFX">
@@ -95,6 +95,25 @@
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
+		<SoundBank Id="2157951080" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Enviorment_Outside</ObjectPath>
+			<ShortName>Enviorment_Outside</ShortName>
+			<Path>Enviorment_Outside.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3948941375" Name="Enviornment_Outside_Start" ObjectPath="\Events\Default Work Unit\Enviornment\Enviornment_Outside\Enviornment_Outside_Start" DurationType="Infinite"/>
+				<Event Id="2050082181" Name="Enviornment_Outside_Stop" ObjectPath="\Events\Default Work Unit\Enviornment\Enviornment_Outside\Enviornment_Outside_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="330302355" Language="SFX">
+					<ShortName>Atoll_enviorment_land, looped.wav</ShortName>
+					<Path>SFX\Atoll_enviorment_land, looped_D79FB2B7.wem</Path>
+				</File>
+				<File Id="984457753" Language="SFX">
+					<ShortName>Atoll_enviorment_ sounds_at sea.wav</ShortName>
+					<Path>SFX\Atoll_enviorment_ sounds_at sea_D79FB2B7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
 		<SoundBank Id="3161908922" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
@@ -105,14 +124,14 @@
 				<Event Id="14522843" Name="AxeSelect" ObjectPath="\Events\Default Work Unit\Player\Tools\Axe\AxeSelect" DurationType="OneShot" DurationMin="0.301823" DurationMax="0.392893"/>
 				<Event Id="2157426783" Name="AxeSwing" ObjectPath="\Events\Default Work Unit\Player\Tools\Axe\AxeSwing" DurationType="OneShot" DurationMin="0.560032" DurationMax="0.628615"/>
 				<Event Id="3604088180" Name="AxeWood" ObjectPath="\Events\Default Work Unit\Player\Tools\Axe\AxeWood" DurationType="OneShot" DurationMin="0.265583" DurationMax="0.628747"/>
-				<Event Id="3930136735" Name="Dialogue" ObjectPath="\Events\Default Work Unit\NPC\Dialogue" DurationType="OneShot" DurationMin="0.285486" DurationMax="0.355379"/>
+				<Event Id="3930136735" Name="Dialogue" ObjectPath="\Events\Default Work Unit\NPC\Dialogue" DurationType="OneShot" DurationMin="0.269462" DurationMax="0.335434"/>
 				<Event Id="3638457343" Name="DoorClose" ObjectPath="\Events\Default Work Unit\Interact\Door\DoorClose" DurationType="OneShot" DurationMin="0.649661" DurationMax="0.768067"/>
 				<Event Id="1404805401" Name="DoorOpen" ObjectPath="\Events\Default Work Unit\Interact\Door\DoorOpen" DurationType="OneShot" DurationMin="0.690798" DurationMax="0.899882"/>
 				<Event Id="3575671711" Name="H_Footsteps" ObjectPath="\Events\Default Work Unit\Player\Footsteps\H_Footsteps" DurationType="OneShot" DurationMin="0.106972" DurationMax="0.512390"/>
 				<Event Id="3987853926" Name="JournalClose" ObjectPath="\Events\Default Work Unit\UI\Journal\JournalClose" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2690803159" Name="JournalFlip" ObjectPath="\Events\Default Work Unit\UI\Journal\JournalFlip" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1738215602" Name="JournalOpen" ObjectPath="\Events\Default Work Unit\UI\Journal\JournalOpen" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="1730208058" Name="Player_Footsteps" ObjectPath="\Events\Default Work Unit\Player\Footsteps\Player_Footsteps" DurationType="OneShot" DurationMin="0.308833" DurationMax="1.220271"/>
+				<Event Id="1730208058" Name="Player_Footsteps" ObjectPath="\Events\Default Work Unit\Player\Footsteps\Player_Footsteps" DurationType="OneShot" DurationMin="0.000000" DurationMax="1.220271"/>
 				<Event Id="1939418267" Name="TreeCut" ObjectPath="\Events\Default Work Unit\Interact\Tree\TreeCut" DurationType="OneShot" DurationMin="0.258022" DurationMax="1.234046"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -127,10 +146,6 @@
 				<File Id="61283694" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Sand_4.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Hooves_Sand_4_10C4C929.wem</Path>
-				</File>
-				<File Id="67835021" Language="SFX">
-					<ShortName>Atoll_Footsteps_Sand_2.wav</ShortName>
-					<Path>SFX\Atoll_Footsteps_Sand_2_10C4C929.wem</Path>
 				</File>
 				<File Id="82266247" Language="SFX">
 					<ShortName>Atoll_Tool_Axe_Wood_2.wav</ShortName>
@@ -167,10 +182,6 @@
 				<File Id="152071147" Language="SFX">
 					<ShortName>Atoll_Dialogue_2.wav</ShortName>
 					<Path>SFX\Atoll_Dialogue_2_10C4C929.wem</Path>
-				</File>
-				<File Id="194565404" Language="SFX">
-					<ShortName>Atoll_Footsteps_Rock_4.wav</ShortName>
-					<Path>SFX\Atoll_Footsteps_Rock_4_10C4C929.wem</Path>
 				</File>
 				<File Id="228086549" Language="SFX">
 					<ShortName>Atoll_Footsteps_Wood_5.wav</ShortName>
@@ -224,10 +235,6 @@
 					<ShortName>Atoll_Footsteps_Wood_6.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Wood_6_10C4C929.wem</Path>
 				</File>
-				<File Id="482172680" Language="SFX">
-					<ShortName>Atoll_Footsteps_Rock_6.wav</ShortName>
-					<Path>SFX\Atoll_Footsteps_Rock_6_10C4C929.wem</Path>
-				</File>
 				<File Id="495743890" Language="SFX">
 					<ShortName>Atoll_Footsteps_Wood_3.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Wood_3_10C4C929.wem</Path>
@@ -259,10 +266,6 @@
 				<File Id="608820768" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Grass_1.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Hooves_Grass_1_10C4C929.wem</Path>
-				</File>
-				<File Id="631188471" Language="SFX">
-					<ShortName>Atoll_Footsteps_Rock_2.wav</ShortName>
-					<Path>SFX\Atoll_Footsteps_Rock_2_10C4C929.wem</Path>
 				</File>
 				<File Id="644213352" Language="SFX">
 					<ShortName>Atoll_Dialogue_1.wav</ShortName>
@@ -304,17 +307,9 @@
 					<ShortName>Atoll_Anchor_Deploy_2.wav</ShortName>
 					<Path>SFX\Atoll_Anchor_Deploy_2_10C4C929.wem</Path>
 				</File>
-				<File Id="794148572" Language="SFX">
-					<ShortName>Atoll_Footsteps_Rock_3.wav</ShortName>
-					<Path>SFX\Atoll_Footsteps_Rock_3_10C4C929.wem</Path>
-				</File>
 				<File Id="848765229" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Wood_5.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Hooves_Wood_5_10C4C929.wem</Path>
-				</File>
-				<File Id="859315153" Language="SFX">
-					<ShortName>Atoll_Footsteps_Sand_3.wav</ShortName>
-					<Path>SFX\Atoll_Footsteps_Sand_3_10C4C929.wem</Path>
 				</File>
 				<File Id="880753549" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Sand_3.wav</ShortName>
@@ -324,17 +319,9 @@
 					<ShortName>Atoll_Tool_Axe_Select_1.wav</ShortName>
 					<Path>SFX\Atoll_Tool_Axe_Select_1_BFB259A6.wem</Path>
 				</File>
-				<File Id="906234038" Language="SFX">
-					<ShortName>Atoll_Footsteps_Sand_5.wav</ShortName>
-					<Path>SFX\Atoll_Footsteps_Sand_5_10C4C929.wem</Path>
-				</File>
 				<File Id="939921997" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Rock_2.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Hooves_Rock_2_10C4C929.wem</Path>
-				</File>
-				<File Id="971776754" Language="SFX">
-					<ShortName>Atoll_Footsteps_Sand_4.wav</ShortName>
-					<Path>SFX\Atoll_Footsteps_Sand_4_10C4C929.wem</Path>
 				</File>
 				<File Id="973321578" Language="SFX">
 					<ShortName>Atoll_Footsteps_Grass_1.wav</ShortName>
@@ -347,22 +334,6 @@
 				<File Id="1022711718" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Wood_2.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Hooves_Wood_2_10C4C929.wem</Path>
-				</File>
-				<File Id="1033123642" Language="SFX">
-					<ShortName>Atoll_Footsteps_Sand_1.wav</ShortName>
-					<Path>SFX\Atoll_Footsteps_Sand_1_10C4C929.wem</Path>
-				</File>
-				<File Id="1067613444" Language="SFX">
-					<ShortName>Atoll_Footsteps_Rock_1.wav</ShortName>
-					<Path>SFX\Atoll_Footsteps_Rock_1_10C4C929.wem</Path>
-				</File>
-				<File Id="1068569866" Language="SFX">
-					<ShortName>Atoll_Footsteps_Rock_5.wav</ShortName>
-					<Path>SFX\Atoll_Footsteps_Rock_5_10C4C929.wem</Path>
-				</File>
-				<File Id="1069074344" Language="SFX">
-					<ShortName>Atoll_Footsteps_Sand_6.wav</ShortName>
-					<Path>SFX\Atoll_Footsteps_Sand_6_10C4C929.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
