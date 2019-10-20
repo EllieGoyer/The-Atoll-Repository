@@ -8197,18 +8197,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e63399382e058e4e94a006eee5f4674, type: 3}
---- !u!114 &289329424 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7377662168263701921, guid: bd8ed6bbe0fb10d42b9ab7a519239cd0,
-    type: 3}
-  m_PrefabInstance: {fileID: 1942032483}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28c8844ce26077545a81da2853c30cda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &289706252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17906,6 +17894,7 @@ GameObject:
   - component: {fileID: 645033487}
   - component: {fileID: 645033486}
   - component: {fileID: 645033485}
+  - component: {fileID: 645033491}
   - component: {fileID: 645033484}
   - component: {fileID: 645033483}
   m_Layer: 0
@@ -17927,7 +17916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 159e18eb1416b57409ae366b9c4f3226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Storm: StormLevel
+  Storm: EnvironmentSwitch
   valueSlider: 49.6
 --- !u!114 &645033484
 MonoBehaviour:
@@ -17949,7 +17938,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 7233e4e84e22832409e2ad20c3bd4069,
+    WwiseObjectReference: {fileID: 11400000, guid: cfa1e626440cfa6498742021f565fe54,
       type: 2}
   useCallbacks: 0
   Callbacks: []
@@ -18102,6 +18091,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &645033491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645033482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a88030adfca227a4698d1ecb94512dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6457f11ecf055ed40919abca8d3faae5,
+      type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1001 &648253304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21326,6 +21340,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueGraph: {fileID: 11400000, guid: e105b2d72a0954b43a963d002e30e083, type: 2}
+  DialogueDisplayBoxPrefab: {fileID: 0}
+  ResponsePromptBoxesPrefab: {fileID: 0}
+  DialogueBoxPositionOffset: {x: 0, y: 0, z: 0}
 --- !u!65 &761062393
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38375,6 +38392,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2093199774}
     m_Modifications:
+    - target: {fileID: 4174129742870688660, guid: c6d9bc48bc340db499c858c0990a68bf,
+        type: 3}
+      propertyPath: m_Name
+      value: Dialog_Box
+      objectReference: {fileID: 0}
     - target: {fileID: 4524339379058250248, guid: c6d9bc48bc340db499c858c0990a68bf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -38479,11 +38501,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4174129742870688660, guid: c6d9bc48bc340db499c858c0990a68bf,
-        type: 3}
-      propertyPath: m_Name
-      value: Dialog_Box
       objectReference: {fileID: 0}
     - target: {fileID: 2790252868541290611, guid: c6d9bc48bc340db499c858c0990a68bf,
         type: 3}
@@ -57244,7 +57261,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnPerforming.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 289329424}
+      objectReference: {fileID: 0}
     - target: {fileID: 7845854780846802746, guid: bd8ed6bbe0fb10d42b9ab7a519239cd0,
         type: 3}
       propertyPath: OnPerforming.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName

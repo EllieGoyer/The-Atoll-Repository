@@ -22,8 +22,8 @@ namespace AK
         static const AkUniqueID DOCKLANDING = 3825949625U;
         static const AkUniqueID DOORCLOSE = 3638457343U;
         static const AkUniqueID DOOROPEN = 1404805401U;
-        static const AkUniqueID ENVIORNMENT_OUTSIDE_START = 3948941375U;
-        static const AkUniqueID ENVIORNMENT_OUTSIDE_STOP = 2050082181U;
+        static const AkUniqueID ENVIRONMENT_OUTSIDE_START = 407167729U;
+        static const AkUniqueID ENVIRONMENT_OUTSIDE_STOP = 2448195179U;
         static const AkUniqueID H_FOOTSTEPS = 3575671711U;
         static const AkUniqueID JOURNALCLOSE = 3987853926U;
         static const AkUniqueID JOURNALFLIP = 2690803159U;
@@ -59,7 +59,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
-        static const AkUniqueID ENVIORMENTSWITCH = 1083807816U;
+        static const AkUniqueID ENVIRONMENTSWITCH = 3780105948U;
         static const AkUniqueID STORMLEVEL = 2380834754U;
     } // namespace GAME_PARAMETERS
 
