@@ -14,14 +14,20 @@ public class EnvironmentRTPC : MonoBehaviour
 
     float t = 0;
     float value;
+    public int duration;
     public string GameParameter;
     public int start;
     public int end;
-    void Update()
-    {
-        t += Time.deltaTime / 3;
-       value = Mathf.Lerp(start, end, t);
 
-        AkSoundEngine.SetRTPCValue(GameParameter, value);
+    public void RtpcSet()
+    {
+        void Update()
+        {
+            t += Time.deltaTime / duration;
+            value = Mathf.Lerp(start, end, t);
+
+            AkSoundEngine.SetRTPCValue(GameParameter, value);
+        }
     }
 }
+
