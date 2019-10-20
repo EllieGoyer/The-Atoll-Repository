@@ -273,6 +273,21 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Environment_Switch" ID="{831B4BDD-3AF4-4677-A65D-496AC9450DB9}">
+									<ChildrenList>
+										<Action Name="" ID="{8750A26B-6DA1-4E55-9689-575F2EBFB822}" ShortID="121337425">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="38"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="EnvironmentSwitch" ID="{D1E42D5C-0659-4B1C-9298-48E1ECDBF34D}" WorkUnitID="{DF4FA145-A679-4276-B9D7-5ED205795645}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
