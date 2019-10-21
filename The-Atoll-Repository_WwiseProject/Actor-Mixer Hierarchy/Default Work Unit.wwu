@@ -492,6 +492,33 @@
 										</RandomSequenceContainer>
 									</ChildrenList>
 								</Folder>
+								<Sound Name="Atoll_enviorment_ sounds_at sea" ID="{3828788F-F6B7-4D69-973D-BAA5B186A175}" ShortID="469979271">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-11</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Atoll_enviorment_ sounds_at sea" ID="{E035D21A-F65D-4154-BE14-1F8715F7FB1A}" ShortID="984457753">
+											<Language>SFX</Language>
+											<AudioFile>Atoll_enviorment_ sounds_at sea.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Atoll_enviorment_ sounds_at sea" ID="{E035D21A-F65D-4154-BE14-1F8715F7FB1A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Land" ID="{F435647F-D84C-4F7E-9EDE-00A130D7DFD3}" ShortID="708632933">
@@ -717,6 +744,33 @@
 										</BlendContainer>
 									</ChildrenList>
 								</Folder>
+								<Sound Name="Atoll_enviorment_land, looped" ID="{88CB8E3C-5986-4BFE-AB1A-691A833F88F1}" ShortID="457230679">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-14</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Atoll_enviorment_land, looped" ID="{0C59C85F-A62F-403E-B60A-BA0C8A071FF4}" ShortID="330302355">
+											<Language>SFX</Language>
+											<AudioFile>Atoll_enviorment_land, looped.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Atoll_enviorment_land, looped" ID="{0C59C85F-A62F-403E-B60A-BA0C8A071FF4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Other" ID="{3C80AD8B-F102-446A-AD91-CCFD89B9EA3B}" ShortID="130684018">
@@ -743,62 +797,6 @@
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
 										</Reference>
 									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Atoll_enviorment_land, looped" ID="{88CB8E3C-5986-4BFE-AB1A-691A833F88F1}" ShortID="457230679">
-											<PropertyList>
-												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-14</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Atoll_enviorment_land, looped" ID="{0C59C85F-A62F-403E-B60A-BA0C8A071FF4}" ShortID="330302355">
-													<Language>SFX</Language>
-													<AudioFile>Atoll_enviorment_land, looped.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Atoll_enviorment_land, looped" ID="{0C59C85F-A62F-403E-B60A-BA0C8A071FF4}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Atoll_enviorment_ sounds_at sea" ID="{3828788F-F6B7-4D69-973D-BAA5B186A175}" ShortID="469979271">
-											<PropertyList>
-												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-11</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Atoll_enviorment_ sounds_at sea" ID="{E035D21A-F65D-4154-BE14-1F8715F7FB1A}" ShortID="984457753">
-													<Language>SFX</Language>
-													<AudioFile>Atoll_enviorment_ sounds_at sea.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Atoll_enviorment_ sounds_at sea" ID="{E035D21A-F65D-4154-BE14-1F8715F7FB1A}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
 									<BlendTrackList>
 										<BlendTrack Name="Outside Enviorment Blend" ID="{3B6728E8-B594-4922-A09F-23C8C059137A}" ShortID="167864403">
 											<PropertyList>
@@ -809,26 +807,6 @@
 													<ObjectRef Name="EnvironmentSwitch" ID="{D1E42D5C-0659-4B1C-9298-48E1ECDBF34D}" WorkUnitID="{DF4FA145-A679-4276-B9D7-5ED205795645}"/>
 												</Reference>
 											</ReferenceList>
-											<BlendTrackAssocList>
-												<BlendTrackAssoc>
-													<ItemRef Name="Atoll_enviorment_land, looped" ID="{88CB8E3C-5986-4BFE-AB1A-691A833F88F1}"/>
-													<CrossfadingInfo>
-														<LeftEdgePos>0</LeftEdgePos>
-														<LeftFadingMode>Automatic</LeftFadingMode>
-														<RightEdgePos>74.7843942505133</RightEdgePos>
-														<RightFadingMode>Automatic</RightFadingMode>
-													</CrossfadingInfo>
-												</BlendTrackAssoc>
-												<BlendTrackAssoc>
-													<ItemRef Name="Atoll_enviorment_ sounds_at sea" ID="{3828788F-F6B7-4D69-973D-BAA5B186A175}"/>
-													<CrossfadingInfo>
-														<LeftEdgePos>24.5998393223819</LeftEdgePos>
-														<LeftFadingMode>Automatic</LeftFadingMode>
-														<RightEdgePos>100</RightEdgePos>
-														<RightFadingMode>Automatic</RightFadingMode>
-													</CrossfadingInfo>
-												</BlendTrackAssoc>
-											</BlendTrackAssocList>
 										</BlendTrack>
 										<BlendTrack Name="New Blend Track" ID="{003FF322-2126-488E-B0FF-5F901841889E}" ShortID="526392199"/>
 									</BlendTrackList>

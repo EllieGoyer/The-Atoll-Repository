@@ -17946,7 +17946,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 645033482}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a314091093b5b24bab40179da4c7b9d, type: 3}
   m_Name: 
@@ -30922,7 +30922,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnPerforming.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2132944173}
+      objectReference: {fileID: 2132944171}
     - target: {fileID: 7845854780846802746, guid: bd8ed6bbe0fb10d42b9ab7a519239cd0,
         type: 3}
       propertyPath: AutoReset
@@ -30946,7 +30946,7 @@ PrefabInstance:
     - target: {fileID: 7845854780846802746, guid: bd8ed6bbe0fb10d42b9ab7a519239cd0,
         type: 3}
       propertyPath: OnPerforming.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: RtpcSet
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 7845854780846802746, guid: bd8ed6bbe0fb10d42b9ab7a519239cd0,
         type: 3}
@@ -30972,7 +30972,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 2132944173}
+      objectReference: {fileID: 0}
     - target: {fileID: 7845854780846802746, guid: bd8ed6bbe0fb10d42b9ab7a519239cd0,
         type: 3}
       propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -30987,7 +30987,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2132944173}
+      objectReference: {fileID: 0}
     - target: {fileID: 7845854780846802746, guid: bd8ed6bbe0fb10d42b9ab7a519239cd0,
         type: 3}
       propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -62541,13 +62541,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2132944167}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46b007e15bc42b3458caa71ac0bc80a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 38cbd7b6f8c5f1b4f9384f5ac44c70df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 2
-  GameParameter: EnvironmentSwitch
-  start: 0
-  end: 100
+  AudioEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0b4382982d60f9746bfc5c19d5293aeb,
+      type: 2}
 --- !u!1001 &2133169158
 PrefabInstance:
   m_ObjectHideFlags: 0

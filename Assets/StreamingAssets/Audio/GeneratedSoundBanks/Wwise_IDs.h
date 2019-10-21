@@ -22,8 +22,12 @@ namespace AK
         static const AkUniqueID DOCKLANDING = 3825949625U;
         static const AkUniqueID DOORCLOSE = 3638457343U;
         static const AkUniqueID DOOROPEN = 1404805401U;
+        static const AkUniqueID ENVIRONMENT_LAND_START = 2038259945U;
+        static const AkUniqueID ENVIRONMENT_LAND_STOP = 792665347U;
         static const AkUniqueID ENVIRONMENT_OUTSIDE_START = 407167729U;
         static const AkUniqueID ENVIRONMENT_OUTSIDE_STOP = 2448195179U;
+        static const AkUniqueID ENVIRONMENT_SEA_START = 1353736985U;
+        static const AkUniqueID ENVIRONMENT_SEA_STOP = 3466662131U;
         static const AkUniqueID ENVIRONMENT_SWITCH = 316040059U;
         static const AkUniqueID H_FOOTSTEPS = 3575671711U;
         static const AkUniqueID JOURNALCLOSE = 3987853926U;

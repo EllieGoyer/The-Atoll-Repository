@@ -288,6 +288,56 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Environment_Sea_Start" ID="{B01F230D-D413-41B3-8383-DABE75897F67}">
+									<ChildrenList>
+										<Action Name="" ID="{D57CC856-C192-4362-BDAF-E35E6D86BACF}" ShortID="271595323">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Atoll_enviorment_ sounds_at sea" ID="{3828788F-F6B7-4D69-973D-BAA5B186A175}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Environment_Land_Start" ID="{549509EE-D332-438E-82F6-CCCF87175846}">
+									<ChildrenList>
+										<Action Name="" ID="{BD40A3EE-DA5B-4FFE-A5E3-0DDAD7C5521F}" ShortID="939961693">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Atoll_enviorment_land, looped" ID="{88CB8E3C-5986-4BFE-AB1A-691A833F88F1}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Environment_Sea_Stop" ID="{A23B73A9-57D8-49CF-A3A3-EF2B0860D785}">
+									<ChildrenList>
+										<Action Name="" ID="{C6C821D6-6D89-455A-9A26-4F183E77607E}" ShortID="301874552">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Atoll_enviorment_ sounds_at sea" ID="{3828788F-F6B7-4D69-973D-BAA5B186A175}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Environment_Land_Stop" ID="{1667DF77-E32C-48B5-BA6D-DACFA86F4968}">
+									<ChildrenList>
+										<Action Name="" ID="{62834687-F31B-4D15-98CF-C50D50F9F44F}" ShortID="862233048">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Atoll_enviorment_land, looped" ID="{88CB8E3C-5986-4BFE-AB1A-691A833F88F1}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
