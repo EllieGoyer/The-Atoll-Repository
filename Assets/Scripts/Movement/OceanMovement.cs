@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(Moveable))]
 
-public class OceanMovement : Movement
-{
+public class OceanMovement : Movement {
     public float BuoyancyStrength = 20.5F;
     public float GravityStrength = 9.8F;
     public float MaxDisplacement = 1;
@@ -14,62 +13,43 @@ public class OceanMovement : Movement
     [HideInInspector]
     protected SpectralWaveGenerationModel model;
     [HideInInspector]
-    protected CharacterController controller;
+    protected Moveable controller;
     [HideInInspector]
     protected float forwardVelocity;
     [HideInInspector]
     protected float angularVelocity;
 
-    protected override float ForwardVelocity
-    {
-        get => forwardVelocity;
+    protected float verticalVelocity = 0;
+    public float AirDrag;
+    public float WaterDrag;
+
+    protected override float ForwardVelocity {
+        get => Vector3.Project(controller.Velocity, transform.forward).magnitude;
         set => forwardVelocity = value;
     }
-    protected override float AngularVelocity
-    {
+    protected override float AngularVelocity {
         set => angularVelocity = value;
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         ReloadReferences();
     }
 
-    public void ReloadReferences()
-    {
-        controller = gameObject.GetComponent<CharacterController>();
+    public void ReloadReferences() {
+        controller = gameObject.GetComponent<Moveable>();
         model = WaveRenderer.GenerationModel;
     }
 
     // Update is called once per frame
-    protected override void Update()
-    {
-        base.Update();
+    protected override void Update() {
+        float forwardInput = AcceptingInput ? Input.GetAxis(ForwardAxisInputName) : 0;
+        float sideInput = AcceptingInput ? Input.GetAxis(SideAxisInputName) : 0;
 
         Transform transform = gameObject.transform;
 
-        transform.Rotate(0, angularVelocity * Time.deltaTime, 0, Space.Self);
+        controller.ApplyTorque(new Vector3(0, TurningRate * sideInput * controller.AngularInertia, 0));
 
-        Vector3 moveVector = forwardVelocity * transform.forward;
-        moveVector.y += ComputeBuoyancy();
-        moveVector.y -= GravityStrength;
-
-        controller.Move(moveVector * Time.deltaTime);
-    }
-
-    public float ComputeBuoyancy()
-    {
-        float shipHeight = transform.position.y;
-        float waterHeight = model.HeightAt(new Vector2(transform.position.x, transform.position.z), Time.time);
-
-        if (shipHeight >= waterHeight)
-        {
-            return 0;
-        }
-        else
-        {
-            return BuoyancyStrength * Mathf.Min(MaxDisplacement, waterHeight - shipHeight);
-        }
+        controller.ApplyForce((forwardInput > 0 ? ForwardAcceleration : BackwardAcceleration) * forwardInput * controller.Mass * transform.forward);
     }
 }
