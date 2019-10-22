@@ -352,7 +352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4785414288882046652}
   m_Layer: 10
-  m_Name: Front
+  m_Name: FrontLeft
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -366,7 +366,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8138266070880075178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 6}
+  m_LocalPosition: {x: -3, y: 0, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4476258011952653597}
@@ -523,12 +523,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ForwardTopSpeed: 20
-  ForwardAcceleration: 10
+  ForwardAcceleration: 20
   ForwardDeceleration: 0.1
   BackwardTopSpeed: 2.5
-  BackwardAcceleration: 5
+  BackwardAcceleration: 10
   BackwardDeceleration: 0.1
-  TurningRate: 15
+  TurningRate: 30
   ForwardAxisInputName: Vertical
   SideAxisInputName: Horizontal
   BuoyancyStrength: 100
