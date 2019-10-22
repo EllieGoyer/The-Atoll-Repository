@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Moveable))]
+[RequireComponent(typeof(CharacterController))]
 
 public class OceanMovement : Movement {
     public float BuoyancyStrength = 20.5F;
@@ -13,7 +13,7 @@ public class OceanMovement : Movement {
     [HideInInspector]
     protected SpectralWaveGenerationModel model;
     [HideInInspector]
-    protected Moveable controller;
+    protected CharacterController controller;
     [HideInInspector]
     protected float forwardVelocity;
     [HideInInspector]
@@ -24,7 +24,7 @@ public class OceanMovement : Movement {
     public float WaterDrag;
 
     protected override float ForwardVelocity {
-        get => Vector3.Project(controller.Velocity, transform.forward).magnitude;
+        get => forwardVelocity;
         set => forwardVelocity = value;
     }
     protected override float AngularVelocity {
@@ -37,19 +37,46 @@ public class OceanMovement : Movement {
     }
 
     public void ReloadReferences() {
-        controller = gameObject.GetComponent<Moveable>();
+        controller = gameObject.GetComponent<CharacterController>();
         model = WaveRenderer.GenerationModel;
     }
 
     // Update is called once per frame
     protected override void Update() {
-        float forwardInput = AcceptingInput ? Input.GetAxis(ForwardAxisInputName) : 0;
-        float sideInput = AcceptingInput ? Input.GetAxis(SideAxisInputName) : 0;
+        base.Update();
 
         Transform transform = gameObject.transform;
 
-        controller.ApplyTorque(new Vector3(0, TurningRate * sideInput * controller.AngularInertia, 0));
+        transform.Rotate(0, angularVelocity * Time.deltaTime, 0, Space.Self);
 
-        controller.ApplyForce((forwardInput > 0 ? ForwardAcceleration : BackwardAcceleration) * forwardInput * controller.Mass * transform.forward);
+        Vector3 moveVector = forwardVelocity * transform.forward;
+        verticalVelocity += (ComputeBuoyancy() - GravityStrength) * Time.deltaTime;
+
+        float drag = IsAirborne() ? AirDrag : WaterDrag;
+        verticalVelocity *= (1 - (drag * Time.deltaTime));
+
+        moveVector.y += verticalVelocity;
+
+        controller.Move(moveVector * Time.deltaTime);
+
+    }
+
+    public float ComputeBuoyancy() {
+        float shipHeight = transform.position.y;
+        float waterHeight = model.HeightAt(new Vector2(transform.position.x, transform.position.z), Time.time);
+
+        if (shipHeight >= waterHeight) {
+            return 0;
+        }
+        else {
+            return BuoyancyStrength * Mathf.Min(MaxDisplacement, waterHeight - shipHeight);
+        }
+    }
+
+    public bool IsAirborne() {
+        float shipHeight = transform.position.y;
+        float waterHeight = model.HeightAt(new Vector2(transform.position.x, transform.position.z), Time.time);
+
+        return shipHeight >= waterHeight;
     }
 }
