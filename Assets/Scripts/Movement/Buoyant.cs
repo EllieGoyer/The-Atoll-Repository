@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+[RequireComponent(typeof(Rigidbody))]
+
 public class Buoyant : MonoBehaviour
 {
     public static readonly float OCEAN_DENSITY = 1000;
@@ -18,11 +20,11 @@ public class Buoyant : MonoBehaviour
     public ContactPoint[] ContactPoints;
     public WaveRenderer OceanRenderer;
 
-    protected Moveable moveable;
+    protected Rigidbody moveable;
 
     public bool RefreshMoveable()
     {
-        moveable = gameObject.GetComponent<Moveable>();
+        moveable = gameObject.GetComponent<Rigidbody>();
         return moveable != null;
     }
 
@@ -43,7 +45,7 @@ public class Buoyant : MonoBehaviour
             if(waterHeight > position.y)
             {
                 float displacement = OCEAN_DENSITY * Mathf.Min(waterHeight - position.y, pt.Height) * pt.BaseArea;
-                moveable.ApplyForceAt(new Vector3(0, -displacement * GRAVITATIONAL_CONSTANT, 0), position);
+                moveable.AddForceAtPosition(new Vector3(0, -displacement * GRAVITATIONAL_CONSTANT, 0), position, ForceMode.Force);
             }
         }
     }
