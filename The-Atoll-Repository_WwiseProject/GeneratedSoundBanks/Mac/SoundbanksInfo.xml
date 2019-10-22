@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -102,11 +102,8 @@
 			<IncludedEvents>
 				<Event Id="2038259945" Name="Environment_Land_Start" ObjectPath="\Events\Default Work Unit\Environment\Environment_Outside\Environment_Land_Start" DurationType="Infinite"/>
 				<Event Id="792665347" Name="Environment_Land_Stop" ObjectPath="\Events\Default Work Unit\Environment\Environment_Outside\Environment_Land_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="407167729" Name="Environment_Outside_Start" ObjectPath="\Events\Default Work Unit\Environment\Environment_Outside\Environment_Outside_Start" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2448195179" Name="Environment_Outside_Stop" ObjectPath="\Events\Default Work Unit\Environment\Environment_Outside\Environment_Outside_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1353736985" Name="Environment_Sea_Start" ObjectPath="\Events\Default Work Unit\Environment\Environment_Outside\Environment_Sea_Start" DurationType="Infinite"/>
 				<Event Id="3466662131" Name="Environment_Sea_Stop" ObjectPath="\Events\Default Work Unit\Environment\Environment_Outside\Environment_Sea_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="316040059" Name="Environment_Switch" ObjectPath="\Events\Default Work Unit\Environment\Environment_Outside\Environment_Switch" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="330302355" Language="SFX">
@@ -124,20 +121,19 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="4026671431" Name="AnchorDeploy" ObjectPath="\Events\Default Work Unit\Interact\Anchor\AnchorDeploy" DurationType="OneShot" DurationMin="1.802667" DurationMax="1.802667"/>
-				<Event Id="1339769741" Name="AnchorHit" ObjectPath="\Events\Default Work Unit\Interact\Anchor\AnchorHit" DurationType="OneShot" DurationMin="0.861333" DurationMax="0.861333"/>
-				<Event Id="14522843" Name="AxeSelect" ObjectPath="\Events\Default Work Unit\Player\Tools\Axe\AxeSelect" DurationType="OneShot" DurationMin="0.301823" DurationMax="0.392893"/>
-				<Event Id="2157426783" Name="AxeSwing" ObjectPath="\Events\Default Work Unit\Player\Tools\Axe\AxeSwing" DurationType="OneShot" DurationMin="0.560032" DurationMax="0.628615"/>
-				<Event Id="3604088180" Name="AxeWood" ObjectPath="\Events\Default Work Unit\Player\Tools\Axe\AxeWood" DurationType="OneShot" DurationMin="0.265583" DurationMax="0.628747"/>
+				<Event Id="4026671431" Name="AnchorDeploy" ObjectPath="\Events\Default Work Unit\Interact\Tools\Anchor\AnchorDeploy" DurationType="OneShot" DurationMin="1.802667" DurationMax="1.802667"/>
+				<Event Id="1339769741" Name="AnchorHit" ObjectPath="\Events\Default Work Unit\Interact\Tools\Anchor\AnchorHit" DurationType="OneShot" DurationMin="0.861333" DurationMax="0.861333"/>
+				<Event Id="14522843" Name="AxeSelect" ObjectPath="\Events\Default Work Unit\Interact\Tools\Axe\AxeSelect" DurationType="OneShot" DurationMin="0.301823" DurationMax="0.392893"/>
+				<Event Id="2157426783" Name="AxeSwing" ObjectPath="\Events\Default Work Unit\Interact\Tools\Axe\AxeSwing" DurationType="OneShot" DurationMin="0.560032" DurationMax="0.628615"/>
+				<Event Id="3604088180" Name="AxeWood" ObjectPath="\Events\Default Work Unit\Interact\Tools\Axe\AxeWood" DurationType="OneShot" DurationMin="0.265583" DurationMax="0.628747"/>
 				<Event Id="3930136735" Name="Dialogue" ObjectPath="\Events\Default Work Unit\NPC\Dialogue" DurationType="OneShot" DurationMin="0.269462" DurationMax="0.335434"/>
 				<Event Id="3638457343" Name="DoorClose" ObjectPath="\Events\Default Work Unit\Interact\Door\DoorClose" DurationType="OneShot" DurationMin="0.649661" DurationMax="0.768067"/>
 				<Event Id="1404805401" Name="DoorOpen" ObjectPath="\Events\Default Work Unit\Interact\Door\DoorOpen" DurationType="OneShot" DurationMin="0.690798" DurationMax="0.899882"/>
-				<Event Id="3575671711" Name="H_Footsteps" ObjectPath="\Events\Default Work Unit\Player\Footsteps\H_Footsteps" DurationType="OneShot" DurationMin="0.106972" DurationMax="0.512390"/>
+				<Event Id="3575671711" Name="H_Footsteps" ObjectPath="\Events\Default Work Unit\Player\Footsteps\H_Footsteps" DurationType="OneShot" DurationMin="0.106972" DurationMax="0.571187"/>
 				<Event Id="3987853926" Name="JournalClose" ObjectPath="\Events\Default Work Unit\UI\Journal\JournalClose" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2690803159" Name="JournalFlip" ObjectPath="\Events\Default Work Unit\UI\Journal\JournalFlip" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1738215602" Name="JournalOpen" ObjectPath="\Events\Default Work Unit\UI\Journal\JournalOpen" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1730208058" Name="Player_Footsteps" ObjectPath="\Events\Default Work Unit\Player\Footsteps\Player_Footsteps" DurationType="OneShot" DurationMin="0.000000" DurationMax="1.220271"/>
-				<Event Id="1939418267" Name="TreeCut" ObjectPath="\Events\Default Work Unit\Interact\Tree\TreeCut" DurationType="OneShot" DurationMin="0.258022" DurationMax="1.234046"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="7304331" Language="SFX">
@@ -331,10 +327,6 @@
 				<File Id="973321578" Language="SFX">
 					<ShortName>Atoll_Footsteps_Grass_1.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Grass_1_10C4C929.wem</Path>
-				</File>
-				<File Id="1014999919" Language="SFX">
-					<ShortName>Atoll_Tool_Axe_Wood_1.wav</ShortName>
-					<Path>SFX\Atoll_Tool_Axe_Wood_1_10C4C929.wem</Path>
 				</File>
 				<File Id="1022711718" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Wood_2.wav</ShortName>

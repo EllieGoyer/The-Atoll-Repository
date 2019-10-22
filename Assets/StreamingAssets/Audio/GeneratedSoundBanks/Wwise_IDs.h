@@ -24,11 +24,8 @@ namespace AK
         static const AkUniqueID DOOROPEN = 1404805401U;
         static const AkUniqueID ENVIRONMENT_LAND_START = 2038259945U;
         static const AkUniqueID ENVIRONMENT_LAND_STOP = 792665347U;
-        static const AkUniqueID ENVIRONMENT_OUTSIDE_START = 407167729U;
-        static const AkUniqueID ENVIRONMENT_OUTSIDE_STOP = 2448195179U;
         static const AkUniqueID ENVIRONMENT_SEA_START = 1353736985U;
         static const AkUniqueID ENVIRONMENT_SEA_STOP = 3466662131U;
-        static const AkUniqueID ENVIRONMENT_SWITCH = 316040059U;
         static const AkUniqueID H_FOOTSTEPS = 3575671711U;
         static const AkUniqueID JOURNALCLOSE = 3987853926U;
         static const AkUniqueID JOURNALFLIP = 2690803159U;
@@ -42,7 +39,6 @@ namespace AK
         static const AkUniqueID SHIPENTER = 2585523711U;
         static const AkUniqueID SHIPSTORM_START = 2475524499U;
         static const AkUniqueID SHIPSTORM_STOP = 4008905809U;
-        static const AkUniqueID TREECUT = 1939418267U;
     } // namespace EVENTS
 
     namespace STATES
@@ -82,7 +78,9 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID DIALOGUE = 3930136735U;
-        static const AkUniqueID ENVIORMENT = 1778060708U;
+        static const AkUniqueID ENVIRONMENT = 1229948536U;
+        static const AkUniqueID FOOTSTEPS = 2385628198U;
+        static const AkUniqueID INTERACT = 1466384055U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
     } // namespace BUSSES
 

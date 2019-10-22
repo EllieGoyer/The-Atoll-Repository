@@ -86,6 +86,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Checks: []
+  AutoReset: 0
+  ResetCooldownTime: 0
   OnEnabled:
     m_PersistentCalls:
       m_Calls: []
@@ -166,8 +168,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  InsidePlayer: {fileID: 0}
-  currentState: 1
 --- !u!114 &2645652512422044639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,7 +213,7 @@ MonoBehaviour:
   AudioEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: ceeeaf88f56c73440aae38b740a3598d,
+    WwiseObjectReference: {fileID: 11400000, guid: cc797e60fdfe72c4688aed5fa6b5a7be,
       type: 2}
 --- !u!114 &567340977815790769
 MonoBehaviour:
