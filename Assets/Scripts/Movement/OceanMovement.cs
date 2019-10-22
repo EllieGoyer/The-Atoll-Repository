@@ -24,7 +24,7 @@ public class OceanMovement : Movement {
     public float WaterDrag;
 
     protected override float ForwardVelocity {
-        get => forwardVelocity;
+        get => Vector3.Project(controller.Velocity, transform.forward).magnitude;
         set => forwardVelocity = value;
     }
     protected override float AngularVelocity {
@@ -43,15 +43,13 @@ public class OceanMovement : Movement {
 
     // Update is called once per frame
     protected override void Update() {
-        base.Update();
+        float forwardInput = AcceptingInput ? Input.GetAxis(ForwardAxisInputName) : 0;
+        float sideInput = AcceptingInput ? Input.GetAxis(SideAxisInputName) : 0;
 
         Transform transform = gameObject.transform;
 
-        controller.ApplyTorque(new Vector3(0, angularVelocity * controller.AngularInertia, 0));
+        controller.ApplyTorque(new Vector3(0, TurningRate * sideInput * controller.AngularInertia, 0));
 
-        Vector3 moveVector = forwardVelocity * transform.forward;
-
-        if(Vector3.Project(controller.Velocity, transform.forward).magnitude < ForwardTopSpeed)
-            controller.ApplyForce(moveVector * controller.Mass);
+        controller.ApplyForce((forwardInput > 0 ? ForwardAcceleration : BackwardAcceleration) * forwardInput * controller.Mass * transform.forward);
     }
 }
