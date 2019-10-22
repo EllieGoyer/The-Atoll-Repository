@@ -166,6 +166,7 @@ MonoBehaviour:
   previousNode: {fileID: 0}
   text: I feel the same. Can you tell me more about the forest here?
   displayRate: 0.1
+  journalText: 
   nextNode: {fileID: 0}
   promptText: Yes
   Checks: []
@@ -297,6 +298,7 @@ MonoBehaviour:
   previousNode: {fileID: 0}
   text: '....oh well the sand here is very coarse. helps me move around. '
   displayRate: 0.1
+  journalText: 
   nextNode: {fileID: 0}
 --- !u!114 &-98788731222609253
 MonoBehaviour:
@@ -311,7 +313,7 @@ MonoBehaviour:
   m_Name: Question Branch
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 584, y: -24}
+  position: {x: 584, y: 24}
   ports:
     keys:
     - Checks
@@ -354,6 +356,7 @@ MonoBehaviour:
   previousNode: {fileID: 0}
   text: I don't really care that much, sorry.
   displayRate: 0.1
+  journalText: 
   nextNode: {fileID: 0}
   promptText: No
   Checks: []
@@ -434,6 +437,7 @@ MonoBehaviour:
   previousNode: {fileID: 0}
   text: '...oh... rude.'
   displayRate: 0.1
+  journalText: 
   nextNode: {fileID: 0}
 --- !u!114 &2556112802965412294
 MonoBehaviour:
@@ -481,6 +485,7 @@ MonoBehaviour:
   previousNode: {fileID: 0}
   text: '...oh... hello...'
   displayRate: 0.1
+  journalText: 
   nextNode: {fileID: 0}
 --- !u!114 &2647443581342823954
 MonoBehaviour:
@@ -714,6 +719,7 @@ MonoBehaviour:
   previousNode: {fileID: 0}
   text: '...do you like the trees here? they.. make me feel at ease.'
   displayRate: 0.1
+  journalText: 
   Branches:
   - {fileID: 0}
   - {fileID: 0}
@@ -766,4 +772,5 @@ MonoBehaviour:
   previousNode: {fileID: 0}
   text: '...did you need something?'
   displayRate: 0.1
+  journalText: 
   nextNode: {fileID: 0}
