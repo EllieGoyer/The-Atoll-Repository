@@ -47,4 +47,18 @@ public class Buoyant : MonoBehaviour
             }
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        SpectralWaveGenerationModel model = OceanRenderer.GenerationModel;
+        foreach (ContactPoint pt in ContactPoints)
+        {
+            float rootBase = Mathf.Sqrt(pt.BaseArea);
+            Vector3 pos = pt.transform.position;
+            float waterHeight = model.HeightAt(new Vector2(pos.x, pos.z), Time.time);
+            float dispHeight = Mathf.Min(pt.Height, Mathf.Max(0, waterHeight - pos.y));
+            Gizmos.DrawWireCube(new Vector3(pos.x, pos.y + 0.5F * pt.Height, pos.z), new Vector3(rootBase, pt.Height, rootBase));
+            Gizmos.DrawCube(new Vector3(pos.x, pos.y + 0.5F * dispHeight, pos.z), new Vector3(rootBase, dispHeight, rootBase));
+        }
+    }
 }

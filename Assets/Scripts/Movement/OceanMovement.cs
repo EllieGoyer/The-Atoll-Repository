@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(Moveable))]
 
 public class OceanMovement : Movement {
     public float BuoyancyStrength = 20.5F;
@@ -13,7 +13,7 @@ public class OceanMovement : Movement {
     [HideInInspector]
     protected SpectralWaveGenerationModel model;
     [HideInInspector]
-    protected CharacterController controller;
+    protected Moveable controller;
     [HideInInspector]
     protected float forwardVelocity;
     [HideInInspector]
@@ -37,7 +37,7 @@ public class OceanMovement : Movement {
     }
 
     public void ReloadReferences() {
-        controller = gameObject.GetComponent<CharacterController>();
+        controller = gameObject.GetComponent<Moveable>();
         model = WaveRenderer.GenerationModel;
     }
 
@@ -47,35 +47,11 @@ public class OceanMovement : Movement {
 
         Transform transform = gameObject.transform;
 
-        transform.Rotate(0, angularVelocity * Time.deltaTime, 0, Space.Self);
+        controller.ApplyTorque(new Vector3(0, angularVelocity * controller.AngularInertia, 0));
 
         Vector3 moveVector = forwardVelocity * transform.forward;
-        verticalVelocity += (ComputeBuoyancy() - GravityStrength) * Time.deltaTime;
 
-        float drag = IsAirborne() ? AirDrag : WaterDrag;
-        verticalVelocity *= (1 - (drag * Time.deltaTime));
-
-        moveVector.y += verticalVelocity;
-
-        controller.Move(moveVector * Time.deltaTime);
-    }
-
-    public float ComputeBuoyancy() {
-        float shipHeight = transform.position.y;
-        float waterHeight = model.HeightAt(new Vector2(transform.position.x, transform.position.z), Time.time);
-
-        if (shipHeight >= waterHeight) {
-            return 0;
-        }
-        else {
-            return BuoyancyStrength * Mathf.Min(MaxDisplacement, waterHeight - shipHeight);
-        }
-    }
-
-    public bool IsAirborne() {
-        float shipHeight = transform.position.y;
-        float waterHeight = model.HeightAt(new Vector2(transform.position.x, transform.position.z), Time.time);
-
-        return shipHeight >= waterHeight;
+        if(Vector3.Project(controller.Velocity, transform.forward).magnitude < ForwardTopSpeed)
+            controller.ApplyForce(moveVector * controller.Mass);
     }
 }

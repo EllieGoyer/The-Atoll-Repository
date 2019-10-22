@@ -8,8 +8,8 @@ public class Moveable : MonoBehaviour
 {
     public Vector3 Velocity;
     public Vector3 Acceleration;
-    public Quaternion AngularVelocity;
-    public Quaternion AngularAcceleration;
+    public Vector3 AngularVelocity;
+    public Vector3 AngularAcceleration;
     public float Mass;
     public float Radius;
     public float Drag;
@@ -37,7 +37,7 @@ public class Moveable : MonoBehaviour
 
     public void ApplyTorque(Vector3 torque)
     {
-        AngularAcceleration *= Quaternion.Euler(torque / AngularInertia);
+        AngularAcceleration += torque / AngularInertia;
     }
 
     public void ApplyForceAt(Vector3 force, Vector3 position)
@@ -59,17 +59,17 @@ public class Moveable : MonoBehaviour
     
     void Update()
     {
-        AngularVelocity *= Quaternion.Slerp(Quaternion.identity, AngularAcceleration, Time.deltaTime);
-        AngularVelocity = Quaternion.Slerp(Quaternion.identity, AngularVelocity, 1 - AngularDrag);
-        transform.rotation *= Quaternion.Slerp(Quaternion.identity, AngularVelocity, Time.deltaTime);
+        AngularVelocity += AngularAcceleration * Time.deltaTime;
+        AngularVelocity *= Mathf.Pow(1 - AngularDrag, Time.deltaTime);
+        transform.Rotate(AngularVelocity * Time.deltaTime, Space.World);
 
-        Velocity = (Velocity + Acceleration * Time.deltaTime) * (1 - Drag);
+        Velocity = (Velocity + Acceleration * Time.deltaTime) * Mathf.Pow(1 - Drag, Time.deltaTime);
         characterController.Move(Velocity * Time.deltaTime);
 
         //Acceleration is reset at the end of each frame so all forces have to be
         //continuously applied each frame
         Acceleration = Vector3.zero;
-        AngularAcceleration = Quaternion.identity;
+        AngularAcceleration = Vector3.zero;
 
     }
 
