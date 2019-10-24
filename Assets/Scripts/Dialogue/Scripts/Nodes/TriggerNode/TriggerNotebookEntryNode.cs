@@ -4,7 +4,7 @@ using UnityEngine;
 using XNode;
 
 namespace Dialogue {
-    public class TriggerModifyToolNode : TriggerNode {
+    public class TriggerNotebookEntryNode: TriggerNode {
         public Relationship relationship;
         public string text;
         public override void Perform() {

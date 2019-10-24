@@ -138,6 +138,10 @@ public class Inventory : MonoBehaviour {
     /// </summary>
     /// <param name="relationship"></param>
     public void UnlockRelationship(Relationship relationship) {
+        if(relationship == null) {
+            throw new System.NullReferenceException("Parameter \"relationship\" cannot be null");
+        }
+
         // if we already have the relationship, return
         if (FindStoredRelationship(relationship) != null) {
             Debug.LogWarning("Relationship " + relationship.name + " already unlocked");
