@@ -501,11 +501,14 @@
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-20</Value>
+												<Value>-26</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Sea Attenuation" ID="{A926AAEA-CD36-4078-B48B-4654C2EC8F25}" WorkUnitID="{50340E82-D163-4027-BB2D-BD73FD5AEE4D}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
 										</Reference>
