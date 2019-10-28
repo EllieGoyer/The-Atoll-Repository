@@ -16,7 +16,7 @@ namespace Dialogue {
         public override DialogueFlowNode OnEnter() {
             SetupBranches();
 
-            return base.OnEnter(); ;
+            return base.OnEnter();
         }
 
         /// <summary>
