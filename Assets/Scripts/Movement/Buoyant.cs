@@ -18,7 +18,6 @@ public class Buoyant : MonoBehaviour
         public float Height;
     }
     public ContactPoint[] ContactPoints;
-    public WaveRenderer OceanRenderer;
 
     protected Rigidbody moveable;
 
@@ -36,7 +35,7 @@ public class Buoyant : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SpectralWaveGenerationModel model = OceanRenderer.GenerationModel;
+        SpectralWaveGenerationModel model = World.CURRENT.ActiveOceanRenderer.GenerationModel;
         foreach(ContactPoint pt in ContactPoints)
         {
             Vector3 position = pt.transform.position;
@@ -52,15 +51,19 @@ public class Buoyant : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        SpectralWaveGenerationModel model = OceanRenderer.GenerationModel;
-        foreach (ContactPoint pt in ContactPoints)
+        
+        if (World.CURRENT != null && World.CURRENT.ActiveOcean != null)
         {
-            float rootBase = Mathf.Sqrt(pt.BaseArea);
-            Vector3 pos = pt.transform.position;
-            float waterHeight = model.HeightAt(new Vector2(pos.x, pos.z), Time.time);
-            float dispHeight = Mathf.Min(pt.Height, Mathf.Max(0, waterHeight - pos.y));
-            Gizmos.DrawWireCube(new Vector3(pos.x, pos.y + 0.5F * pt.Height, pos.z), new Vector3(rootBase, pt.Height, rootBase));
-            Gizmos.DrawCube(new Vector3(pos.x, pos.y + 0.5F * dispHeight, pos.z), new Vector3(rootBase, dispHeight, rootBase));
+            SpectralWaveGenerationModel model = World.CURRENT.ActiveOceanRenderer.GenerationModel;
+            foreach (ContactPoint pt in ContactPoints)
+            {
+                float rootBase = Mathf.Sqrt(pt.BaseArea);
+                Vector3 pos = pt.transform.position;
+                float waterHeight = model.HeightAt(new Vector2(pos.x, pos.z), Time.time);
+                float dispHeight = Mathf.Min(pt.Height, Mathf.Max(0, waterHeight - pos.y));
+                Gizmos.DrawWireCube(new Vector3(pos.x, pos.y + 0.5F * pt.Height, pos.z), new Vector3(rootBase, pt.Height, rootBase));
+                Gizmos.DrawCube(new Vector3(pos.x, pos.y + 0.5F * dispHeight, pos.z), new Vector3(rootBase, dispHeight, rootBase));
+            }
         }
     }
 }

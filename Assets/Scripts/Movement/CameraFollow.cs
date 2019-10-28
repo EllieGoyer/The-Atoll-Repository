@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public CharacterController Target;
-
     /// <summary>
     /// Minimum elevation of the camera in terms of degrees.
     /// </summary>
@@ -55,6 +53,8 @@ public class CameraFollow : MonoBehaviour
 
     void Update()
     {
+        CharacterController Target = World.CURRENT.ActivePlayer.GetComponent<CharacterController>();
+
         Vector3 targetPosition = Target.transform.position + Vector3.up * FollowHeightOffset;
 
         if(Input.GetButton(DragInputName))

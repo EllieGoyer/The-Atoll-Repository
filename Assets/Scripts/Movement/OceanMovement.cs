@@ -8,10 +8,7 @@ public class OceanMovement : Movement {
     public float BuoyancyStrength = 20.5F;
     public float GravityStrength = 9.8F;
     public float MaxDisplacement = 1;
-    public WaveRenderer WaveRenderer;
 
-    [HideInInspector]
-    protected SpectralWaveGenerationModel model;
     [HideInInspector]
     protected CharacterController controller;
     [HideInInspector]
@@ -38,7 +35,6 @@ public class OceanMovement : Movement {
 
     public void ReloadReferences() {
         controller = gameObject.GetComponent<CharacterController>();
-        model = WaveRenderer.GenerationModel;
     }
 
     // Update is called once per frame
@@ -63,7 +59,7 @@ public class OceanMovement : Movement {
 
     public float ComputeBuoyancy() {
         float shipHeight = transform.position.y;
-        float waterHeight = model.HeightAt(new Vector2(transform.position.x, transform.position.z), Time.time);
+        float waterHeight = World.CURRENT.ActiveOceanRenderer.GenerationModel.HeightAt(new Vector2(transform.position.x, transform.position.z), Time.time);
 
         if (shipHeight >= waterHeight) {
             return 0;
@@ -75,7 +71,7 @@ public class OceanMovement : Movement {
 
     public bool IsAirborne() {
         float shipHeight = transform.position.y;
-        float waterHeight = model.HeightAt(new Vector2(transform.position.x, transform.position.z), Time.time);
+        float waterHeight = World.CURRENT.ActiveOceanRenderer.GenerationModel.HeightAt(new Vector2(transform.position.x, transform.position.z), Time.time);
 
         return shipHeight >= waterHeight;
     }
