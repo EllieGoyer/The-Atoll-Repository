@@ -139,47 +139,6 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
-						<Folder Name="Tools" ID="{C22E47B1-2D52-47E3-9F03-655F6B8BFFCB}" ShortID="765179823">
-							<ChildrenList>
-								<Folder Name="Axe" ID="{E4189137-658B-4A32-8C93-A9C08FA3184D}" ShortID="838774377">
-									<ChildrenList>
-										<Event Name="AxeSelect" ID="{2CBC51C6-E9D4-43F9-87FB-BBB06635BDB2}">
-											<ChildrenList>
-												<Action Name="" ID="{DDEFB7DC-FCBA-4C82-A5E7-F352DFD12B2C}" ShortID="553198409">
-													<ReferenceList>
-														<Reference Name="Target">
-															<ObjectRef Name="Axe_Select" ID="{003C45E8-8FF6-4ABD-BDE3-9ABED8214511}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
-														</Reference>
-													</ReferenceList>
-												</Action>
-											</ChildrenList>
-										</Event>
-										<Event Name="AxeSwing" ID="{8FAB1EBD-A737-4551-8DBA-E8AD130DA642}">
-											<ChildrenList>
-												<Action Name="" ID="{8F802CDD-3AEB-4DD4-9EBE-BDDE0280243E}" ShortID="1037034576">
-													<ReferenceList>
-														<Reference Name="Target">
-															<ObjectRef Name="Atoll_Tool_Axe_Swing" ID="{AC007781-28AD-4390-920B-1176C5AF28AC}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
-														</Reference>
-													</ReferenceList>
-												</Action>
-											</ChildrenList>
-										</Event>
-										<Event Name="AxeWood" ID="{0EC1DDCF-3CE4-487A-8D54-4E6D244BA3B3}">
-											<ChildrenList>
-												<Action Name="" ID="{788D1C70-C7BC-49EA-89D7-1629ABA5E146}" ShortID="685564989">
-													<ReferenceList>
-														<Reference Name="Target">
-															<ObjectRef Name="Axe_Wood" ID="{E63DBA53-F492-4864-B5B5-FF489189EC09}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
-														</Reference>
-													</ReferenceList>
-												</Action>
-											</ChildrenList>
-										</Event>
-									</ChildrenList>
-								</Folder>
-							</ChildrenList>
-						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{AF570D02-AC54-4AF9-B05C-DBFD68CD7787}" ShortID="944396712">
@@ -230,7 +189,7 @@
 						</Folder>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="Envoriment" ID="{B9D6A7DC-7010-4B07-9500-F8055029CE96}" ShortID="911091591">
+				<Folder Name="Environment" ID="{B9D6A7DC-7010-4B07-9500-F8055029CE96}" ShortID="911091591">
 					<ChildrenList>
 						<Event Name="Sea_Oneshot" ID="{AF84820C-32B3-497F-B6FC-F2E83AA6C638}">
 							<ChildrenList>
@@ -246,6 +205,62 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Folder Name="Environment_Outside" ID="{F731B393-7C5B-49C8-9253-61BEF3BF0D97}" ShortID="525241174">
+							<ChildrenList>
+								<Event Name="Environment_Sea_Start" ID="{B01F230D-D413-41B3-8383-DABE75897F67}">
+									<ChildrenList>
+										<Action Name="" ID="{D57CC856-C192-4362-BDAF-E35E6D86BACF}" ShortID="271595323">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Atoll_enviorment_ sounds_at sea" ID="{3828788F-F6B7-4D69-973D-BAA5B186A175}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Environment_Land_Start" ID="{549509EE-D332-438E-82F6-CCCF87175846}">
+									<ChildrenList>
+										<Action Name="" ID="{BD40A3EE-DA5B-4FFE-A5E3-0DDAD7C5521F}" ShortID="939961693">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Atoll_enviorment_land, looped" ID="{88CB8E3C-5986-4BFE-AB1A-691A833F88F1}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Environment_Sea_Stop" ID="{A23B73A9-57D8-49CF-A3A3-EF2B0860D785}">
+									<ChildrenList>
+										<Action Name="" ID="{C6C821D6-6D89-455A-9A26-4F183E77607E}" ShortID="301874552">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Atoll_enviorment_ sounds_at sea" ID="{3828788F-F6B7-4D69-973D-BAA5B186A175}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Environment_Land_Stop" ID="{1667DF77-E32C-48B5-BA6D-DACFA86F4968}">
+									<ChildrenList>
+										<Action Name="" ID="{62834687-F31B-4D15-98CF-C50D50F9F44F}" ShortID="862233048">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="2"/>
+												<Property Name="Scope" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Atoll_enviorment_land, looped" ID="{88CB8E3C-5986-4BFE-AB1A-691A833F88F1}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Interact" ID="{CA23AE3A-A1B9-4DA9-A0B1-894FC4610FED}" ShortID="557901276">
@@ -276,45 +291,71 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
-						<Folder Name="Anchor" ID="{98819A9B-8BEF-4C00-9A06-510961D216B8}" ShortID="827671619">
+						<Folder Name="Tools" ID="{C22E47B1-2D52-47E3-9F03-655F6B8BFFCB}" ShortID="765179823">
 							<ChildrenList>
-								<Event Name="AnchorDeploy" ID="{54A0411A-A684-4533-AA1F-5FA91E2F2A33}">
+								<Folder Name="Axe" ID="{E4189137-658B-4A32-8C93-A9C08FA3184D}" ShortID="838774377">
 									<ChildrenList>
-										<Action Name="" ID="{F897E393-F0B2-4CE0-A31B-98CC65363EF6}" ShortID="772890860">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Atoll_Anchor_Deploy_2" ID="{BEB8CA49-43F5-425A-9E8A-083000058078}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
+										<Event Name="AxeSelect" ID="{2CBC51C6-E9D4-43F9-87FB-BBB06635BDB2}">
+											<ChildrenList>
+												<Action Name="" ID="{DDEFB7DC-FCBA-4C82-A5E7-F352DFD12B2C}" ShortID="553198409">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Axe_Select" ID="{003C45E8-8FF6-4ABD-BDE3-9ABED8214511}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="AxeSwing" ID="{8FAB1EBD-A737-4551-8DBA-E8AD130DA642}">
+											<ChildrenList>
+												<Action Name="" ID="{8F802CDD-3AEB-4DD4-9EBE-BDDE0280243E}" ShortID="1037034576">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Atoll_Tool_Axe_Swing" ID="{AC007781-28AD-4390-920B-1176C5AF28AC}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="AxeWood" ID="{0EC1DDCF-3CE4-487A-8D54-4E6D244BA3B3}">
+											<ChildrenList>
+												<Action Name="" ID="{788D1C70-C7BC-49EA-89D7-1629ABA5E146}" ShortID="685564989">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Axe_Wood" ID="{E63DBA53-F492-4864-B5B5-FF489189EC09}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
 									</ChildrenList>
-								</Event>
-								<Event Name="AnchorHit" ID="{15921C24-84E5-43E0-9797-C89307E0C33B}">
+								</Folder>
+								<Folder Name="Anchor" ID="{98819A9B-8BEF-4C00-9A06-510961D216B8}" ShortID="827671619">
 									<ChildrenList>
-										<Action Name="" ID="{19D1E155-039B-4A25-A140-8889C0861B8E}" ShortID="126262953">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Atoll_Anchor_Hit" ID="{F5C10A3F-73FA-45D4-90D9-0DD9943DB220}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
+										<Event Name="AnchorDeploy" ID="{54A0411A-A684-4533-AA1F-5FA91E2F2A33}">
+											<ChildrenList>
+												<Action Name="" ID="{F897E393-F0B2-4CE0-A31B-98CC65363EF6}" ShortID="772890860">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Atoll_Anchor_Deploy_2" ID="{BEB8CA49-43F5-425A-9E8A-083000058078}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="AnchorHit" ID="{15921C24-84E5-43E0-9797-C89307E0C33B}">
+											<ChildrenList>
+												<Action Name="" ID="{19D1E155-039B-4A25-A140-8889C0861B8E}" ShortID="126262953">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Atoll_Anchor_Hit" ID="{F5C10A3F-73FA-45D4-90D9-0DD9943DB220}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
 									</ChildrenList>
-								</Event>
-							</ChildrenList>
-						</Folder>
-						<Folder Name="Tree" ID="{00456997-0C9A-48DA-9653-D70F04A227B0}" ShortID="550475613">
-							<ChildrenList>
-								<Event Name="TreeCut" ID="{3399E1A9-D566-4CC6-9C9C-50F406CA0458}">
-									<ChildrenList>
-										<Action Name="" ID="{14E34E6E-20F9-41F4-9C3A-B308332CE818}" ShortID="1010006798">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Tree_Cut" ID="{15A2B245-A5EB-442F-AFFC-0544E51E75CB}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
+								</Folder>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>

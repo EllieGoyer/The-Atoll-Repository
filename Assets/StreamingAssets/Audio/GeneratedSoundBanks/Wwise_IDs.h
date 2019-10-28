@@ -22,6 +22,10 @@ namespace AK
         static const AkUniqueID DOCKLANDING = 3825949625U;
         static const AkUniqueID DOORCLOSE = 3638457343U;
         static const AkUniqueID DOOROPEN = 1404805401U;
+        static const AkUniqueID ENVIRONMENT_LAND_START = 2038259945U;
+        static const AkUniqueID ENVIRONMENT_LAND_STOP = 792665347U;
+        static const AkUniqueID ENVIRONMENT_SEA_START = 1353736985U;
+        static const AkUniqueID ENVIRONMENT_SEA_STOP = 3466662131U;
         static const AkUniqueID H_FOOTSTEPS = 3575671711U;
         static const AkUniqueID JOURNALCLOSE = 3987853926U;
         static const AkUniqueID JOURNALFLIP = 2690803159U;
@@ -35,7 +39,6 @@ namespace AK
         static const AkUniqueID SHIPENTER = 2585523711U;
         static const AkUniqueID SHIPSTORM_START = 2475524499U;
         static const AkUniqueID SHIPSTORM_STOP = 4008905809U;
-        static const AkUniqueID TREECUT = 1939418267U;
     } // namespace EVENTS
 
     namespace STATES
@@ -57,12 +60,14 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID ENVIRONMENTSWITCH = 3780105948U;
         static const AkUniqueID STORMLEVEL = 2380834754U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
+        static const AkUniqueID ENVIORMENT_OUTSIDE = 2157951080U;
         static const AkUniqueID LAND_STORM = 1595190680U;
         static const AkUniqueID MAIN = 3161908922U;
         static const AkUniqueID NPC = 662417162U;
@@ -72,6 +77,10 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID DIALOGUE = 3930136735U;
+        static const AkUniqueID ENVIRONMENT = 1229948536U;
+        static const AkUniqueID FOOTSTEPS = 2385628198U;
+        static const AkUniqueID INTERACT = 1466384055U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
     } // namespace BUSSES
 
