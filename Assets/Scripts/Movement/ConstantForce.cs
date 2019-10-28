@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Moveable))]
+[RequireComponent(typeof(Rigidbody))]
 
 public class ConstantForce : MonoBehaviour
 {
     public Vector3 Force = new Vector3(0, -9.8F, 0);
 
-    protected Moveable moveable;
+    protected Rigidbody moveable;
 
     public bool RefreshMoveable()
     {
-        moveable = gameObject.GetComponent<Moveable>();
+        moveable = gameObject.GetComponent<Rigidbody>();
         return moveable != null;
     }
 
@@ -23,6 +23,6 @@ public class ConstantForce : MonoBehaviour
 
     void Update()
     {
-        moveable.ApplyForce(Force);
+        moveable.AddForce(Force, ForceMode.Force);
     }
 }

@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class OceanFollow : MonoBehaviour
 {
-    public GameObject Target;
-    
     void Update()
     {
-        gameObject.transform.position = new Vector3(Target.transform.position.x, 0, Target.transform.position.z);
+        Vector3 position = World.CURRENT.ActivePlayer.transform.position;
+        gameObject.transform.position = new Vector3(position.x, 0, position.z);
     }
 }

@@ -10,8 +10,6 @@ public class BoatTransitionHandler : MonoBehaviour {
     //public UnityEvent OnEnterOceanMode;
     //public UnityEvent OnEnterLandMode;
 
-    [HideInInspector]
-    protected CameraFollow cameraFollow;
     public WalkingMovement LandTarget;
     public GameObject LandPrefab;
     public Vector3 ShipDropoffOffset;
@@ -27,6 +25,7 @@ public class BoatTransitionHandler : MonoBehaviour {
 
     void Awake()
     {
+        Debug.Log("Transition");
         // set object up as a singleton
         if (Instance != null) {
             Destroy(gameObject);
@@ -34,7 +33,6 @@ public class BoatTransitionHandler : MonoBehaviour {
         }
         Instance = this;
         //DontDestroyOnLoad(gameObject);
-        cameraFollow = gameObject.GetComponent<CameraFollow>();
         UpdateControllers();
     }
 
@@ -69,9 +67,10 @@ public class BoatTransitionHandler : MonoBehaviour {
 
     public void UpdateControllers()
     {
+        CameraFollow cameraFollow = World.CURRENT.ActiveCameraFollow;
         if (IsOceanMode)
         {
-            cameraFollow.Target = OceanTarget.gameObject.GetComponent<CharacterController>();
+            World.CURRENT.ActivePlayer = OceanTarget.gameObject;
             cameraFollow.FollowDistance = OceanDistance;
             cameraFollow.FollowElevation = OceanAngle;
             cameraFollow.FollowHeightOffset = OceanHeightOffset;
@@ -80,12 +79,13 @@ public class BoatTransitionHandler : MonoBehaviour {
         }
         else
         {
-            cameraFollow.Target = LandTarget.gameObject.GetComponent<CharacterController>();
+            World.CURRENT.ActivePlayer = LandTarget.gameObject;
             cameraFollow.FollowDistance = LandDistance;
             cameraFollow.FollowElevation = LandAngle;
             cameraFollow.FollowHeightOffset = LandHeightOffset;
             OceanTarget.AcceptingInput = false;
             LandTarget.AcceptingInput = true;
         }
+
     }
 }
