@@ -41,8 +41,7 @@ public class WalkingMovement : Movement
 
         controller.SimpleMove(moveVector);
 
-        
-        if(Mathf.Approximately(0, moveVector.magnitude))
+        if (Mathf.Approximately(0, moveVector.magnitude))
         {
             Animator.SetBool("IsWalking", false);
         }
