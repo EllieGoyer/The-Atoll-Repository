@@ -57,8 +57,6 @@ public class CameraFollow : MonoBehaviour
     {
         Vector3 targetPosition = Target.transform.position + Vector3.up * FollowHeightOffset;
 
-        Debug.Log(Target.velocity.sqrMagnitude);
-
         if(Input.GetButton(DragInputName))
         {
             float verticalDrag = Input.GetAxis(DragVerticalAxisName) * -1;
