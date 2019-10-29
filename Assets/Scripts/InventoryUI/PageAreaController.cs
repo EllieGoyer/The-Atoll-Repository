@@ -6,27 +6,30 @@ using UnityEngine.UI;
 public class PageAreaController : MonoBehaviour
 {
 
-    private Image[] tabs;
+    private Canvas[] tabs;
 
-    private Image current;
+    private Canvas current;
 
     // Start is called before the first frame update
     void Start()
     {
-        tabs = this.GetComponentsInChildren<Image>(true);
+        tabs = this.GetComponentsInChildren<Canvas>(true);
 
-        print(tabs);
-
+ 
         current.enabled = true;
     }
 
     public void changeTab(int x)
     {
-        for(int i = 1; i < tabs.Length; i++)
+        
+        for (int i = 0; i < tabs.Length; i++)
         {
             tabs[i].enabled = false;
         }
-        tabs[x+1].enabled = true;
+        tabs[x].enabled = true;
+
+      // DrawTools.Instance.draw();
+       
     }
 
     // Update is called once per frame
