@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEditor;
 
@@ -73,12 +74,15 @@ public class IntersectionPathColliderEditor : Editor
 
     public override void OnInspectorGUI()
     {
+        serializedObject.Update();
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("BaseLevel"));
+        serializedObject.ApplyModifiedProperties();
         if(GUILayout.Button("Regenerate"))
         {
             collider = ((IntersectionPathCollider)target);
             terrain = collider.gameObject.GetComponent<Terrain>();
-            Target = collider.BaseLevel;
-            points = FindCandidatePoints();
+            Target = serializedObject.FindProperty("BaseLevel").floatValue;
+            points = FindCandidatePoints().Where(x => Mathf.Approximately(x.y, Target)).ToArray();
             SerializedProperty prop = serializedObject.FindProperty("tpts");
             prop.arraySize = points.Length;
             Vector3 bmat = collider.transform.position;
