@@ -28,7 +28,8 @@ public class PageAreaController : MonoBehaviour
         }
         tabs[x].enabled = true;
 
-      // DrawTools.Instance.draw();
+        
+        DrawTools.Instance.draw();
        
     }
 

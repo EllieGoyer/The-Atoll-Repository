@@ -13,16 +13,16 @@ public class DrawTools : MonoBehaviour
     public GameObject prefab;
     public int num;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        draw();   
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // set object up as a singleton
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        //DontDestroyOnLoad(gameObject);
     }
 
     public void draw()
