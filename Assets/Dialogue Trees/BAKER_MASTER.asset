@@ -141,6 +141,53 @@ MonoBehaviour:
   relationship: {fileID: 11400000, guid: 57cfd302fe78bc84a967e9c7bef85a34, type: 2}
   relationshipCheckType: 1
   CheckAmount: 0
+--- !u!114 &-6705852288180607094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff1faa2f3f56e5e4c9465e609842060a, type: 3}
+  m_Name: Segment
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -728, y: -760}
+  ports:
+    keys:
+    - nextNode
+    - previousNode
+    values:
+    - _fieldName: nextNode
+      _node: {fileID: -6705852288180607094}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: previousNode
+        node: {fileID: 8941650559197524570}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: previousNode
+      _node: {fileID: -6705852288180607094}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: nextNode
+        node: {fileID: 2998860269126981463}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previousNode: {fileID: 0}
+  text: I'll take those from you. Thank you again!!
+  displayRate: 0.1
+  nextNode: {fileID: 0}
 --- !u!114 &-5822802435392445508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,7 +307,7 @@ MonoBehaviour:
   m_Name: Check Collectable
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -936, y: -440}
+  position: {x: -936, y: -424}
   ports:
     keys:
     - branch
@@ -389,9 +436,46 @@ MonoBehaviour:
   - {fileID: -1136121309455119414}
   - {fileID: 467730862839643227}
   - {fileID: 7640826641333154933}
+  - {fileID: 81865367611212079}
+  - {fileID: 2998860269126981463}
+  - {fileID: -6705852288180607094}
+  - {fileID: 8941650559197524570}
   current: {fileID: 6013064921633254654}
   dialogueController: {fileID: 0}
   Active: 0
+--- !u!114 &81865367611212079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf2976bdb4369da419bc23a24c6397a8, type: 3}
+  m_Name: Check Collectable
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -936, y: -328}
+  ports:
+    keys:
+    - branch
+    values:
+    - _fieldName: branch
+      _node: {fileID: 81865367611212079}
+      _typeQualifiedName: Dialogue.QuestionBranchNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Checks 1
+        node: {fileID: 7793184481650450523}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  branch: {fileID: 0}
+  collectable: {fileID: 11400000, guid: 447c7fdcf1170a54ebdeb62ea9f8eeed, type: 2}
+  collectableCheckType: 0
 --- !u!114 &467730862839643227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,6 +600,54 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   previousNode: {fileID: 0}
+--- !u!114 &2998860269126981463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff1faa2f3f56e5e4c9465e609842060a, type: 3}
+  m_Name: Segment
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -936, y: -760}
+  ports:
+    keys:
+    - nextNode
+    - previousNode
+    values:
+    - _fieldName: nextNode
+      _node: {fileID: 2998860269126981463}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: previousNode
+        node: {fileID: -6705852288180607094}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: previousNode
+      _node: {fileID: 2998860269126981463}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: PassPath
+        node: {fileID: 7793184481650450523}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previousNode: {fileID: 0}
+  text: OH! Thank you, dear! How was Cerci? Hopefully she didn't give you too much
+    trouble.
+  displayRate: 0.1
+  nextNode: {fileID: 0}
 --- !u!114 &3966092681315098431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -807,9 +939,6 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: PassPath
-        node: {fileID: 7793184481650450523}
-        reroutePoints: []
       - fieldName: nextNode
         node: {fileID: 467730862839643227}
         reroutePoints: []
@@ -868,6 +997,7 @@ MonoBehaviour:
     - FailPath
     - previousNode
     - Checks 0
+    - Checks 1
     values:
     - _fieldName: Checks
       _node: {fileID: 7793184481650450523}
@@ -884,7 +1014,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: previousNode
-        node: {fileID: 7717921224609743828}
+        node: {fileID: 2998860269126981463}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -929,8 +1059,52 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
+    - _fieldName: Checks 1
+      _node: {fileID: 7793184481650450523}
+      _typeQualifiedName: Dialogue.CheckNode[], Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: branch
+        node: {fileID: 81865367611212079}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   previousNode: {fileID: 0}
   Checks:
   - {fileID: 0}
+  - {fileID: 0}
   PassPath: {fileID: 0}
   FailPath: {fileID: 0}
+--- !u!114 &8941650559197524570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31123c96354d01740a9bd43d295c653e, type: 3}
+  m_Name: End
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -520, y: -664}
+  ports:
+    keys:
+    - previousNode
+    values:
+    - _fieldName: previousNode
+      _node: {fileID: 8941650559197524570}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: nextNode
+        node: {fileID: -6705852288180607094}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previousNode: {fileID: 0}
