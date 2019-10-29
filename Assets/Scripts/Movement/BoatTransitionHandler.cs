@@ -25,7 +25,6 @@ public class BoatTransitionHandler : MonoBehaviour {
 
     void Awake()
     {
-        Debug.Log("Transition");
         // set object up as a singleton
         if (Instance != null) {
             Destroy(gameObject);

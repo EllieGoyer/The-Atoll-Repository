@@ -54,7 +54,7 @@ public class World : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("World");
         CURRENT = this;
+        activeCamera.GetComponent<Camera>().depthTextureMode = DepthTextureMode.Depth;
     }
 }
