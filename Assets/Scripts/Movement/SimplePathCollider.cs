@@ -4,21 +4,29 @@ using UnityEngine;
 
 public class SimplePathCollider : PathCollider
 {
-    public Transform[] Points;
     protected override Vector3[] points
     {
         get
         {
-            if (Points == null) return null;
-            else {
-                Vector3[] pts = new Vector3[Points.Length];
-                for (int i = 0; i < Points.Length; i++)
-                {
-                    if (Points[i] == null) return null;
-                    pts[i] = Points[i].position;
-                }
-                return pts;
+            Vector3[] pts = new Vector3[transform.childCount];
+            for(int i = 0; i < pts.Length; i++)
+            {
+                pts[i] = transform.GetChild(i).transform.position;
             }
+            return pts;
+        }
+    }
+    protected override int[] segments
+    {
+        get
+        {
+            int[] segs = new int[Mathf.Max(0, 2 * points.Length - 2)];
+            for(int i = 0; i < segs.Length; i += 2)
+            {
+                segs[i] = i / 2;
+                segs[i + 1] = i / 2 + 1;
+            }
+            return segs;
         }
     }
 }

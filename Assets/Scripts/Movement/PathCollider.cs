@@ -37,7 +37,10 @@ public abstract class PathCollider : MonoBehaviour
     {
         get;
     }
-    public bool IsClosed;
+    protected abstract int[] segments
+    {
+        get;
+    }
     public float Thickness;
     public float Height;
     public float CapLength;
@@ -46,6 +49,7 @@ public abstract class PathCollider : MonoBehaviour
     public void GenerateColliders()
     {
         Vector3[] pts = points;
+        int[] segs = segments;
         if(colliderObjects != null)
         {
             foreach(GameObject obj in colliderObjects)
@@ -53,17 +57,13 @@ public abstract class PathCollider : MonoBehaviour
                 Destroy(obj);
             }
         }
-        colliderObjects = new GameObject[IsClosed ? pts.Length : pts.Length - 1];
-        for(int i = 0; i < pts.Length - 1; i++)
+        colliderObjects = new GameObject[segs.Length / 2];
+        Matrix4x4 baseTransform = gameObject.transform.localToWorldMatrix;
+        for(int i = 0; i < segs.Length; i += 2)
         {
-            colliderObjects[i] = SegmentToCollider(pts[i], pts[i + 1], Thickness, Height, CapLength);
-            colliderObjects[i].transform.parent = gameObject.transform;
-        }
-
-        if(IsClosed && pts.Length > 1)
-        {
-            colliderObjects[pts.Length - 1] = SegmentToCollider(pts[pts.Length - 1], pts[0], Thickness, Height, CapLength);
-            colliderObjects[pts.Length - 1].transform.parent = gameObject.transform;
+            colliderObjects[i / 2] = SegmentToCollider(pts[segs[i]], pts[segs[i + 1]], Thickness, Height, CapLength);
+            colliderObjects[i / 2].transform.SetParent(gameObject.transform, true);
+            colliderObjects[i / 2].layer = gameObject.layer;
         }
     }
 
@@ -75,18 +75,14 @@ public abstract class PathCollider : MonoBehaviour
     private void OnDrawGizmos()
     {
         Vector3[] pts = points;
+        int[] segs = segments;
         Gizmos.color = Color.green;
         if (pts != null)
         {
-            for (int i = 0; i < pts.Length - 1; i++)
+            for (int i = 0; i < segs.Length; i += 2)
             {
-                Gizmos.matrix = Matrix4x4.TRS(SegmentColliderCenter(pts[i], pts[i + 1]), SegmentColliderOrientation(pts[i], pts[i + 1]), Vector3.one);
-                Gizmos.DrawWireCube(Vector3.zero, SegmentColliderSize(pts[i], pts[i + 1], Thickness, Height, CapLength));
-            }
-            if (IsClosed && pts.Length > 1)
-            {
-                Gizmos.matrix = Matrix4x4.TRS(SegmentColliderCenter(pts[pts.Length - 1], pts[0]), SegmentColliderOrientation(pts[pts.Length - 1], pts[0]), Vector3.one);
-                Gizmos.DrawWireCube(Vector3.zero, SegmentColliderSize(pts[pts.Length - 1], pts[0], Thickness, Height, CapLength));
+                Gizmos.matrix = Matrix4x4.TRS(SegmentColliderCenter(pts[segs[i]], pts[segs[i + 1]]), SegmentColliderOrientation(pts[segs[i]], pts[segs[i + 1]]), Vector3.one);
+                Gizmos.DrawWireCube(Vector3.zero, SegmentColliderSize(pts[segs[i]], pts[segs[i + 1]], Thickness, Height, CapLength));
             }
         }
     }
