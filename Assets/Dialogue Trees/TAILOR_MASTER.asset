@@ -192,9 +192,6 @@ MonoBehaviour:
       - fieldName: previousNode
         node: {fileID: 4300593131445738115}
         reroutePoints: []
-      - fieldName: previousNode
-        node: {fileID: -3345408482793341544}
-        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -346,7 +343,7 @@ MonoBehaviour:
   m_Name: Trigger Modify Collectable
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 648, y: -360}
+  position: {x: 664, y: -184}
   ports:
     keys:
     - Output
@@ -369,8 +366,8 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: nextNode
-        node: {fileID: -6376104524812220075}
+      - fieldName: Output
+        node: {fileID: 4300593131445738115}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1420,7 +1417,7 @@ MonoBehaviour:
   m_Name: End
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1112, y: -184}
+  position: {x: 920, y: -152}
   ports:
     keys:
     - previousNode
@@ -1432,9 +1429,6 @@ MonoBehaviour:
       connections:
       - fieldName: Output
         node: {fileID: -3345408482793341544}
-        reroutePoints: []
-      - fieldName: Output
-        node: {fileID: 4300593131445738115}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1488,7 +1482,7 @@ MonoBehaviour:
   m_Name: Trigger Modify Relationship
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 648, y: -232}
+  position: {x: 664, y: -328}
   ports:
     keys:
     - Output
@@ -1500,7 +1494,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: previousNode
-        node: {fileID: 3365031104095925296}
+        node: {fileID: -3345408482793341544}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
