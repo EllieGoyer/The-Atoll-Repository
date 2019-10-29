@@ -119,6 +119,21 @@ public class Inventory : MonoBehaviour {
         OnInventoryUpdate.Invoke();
     }
     /// <summary>
+    /// Remove a collectable from the inventory
+    /// </summary>
+    /// <param name="collectable"></param>
+    public void LockCollectable(Collectable collectable) {
+        // if we don't have the collectable, return
+        if(!Collectables.Contains(collectable)) {
+            Debug.LogWarning("Collectable " + collectable.name + "is not unlocked");
+            return;
+        }
+
+        //remove the collectable
+        Collectables.Remove(collectable);
+        OnInventoryUpdate.Invoke();
+    }
+    /// <summary>
     /// Add a new good to the inventory
     /// </summary>
     /// <param name="good"></param>

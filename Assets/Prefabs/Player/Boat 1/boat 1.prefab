@@ -193,13 +193,9 @@ MonoBehaviour:
   OnEnabled:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnDisabled:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnActivated:
     m_PersistentCalls:
       m_Calls:
@@ -214,8 +210,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnDeactivated:
     m_PersistentCalls:
       m_Calls:
@@ -230,8 +224,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnPerforming:
     m_PersistentCalls:
       m_Calls:
@@ -257,8 +249,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &39681370175962453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,7 +524,6 @@ MonoBehaviour:
   BuoyancyStrength: 100
   GravityStrength: 9.8
   MaxDisplacement: 1
-  WaveRenderer: {fileID: 0}
   AirDrag: 0.5
   WaterDrag: 5
 --- !u!114 &4540990674184337570
@@ -603,7 +592,6 @@ MonoBehaviour:
   - transform: {fileID: 7905428888661624073}
     BaseArea: 1
     Height: 1
-  OceanRenderer: {fileID: 0}
 --- !u!114 &834614422948463759
 MonoBehaviour:
   m_ObjectHideFlags: 0
