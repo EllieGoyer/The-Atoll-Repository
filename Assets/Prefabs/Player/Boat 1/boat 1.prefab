@@ -193,9 +193,13 @@ MonoBehaviour:
   OnEnabled:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   OnDisabled:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   OnActivated:
     m_PersistentCalls:
       m_Calls:
@@ -210,6 +214,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   OnDeactivated:
     m_PersistentCalls:
       m_Calls:
@@ -224,6 +230,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   OnPerforming:
     m_PersistentCalls:
       m_Calls:
@@ -249,6 +257,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &39681370175962453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,7 +560,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -633,16 +643,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8171264087177971974}
     m_Modifications:
-    - target: {fileID: 2459733140224072237, guid: 2dfe244af4ed1f042a8076e5f4af9360,
-        type: 3}
-      propertyPath: m_Name
-      value: Debug Interactable Visualizer
-      objectReference: {fileID: 0}
-    - target: {fileID: 2459733140224072237, guid: 2dfe244af4ed1f042a8076e5f4af9360,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 2459733140224072234, guid: 2dfe244af4ed1f042a8076e5f4af9360,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -697,6 +697,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2459733140224072237, guid: 2dfe244af4ed1f042a8076e5f4af9360,
+        type: 3}
+      propertyPath: m_Name
+      value: Debug Interactable Visualizer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2459733140224072237, guid: 2dfe244af4ed1f042a8076e5f4af9360,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2459733140224072233, guid: 2dfe244af4ed1f042a8076e5f4af9360,
         type: 3}
