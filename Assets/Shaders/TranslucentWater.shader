@@ -1,4 +1,4 @@
-﻿Shader "TranslucentWater" {
+Shader "TranslucentWater" {
 	Properties
 	{
 		_WaterColor("Water Color", Color) = (0,0,0,1)
