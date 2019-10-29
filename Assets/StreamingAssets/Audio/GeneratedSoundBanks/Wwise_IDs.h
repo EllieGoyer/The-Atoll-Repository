@@ -19,6 +19,11 @@ namespace AK
         static const AkUniqueID AXESWING = 2157426783U;
         static const AkUniqueID AXEWOOD = 3604088180U;
         static const AkUniqueID DIALOGUE = 3930136735U;
+        static const AkUniqueID DIALOGUE_BAKER = 3627704641U;
+        static const AkUniqueID DIALOGUE_FARMER = 1399074927U;
+        static const AkUniqueID DIALOGUE_LUMBERJACK = 688404286U;
+        static const AkUniqueID DIALOGUE_POTTER = 3640867316U;
+        static const AkUniqueID DIALOGUE_TAYLOR = 2409864631U;
         static const AkUniqueID DOCKLANDING = 3825949625U;
         static const AkUniqueID DOORCLOSE = 3638457343U;
         static const AkUniqueID DOOROPEN = 1404805401U;

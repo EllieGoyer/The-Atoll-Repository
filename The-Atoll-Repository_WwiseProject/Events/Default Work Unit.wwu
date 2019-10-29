@@ -418,6 +418,61 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Dialogue_Potter" ID="{A4702CDB-C091-411D-B2EA-0B5BC78382CE}">
+							<ChildrenList>
+								<Action Name="" ID="{6EE9EE6C-68BC-4F41-96F1-5BA5ED5DF2E5}" ShortID="947044586">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Potter_Dialogue" ID="{CBD05791-71D6-4E64-B478-1EFBB616D85A}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Dialogue_Baker" ID="{A9E5C191-3898-41C2-8660-C059BE980AAA}">
+							<ChildrenList>
+								<Action Name="" ID="{ACC3AC24-DC10-4FF8-AF6A-B663C1EF5CC5}" ShortID="417241904">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Baker_Dialogue" ID="{E20700B2-E28D-4045-A4F0-FE9C3A0BAD14}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Dialogue_Taylor" ID="{83A2F02D-79F6-4CDD-8FFA-1B4FF54A65BC}">
+							<ChildrenList>
+								<Action Name="" ID="{F1B2B4A7-5CB8-4C60-851E-CF9E5645AE15}" ShortID="223647211">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Taylor_Dialogue" ID="{2DB3B90F-B35C-4B1B-B11E-0B1E75F447D2}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Dialogue_Farmer" ID="{77836F47-E29C-4DE9-88A8-77F2AA0A1251}">
+							<ChildrenList>
+								<Action Name="" ID="{A6041232-3FA1-4944-AF57-B40DF0CB8EF4}" ShortID="191954422">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Farmer_Dialogue" ID="{870E69DE-8486-4443-9501-0D20D05BAC77}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Dialogue_Lumberjack" ID="{1E98483F-8592-44D0-89A6-66E6A992BAAE}">
+							<ChildrenList>
+								<Action Name="" ID="{071263C8-F8B7-499F-A87A-347698CDD6B3}" ShortID="723679124">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Lumberjack_Dialogue" ID="{581F6466-EE5B-4560-B2DA-E4B2B4D573C4}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

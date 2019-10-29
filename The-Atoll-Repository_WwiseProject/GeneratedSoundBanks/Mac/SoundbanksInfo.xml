@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -55,6 +55,11 @@
 			<Path>NPC.bnk</Path>
 			<IncludedEvents>
 				<Event Id="3930136735" Name="Dialogue" ObjectPath="\Events\Default Work Unit\NPC\Dialogue" DurationType="OneShot" DurationMin="0.269462" DurationMax="0.335434"/>
+				<Event Id="3627704641" Name="Dialogue_Baker" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Baker" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1399074927" Name="Dialogue_Farmer" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Farmer" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="688404286" Name="Dialogue_Lumberjack" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Lumberjack" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3640867316" Name="Dialogue_Potter" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Potter" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2409864631" Name="Dialogue_Taylor" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Taylor" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="152071147" Language="SFX">
@@ -127,6 +132,11 @@
 				<Event Id="2157426783" Name="AxeSwing" ObjectPath="\Events\Default Work Unit\Interact\Tools\Axe\AxeSwing" DurationType="OneShot" DurationMin="0.560032" DurationMax="0.628615"/>
 				<Event Id="3604088180" Name="AxeWood" ObjectPath="\Events\Default Work Unit\Interact\Tools\Axe\AxeWood" DurationType="OneShot" DurationMin="0.265583" DurationMax="0.628747"/>
 				<Event Id="3930136735" Name="Dialogue" ObjectPath="\Events\Default Work Unit\NPC\Dialogue" DurationType="OneShot" DurationMin="0.269462" DurationMax="0.335434"/>
+				<Event Id="3627704641" Name="Dialogue_Baker" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Baker" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1399074927" Name="Dialogue_Farmer" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Farmer" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="688404286" Name="Dialogue_Lumberjack" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Lumberjack" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3640867316" Name="Dialogue_Potter" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Potter" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2409864631" Name="Dialogue_Taylor" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Taylor" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3638457343" Name="DoorClose" ObjectPath="\Events\Default Work Unit\Interact\Door\DoorClose" DurationType="OneShot" DurationMin="0.649661" DurationMax="0.768067"/>
 				<Event Id="1404805401" Name="DoorOpen" ObjectPath="\Events\Default Work Unit\Interact\Door\DoorOpen" DurationType="OneShot" DurationMin="0.690798" DurationMax="0.899882"/>
 				<Event Id="3575671711" Name="H_Footsteps" ObjectPath="\Events\Default Work Unit\Player\Footsteps\H_Footsteps" DurationType="OneShot" DurationMin="0.106972" DurationMax="0.571187"/>
