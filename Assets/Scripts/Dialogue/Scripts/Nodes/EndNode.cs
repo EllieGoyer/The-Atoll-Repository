@@ -6,11 +6,10 @@ using XNode;
 namespace Dialogue {
     [NodeTint("FFFFFF")]
     public class EndNode : DialogueFlowNode {
-
         public override DialogueFlowNode OnEnter() {
             DialogueGraph dgraph = graph as DialogueGraph;
 
-            dgraph.dialogueController.EndDialogue();
+            dgraph.dialogueController.CloseCurrentGraph();
 
             return null;
         }

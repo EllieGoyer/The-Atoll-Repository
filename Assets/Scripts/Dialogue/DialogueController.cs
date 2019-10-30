@@ -5,7 +5,17 @@ using UnityEngine.Events;
 
 public class DialogueController : MonoBehaviour
 {
-    public Dialogue.DialogueGraph dialogueGraph;
+    public Dialogue.DialogueGraph masterDialogueGraph;
+
+    Stack<Dialogue.DialogueGraph> GraphStack;
+
+    [HideInInspector] public Dialogue.DialogueGraph CurrentGraph {
+        get {
+            if (GraphStack.Count == 0) return null;
+            return GraphStack.Peek();
+        }
+    }
+
     public GameObject DialogueDisplayBoxPrefab;
     public GameObject ResponsePromptBoxesPrefab;
     public Vector3 DialogueBoxPositionOffset;
@@ -17,19 +27,19 @@ public class DialogueController : MonoBehaviour
     ResponsePromptBoxes playerResponseBoxes;
 
     private void Awake() {
-        dialogueGraph.Initialize(this);
+        
     }
 
     private void Update() {
         if(Active) {
             if (Input.GetKeyDown(KeyCode.Alpha1)) {
-                dialogueGraph.TryAnswer(0);
+                CurrentGraph.TryAnswer(0);
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2)) {
-                dialogueGraph.TryAnswer(1);
+                CurrentGraph.TryAnswer(1);
             }
             else if (Input.GetKeyDown(KeyCode.Alpha3)) {
-                dialogueGraph.TryAnswer(2);
+                CurrentGraph.TryAnswer(2);
             }
         }
         
@@ -54,12 +64,32 @@ public class DialogueController : MonoBehaviour
 
     public void TryAdvance() {
 
-        dialogueGraph.TryAdvance();
+        CurrentGraph.TryAdvance();
+    }
+
+    public void OpenGraph(Dialogue.DialogueGraph newGraph) {
+        GraphStack.Push(newGraph);
+        CurrentGraph.Initialize(this);
+        CurrentGraph.Reset();
+    }
+
+    public void CloseCurrentGraph() {
+        GraphStack.Pop();
+        
+        if(CurrentGraph == null) {
+            EndDialogue();
+        }
+        else {
+            CurrentGraph.TryAdvance();
+        }
     }
 
     public void StartDialogue() {
+        GraphStack = new Stack<Dialogue.DialogueGraph>();
+
+        OpenGraph(masterDialogueGraph);
+
         Active = true;
-        dialogueGraph.Reset();
     }
 
     public void EndDialogue() {
@@ -134,7 +164,7 @@ public class DialogueController : MonoBehaviour
             // listen for that onClick event to occur, and try the corresponding answer\
             int temp = n;
             events[n].AddListener(delegate {
-                dialogueGraph.TryAnswer(temp);
+                CurrentGraph.TryAnswer(temp);
             });
         }
     }
