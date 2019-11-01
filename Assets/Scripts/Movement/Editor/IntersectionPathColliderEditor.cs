@@ -10,7 +10,6 @@ public class IntersectionPathColliderEditor : Editor
     public float Target;
     protected IntersectionPathCollider collider;
     protected Terrain terrain;
-    protected Vector3[] points;
 
     public Vector3 FineSearchHeight(float x1, float y1, float x2, float y2)
     {
@@ -75,34 +74,130 @@ public class IntersectionPathColliderEditor : Editor
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("Thickness"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("Height"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("CapLength"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("BaseLevel"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("BuildStep"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("LoopDistance"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("pts"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("segs"));
         serializedObject.ApplyModifiedProperties();
+
         if(GUILayout.Button("Regenerate"))
         {
             collider = ((IntersectionPathCollider)target);
             terrain = collider.gameObject.GetComponent<Terrain>();
             Target = serializedObject.FindProperty("BaseLevel").floatValue;
-            points = FindCandidatePoints().Where(x => Mathf.Approximately(x.y, Target)).ToArray();
-            SerializedProperty prop = serializedObject.FindProperty("tpts");
-            prop.arraySize = points.Length;
+
+            List<Vector3> candidates = FindCandidatePoints().Where(x => Mathf.Approximately(x.y, Target)).Distinct().ToList();
+            FilterCandidates(candidates, serializedObject.FindProperty("BuildStep").floatValue);
+
+            SerializedProperty prop = serializedObject.FindProperty("pts");
+            prop.arraySize = candidates.Count;
             Vector3 bmat = collider.transform.position;
-            for (int i = 0; i < points.Length; i++)
-                prop.GetArrayElementAtIndex(i).vector3Value = points[i];
-            Debug.Log(points[0]);
+            for (int i = 0; i < candidates.Count; i++)
+                prop.GetArrayElementAtIndex(i).vector3Value = candidates[i];
+
+            prop = serializedObject.FindProperty("segs");
+
+            List<int> candSegs = new List<int>();
+            bool[] used = new bool[candidates.Count];
+            float maxLoopDist = serializedObject.FindProperty("LoopDistance").floatValue;
+            while (!used.All(x => x))
+            {
+                for (int k = 0; k < candidates.Count; k++)
+                {
+                    if(!used[k])
+                    {
+                        used[k] = true;
+                        List<int> loopIndices = new List<int>();
+                        loopIndices.Add(k);
+
+                        bool newEntries = true;
+                        while(newEntries)
+                        {
+                            newEntries = false;
+
+                            for(int i = 0; i < candidates.Count; i++)
+                            {
+                                if(!used[i])
+                                {
+                                    float minDist = float.PositiveInfinity;
+
+                                    for (int j = 0; j < loopIndices.Count; j++)
+                                    {
+                                        minDist = Mathf.Min(minDist, Vector3.Distance(candidates[loopIndices[j]], candidates[i]));
+                                    }
+
+                                    if(minDist < maxLoopDist)
+                                    {
+                                        loopIndices.Add(i);
+                                        used[i] = true;
+                                        newEntries = true;
+                                    }
+                                }
+                            }
+                        }
+
+                        for(int i = 0; i < loopIndices.Count - 1; i++)
+                        {
+                            float minDist = float.PositiveInfinity;
+                            int minIndex = i + 1;
+
+                            for(int j = i + 1; j < loopIndices.Count; j++)
+                            {
+                                float newDist = Vector3.Distance(candidates[loopIndices[i]], candidates[loopIndices[j]]);
+
+                                if(newDist < minDist)
+                                {
+                                    minDist = newDist;
+                                    minIndex = j;
+                                }
+                            }
+
+                            int temp = loopIndices[i + 1];
+                            loopIndices[i + 1] = loopIndices[minIndex];
+                            loopIndices[minIndex] = temp;
+                        }
+
+                        loopIndices.Add(loopIndices[0]);
+
+                        for(int i = 0; i < loopIndices.Count - 1; i++)
+                        {
+                            candSegs.Add(loopIndices[i]);
+                            candSegs.Add(loopIndices[i + 1]);
+                        }
+                    }
+                }
+            }
+
+            prop.arraySize = candSegs.Count;
+            for(int i = 0; i < candSegs.Count; i++)
+            {
+                prop.GetArrayElementAtIndex(i).intValue = candSegs[i];
+            }
+
             serializedObject.ApplyModifiedProperties();
-            Debug.Log(points.Length);
         }
     }
 
-    [DrawGizmo(GizmoType.Selected | GizmoType.Active)]
-    public static void DrawCandidates(IntersectionPathCollider collider, GizmoType type)
+    public static bool FilterCandidates(List<Vector3> candidates, float minDist)
     {
-        if(collider.tpts != null)
+        bool anyRemoved = false;
+
+        for (int i = 0; i < candidates.Count; i++)
         {
-            foreach (Vector3 p in collider.tpts)
+            for (int j = candidates.Count - 1; j > i; j--)
             {
-                Gizmos.DrawSphere(p, 0.2F);
+                if (Mathf.Approximately(0, Mathf.Max(0, Vector3.Distance(candidates[i], candidates[j]) - minDist)))
+                {
+                    candidates.RemoveAt(j);
+                    anyRemoved = true;
+                }
             }
         }
+
+        return anyRemoved;
     }
 }
