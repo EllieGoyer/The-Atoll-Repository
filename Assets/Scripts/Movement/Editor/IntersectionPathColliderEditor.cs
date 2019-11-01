@@ -74,20 +74,21 @@ public class IntersectionPathColliderEditor : Editor
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("Terrain"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("Thickness"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("Height"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("CapLength"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("BaseLevel"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("BuildStep"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("LoopDistance"));
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("pts"));
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("segs"));
+        EditorGUILayout.LabelField("Points: " + serializedObject.FindProperty("pts").arraySize);
+        EditorGUILayout.LabelField("Segments: " + serializedObject.FindProperty("segs").arraySize / 2);
         serializedObject.ApplyModifiedProperties();
 
         if(GUILayout.Button("Regenerate"))
         {
             collider = ((IntersectionPathCollider)target);
-            terrain = collider.gameObject.GetComponent<Terrain>();
+            terrain = collider.Terrain;
             Target = serializedObject.FindProperty("BaseLevel").floatValue;
 
             List<Vector3> candidates = FindCandidatePoints().Where(x => Mathf.Approximately(x.y, Target)).Distinct().ToList();

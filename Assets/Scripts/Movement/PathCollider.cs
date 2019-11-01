@@ -18,7 +18,7 @@ public abstract class PathCollider : MonoBehaviour
     {
         Vector3 dvector = (start - end).normalized;
         dvector = new Vector3(-dvector.z, dvector.y, dvector.x);
-        return Quaternion.LookRotation(dvector, Vector3.up);
+        return Mathf.Approximately(0, dvector.sqrMagnitude) ? Quaternion.identity : Quaternion.LookRotation(dvector, Vector3.up);
     }
     public static GameObject SegmentToCollider(Vector3 start, Vector3 end, float thickness, float height, float capLength)
     {
