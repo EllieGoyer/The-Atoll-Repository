@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Collider))]
 
 public class Buoyant : MonoBehaviour
 {
@@ -23,7 +23,7 @@ public class Buoyant : MonoBehaviour
 
     public bool RefreshMoveable()
     {
-        moveable = gameObject.GetComponent<Rigidbody>();
+        moveable = gameObject.GetComponent<Collider>().attachedRigidbody;
         return moveable != null;
     }
 
@@ -33,7 +33,7 @@ public class Buoyant : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         SpectralWaveGenerationModel model = World.CURRENT.ActiveOceanRenderer.GenerationModel;
         foreach(ContactPoint pt in ContactPoints)
