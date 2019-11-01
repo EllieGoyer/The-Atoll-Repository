@@ -58,7 +58,7 @@ public class IntersectionPathColliderEditor : Editor
                 for (float c = minW + d; c < maxW - d; c++)
                 {
                     bool center = (terrain.SampleHeight(new Vector3(r, 0, c)) > Target);
-                    if (center && c < 0) Debug.Log(r + " " + c);
+
                     foreach (int[] dir in DIRECTION_ARRAY)
                     {
                         if (center != (terrain.SampleHeight(new Vector3(r + d * dir[0], 0, c + d * dir[1])) > Target))
@@ -96,7 +96,6 @@ public class IntersectionPathColliderEditor : Editor
             Target = serializedObject.FindProperty("BaseLevel").floatValue;
 
             List<Vector3> candidates = FindCandidatePoints().Where(x => Mathf.Approximately(x.y, Target)).Distinct().ToList();
-            Debug.Log(candidates.Count);
             FilterCandidates(candidates, serializedObject.FindProperty("BuildStep").floatValue);
 
             SerializedProperty prop = serializedObject.FindProperty("pts");

@@ -193,13 +193,9 @@ MonoBehaviour:
   OnEnabled:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnDisabled:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnActivated:
     m_PersistentCalls:
       m_Calls:
@@ -214,8 +210,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnDeactivated:
     m_PersistentCalls:
       m_Calls:
@@ -230,8 +224,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnPerforming:
     m_PersistentCalls:
       m_Calls:
@@ -257,8 +249,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &39681370175962453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,7 +454,6 @@ GameObject:
   - component: {fileID: 923332462627049655}
   - component: {fileID: 4540990674184337570}
   - component: {fileID: 2447373492161804677}
-  - component: {fileID: 1945378372996361613}
   - component: {fileID: 8621230848328292830}
   - component: {fileID: 834614422948463759}
   - component: {fileID: 1766379157737309033}
@@ -564,19 +553,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!65 &1945378372996361613
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9219353242899759510}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 7.35, y: 4.5, z: 11.19}
-  m_Center: {x: 0, y: 1.74, z: 1.5}
 --- !u!114 &8621230848328292830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -643,6 +619,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8171264087177971974}
     m_Modifications:
+    - target: {fileID: 2459733140224072237, guid: 2dfe244af4ed1f042a8076e5f4af9360,
+        type: 3}
+      propertyPath: m_Name
+      value: Debug Interactable Visualizer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2459733140224072237, guid: 2dfe244af4ed1f042a8076e5f4af9360,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2459733140224072234, guid: 2dfe244af4ed1f042a8076e5f4af9360,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -698,16 +684,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2459733140224072237, guid: 2dfe244af4ed1f042a8076e5f4af9360,
-        type: 3}
-      propertyPath: m_Name
-      value: Debug Interactable Visualizer
-      objectReference: {fileID: 0}
-    - target: {fileID: 2459733140224072237, guid: 2dfe244af4ed1f042a8076e5f4af9360,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 2459733140224072233, guid: 2dfe244af4ed1f042a8076e5f4af9360,
         type: 3}
       propertyPath: VisualizedCollider
@@ -715,15 +691,15 @@ PrefabInstance:
       objectReference: {fileID: 6155248029429576985}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dfe244af4ed1f042a8076e5f4af9360, type: 3}
---- !u!4 &3661360671517937463 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2459733140224072234, guid: 2dfe244af4ed1f042a8076e5f4af9360,
-    type: 3}
-  m_PrefabInstance: {fileID: 1219770040122234141}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3661360671517937456 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2459733140224072237, guid: 2dfe244af4ed1f042a8076e5f4af9360,
+    type: 3}
+  m_PrefabInstance: {fileID: 1219770040122234141}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3661360671517937463 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2459733140224072234, guid: 2dfe244af4ed1f042a8076e5f4af9360,
     type: 3}
   m_PrefabInstance: {fileID: 1219770040122234141}
   m_PrefabAsset: {fileID: 0}
