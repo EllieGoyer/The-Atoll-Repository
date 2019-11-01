@@ -48,25 +48,29 @@ public class IntersectionPathColliderEditor : Editor
     {
         List<Vector3> candidates = new List<Vector3>();
 
-        
-        float minH = terrain.transform.position.z, minW = terrain.transform.position.x;
-        float maxH = terrain.terrainData.size.z + minH, maxW = terrain.terrainData.size.x + minW;
+        float minH = terrain.transform.position.x, minW = terrain.transform.position.z;
+        float maxH = terrain.terrainData.size.x + minH, maxW = terrain.terrainData.size.z + minW;
 
-        for (float r = minH + 1; r < maxW - 1; r++)
+        for(int d = 1; d <= 3; d++)
         {
-            for(int c = 1; c < maxH - 1; c++)
+            for (float r = minH + d; r < maxH - d; r++)
             {
-                bool center = (terrain.SampleHeight(new Vector3(r, 0, c)) > Target);
-                foreach(int[] dir in DIRECTION_ARRAY)
+                for (float c = minW + d; c < maxW - d; c++)
                 {
-                    if(center != (terrain.SampleHeight(new Vector3(r + dir[0], 0, c + dir[1])) > Target))
+                    bool center = (terrain.SampleHeight(new Vector3(r, 0, c)) > Target);
+                    if (center && c < 0) Debug.Log(r + " " + c);
+                    foreach (int[] dir in DIRECTION_ARRAY)
                     {
-                        float x2 = r + dir[0], y2 = c + dir[1];
-                        candidates.Add(FineSearchHeight(r, c, x2, y2));
+                        if (center != (terrain.SampleHeight(new Vector3(r + d * dir[0], 0, c + d * dir[1])) > Target))
+                        {
+                            float x2 = r + d * dir[0], y2 = c + d * dir[1];
+                            candidates.Add(FineSearchHeight(r, c, x2, y2));
+                        }
                     }
                 }
             }
         }
+
 
         return candidates.ToArray();
     }
@@ -92,6 +96,7 @@ public class IntersectionPathColliderEditor : Editor
             Target = serializedObject.FindProperty("BaseLevel").floatValue;
 
             List<Vector3> candidates = FindCandidatePoints().Where(x => Mathf.Approximately(x.y, Target)).Distinct().ToList();
+            Debug.Log(candidates.Count);
             FilterCandidates(candidates, serializedObject.FindProperty("BuildStep").floatValue);
 
             SerializedProperty prop = serializedObject.FindProperty("pts");
