@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(Rigidbody))]
 
 public class OceanMovement : Movement {
     public float BuoyancyStrength = 20.5F;
@@ -10,7 +10,7 @@ public class OceanMovement : Movement {
     public float MaxDisplacement = 1;
 
     [HideInInspector]
-    protected CharacterController controller;
+    protected Rigidbody controller;
     [HideInInspector]
     protected float forwardVelocity;
     [HideInInspector]
@@ -34,39 +34,34 @@ public class OceanMovement : Movement {
     }
 
     public void ReloadReferences() {
-        controller = gameObject.GetComponent<CharacterController>();
+        controller = gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     protected override void Update() {
-        base.Update();
+        if(AcceptingInput && !IsAirborne())
+        {
+            float forwardAxis = Input.GetAxis(ForwardAxisInputName), sideAxis = Input.GetAxis(SideAxisInputName);
 
-        Transform transform = gameObject.transform;
-
-        transform.Rotate(0, angularVelocity * Time.deltaTime, 0, Space.Self);
-
-        Vector3 moveVector = forwardVelocity * transform.forward;
-        verticalVelocity += (ComputeBuoyancy() - GravityStrength) * Time.deltaTime;
-
-        float drag = IsAirborne() ? AirDrag : WaterDrag;
-        verticalVelocity *= (1 - (drag * Time.deltaTime));
-
-        moveVector.y += verticalVelocity;
-
-        controller.Move(moveVector * Time.deltaTime);
-
-    }
-
-    public float ComputeBuoyancy() {
-        float shipHeight = transform.position.y;
-        float waterHeight = World.CURRENT.ActiveOceanRenderer.GenerationModel.HeightAt(new Vector2(transform.position.x, transform.position.z), Time.time);
-
-        if (shipHeight >= waterHeight) {
-            return 0;
+            Vector3 forwardVelocity = Vector3.Project(controller.velocity, transform.forward);
+            if (forwardAxis > 0 && Vector3.Dot(forwardVelocity, transform.forward) >= 0 && forwardVelocity.magnitude < ForwardTopSpeed)
+            {
+                controller.AddRelativeForce(new Vector3(0, 0, ForwardAcceleration), ForceMode.Acceleration);
+            }
+            if (forwardAxis < 0 && Vector3.Dot(forwardVelocity, transform.forward) <= 0 && forwardVelocity.magnitude < BackwardTopSpeed)
+            {
+                controller.AddRelativeForce(new Vector3(0, 0, -BackwardAcceleration), ForceMode.Acceleration);
+            }
+            if (sideAxis < 0)
+            {
+                controller.AddTorque(0, -TurningRate, 0, ForceMode.Acceleration);
+            }
+            if (sideAxis > 0)
+            {
+                controller.AddTorque(0, TurningRate, 0, ForceMode.Acceleration);
+            }
         }
-        else {
-            return BuoyancyStrength * Mathf.Min(MaxDisplacement, waterHeight - shipHeight);
-        }
+        
     }
 
     public bool IsAirborne() {

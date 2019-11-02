@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlanarWindSurface : WindSurface
+public class PlanarFluidSurface : FluidSurface
 {
     public Vector2 Size;
     public Vector3 Center;
@@ -18,6 +18,11 @@ public class PlanarWindSurface : WindSurface
     public override float DragCoefficient(Vector3 windNormal)
     {
         return Mathf.Lerp(0.005F, 1.28F, CrossSectionArea(windNormal) / (Size.x * Size.y));
+    }
+
+    public override float LiftCoefficient(Vector3 normal)
+    {
+        return 1.0F;
     }
 
     private void OnDrawGizmos()

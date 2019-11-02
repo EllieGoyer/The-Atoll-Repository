@@ -54,14 +54,4 @@ public class BoxFloat : Float
         sampleCache = GenerateSamples();
         Debug.Log(sampleCache[0].Item1);
     }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.matrix = gameObject.transform.localToWorldMatrix;
-
-        foreach (Tuple<Vector3, float, float> sample in sampleCache)
-        {
-            Gizmos.DrawSphere(sample.Item1, 0.25F);
-        }
-    }
 }
