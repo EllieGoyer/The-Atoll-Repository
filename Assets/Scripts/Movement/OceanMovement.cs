@@ -21,11 +21,26 @@ public class OceanMovement : Movement {
     public float WaterDrag;
 
     protected override float ForwardVelocity {
-        get => forwardVelocity;
-        set => forwardVelocity = value;
+        get => Vector3.Project(controller.velocity, transform.forward).magnitude * Mathf.Sign(Vector3.Dot(controller.velocity, transform.forward));
+        set
+        {
+            if(AcceptingInput)
+            {
+                Vector3 remainder = Vector3.ProjectOnPlane(controller.velocity, transform.forward);
+                remainder += transform.forward * value;
+                controller.velocity = remainder;
+            }
+        }
     }
     protected override float AngularVelocity {
-        set => angularVelocity = value;
+        set
+        {
+            if(AcceptingInput)
+            {
+                Vector3 av = controller.angularVelocity;
+                controller.angularVelocity = new Vector3(av.x, Mathf.LerpAngle(av.y, value, 0.3F), av.z);
+            }
+        }
     }
 
     // Start is called before the first frame update
@@ -35,33 +50,6 @@ public class OceanMovement : Movement {
 
     public void ReloadReferences() {
         controller = gameObject.GetComponent<Rigidbody>();
-    }
-
-    // Update is called once per frame
-    protected override void Update() {
-        if(AcceptingInput && !IsAirborne())
-        {
-            float forwardAxis = Input.GetAxis(ForwardAxisInputName), sideAxis = Input.GetAxis(SideAxisInputName);
-
-            Vector3 forwardVelocity = Vector3.Project(controller.velocity, transform.forward);
-            if (forwardAxis > 0 && Vector3.Dot(forwardVelocity, transform.forward) >= 0 && forwardVelocity.magnitude < ForwardTopSpeed)
-            {
-                controller.AddRelativeForce(new Vector3(0, 0, ForwardAcceleration), ForceMode.Acceleration);
-            }
-            if (forwardAxis < 0 && Vector3.Dot(forwardVelocity, transform.forward) <= 0 && forwardVelocity.magnitude < BackwardTopSpeed)
-            {
-                controller.AddRelativeForce(new Vector3(0, 0, -BackwardAcceleration), ForceMode.Acceleration);
-            }
-            if (sideAxis < 0)
-            {
-                controller.AddTorque(0, -TurningRate, 0, ForceMode.Acceleration);
-            }
-            if (sideAxis > 0)
-            {
-                controller.AddTorque(0, TurningRate, 0, ForceMode.Acceleration);
-            }
-        }
-        
     }
 
     public bool IsAirborne() {
