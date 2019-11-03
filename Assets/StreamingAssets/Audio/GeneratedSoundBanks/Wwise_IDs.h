@@ -38,6 +38,7 @@ namespace AK
         static const AkUniqueID LANDSTORM_START = 1930650448U;
         static const AkUniqueID LANDSTORM_STOP = 2869071164U;
         static const AkUniqueID PLAYER_FOOTSTEPS = 1730208058U;
+        static const AkUniqueID SEA_MONSTER = 715294513U;
         static const AkUniqueID SEASTORM_START = 875170180U;
         static const AkUniqueID SEASTORM_STOP = 2153236280U;
         static const AkUniqueID SHIPCREAK = 2557820305U;
@@ -73,6 +74,7 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID ENVIORMENT_OUTSIDE = 2157951080U;
+        static const AkUniqueID ENVIRONMENT_OTHER = 3918401191U;
         static const AkUniqueID LAND_STORM = 1595190680U;
         static const AkUniqueID MAIN = 3161908922U;
         static const AkUniqueID NPC = 662417162U;
