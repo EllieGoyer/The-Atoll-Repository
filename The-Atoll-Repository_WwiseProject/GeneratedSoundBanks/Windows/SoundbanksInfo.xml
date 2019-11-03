@@ -101,7 +101,7 @@
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="2157951080" Language="SFX">
-			<ObjectPath>\SoundBanks\Default Work Unit\Enviorment_Outside</ObjectPath>
+			<ObjectPath>\SoundBanks\Default Work Unit\Environment\Enviorment_Outside</ObjectPath>
 			<ShortName>Enviorment_Outside</ShortName>
 			<Path>Enviorment_Outside.bnk</Path>
 			<IncludedEvents>
@@ -378,6 +378,20 @@
 				<File Id="961251564" Language="SFX">
 					<ShortName>Atoll_Storm_Sea_3_v2(1Min loop).wav</ShortName>
 					<Path>SFX\Atoll_Storm_Sea_3_v2(1Min loop)_D79FB2B7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="3918401191" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Environment\Environment_Other</ObjectPath>
+			<ShortName>Environment_Other</ShortName>
+			<Path>Environment_Other.bnk</Path>
+			<IncludedEvents>
+				<Event Id="715294513" Name="Sea_Monster" ObjectPath="\Events\Default Work Unit\Environment\Environment_Other\Sea_Monster" MaxAttenuation="100.000000" DurationType="Infinite"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="475801405" Language="SFX">
+					<ShortName>Atoll_Environment_SeaMonster.wav</ShortName>
+					<Path>SFX\Atoll_Environment_SeaMonster_D79FB2B7.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

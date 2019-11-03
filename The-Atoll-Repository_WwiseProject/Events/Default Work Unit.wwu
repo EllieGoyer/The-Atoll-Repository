@@ -261,6 +261,21 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Environment_Other" ID="{40ED1186-23A0-4619-B95D-84DFE291A62C}" ShortID="262537880">
+							<ChildrenList>
+								<Event Name="Sea_Monster" ID="{A159BAC3-7F2E-4BED-B473-BFC25EDF3B0B}">
+									<ChildrenList>
+										<Action Name="" ID="{23398C3C-4851-4800-AAD9-2CD6CD30A6C0}" ShortID="428581037">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Atoll_Environment_SeaMonster" ID="{766CE994-108D-42B3-806F-97F7FA0BACDD}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Interact" ID="{CA23AE3A-A1B9-4DA9-A0B1-894FC4610FED}" ShortID="557901276">
