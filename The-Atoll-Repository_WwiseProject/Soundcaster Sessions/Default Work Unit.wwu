@@ -14,6 +14,10 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Outside Environment" ID="{DE6805D6-963E-448F-A184-9EE6FF2AC2E3}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="AnchorDeploy" ID="{54A0411A-A684-4533-AA1F-5FA91E2F2A33}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -25,15 +29,15 @@
 							<ObjectRef Name="AnchorHit" ID="{15921C24-84E5-43E0-9797-C89307E0C33B}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
 							<Position X="2" Y="0"/>
 						</Module>
-						<Module>
-							<ObjectRef Name="TreeCut" ID="{3399E1A9-D566-4CC6-9C9C-50F406CA0458}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
-							<Position X="2" Y="1"/>
-						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="StormLevel" ID="{D49BCCF2-9952-44AB-B0EE-779C08825144}"/>
 							<Value>5.6282722513089</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="EnvironmentSwitch" ID="{D1E42D5C-0659-4B1C-9298-48E1ECDBF34D}"/>
+							<Value>2.71078296622987E-312</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>

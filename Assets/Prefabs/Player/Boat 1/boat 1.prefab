@@ -625,6 +625,8 @@ GameObject:
   - component: {fileID: 8621230848328292830}
   - component: {fileID: 834614422948463759}
   - component: {fileID: 1766379157737309033}
+  - component: {fileID: 1555689744}
+  - component: {fileID: 1555689745}
   m_Layer: 10
   m_Name: boat 1
   m_TagString: Untagged
@@ -788,6 +790,62 @@ MonoBehaviour:
   Drag: 0.5
   AngularDrag: 0.25
   CollisionElasticity: 0.5
+--- !u!114 &1555689744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9219353242899759510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a314091093b5b24bab40179da4c7b9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 115402f0c7084df4da8f87a41946ef9f,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  LargeModePositions: []
+  multiPositionArray: []
+--- !u!114 &1555689745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9219353242899759510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25787e094866428419d7d9abf8ab7099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1001 &1219770040122234141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -867,15 +925,15 @@ PrefabInstance:
       objectReference: {fileID: 6155248029429576985}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dfe244af4ed1f042a8076e5f4af9360, type: 3}
---- !u!4 &3661360671517937463 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2459733140224072234, guid: 2dfe244af4ed1f042a8076e5f4af9360,
-    type: 3}
-  m_PrefabInstance: {fileID: 1219770040122234141}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3661360671517937456 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2459733140224072237, guid: 2dfe244af4ed1f042a8076e5f4af9360,
+    type: 3}
+  m_PrefabInstance: {fileID: 1219770040122234141}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3661360671517937463 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2459733140224072234, guid: 2dfe244af4ed1f042a8076e5f4af9360,
     type: 3}
   m_PrefabInstance: {fileID: 1219770040122234141}
   m_PrefabAsset: {fileID: 0}

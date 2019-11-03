@@ -8,8 +8,8 @@ public class Interactable : MonoBehaviour
 {
     [HideInInspector] public Check[] Checks;
 
-    [HideInInspector] public bool AutoReset = false;
-    [HideInInspector] public float ResetCooldownTime = 0;
+    [SerializeField] [HideInInspector] public bool AutoReset = false;
+    [SerializeField] [HideInInspector] public float ResetCooldownTime = 0;
 
     public UnityEvent OnEnabled; // invoked when leaving the "disabled" state
     public UnityEvent OnDisabled; // invoked when entering the "disabled" state
