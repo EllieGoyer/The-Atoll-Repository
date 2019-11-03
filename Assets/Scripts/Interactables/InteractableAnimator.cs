@@ -6,9 +6,32 @@ using UnityEngine;
 [RequireComponent(typeof(Interactable))]
 public class InteractableAnimator : MonoBehaviour
 {
+    public enum TYPE {
+        Normal,
+        Toy
+    }
+    public TYPE Type;
+    
+    public Material DefaultMaterial;
+    public Material ActivatedMaterial;
+
+    public Renderer[] renderers;
+
     Animator animator;
 
-    private void Awake() {
+    public void SetMaterialActivated() {
+        foreach(Renderer r in renderers) {
+            r.material = ActivatedMaterial;
+        }
+    }
+    public void SetMaterialDeActivated() {
+        foreach (Renderer r in renderers) {
+            r.material = DefaultMaterial;
+        }
+    }
+
+
+    private void Start() {
         animator = GetComponent<Animator>();
         Interactable interactable = GetComponent<Interactable>();
 
@@ -17,6 +40,7 @@ public class InteractableAnimator : MonoBehaviour
         interactable.OnActivated.AddListener(SetParameterActive);
         interactable.OnDeactivated.AddListener(UnSetParameterActive);
         interactable.OnPerforming.AddListener(SetTriggerPerforming);
+        interactable.OnReset.AddListener(SetTriggerReset);
     }
 
     void SetParameterEnabled() {
@@ -27,15 +51,19 @@ public class InteractableAnimator : MonoBehaviour
     }
 
     void SetParameterActive() {
-        animator.SetBool("Active", true);
+        animator.SetBool("Activated", true);
 
     }
     void UnSetParameterActive() {
-        animator.SetBool("Active", false);
+        animator.SetBool("Activated", false);
 
     }
 
     void SetTriggerPerforming() {
         animator.SetTrigger("Performing");
+    }
+
+    void SetTriggerReset() {
+        animator.SetTrigger("Reset");
     }
 }

@@ -4694,19 +4694,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8570017500868300475, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
         type: 3}
-      propertyPath: dialogueGraph
-      value: 
-      objectReference: {fileID: 11400000, guid: 6f3abf4d67967174682e61b28410285a,
-        type: 2}
-    - target: {fileID: 8570017500868300475, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
-        type: 3}
       propertyPath: masterDialogueGraph
       value: 
       objectReference: {fileID: 11400000, guid: 5630d48eb2773444986fe21c07995c5f,
         type: 2}
-    m_RemovedComponents:
-    - {fileID: 8570017500868300472, guid: ebbd9ea026178b54bbfa39ca16d6fa2b, type: 3}
-    - {fileID: 8570017500868300479, guid: ebbd9ea026178b54bbfa39ca16d6fa2b, type: 3}
+    - target: {fileID: 5738094553196888131, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: renderers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5738094553196888131, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: renderers.Array.data[0]
+      value: 
+      objectReference: {fileID: 4074599252162807469}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebbd9ea026178b54bbfa39ca16d6fa2b, type: 3}
 --- !u!4 &1065354879860566114 stripped
 Transform:
