@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -386,12 +386,17 @@
 			<ShortName>Environment_Other</ShortName>
 			<Path>Environment_Other.bnk</Path>
 			<IncludedEvents>
-				<Event Id="715294513" Name="Sea_Monster" ObjectPath="\Events\Default Work Unit\Environment\Environment_Other\Sea_Monster" MaxAttenuation="100.000000" DurationType="Infinite"/>
+				<Event Id="715294513" Name="Sea_Monster" ObjectPath="\Events\Default Work Unit\Environment\Environment_Other\Sea_Monster" MaxAttenuation="150.000000" DurationType="Infinite"/>
+				<Event Id="2775184934" Name="Seagull" ObjectPath="\Events\Default Work Unit\Environment\Environment_Other\Seagull" MaxAttenuation="200.000000" DurationType="Infinite"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="475801405" Language="SFX">
 					<ShortName>Atoll_Environment_SeaMonster.wav</ShortName>
 					<Path>SFX\Atoll_Environment_SeaMonster_D79FB2B7.wem</Path>
+				</File>
+				<File Id="588576551" Language="SFX">
+					<ShortName>Atoll_Environment_Seagull.wav</ShortName>
+					<Path>SFX\Atoll_Environment_Seagull_D79FB2B7.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

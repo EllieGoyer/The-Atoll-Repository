@@ -798,7 +798,7 @@
 														<PointList>
 															<Point>
 																<XPos>0</XPos>
-																<YPos>-0</YPos>
+																<YPos>0</YPos>
 																<Flags>5</Flags>
 															</Point>
 															<Point>
@@ -880,6 +880,11 @@
 								<Sound Name="Atoll_Environment_SeaMonster" ID="{766CE994-108D-42B3-806F-97F7FA0BACDD}" ShortID="830519964">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -903,6 +908,36 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="Atoll_Environment_SeaMonster" ID="{22CFFF8A-199B-4211-A645-873CD6819772}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Atoll_Environment_Seagull" ID="{5CF859AC-F37F-459E-940E-9D9E6549D496}" ShortID="596963452">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>600</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Seagull" ID="{2841656C-8810-4AA2-AC6C-E4955DA58287}" WorkUnitID="{50340E82-D163-4027-BB2D-BD73FD5AEE4D}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Atoll_Environment_Seagull" ID="{21399309-BDEE-4577-A5BA-74E45DE3A921}" ShortID="588576551">
+											<Language>SFX</Language>
+											<AudioFile>Atoll_Environment_Seagull.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Atoll_Environment_Seagull" ID="{21399309-BDEE-4577-A5BA-74E45DE3A921}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
