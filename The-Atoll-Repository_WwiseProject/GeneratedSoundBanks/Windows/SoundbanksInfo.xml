@@ -55,7 +55,7 @@
 			<Path>NPC.bnk</Path>
 			<IncludedEvents>
 				<Event Id="3930136735" Name="Dialogue" ObjectPath="\Events\Default Work Unit\NPC\Dialogue" DurationType="OneShot" DurationMin="0.269462" DurationMax="0.335434"/>
-				<Event Id="3627704641" Name="Dialogue_Baker" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Baker" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3627704641" Name="Dialogue_Baker" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Baker" DurationType="OneShot" DurationMin="0.594625" DurationMax="1.327500"/>
 				<Event Id="1399074927" Name="Dialogue_Farmer" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Farmer" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="688404286" Name="Dialogue_Lumberjack" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Lumberjack" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3640867316" Name="Dialogue_Potter" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Potter" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
@@ -66,9 +66,17 @@
 					<ShortName>Atoll_Dialogue_2.wav</ShortName>
 					<Path>SFX\Atoll_Dialogue_2_10C4C929.wem</Path>
 				</File>
+				<File Id="442305733" Language="SFX">
+					<ShortName>Atoll_Dialouge_Baker_2.wav</ShortName>
+					<Path>SFX\Atoll_Dialouge_Baker_2_10C4C929.wem</Path>
+				</File>
 				<File Id="644213352" Language="SFX">
 					<ShortName>Atoll_Dialogue_1.wav</ShortName>
 					<Path>SFX\Atoll_Dialogue_1_10C4C929.wem</Path>
+				</File>
+				<File Id="1058273715" Language="SFX">
+					<ShortName>Atoll_Dialouge_Baker_01.wav</ShortName>
+					<Path>SFX\Atoll_Dialouge_Baker_01_10C4C929.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -132,7 +140,7 @@
 				<Event Id="2157426783" Name="AxeSwing" ObjectPath="\Events\Default Work Unit\Interact\Tools\Axe\AxeSwing" DurationType="OneShot" DurationMin="0.560032" DurationMax="0.628615"/>
 				<Event Id="3604088180" Name="AxeWood" ObjectPath="\Events\Default Work Unit\Interact\Tools\Axe\AxeWood" DurationType="OneShot" DurationMin="0.265583" DurationMax="0.628747"/>
 				<Event Id="3930136735" Name="Dialogue" ObjectPath="\Events\Default Work Unit\NPC\Dialogue" DurationType="OneShot" DurationMin="0.269462" DurationMax="0.335434"/>
-				<Event Id="3627704641" Name="Dialogue_Baker" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Baker" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3627704641" Name="Dialogue_Baker" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Baker" DurationType="OneShot" DurationMin="0.594625" DurationMax="1.327500"/>
 				<Event Id="1399074927" Name="Dialogue_Farmer" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Farmer" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="688404286" Name="Dialogue_Lumberjack" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Lumberjack" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3640867316" Name="Dialogue_Potter" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Potter" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
@@ -246,6 +254,10 @@
 					<ShortName>Atoll_Footsteps_Wood_6.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Wood_6_10C4C929.wem</Path>
 				</File>
+				<File Id="442305733" Language="SFX">
+					<ShortName>Atoll_Dialouge_Baker_2.wav</ShortName>
+					<Path>SFX\Atoll_Dialouge_Baker_2_10C4C929.wem</Path>
+				</File>
 				<File Id="495743890" Language="SFX">
 					<ShortName>Atoll_Footsteps_Wood_3.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Wood_3_10C4C929.wem</Path>
@@ -341,6 +353,10 @@
 				<File Id="1022711718" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Wood_2.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Hooves_Wood_2_10C4C929.wem</Path>
+				</File>
+				<File Id="1058273715" Language="SFX">
+					<ShortName>Atoll_Dialouge_Baker_01.wav</ShortName>
+					<Path>SFX\Atoll_Dialouge_Baker_01_10C4C929.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
