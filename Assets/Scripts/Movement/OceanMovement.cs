@@ -20,26 +20,17 @@ public class OceanMovement : Movement {
     public float AirDrag;
     public float WaterDrag;
 
+    public OceanEngine Engine;
+
     protected override float ForwardVelocity {
         get => Vector3.Project(controller.velocity, transform.forward).magnitude * Mathf.Sign(Vector3.Dot(controller.velocity, transform.forward));
         set
         {
-            if(AcceptingInput)
-            {
-                Vector3 remainder = Vector3.ProjectOnPlane(controller.velocity, transform.forward);
-                remainder += transform.forward * value;
-                controller.velocity = remainder;
-            }
         }
     }
     protected override float AngularVelocity {
         set
         {
-            if(AcceptingInput)
-            {
-                Vector3 av = controller.angularVelocity;
-                controller.angularVelocity = new Vector3(av.x, Mathf.LerpAngle(av.y, value, 0.3F), av.z);
-            }
         }
     }
 
@@ -50,6 +41,40 @@ public class OceanMovement : Movement {
 
     public void ReloadReferences() {
         controller = gameObject.GetComponent<Rigidbody>();
+    }
+
+    protected override void Update()
+    {
+        if(AcceptingInput)
+        {
+            float forwardAxis = Input.GetAxis(ForwardAxisInputName), sideAxis = Input.GetAxis(SideAxisInputName);
+
+            if (forwardAxis > 0)
+            {
+                Engine.Direction = 1;
+            }
+            else if (forwardAxis < 0)
+            {
+                Engine.Direction = -1;
+            }
+            else
+            {
+                Engine.Direction = 0;
+            }
+
+            if (sideAxis > 0)
+            {
+                controller.AddTorque(0, 50000, 0);
+            }
+            else if (sideAxis < 0)
+            {
+                controller.AddTorque(0, -50000, 0);
+            }
+        }
+        else
+        {
+            Engine.Direction = 0;
+        }
     }
 
     public bool IsAirborne() {

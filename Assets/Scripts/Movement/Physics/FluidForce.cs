@@ -2,10 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(BoxCollider))]
 public class FluidForce : MonoBehaviour
 {
     public float FluidSpeed;
     public float FluidDensity;
+
+    public ParticleSystem WindParticles;
+
+    protected BoxCollider bc;
+
+    private void Awake()
+    {
+        bc = GetComponent<BoxCollider>();
+    }
+    private void Update()
+    {
+        if(WindParticles != null)
+        {
+            ParticleSystem.MainModule main = WindParticles.main;
+            main.startSpeed = new ParticleSystem.MinMaxCurve(FluidSpeed);
+            main.startLifetime = bc.size.z / FluidSpeed;
+        }
+    }
 
     private void OnTriggerStay(Collider collision)
     {
