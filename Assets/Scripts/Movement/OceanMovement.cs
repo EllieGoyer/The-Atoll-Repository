@@ -21,6 +21,9 @@ public class OceanMovement : Movement {
     public float WaterDrag;
 
     public OceanEngine Engine;
+    public Winch AnchorWinch;
+    public Anchor Anchor;
+    public GameObject AnchorPrefab;
 
     protected override float ForwardVelocity {
         get => Vector3.Project(controller.velocity, transform.forward).magnitude * Mathf.Sign(Vector3.Dot(controller.velocity, transform.forward));
@@ -35,7 +38,7 @@ public class OceanMovement : Movement {
     }
 
     // Start is called before the first frame update
-    void Start() {
+    void Awake() {
         ReloadReferences();
     }
 
@@ -48,6 +51,40 @@ public class OceanMovement : Movement {
         if(AcceptingInput)
         {
             float forwardAxis = Input.GetAxis(ForwardAxisInputName), sideAxis = Input.GetAxis(SideAxisInputName);
+
+            //Ad-hoc anchor controls
+            if(Input.GetKey(KeyCode.C))
+            {
+                AnchorWinch.CurrentAction = Winch.Action.Retract;
+                if(Anchor != null && Mathf.Approximately(AnchorWinch.Position, AnchorWinch.MinLength))
+                {
+                    AnchorWinch.enabled = false;
+                    Destroy(Anchor.gameObject);
+                }
+            }
+            else if(Input.GetKey(KeyCode.V))
+            {
+                if(Anchor == null)
+                {
+                    Anchor = Instantiate(AnchorPrefab, AnchorWinch.transform.position - Vector3.up * AnchorWinch.MinLength, Quaternion.identity).GetComponent<Anchor>();
+                    Anchor.GetComponent<SpringJoint>().connectedBody = controller;
+                    AnchorWinch.Target = Anchor.GetComponent<SpringJoint>();
+                    AnchorWinch.enabled = true;
+                }
+                AnchorWinch.CurrentAction = Winch.Action.Extend;
+            }
+            else
+            {
+                AnchorWinch.CurrentAction = Winch.Action.None;
+            }
+
+            if(Input.GetKey(KeyCode.F))
+            {
+                if(Anchor != null)
+                {
+                    Anchor.Disengage();
+                }
+            }
 
             if (forwardAxis > 0)
             {
