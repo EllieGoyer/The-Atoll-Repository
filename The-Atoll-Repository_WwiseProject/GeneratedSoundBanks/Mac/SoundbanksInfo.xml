@@ -57,18 +57,30 @@
 				<Event Id="3930136735" Name="Dialogue" ObjectPath="\Events\Default Work Unit\NPC\Dialogue" DurationType="OneShot" DurationMin="0.269462" DurationMax="0.335434"/>
 				<Event Id="3627704641" Name="Dialogue_Baker" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Baker" DurationType="OneShot" DurationMin="0.594625" DurationMax="1.327500"/>
 				<Event Id="1399074927" Name="Dialogue_Farmer" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Farmer" DurationType="OneShot" DurationMin="1.122187" DurationMax="1.239500"/>
-				<Event Id="688404286" Name="Dialogue_Lumberjack" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Lumberjack" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="3640867316" Name="Dialogue_Potter" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Potter" DurationType="OneShot" DurationMin="0.582187" DurationMax="0.945000"/>
-				<Event Id="2409864631" Name="Dialogue_Taylor" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Taylor" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="688404286" Name="Dialogue_Lumberjack" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Lumberjack" DurationType="OneShot" DurationMin="1.155190" DurationMax="1.576870"/>
+				<Event Id="3640867316" Name="Dialogue_Potter" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Potter" DurationType="OneShot" DurationMin="0.653483" DurationMax="1.060727"/>
+				<Event Id="2409864631" Name="Dialogue_Taylor" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Taylor" DurationType="OneShot" DurationMin="0.867963" DurationMax="1.122702"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="105332877" Language="SFX">
 					<ShortName>Atoll_Dialogue_Potter_2.wav</ShortName>
 					<Path>SFX\Atoll_Dialogue_Potter_2_10C4C929.wem</Path>
 				</File>
+				<File Id="128201263" Language="SFX">
+					<ShortName>Atoll_Dialogue_Lumberjack_2.wav</ShortName>
+					<Path>SFX\Atoll_Dialogue_Lumberjack_2_10C4C929.wem</Path>
+				</File>
 				<File Id="152071147" Language="SFX">
 					<ShortName>Atoll_Dialogue_2.wav</ShortName>
 					<Path>SFX\Atoll_Dialogue_2_10C4C929.wem</Path>
+				</File>
+				<File Id="260917243" Language="SFX">
+					<ShortName>Atoll_Dialogue_Taylor_2.wav</ShortName>
+					<Path>SFX\Atoll_Dialogue_Taylor_2_10C4C929.wem</Path>
+				</File>
+				<File Id="275468882" Language="SFX">
+					<ShortName>Atoll_Dialogue_Lumberjack_1.wav</ShortName>
+					<Path>SFX\Atoll_Dialogue_Lumberjack_1_10C4C929.wem</Path>
 				</File>
 				<File Id="442305733" Language="SFX">
 					<ShortName>Atoll_Dialouge_Baker_2.wav</ShortName>
@@ -81,6 +93,10 @@
 				<File Id="863248234" Language="SFX">
 					<ShortName>Atoll_Dialogue_Farmer_01.wav</ShortName>
 					<Path>SFX\Atoll_Dialogue_Farmer_01_10C4C929.wem</Path>
+				</File>
+				<File Id="898764709" Language="SFX">
+					<ShortName>Atoll_Dialogue_Taylor_1.wav</ShortName>
+					<Path>SFX\Atoll_Dialogue_Taylor_1_10C4C929.wem</Path>
 				</File>
 				<File Id="908164601" Language="SFX">
 					<ShortName>Atoll_Dialogue_Farmer_2.wav</ShortName>
@@ -183,9 +199,9 @@
 				<Event Id="3930136735" Name="Dialogue" ObjectPath="\Events\Default Work Unit\NPC\Dialogue" DurationType="OneShot" DurationMin="0.269462" DurationMax="0.335434"/>
 				<Event Id="3627704641" Name="Dialogue_Baker" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Baker" DurationType="OneShot" DurationMin="0.594625" DurationMax="1.327500"/>
 				<Event Id="1399074927" Name="Dialogue_Farmer" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Farmer" DurationType="OneShot" DurationMin="1.122187" DurationMax="1.239500"/>
-				<Event Id="688404286" Name="Dialogue_Lumberjack" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Lumberjack" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="3640867316" Name="Dialogue_Potter" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Potter" DurationType="OneShot" DurationMin="0.582187" DurationMax="0.945000"/>
-				<Event Id="2409864631" Name="Dialogue_Taylor" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Taylor" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="688404286" Name="Dialogue_Lumberjack" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Lumberjack" DurationType="OneShot" DurationMin="1.155190" DurationMax="1.576870"/>
+				<Event Id="3640867316" Name="Dialogue_Potter" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Potter" DurationType="OneShot" DurationMin="0.653483" DurationMax="1.060727"/>
+				<Event Id="2409864631" Name="Dialogue_Taylor" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Taylor" DurationType="OneShot" DurationMin="0.867963" DurationMax="1.122702"/>
 				<Event Id="3638457343" Name="DoorClose" ObjectPath="\Events\Default Work Unit\Interact\Door\DoorClose" DurationType="OneShot" DurationMin="0.649661" DurationMax="0.768067"/>
 				<Event Id="1404805401" Name="DoorOpen" ObjectPath="\Events\Default Work Unit\Interact\Door\DoorOpen" DurationType="OneShot" DurationMin="0.690798" DurationMax="0.899882"/>
 				<Event Id="3575671711" Name="H_Footsteps" ObjectPath="\Events\Default Work Unit\Player\Footsteps\H_Footsteps" DurationType="OneShot" DurationMin="0.106972" DurationMax="0.571187"/>
@@ -231,6 +247,10 @@
 					<ShortName>Atoll_Footsteps_Hooves_Wood_3.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Hooves_Wood_3_10C4C929.wem</Path>
 				</File>
+				<File Id="128201263" Language="SFX">
+					<ShortName>Atoll_Dialogue_Lumberjack_2.wav</ShortName>
+					<Path>SFX\Atoll_Dialogue_Lumberjack_2_10C4C929.wem</Path>
+				</File>
 				<File Id="129110741" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Sand_2.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Hooves_Sand_2_10C4C929.wem</Path>
@@ -259,9 +279,17 @@
 					<ShortName>Atoll_Footsteps_Grass_6.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Grass_6_10C4C929.wem</Path>
 				</File>
+				<File Id="260917243" Language="SFX">
+					<ShortName>Atoll_Dialogue_Taylor_2.wav</ShortName>
+					<Path>SFX\Atoll_Dialogue_Taylor_2_10C4C929.wem</Path>
+				</File>
 				<File Id="266551798" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Grass_3.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Hooves_Grass_3_10C4C929.wem</Path>
+				</File>
+				<File Id="275468882" Language="SFX">
+					<ShortName>Atoll_Dialogue_Lumberjack_1.wav</ShortName>
+					<Path>SFX\Atoll_Dialogue_Lumberjack_1_10C4C929.wem</Path>
 				</File>
 				<File Id="275716071" Language="SFX">
 					<ShortName>Atoll_Footsteps_Wood_4.wav</ShortName>
@@ -390,6 +418,10 @@
 				<File Id="886126818" Language="SFX">
 					<ShortName>Atoll_Tool_Axe_Select_1.wav</ShortName>
 					<Path>SFX\Atoll_Tool_Axe_Select_1_BFB259A6.wem</Path>
+				</File>
+				<File Id="898764709" Language="SFX">
+					<ShortName>Atoll_Dialogue_Taylor_1.wav</ShortName>
+					<Path>SFX\Atoll_Dialogue_Taylor_1_10C4C929.wem</Path>
 				</File>
 				<File Id="908164601" Language="SFX">
 					<ShortName>Atoll_Dialogue_Farmer_2.wav</ShortName>
