@@ -1396,6 +1396,13 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Lumberjack_Dialogue" ID="{581F6466-EE5B-4560-B2DA-E4B2B4D573C4}" ShortID="740290617">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-400</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
@@ -1404,8 +1411,55 @@
 											<ObjectRef Name="Dialogue" ID="{88F3FFAD-B8BE-41C3-9C35-1C36F8FAB6B7}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Atoll_Dialogue_Lumberjack_1" ID="{A4D69B86-9678-4911-BB6E-F9717ED5FDA4}" ShortID="824960247">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Atoll_Dialogue_Lumberjack_1" ID="{E98358B2-89A7-47AC-9A39-0A10F808B650}" ShortID="275468882">
+													<Language>SFX</Language>
+													<AudioFile>Atoll_Dialogue_Lumberjack_1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Atoll_Dialogue_Lumberjack_1" ID="{E98358B2-89A7-47AC-9A39-0A10F808B650}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Atoll_Dialogue_Lumberjack_2" ID="{CC2A26B3-7914-4E9E-B2FE-5280EA5DADF0}" ShortID="864778314">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Atoll_Dialogue_Lumberjack_2" ID="{F49331B7-BE9C-4A2A-AE71-AA3D5E0E2F16}" ShortID="128201263">
+													<Language>SFX</Language>
+													<AudioFile>Atoll_Dialogue_Lumberjack_2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Atoll_Dialogue_Lumberjack_2" ID="{F49331B7-BE9C-4A2A-AE71-AA3D5E0E2F16}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Taylor_Dialogue" ID="{2DB3B90F-B35C-4B1B-B11E-0B1E75F447D2}" ShortID="520375925">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>300</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
@@ -1414,8 +1468,55 @@
 											<ObjectRef Name="Dialogue" ID="{88F3FFAD-B8BE-41C3-9C35-1C36F8FAB6B7}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Atoll_Dialogue_Taylor_1" ID="{D2FC1A8C-CD87-4374-A193-3EA482C537D4}" ShortID="956807285">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Atoll_Dialogue_Taylor_1" ID="{FD6AAF02-BA70-47AB-A540-C4926C93BFD3}" ShortID="898764709">
+													<Language>SFX</Language>
+													<AudioFile>Atoll_Dialogue_Taylor_1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Atoll_Dialogue_Taylor_1" ID="{FD6AAF02-BA70-47AB-A540-C4926C93BFD3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Atoll_Dialogue_Taylor_2" ID="{887CAF28-1360-4911-98BF-7735A832D835}" ShortID="367861328">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Atoll_Dialogue_Taylor_2" ID="{08586500-A6DA-42C3-89EF-FE9D622FFEC1}" ShortID="260917243">
+													<Language>SFX</Language>
+													<AudioFile>Atoll_Dialogue_Taylor_2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Atoll_Dialogue_Taylor_2" ID="{08586500-A6DA-42C3-89EF-FE9D622FFEC1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Potter_Dialogue" ID="{CBD05791-71D6-4E64-B478-1EFBB616D85A}" ShortID="929366195">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-200</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
