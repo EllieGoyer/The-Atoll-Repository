@@ -68,9 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0d94cedcec51d2848b763abda3c68101, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 250d5cf860497c447b0ca3c2b1edf135, type: 3}
   m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -131,7 +129,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42626eccf24df824e8cd7e18a9a15009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnDisplayComplete:
+    m_PersistentCalls:
+      m_Calls: []
   textComponent: {fileID: 4013639068550558066}
+  isBuildingText: 0
 --- !u!114 &231548604661738884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,12 +212,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1217db6923ca6a748af02cb3a2804625, type: 2}
+  m_sharedMaterial: {fileID: 4251979452368026534, guid: 1217db6923ca6a748af02cb3a2804625,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
