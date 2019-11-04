@@ -10,6 +10,11 @@ public class Anchor : MonoBehaviour
     protected SpringJoint spring;
     protected Rigidbody rb;
     protected bool coolingDown = false;
+
+    public bool IsEngaged
+    {
+        get { return rb.isKinematic; }
+    }
     void Awake()
     {
         spring = GetComponent<SpringJoint>();
@@ -24,6 +29,11 @@ public class Anchor : MonoBehaviour
             Invoke("ResetCooldown", Cooldown);
             coolingDown = true;
         }
+    }
+
+    public void Engage()
+    {
+        rb.isKinematic = true;
     }
 
     public void ResetCooldown()
@@ -43,7 +53,7 @@ public class Anchor : MonoBehaviour
     {
         if(!coolingDown && collision.rigidbody != spring.connectedBody)
         {
-            rb.isKinematic = true;
+            Engage();
         }
     }
 }

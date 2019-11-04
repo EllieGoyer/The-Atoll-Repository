@@ -52,38 +52,11 @@ public class OceanMovement : Movement {
         {
             float forwardAxis = Input.GetAxis(ForwardAxisInputName), sideAxis = Input.GetAxis(SideAxisInputName);
 
-            //Ad-hoc anchor controls
-            if(Input.GetKey(KeyCode.C))
+            if (Anchor != null)
             {
-                AnchorWinch.CurrentAction = Winch.Action.Retract;
-                if(Anchor != null && Mathf.Approximately(AnchorWinch.Position, AnchorWinch.MinLength))
-                {
-                    AnchorWinch.enabled = false;
-                    Destroy(Anchor.gameObject);
-                }
-            }
-            else if(Input.GetKey(KeyCode.V))
-            {
-                if(Anchor == null)
-                {
-                    Anchor = Instantiate(AnchorPrefab, AnchorWinch.transform.position - Vector3.up * AnchorWinch.MinLength, Quaternion.identity).GetComponent<Anchor>();
-                    Anchor.GetComponent<SpringJoint>().connectedBody = controller;
-                    AnchorWinch.Target = Anchor.GetComponent<SpringJoint>();
-                    AnchorWinch.enabled = true;
-                }
-                AnchorWinch.CurrentAction = Winch.Action.Extend;
-            }
-            else
-            {
-                AnchorWinch.CurrentAction = Winch.Action.None;
-            }
-
-            if(Input.GetKey(KeyCode.F))
-            {
-                if(Anchor != null)
-                {
-                    Anchor.Disengage();
-                }
+                Anchor.Disengage();
+                AnchorWinch.enabled = false;
+                Destroy(Anchor.gameObject);
             }
 
             if (forwardAxis > 0)
@@ -111,6 +84,19 @@ public class OceanMovement : Movement {
         else
         {
             Engine.Direction = 0;
+            if (Anchor == null)
+            {
+                Anchor = Instantiate(AnchorPrefab, AnchorWinch.transform.position - Vector3.up * AnchorWinch.MinLength, Quaternion.identity).GetComponent<Anchor>();
+                Anchor.GetComponent<SpringJoint>().connectedBody = controller;
+                AnchorWinch.Target = Anchor.GetComponent<SpringJoint>();
+                AnchorWinch.enabled = true;
+            } else if (!Anchor.IsEngaged)
+            {
+                AnchorWinch.CurrentAction = Winch.Action.Extend;
+            } else
+            {
+                AnchorWinch.CurrentAction = Winch.Action.None;
+            }
         }
     }
 
