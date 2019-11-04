@@ -1404,6 +1404,18 @@
 											<ObjectRef Name="Dialogue" ID="{88F3FFAD-B8BE-41C3-9C35-1C36F8FAB6B7}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Atoll_Dialogue_Lumberjack_1" ID="{55720AFA-3D45-487E-9C3D-248FA1B0E675}" ShortID="118201807">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+												</Reference>
+											</ReferenceList>
+										</Sound>
+									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Taylor_Dialogue" ID="{2DB3B90F-B35C-4B1B-B11E-0B1E75F447D2}" ShortID="520375925">
 									<ReferenceList>
@@ -1414,6 +1426,18 @@
 											<ObjectRef Name="Dialogue" ID="{88F3FFAD-B8BE-41C3-9C35-1C36F8FAB6B7}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Atoll_Dialogue_Taylor_1" ID="{799C96A2-D955-41B4-B958-4777F2FAA2C5}" ShortID="96605371">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+												</Reference>
+											</ReferenceList>
+										</Sound>
+									</ChildrenList>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Potter_Dialogue" ID="{CBD05791-71D6-4E64-B478-1EFBB616D85A}" ShortID="929366195">
 									<ReferenceList>
