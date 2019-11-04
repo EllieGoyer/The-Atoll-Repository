@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class IntersectionPathCollider : PathCollider
 {
-    public float BaseLevel;
-    public float BuildStep;
-    public float SweepStep;
-    public Vector3 BuildStart;
-    protected TerrainData data;
+    public float BaseLevel = 85;
+    public float BuildStep = 10;
+    public float LoopDistance = 30;
+    public Terrain Terrain;
+    public Vector3[] pts;
+    public int[] segs;
     protected override Vector3[] points
     {
-        get { return new Vector3[0]; }
+        get { return pts ?? new Vector3[0]; }
     }
 
     protected override int[] segments
     {
-        get { return new int[0]; }
+        get { return segs ?? new int[0]; }
     }
 }

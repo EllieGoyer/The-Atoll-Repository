@@ -43,6 +43,24 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<Folder Name="Environment" ID="{05448558-1413-4186-B36C-CD22542EE2A7}" ShortID="16916409">
+					<ChildrenList>
+						<SoundBank Name="Enviorment_Outside" ID="{682BDB02-0328-4376-BAEB-8DF4C7F143E2}">
+							<ObjectInclusionList>
+								<ObjectRef Name="Environment_Outside" ID="{F731B393-7C5B-49C8-9253-61BEF3BF0D97}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
+							</ObjectInclusionList>
+							<ObjectExclusionList/>
+							<GameSyncExclusionList/>
+						</SoundBank>
+						<SoundBank Name="Environment_Other" ID="{1C3DB086-3FEA-429D-8E28-D1D508817289}">
+							<ObjectInclusionList>
+								<ObjectRef Name="Environment_Other" ID="{40ED1186-23A0-4619-B95D-84DFE291A62C}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
+							</ObjectInclusionList>
+							<ObjectExclusionList/>
+							<GameSyncExclusionList/>
+						</SoundBank>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

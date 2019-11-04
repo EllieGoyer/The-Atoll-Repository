@@ -54,8 +54,17 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
         CharacterController Target = World.CURRENT.ActivePlayer.GetComponent<CharacterController>();
+        float velocity;
+        if(Target.enabled)
+        {
+            velocity = Target.velocity.sqrMagnitude;
+        }
+        else
+        {
+            velocity = World.CURRENT.ActivePlayer.GetComponent<Rigidbody>().velocity.sqrMagnitude;
+        }
 
-        Vector3 targetPosition = Target.transform.position + Vector3.up * FollowHeightOffset;
+        Vector3 targetPosition = World.CURRENT.ActivePlayer.transform.position + Vector3.up * FollowHeightOffset;
 
         if(Input.GetButton(DragInputName))
         {
@@ -76,9 +85,9 @@ public class CameraFollow : MonoBehaviour
                 cameraPolarVelocity = cameraPolarVelocity.normalized * newPolarSpeed;
             }
         }
-        else if(!Mathf.Approximately(Target.velocity.sqrMagnitude, 0))
+        else if(!Mathf.Approximately(velocity, 0))
         {
-            Vector3 targetPolar = new Vector3(((Target.gameObject.transform.rotation.eulerAngles.y + 180) % 360 + 360) % 360, FollowElevation, FollowDistance);
+            Vector3 targetPolar = new Vector3(((World.CURRENT.ActivePlayer.transform.rotation.eulerAngles.y + 180) % 360 + 360) % 360, FollowElevation, FollowDistance);
             Vector3 polarDirection = targetPolar - cameraPolarPosition;
             polarDirection.x = Mathf.Abs(polarDirection.x) > 180 ? -Mathf.Sign(polarDirection.x) * (360 - Mathf.Abs(polarDirection.x)) : polarDirection.x;
             polarDirection.y = Mathf.Abs(polarDirection.y) > 180 ? -Mathf.Sign(polarDirection.y) * (360 - Mathf.Abs(polarDirection.y)) : polarDirection.y;

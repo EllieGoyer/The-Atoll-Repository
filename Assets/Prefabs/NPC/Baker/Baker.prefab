@@ -4632,11 +4632,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 617777906586814624}
     m_Modifications:
-    - target: {fileID: 8570017500868300468, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
-        type: 3}
-      propertyPath: m_Name
-      value: BakerDialog
-      objectReference: {fileID: 0}
     - target: {fileID: 8570017500868300478, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4692,6 +4687,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8570017500868300468, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: m_Name
+      value: BakerDialog
+      objectReference: {fileID: 0}
     - target: {fileID: 8570017500868300475, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
         type: 3}
       propertyPath: masterDialogueGraph
@@ -4707,8 +4707,17 @@ PrefabInstance:
         type: 3}
       propertyPath: renderers.Array.data[0]
       value: 
-      objectReference: {fileID: 4074599252162807469}
-    m_RemovedComponents: []
+      objectReference: {fileID: 11400000, guid: 5630d48eb2773444986fe21c07995c5f,
+        type: 2}
+    - target: {fileID: 7158740401635510714, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: AudioEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 3e2f73f98bcfff649972cea6cc01c819,
+        type: 2}
+    m_RemovedComponents:
+    - {fileID: 8570017500868300472, guid: ebbd9ea026178b54bbfa39ca16d6fa2b, type: 3}
+    - {fileID: 8570017500868300479, guid: ebbd9ea026178b54bbfa39ca16d6fa2b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ebbd9ea026178b54bbfa39ca16d6fa2b, type: 3}
 --- !u!4 &1065354879860566114 stripped
 Transform:
