@@ -12,7 +12,15 @@
 					<ChildrenList>
 						<AuxBus Name="LP_Bus" ID="{74E58BCD-D318-4AE9-B599-67974C158953}"/>
 						<Bus Name="Environment" ID="{8866971F-B22F-4E25-B79F-0AE7A6720F46}"/>
-						<Bus Name="Dialogue" ID="{88F3FFAD-B8BE-41C3-9C35-1C36F8FAB6B7}"/>
+						<Bus Name="Dialogue" ID="{88F3FFAD-B8BE-41C3-9C35-1C36F8FAB6B7}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+						</Bus>
 						<Bus Name="Footsteps" ID="{6FE6D4FF-CBF7-4CE6-A812-3E3AECB4C0BE}">
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
