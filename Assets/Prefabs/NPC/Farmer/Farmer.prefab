@@ -4224,11 +4224,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 37934774237736441}
     m_Modifications:
-    - target: {fileID: 8570017500868300468, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
-        type: 3}
-      propertyPath: m_Name
-      value: FarmerDialog
-      objectReference: {fileID: 0}
     - target: {fileID: 8570017500868300478, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4284,6 +4279,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8570017500868300468, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: m_Name
+      value: FarmerDialog
+      objectReference: {fileID: 0}
     - target: {fileID: 8570017500868300475, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
         type: 3}
       propertyPath: dialogueGraph
@@ -4295,6 +4295,12 @@ PrefabInstance:
       propertyPath: masterDialogueGraph
       value: 
       objectReference: {fileID: 11400000, guid: 8420db9428d3b8444994de4b1383dccf,
+        type: 2}
+    - target: {fileID: 7158740401635510714, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: AudioEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 35f109b96cd93cc468caab314ed7dfb2,
         type: 2}
     m_RemovedComponents:
     - {fileID: 8570017500868300479, guid: ebbd9ea026178b54bbfa39ca16d6fa2b, type: 3}

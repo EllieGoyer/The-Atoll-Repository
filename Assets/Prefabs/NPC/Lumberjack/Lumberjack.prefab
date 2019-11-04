@@ -38,11 +38,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2367762183244054964}
     m_Modifications:
-    - target: {fileID: 8570017500868300468, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
-        type: 3}
-      propertyPath: m_Name
-      value: LumberjackDialog
-      objectReference: {fileID: 0}
     - target: {fileID: 8570017500868300478, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -98,11 +93,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8570017500868300468, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: m_Name
+      value: LumberjackDialog
+      objectReference: {fileID: 0}
     - target: {fileID: 8570017500868300475, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
         type: 3}
       propertyPath: masterDialogueGraph
       value: 
       objectReference: {fileID: 11400000, guid: 243aa9ed0af358342861335311f097a2,
+        type: 2}
+    - target: {fileID: 7158740401635510714, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: AudioEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 5483f04952359054986eeb49dfff36f7,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebbd9ea026178b54bbfa39ca16d6fa2b, type: 3}
