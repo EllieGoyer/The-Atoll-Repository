@@ -12,6 +12,7 @@ public class WorldInspector : Editor
         world.ActivePlayer = (GameObject)EditorGUILayout.ObjectField("Active Player", world.ActivePlayer, typeof(GameObject), true);
         world.ActiveOcean = (GameObject)EditorGUILayout.ObjectField("Active Ocean", world.ActiveOcean, typeof(GameObject), true);
         world.ActiveCamera = (GameObject)EditorGUILayout.ObjectField("Active Camera", world.ActiveCamera, typeof(GameObject), true);
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("ActiveSun"));
         serializedObject.FindProperty("activePlayer").objectReferenceValue = world.ActivePlayer;
         serializedObject.FindProperty("activeOcean").objectReferenceValue = world.ActiveOcean;
         serializedObject.FindProperty("activeOceanRenderer").objectReferenceValue = world.ActiveOceanRenderer;
