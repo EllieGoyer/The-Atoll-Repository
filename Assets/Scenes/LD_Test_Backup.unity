@@ -20237,7 +20237,7 @@ Transform:
   m_Children:
   - {fileID: 438955399}
   - {fileID: 61709319}
-  - {fileID: 1586565199}
+  - {fileID: 1622496795}
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -55241,6 +55241,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b96f258c7d90cb4c9812faaca9f4a7d, type: 3}
+--- !u!1 &899945849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 795577858}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1586565199}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &901010619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88560,12 +88576,21 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1598602716}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1586565199 stripped
+--- !u!4 &1586565199
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 3641626756895962303, guid: 82bc49f8f8113af4893771f5846a9a1e,
     type: 3}
   m_PrefabInstance: {fileID: 795577858}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899945849}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1622496795}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1590408933 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5404565816205547681, guid: 02e6191294b357244a35b6a29e196014,
@@ -89979,6 +90004,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 629591276}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1622496794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 795577858}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1622496795}
+  m_Layer: 0
+  m_Name: atoll_baker_house (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1622496795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 795577858}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622496794}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1586565199}
+  m_Father: {fileID: 370094035}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1623897487 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8782380196463486388, guid: ed55603717c9287478d08502a7c9ad7b,
