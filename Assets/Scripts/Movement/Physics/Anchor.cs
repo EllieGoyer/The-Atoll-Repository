@@ -10,6 +10,7 @@ public class Anchor : MonoBehaviour
     protected SpringJoint spring;
     protected Rigidbody rb;
     protected bool coolingDown = false;
+    public AK.Wwise.Event HitSound;
 
     public bool IsEngaged
     {
@@ -33,6 +34,7 @@ public class Anchor : MonoBehaviour
 
     public void Engage()
     {
+        HitSound.Post(gameObject);
         rb.isKinematic = true;
     }
 
