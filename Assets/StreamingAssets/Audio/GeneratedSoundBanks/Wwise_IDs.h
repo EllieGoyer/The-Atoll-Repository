@@ -47,6 +47,7 @@ namespace AK
         static const AkUniqueID SHIPENTER = 2585523711U;
         static const AkUniqueID SHIPSTORM_START = 2475524499U;
         static const AkUniqueID SHIPSTORM_STOP = 4008905809U;
+        static const AkUniqueID TREE_RUSTLE = 4137946895U;
     } // namespace EVENTS
 
     namespace STATES

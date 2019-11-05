@@ -19,11 +19,13 @@ public class OceanMovement : Movement {
     protected float verticalVelocity = 0;
     public float AirDrag;
     public float WaterDrag;
+    public float FlippingPower;
 
     public OceanEngine Engine;
     public Winch AnchorWinch;
     public Anchor Anchor;
     public GameObject AnchorPrefab;
+    public Animator Animator;
 
     protected override float ForwardVelocity {
         get => Vector3.Project(controller.velocity, transform.forward).magnitude * Mathf.Sign(Vector3.Dot(controller.velocity, transform.forward));
@@ -75,10 +77,22 @@ public class OceanMovement : Movement {
             if (sideAxis > 0)
             {
                 controller.AddTorque(0, TurningRate, 0, ForceMode.Acceleration);
+                Animator.SetInteger("Direction", 1);
             }
             else if (sideAxis < 0)
             {
                 controller.AddTorque(0, -TurningRate, 0, ForceMode.Acceleration);
+                Animator.SetInteger("Direction", -1);
+            }
+            else
+            {
+                Animator.SetInteger("Direction", 0);
+            }
+
+            //Emergency boat flipper
+            if(Input.GetKeyDown(KeyCode.F) && Vector3.Dot(Vector3.up, transform.up) < -0.5)
+            {
+                controller.AddRelativeTorque(0, 0, FlippingPower, ForceMode.VelocityChange);
             }
         }
         else

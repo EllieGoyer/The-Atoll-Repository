@@ -501,7 +501,7 @@
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-26</Value>
+												<Value>-15</Value>
 											</ValueList>
 											<RTPCList>
 												<RTPC Name="" ID="{E4DC51D7-C891-46F6-9E3A-A3C2B58C69A4}" ShortID="16932819">
@@ -782,7 +782,7 @@
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-30</Value>
+												<Value>-12</Value>
 											</ValueList>
 											<RTPCList>
 												<RTPC Name="" ID="{AB20D79B-C960-4751-AEC7-8813835B1317}" ShortID="283814443">
@@ -938,6 +938,36 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="Atoll_Environment_Seagull" ID="{21399309-BDEE-4577-A5BA-74E45DE3A921}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Atoll_Environment_TreeRustle_1" ID="{7F0CAB5D-BA57-48BC-AABE-9757DFDE6E5A}" ShortID="14471841">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="TreeRustle" ID="{BD656B8F-ED4D-4790-ADC4-1BD113502F56}" WorkUnitID="{50340E82-D163-4027-BB2D-BD73FD5AEE4D}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Environment" ID="{8866971F-B22F-4E25-B79F-0AE7A6720F46}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Atoll_Environment_TreeRustle_1" ID="{5CFAF8F1-8C1C-43A9-B396-3A4796F42753}" ShortID="42804570">
+											<Language>SFX</Language>
+											<AudioFile>Atoll_Environment_TreeRustle_1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Atoll_Environment_TreeRustle_1" ID="{5CFAF8F1-8C1C-43A9-B396-3A4796F42753}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -1271,11 +1301,7 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Farmer_Dialogue" ID="{870E69DE-8486-4443-9501-0D20D05BAC77}" ShortID="630723974">
 									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>5</Value>
-											</ValueList>
-										</Property>
+										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1334,11 +1360,7 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Baker_Dialogue" ID="{E20700B2-E28D-4045-A4F0-FE9C3A0BAD14}" ShortID="67001369">
 									<PropertyList>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>3</Value>
-											</ValueList>
-										</Property>
+										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1397,6 +1419,7 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Lumberjack_Dialogue" ID="{581F6466-EE5B-4560-B2DA-E4B2B4D573C4}" ShortID="740290617">
 									<PropertyList>
+										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
 												<Value>-400</Value>
@@ -1454,6 +1477,7 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Taylor_Dialogue" ID="{2DB3B90F-B35C-4B1B-B11E-0B1E75F447D2}" ShortID="520375925">
 									<PropertyList>
+										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
 												<Value>300</Value>
@@ -1511,6 +1535,7 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Potter_Dialogue" ID="{CBD05791-71D6-4E64-B478-1EFBB616D85A}" ShortID="929366195">
 									<PropertyList>
+										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
 												<Value>-200</Value>
@@ -1721,6 +1746,13 @@
 						<Folder Name="Anchor" ID="{04B4A77B-2654-4CBC-8281-C515DA325BD5}" ShortID="974725092">
 							<ChildrenList>
 								<Sound Name="Atoll_Anchor_Deploy_2" ID="{BEB8CA49-43F5-425A-9E8A-083000058078}" ShortID="641245724">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
@@ -1740,6 +1772,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Atoll_Anchor_Hit" ID="{F5C10A3F-73FA-45D4-90D9-0DD9943DB220}" ShortID="649764282">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>

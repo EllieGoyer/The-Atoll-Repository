@@ -45,7 +45,7 @@ MonoBehaviour:
       _dynamic: 0
   previousNode: {fileID: 0}
   text: ' She can be seen tending to her crops or her animals.'
-  displayRate: 0.1
+  displayRate: 0.025
   nextNode: {fileID: 0}
 --- !u!114 &-6965796109002970233
 MonoBehaviour:
@@ -123,7 +123,7 @@ MonoBehaviour:
       _dynamic: 0
   previousNode: {fileID: 0}
   text: Oh thank you muchly, dear!
-  displayRate: 0.1
+  displayRate: 0.025
   nextNode: {fileID: 0}
 --- !u!114 &-2680021024885357698
 MonoBehaviour:
@@ -170,7 +170,7 @@ MonoBehaviour:
       _dynamic: 0
   previousNode: {fileID: 0}
   text: Ah. Maybe later then.
-  displayRate: 0.1
+  displayRate: 0.025
   nextNode: {fileID: 0}
 --- !u!114 &-2490500605093884014
 MonoBehaviour:
@@ -217,7 +217,7 @@ MonoBehaviour:
       _dynamic: 0
   previousNode: {fileID: 0}
   text: 'I appreciate it, I really do. '
-  displayRate: 0.1
+  displayRate: 0.025
   nextNode: {fileID: 0}
 --- !u!114 &-622133828336742117
 MonoBehaviour:
@@ -305,7 +305,7 @@ MonoBehaviour:
       _dynamic: 0
   previousNode: {fileID: 0}
   text: Absolutely
-  displayRate: 0.1
+  displayRate: 0.025
   nextNode: {fileID: 0}
   promptText: Yes!
   Checks: []
@@ -394,7 +394,7 @@ MonoBehaviour:
       _dynamic: 0
   previousNode: {fileID: 0}
   text: Not right now, sorry.
-  displayRate: 0.1
+  displayRate: 0.025
   nextNode: {fileID: 0}
   promptText: No!
   Checks: []
@@ -443,7 +443,7 @@ MonoBehaviour:
       _dynamic: 0
   previousNode: {fileID: 0}
   text: 'Oh yes, of course! '
-  displayRate: 0.1
+  displayRate: 0.025
   nextNode: {fileID: 0}
 --- !u!114 &1421790285076717359
 MonoBehaviour:
@@ -490,7 +490,7 @@ MonoBehaviour:
       _dynamic: 0
   previousNode: {fileID: 0}
   text: The farmer is located on her own island.
-  displayRate: 0.1
+  displayRate: 0.025
   nextNode: {fileID: 0}
 --- !u!114 &1467398368371112438
 MonoBehaviour:
@@ -576,7 +576,7 @@ MonoBehaviour:
       _dynamic: 1
   previousNode: {fileID: 0}
   text: Excuse me, but would you be able to get me some eggs from the farmer?
-  displayRate: 0.1
+  displayRate: 0.025
   Branches:
   - {fileID: 0}
   - {fileID: 0}
@@ -714,7 +714,7 @@ MonoBehaviour:
       _dynamic: 0
   previousNode: {fileID: 0}
   text: Wait, can you give me some more information?
-  displayRate: 0.1
+  displayRate: 0.025
   nextNode: {fileID: 0}
   promptText: Tell me more
   Checks: []

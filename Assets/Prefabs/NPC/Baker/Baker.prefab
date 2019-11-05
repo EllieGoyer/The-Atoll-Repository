@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3890888257344226489}
+  - component: {fileID: 1365899564552294277}
   m_Layer: 0
   m_Name: Master
   m_TagString: Untagged
@@ -154,6 +155,25 @@ Transform:
   m_Father: {fileID: 4868692027893225586}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1365899564552294277
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589297230582316118}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: bddc489b0c12618498e7683d49a895bd, type: 3}
+  m_Controller: {fileID: 9100000, guid: c047ef35b61f3d348be169c4dcc423d4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &657070932810856828
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,7 +1974,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1626338483060548788, guid: bddc489b0c12618498e7683d49a895bd, type: 3}
+  - {fileID: 2100000, guid: 7227887e5817d9948b4ab204e4369b24, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2358,7 +2378,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 617777906586814624}
-  - component: {fileID: 7356852616881874394}
   m_Layer: 0
   m_Name: Baker
   m_TagString: Untagged
@@ -2382,25 +2401,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &7356852616881874394
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4524306056882944691}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: bddc489b0c12618498e7683d49a895bd, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4570307589207772416
 GameObject:
   m_ObjectHideFlags: 0
@@ -4698,6 +4698,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 5630d48eb2773444986fe21c07995c5f,
         type: 2}
+    - target: {fileID: 3883881804824359007, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862758198390122110, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: renderers.Array.data[0]
+      value: 
+      objectReference: {fileID: 4074599252162807469}
     - target: {fileID: 7158740401635510714, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
         type: 3}
       propertyPath: AudioEvent.WwiseObjectReference
@@ -4715,16 +4725,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 5630d48eb2773444986fe21c07995c5f,
         type: 2}
-    - target: {fileID: 8862758198390122110, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
-        type: 3}
-      propertyPath: renderers.Array.data[0]
-      value: 
-      objectReference: {fileID: 4074599252162807469}
-    - target: {fileID: 3883881804824359007, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8570017500868300472, guid: ebbd9ea026178b54bbfa39ca16d6fa2b, type: 3}
     - {fileID: 8570017500868300479, guid: ebbd9ea026178b54bbfa39ca16d6fa2b, type: 3}
