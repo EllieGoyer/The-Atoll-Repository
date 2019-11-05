@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5700f036e354cc0458b82830ad950fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxThrust: 270000
+  MaxThrust: 135000
   MinThrust: -20000
   Direction: 1
 --- !u!1 &6633866828282480852
@@ -321,9 +321,6 @@ MonoBehaviour:
   OnReset:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  currentState: 0
 --- !u!114 &39681370175962453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,7 +484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxLength: 50
-  MinLength: 2
+  MinLength: 0.25
   MaxExtendRate: 10
   MaxRetractRate: 5
   CurrentAction: 0
