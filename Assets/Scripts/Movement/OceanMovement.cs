@@ -74,11 +74,11 @@ public class OceanMovement : Movement {
 
             if (sideAxis > 0)
             {
-                controller.AddTorque(0, 80000, 0);
+                controller.AddTorque(0, TurningRate, 0, ForceMode.Acceleration);
             }
             else if (sideAxis < 0)
             {
-                controller.AddTorque(0, -80000, 0);
+                controller.AddTorque(0, -TurningRate, 0, ForceMode.Acceleration);
             }
         }
         else

@@ -17,7 +17,6 @@ public class RepeatingAudio : AudioInteractable
 
     void PlayRepeatingRandom()
     {
-        Debug.Log("Play");
         Play();
         Invoke("PlayRepeatingRandom", Random.Range(MinPeriod, MaxPeriod));
     }
