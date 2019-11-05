@@ -80,8 +80,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Checks: []
-  AutoReset: 0
-  ResetCooldownTime: 0
+  AutoReset: 1
+  ResetCooldownTime: 1
   OnEnabled:
     m_PersistentCalls:
       m_Calls: []
@@ -107,6 +107,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  OnReset:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &4231031286349676991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,6 +124,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d25fd58396c4eb46a97ebe691e60cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 0
+  DefaultMaterial: {fileID: 2100000, guid: ab356067df167fb46b377c77b9c65f42, type: 2}
+  ActivatedMaterial: {fileID: 2100000, guid: 45eb1f0e0205ef1488adb6520d9e0836, type: 2}
+  meshRenderers:
+  - {fileID: 5271493338607769832}
 --- !u!1 &4733144564756230701
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +187,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ab356067df167fb46b377c77b9c65f42, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

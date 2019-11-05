@@ -4632,6 +4632,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 617777906586814624}
     m_Modifications:
+    - target: {fileID: 8570017500868300468, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: m_Name
+      value: BakerDialog
+      objectReference: {fileID: 0}
     - target: {fileID: 8570017500868300478, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4687,17 +4692,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8570017500868300468, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
-        type: 3}
-      propertyPath: m_Name
-      value: BakerDialog
-      objectReference: {fileID: 0}
-    - target: {fileID: 8570017500868300475, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
-        type: 3}
-      propertyPath: dialogueGraph
-      value: 
-      objectReference: {fileID: 11400000, guid: 6f3abf4d67967174682e61b28410285a,
-        type: 2}
     - target: {fileID: 8570017500868300475, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
         type: 3}
       propertyPath: masterDialogueGraph
@@ -4710,6 +4704,27 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 3e2f73f98bcfff649972cea6cc01c819,
         type: 2}
+    - target: {fileID: 5738094553196888131, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: renderers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5738094553196888131, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: renderers.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5630d48eb2773444986fe21c07995c5f,
+        type: 2}
+    - target: {fileID: 8862758198390122110, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: renderers.Array.data[0]
+      value: 
+      objectReference: {fileID: 4074599252162807469}
+    - target: {fileID: 3883881804824359007, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8570017500868300472, guid: ebbd9ea026178b54bbfa39ca16d6fa2b, type: 3}
     - {fileID: 8570017500868300479, guid: ebbd9ea026178b54bbfa39ca16d6fa2b, type: 3}
