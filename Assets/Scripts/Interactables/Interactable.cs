@@ -8,14 +8,15 @@ public class Interactable : MonoBehaviour
 {
     [HideInInspector] public Check[] Checks;
 
-    [HideInInspector] public bool AutoReset = false;
-    [HideInInspector] public float ResetCooldownTime = 0;
+    [SerializeField] [HideInInspector] public bool AutoReset = false;
+    [SerializeField] [HideInInspector] public float ResetCooldownTime = 0;
 
     public UnityEvent OnEnabled; // invoked when leaving the "disabled" state
     public UnityEvent OnDisabled; // invoked when entering the "disabled" state
     public UnityEvent OnActivated; // invoked when entering the "activate" state
     public UnityEvent OnDeactivated; // invoked when entering the "inactive" state
     public UnityEvent OnPerforming; // invoked when entering the "performing" state
+    [HideInInspector] public UnityEvent OnReset;
 
     Collider InsidePlayer = null;
     new Collider collider;
@@ -70,6 +71,7 @@ public class Interactable : MonoBehaviour
     // DEFAULT UNITY METHODS
 
     private void Awake() {
+        OnReset = new UnityEvent();
         Checks = GetComponents<Check>();
         collider = GetComponent<Collider>();
         currentState = STATE.Inactive;
@@ -133,6 +135,9 @@ public class Interactable : MonoBehaviour
             if(ResetCooldownTime > 0) {
                 ResetDelayed(ResetCooldownTime);
             }
+            else {
+                OnReset.Invoke();
+            }
 
             CurrentState = STATE.Active;
         }
@@ -168,6 +173,7 @@ public class Interactable : MonoBehaviour
     public void Reset() {
         CurrentState = STATE.Inactive;
         ResetTrigger();
+        OnReset.Invoke();
     }
 
     /// <summary>

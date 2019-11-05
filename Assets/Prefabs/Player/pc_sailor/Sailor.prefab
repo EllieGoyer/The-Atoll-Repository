@@ -224,11 +224,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: sailerRigged
       objectReference: {fileID: 0}
-    - target: {fileID: -6271754044598054407, guid: df4be9d2df5b280439869533f11511b7,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 46ac0bafd5d13114e862b20b2aacf2cd, type: 2}
     - target: {fileID: -6057140222963153312, guid: df4be9d2df5b280439869533f11511b7,
         type: 3}
       propertyPath: m_Avatar
@@ -299,6 +294,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6271754044598054407, guid: df4be9d2df5b280439869533f11511b7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 46ac0bafd5d13114e862b20b2aacf2cd, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df4be9d2df5b280439869533f11511b7, type: 3}
 --- !u!1 &8284270994151343781 stripped
