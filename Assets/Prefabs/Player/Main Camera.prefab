@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6695278601425680689}
   - component: {fileID: 9137598730512023710}
   - component: {fileID: 4418241592991519053}
+  - component: {fileID: 6958050560558346035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -61,11 +62,11 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 2000
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -94,9 +95,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinElevation: 10
   MaxElevation: 75
-  CameraTopSpeed: 135
-  CameraAcceleration: 20
-  CameraDeceleration: 20
+  CameraTopSpeed: 180
+  CameraAcceleration: 2880
+  CameraDeceleration: 2880
   FollowDistance: 12
   FollowElevation: 37.5
   FollowHeightOffset: 0
@@ -163,6 +164,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d933676e4446c84d87f151d861eb139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activePlayer: {fileID: 0}
+  activeOcean: {fileID: 0}
+  activeOceanRenderer: {fileID: 0}
+  activeCamera: {fileID: 577427505857984563}
+  activeCameraFollow: {fileID: 577427505857984567}
+  ActiveSun: {fileID: 0}
 --- !u!114 &9137598730512023710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,3 +218,19 @@ MonoBehaviour:
   multiPositionTypeLabel: 0
   LargeModePositions: []
   multiPositionArray: []
+--- !u!114 &6958050560558346035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577427505857984563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b007e15bc42b3458caa71ac0bc80a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
+  GameParameter: EnvironmentSwitch
+  start: 0
+  end: 100
