@@ -333,6 +333,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  currentState: 0
 --- !u!114 &39681370175962453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,6 +666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002a3d06445a80545bf06648d5726ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collider: {fileID: 8692219543113281828}
 --- !u!54 &2447373492161804677
 Rigidbody:
   m_ObjectHideFlags: 0
