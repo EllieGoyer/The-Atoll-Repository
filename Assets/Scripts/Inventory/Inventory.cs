@@ -12,6 +12,26 @@ public class Inventory : MonoBehaviour {
     public List<StoredGood> Goods;
     public List<StoredRelationship> Relationships;
 
+    public List<Tool> getTools()
+    {
+        return Tools;
+    }
+
+    public List<Collectable> GetCollectables()
+    {
+        return Collectables;
+    }
+
+    public List<StoredGood> GetGoods()
+    {
+        return Goods;
+    }
+
+    public List<StoredRelationship> GetRelationships()
+    {
+        return Relationships;
+    }
+
     private void Awake() {
         // set object up as a singleton
         if (Instance != null) {
