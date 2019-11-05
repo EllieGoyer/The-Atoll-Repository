@@ -59,16 +59,17 @@ public abstract class Movement : MonoBehaviour
             }
         }
 
-        if (sideInput > Mathf.Epsilon)
-        {
+        DoSideInput(sideInput);
+    }
+
+    protected virtual void DoSideInput(float sideInput) {
+        if (sideInput > Mathf.Epsilon) {
             AngularVelocity = TurningRate;
         }
-        else if (sideInput < -Mathf.Epsilon)
-        {
+        else if (sideInput < -Mathf.Epsilon) {
             AngularVelocity = -TurningRate;
         }
-        else
-        {
+        else {
             AngularVelocity = 0;
         }
     }

@@ -14,6 +14,12 @@ public class CameraFollow : MonoBehaviour
     public float CameraAcceleration;
     public float CameraDeceleration;
 
+    public bool IsDragging {
+        get {
+            return Input.GetButton(DragInputName);
+        }
+    }
+
     /// <summary>
     /// how far from the target to follow from
     /// </summary>
@@ -66,7 +72,7 @@ public class CameraFollow : MonoBehaviour
 
         Vector3 targetPosition = World.CURRENT.ActivePlayer.transform.position + Vector3.up * FollowHeightOffset;
 
-        if(Input.GetButton(DragInputName))
+        if(IsDragging)
         {
             float verticalDrag = Input.GetAxis(DragVerticalAxisName) * -1;
             float horizontalDrag = Input.GetAxis(DragHorizontalAxisName);

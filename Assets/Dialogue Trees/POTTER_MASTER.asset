@@ -173,6 +173,54 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   previousNode: {fileID: 0}
+--- !u!114 &-7993936932360542326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 607d4fe632abbed478d53a48af9f5ac2, type: 3}
+  m_Name: Trigger Modify Good
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2040, y: -744}
+  ports:
+    keys:
+    - Output
+    - previousNode
+    values:
+    - _fieldName: Output
+      _node: {fileID: -7993936932360542326}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: previousNode
+        node: {fileID: -7870144483479599377}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: previousNode
+      _node: {fileID: -7993936932360542326}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: nextNode
+        node: {fileID: 6246996219489173384}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previousNode: {fileID: 0}
+  Output: {fileID: 0}
+  good: {fileID: 11400000, guid: ecea8b1574ebccf48894ff9a59fc73dd, type: 2}
+  ModificationType: 3
+  amount: 1
 --- !u!114 &-7978734678847959587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,7 +340,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: previousNode
-        node: {fileID: 4872676639163223160}
+        node: {fileID: -4425658670660405611}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -303,8 +351,8 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: nextNode
-        node: {fileID: 6246996219489173384}
+      - fieldName: Output
+        node: {fileID: -7993936932360542326}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -859,7 +907,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: branch
-        node: {fileID: -2224223851719685927}
+        node: {fileID: -2713079127614862119}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -932,6 +980,53 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   previousNode: {fileID: 0}
+--- !u!114 &-4425658670660405611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5fcf1d9856535e4b909c4075e9aa7e9, type: 3}
+  m_Name: Trigger Modify Collectable
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 2488, y: -728}
+  ports:
+    keys:
+    - Output
+    - previousNode
+    values:
+    - _fieldName: Output
+      _node: {fileID: -4425658670660405611}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: previousNode
+        node: {fileID: 4872676639163223160}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: previousNode
+      _node: {fileID: -4425658670660405611}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Output
+        node: {fileID: -7870144483479599377}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previousNode: {fileID: 0}
+  Output: {fileID: 0}
+  collectable: {fileID: 11400000, guid: 6aa2e83eede20b343b1e3989bf0bbe1e, type: 2}
+  ModificationType: 0
 --- !u!114 &-3299843414849226090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1038,6 +1133,40 @@ MonoBehaviour:
   text: Powers that BE I was SO worried for ya there.
   displayRate: 0.1
   nextNode: {fileID: 0}
+--- !u!114 &-2713079127614862119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7387b66158db52439fbb187dd0ea0ec, type: 3}
+  m_Name: Check Good
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1400, y: -760}
+  ports:
+    keys:
+    - branch
+    values:
+    - _fieldName: branch
+      _node: {fileID: -2713079127614862119}
+      _typeQualifiedName: Dialogue.QuestionBranchNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: Checks 0
+        node: {fileID: -5055291873007691898}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  branch: {fileID: 0}
+  good: {fileID: 11400000, guid: ecea8b1574ebccf48894ff9a59fc73dd, type: 2}
+  goodCheckType: 2
+  CheckAmount: 1
 --- !u!114 &-2345723406711740779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1116,39 +1245,6 @@ MonoBehaviour:
   text: Since it seems you've for-got-ten about our history, she's my wife! Haha
   displayRate: 0.1
   nextNode: {fileID: 0}
---- !u!114 &-2224223851719685927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf2976bdb4369da419bc23a24c6397a8, type: 3}
-  m_Name: Check Collectable
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1416.3486, y: -743.0758}
-  ports:
-    keys:
-    - branch
-    values:
-    - _fieldName: branch
-      _node: {fileID: -2224223851719685927}
-      _typeQualifiedName: Dialogue.QuestionBranchNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: Checks 0
-        node: {fileID: -5055291873007691898}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  branch: {fileID: 0}
-  collectable: {fileID: 11400000, guid: 6aa2e83eede20b343b1e3989bf0bbe1e, type: 2}
-  collectableCheckType: 0
 --- !u!114 &-1511201722663905251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1752,8 +1848,10 @@ MonoBehaviour:
   - {fileID: 4146746580705257399}
   - {fileID: 4872676639163223160}
   - {fileID: -4475560601927007705}
-  - {fileID: -2224223851719685927}
   - {fileID: -8311567473187038862}
+  - {fileID: -2713079127614862119}
+  - {fileID: -7993936932360542326}
+  - {fileID: -4425658670660405611}
   current: {fileID: 8046935250699968030}
   dialogueController: {fileID: 0}
   Active: 0
@@ -2551,7 +2649,7 @@ MonoBehaviour:
   m_Name: End
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2472, y: -728}
+  position: {x: 2712, y: -712}
   ports:
     keys:
     - previousNode
@@ -2562,7 +2660,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
-        node: {fileID: -7870144483479599377}
+        node: {fileID: -4425658670660405611}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -2795,7 +2893,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: previousNode
-        node: {fileID: -7870144483479599377}
+        node: {fileID: -7993936932360542326}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
