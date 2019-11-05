@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,8 +11,8 @@ public class DrawTools : MonoBehaviour
 {
     public static DrawTools _instance;
 
-    public GameObject prefab;
-    public int num;
+   // public Image box;
+    public TextMeshProUGUI tm;
 
     private void Awake()
     {
@@ -27,28 +28,28 @@ public class DrawTools : MonoBehaviour
 
     public void draw()
     {
+        string txt = "";
       
-        GameObject newObj = null;
-
-
-        List<Tool> tools = Inventory.Instance.getTools();
-
-        foreach(Tool t in tools)
+        foreach (Tool tool in Inventory.Instance.Tools)
         {
-
-            prefab.GetComponent<Image>().sprite = Sprite.Create(AssetPreview.GetAssetPreview(t.prefab), new Rect(0, 0, 128, 128), new Vector2());
-
-           
-            newObj = (GameObject)Instantiate(prefab, transform);
+            txt += tool.name + ", ";
         }
 
-       
+        tm.text = txt;
 
-      /*  for(int i =0; i < num; i++)
-        {
-            
-             newObj = (GameObject)Instantiate(prefab, transform);
-             newObj.GetComponent<Image>().color = Random.ColorHSV();
-        }*/
+
+        /* foreach (Tool t in Inventory.Instance.Tools)
+              {
+                  print(t.name);
+              }
+
+
+
+             for(int i =0; i < num; i++)
+                {
+                    box.sprite = Sprite.Create(AssetPreview.GetAssetPreview(t.prefab), new Rect(0, 0, 128, 128), new Vector2());
+                     newObj = (GameObject)Instantiate(prefab, transform);
+                     newObj.GetComponent<Image>().color = Random.ColorHSV();
+                }*/
     }
 }

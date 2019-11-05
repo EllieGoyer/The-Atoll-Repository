@@ -15,15 +15,13 @@ public class PageAreaController : MonoBehaviour
     {
         tabs = this.GetComponentsInChildren<Canvas>(true);
 
-
-        print(tabs.Length);
-
         changeTab(0);
+
     }
 
     public void changeTab(int x)
     {
-        print(tabs[x].name);
+        
         for (int i = 0; i < tabs.Length; i++)
         {
             
@@ -32,8 +30,15 @@ public class PageAreaController : MonoBehaviour
         tabs[x].enabled = true;
         
 
+        if(x == 0)
+        {
+            DrawTools._instance.draw();
+        }
+        if(x == 2)
+        {
+            DrawRelationships._instance.draw();
+        }
         
-        DrawTools._instance.draw();
        
     }
 
