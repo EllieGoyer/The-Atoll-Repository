@@ -193,7 +193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5997959201552551192}
   m_LocalRotation: {x: -0.32376793, y: -0, z: -0, w: 0.9461366}
-  m_LocalPosition: {x: -0.00002026558, y: 0, z: 6.290018}
+  m_LocalPosition: {x: -0.00002026558, y: -2, z: 6.290018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5308302730479285125}
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5700f036e354cc0458b82830ad950fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxThrust: 90000
+  MaxThrust: 270000
   MinThrust: -20000
   Direction: 1
 --- !u!1 &6633866828282480852
@@ -321,6 +321,9 @@ MonoBehaviour:
   OnReset:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  currentState: 0
 --- !u!114 &39681370175962453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,6 +656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 002a3d06445a80545bf06648d5726ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collider: {fileID: 8692219543113281828}
 --- !u!54 &2447373492161804677
 Rigidbody:
   m_ObjectHideFlags: 0

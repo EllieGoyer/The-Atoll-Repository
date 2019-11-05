@@ -29,7 +29,7 @@ public class Interactable : MonoBehaviour
     }
 
     // the state machine for the interactable, ONLY change state through the property
-    STATE currentState;
+    public STATE currentState;
     
     public STATE CurrentState {
         get { return currentState; }
