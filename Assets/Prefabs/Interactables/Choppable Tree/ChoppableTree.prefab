@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 567340977815790769}
   - component: {fileID: 3613875636882339416}
   - component: {fileID: 634242467874325717}
+  - component: {fileID: 8465775671199434214}
   m_Layer: 0
   m_Name: ChoppableTree
   m_TagString: Untagged
@@ -92,23 +93,15 @@ MonoBehaviour:
   OnEnabled:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnDisabled:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnActivated:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnDeactivated:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnPerforming:
     m_PersistentCalls:
       m_Calls:
@@ -145,13 +138,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+      - m_Target: {fileID: 8465775671199434214}
+        m_MethodName: Swap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnReset:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &2645652512422044639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,6 +277,21 @@ MonoBehaviour:
   - {fileID: 5016160413684897675}
   - {fileID: 5016160413684897673}
   - {fileID: 5016160413684897671}
+--- !u!114 &8465775671199434214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3553970362272207372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a52dee44206c9964c98a6e2d0d998260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  First: sailerRigged
+  Second: sailorAnimation_axeChop
+  Duration: 2.1
 --- !u!1 &6660226137153227687
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,26 +343,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3553970362272697900}
     m_Modifications:
-    - target: {fileID: 2300008, guid: fa40627bbb7047b42864ae1ccc48181b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ab356067df167fb46b377c77b9c65f42, type: 2}
-    - target: {fileID: 2300006, guid: fa40627bbb7047b42864ae1ccc48181b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ab356067df167fb46b377c77b9c65f42, type: 2}
-    - target: {fileID: 2300004, guid: fa40627bbb7047b42864ae1ccc48181b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ab356067df167fb46b377c77b9c65f42, type: 2}
-    - target: {fileID: 2300002, guid: fa40627bbb7047b42864ae1ccc48181b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ab356067df167fb46b377c77b9c65f42, type: 2}
-    - target: {fileID: 2300000, guid: fa40627bbb7047b42864ae1ccc48181b, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ab356067df167fb46b377c77b9c65f42, type: 2}
     - target: {fileID: 100000, guid: fa40627bbb7047b42864ae1ccc48181b, type: 3}
       propertyPath: m_Name
       value: atoll_deciduousTree_01
@@ -396,6 +391,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300008, guid: fa40627bbb7047b42864ae1ccc48181b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ab356067df167fb46b377c77b9c65f42, type: 2}
+    - target: {fileID: 2300006, guid: fa40627bbb7047b42864ae1ccc48181b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ab356067df167fb46b377c77b9c65f42, type: 2}
+    - target: {fileID: 2300004, guid: fa40627bbb7047b42864ae1ccc48181b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ab356067df167fb46b377c77b9c65f42, type: 2}
+    - target: {fileID: 2300002, guid: fa40627bbb7047b42864ae1ccc48181b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ab356067df167fb46b377c77b9c65f42, type: 2}
+    - target: {fileID: 2300000, guid: fa40627bbb7047b42864ae1ccc48181b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ab356067df167fb46b377c77b9c65f42, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa40627bbb7047b42864ae1ccc48181b, type: 3}
 --- !u!4 &5016160413687321967 stripped
@@ -441,6 +456,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3553970362272697900}
     m_Modifications:
+    - target: {fileID: 100000, guid: e720e38a241131446aaa1c4a552cca2e, type: 3}
+      propertyPath: m_Name
+      value: atoll_treeStump
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e720e38a241131446aaa1c4a552cca2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -484,10 +503,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: e720e38a241131446aaa1c4a552cca2e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: e720e38a241131446aaa1c4a552cca2e, type: 3}
-      propertyPath: m_Name
-      value: atoll_treeStump
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: e720e38a241131446aaa1c4a552cca2e, type: 3}
       propertyPath: m_Materials.Array.data[0]
