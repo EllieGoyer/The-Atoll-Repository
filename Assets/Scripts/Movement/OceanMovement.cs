@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(Rigidbody))]
 
 public class OceanMovement : Movement {
     public float BuoyancyStrength = 20.5F;
@@ -10,7 +10,7 @@ public class OceanMovement : Movement {
     public float MaxDisplacement = 1;
 
     [HideInInspector]
-    protected CharacterController controller;
+    protected Rigidbody controller;
     [HideInInspector]
     protected float forwardVelocity;
     [HideInInspector]
@@ -20,52 +20,83 @@ public class OceanMovement : Movement {
     public float AirDrag;
     public float WaterDrag;
 
+    public OceanEngine Engine;
+    public Winch AnchorWinch;
+    public Anchor Anchor;
+    public GameObject AnchorPrefab;
+
     protected override float ForwardVelocity {
-        get => forwardVelocity;
-        set => forwardVelocity = value;
+        get => Vector3.Project(controller.velocity, transform.forward).magnitude * Mathf.Sign(Vector3.Dot(controller.velocity, transform.forward));
+        set
+        {
+        }
     }
     protected override float AngularVelocity {
-        set => angularVelocity = value;
+        set
+        {
+        }
     }
 
     // Start is called before the first frame update
-    void Start() {
+    void Awake() {
         ReloadReferences();
     }
 
     public void ReloadReferences() {
-        controller = gameObject.GetComponent<CharacterController>();
+        controller = gameObject.GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    protected override void Update() {
-        base.Update();
+    protected override void Update()
+    {
+        if(AcceptingInput)
+        {
+            float forwardAxis = Input.GetAxis(ForwardAxisInputName), sideAxis = Input.GetAxis(SideAxisInputName);
 
-        Transform transform = gameObject.transform;
+            if (Anchor != null)
+            {
+                Anchor.Disengage();
+                AnchorWinch.enabled = false;
+                Destroy(Anchor.gameObject);
+            }
 
-        transform.Rotate(0, angularVelocity * Time.deltaTime, 0, Space.Self);
+            if (forwardAxis > 0)
+            {
+                Engine.Direction = 1;
+            }
+            else if (forwardAxis < 0)
+            {
+                Engine.Direction = -1;
+            }
+            else
+            {
+                Engine.Direction = 0;
+            }
 
-        Vector3 moveVector = forwardVelocity * transform.forward;
-        verticalVelocity += (ComputeBuoyancy() - GravityStrength) * Time.deltaTime;
-
-        float drag = IsAirborne() ? AirDrag : WaterDrag;
-        verticalVelocity *= (1 - (drag * Time.deltaTime));
-
-        moveVector.y += verticalVelocity;
-
-        controller.Move(moveVector * Time.deltaTime);
-
-    }
-
-    public float ComputeBuoyancy() {
-        float shipHeight = transform.position.y;
-        float waterHeight = World.CURRENT.ActiveOceanRenderer.GenerationModel.HeightAt(new Vector2(transform.position.x, transform.position.z), Time.time);
-
-        if (shipHeight >= waterHeight) {
-            return 0;
+            if (sideAxis > 0)
+            {
+                controller.AddTorque(0, TurningRate, 0, ForceMode.Acceleration);
+            }
+            else if (sideAxis < 0)
+            {
+                controller.AddTorque(0, -TurningRate, 0, ForceMode.Acceleration);
+            }
         }
-        else {
-            return BuoyancyStrength * Mathf.Min(MaxDisplacement, waterHeight - shipHeight);
+        else
+        {
+            Engine.Direction = 0;
+            if (Anchor == null)
+            {
+                Anchor = Instantiate(AnchorPrefab, AnchorWinch.transform.position - Vector3.up * AnchorWinch.MinLength, Quaternion.identity).GetComponent<Anchor>();
+                Anchor.GetComponent<SpringJoint>().connectedBody = controller;
+                AnchorWinch.Target = Anchor.GetComponent<SpringJoint>();
+                AnchorWinch.enabled = true;
+            } else if (!Anchor.IsEngaged)
+            {
+                AnchorWinch.CurrentAction = Winch.Action.Extend;
+            } else
+            {
+                AnchorWinch.CurrentAction = Winch.Action.None;
+            }
         }
     }
 

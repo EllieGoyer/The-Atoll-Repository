@@ -132,11 +132,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4508130227873925166}
     m_Modifications:
-    - target: {fileID: 8570017500868300468, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
-        type: 3}
-      propertyPath: m_Name
-      value: TailorDialogue
-      objectReference: {fileID: 0}
     - target: {fileID: 8570017500868300478, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -192,22 +187,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8570017500868300468, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: m_Name
+      value: TailorDialogue
+      objectReference: {fileID: 0}
     - target: {fileID: 8570017500868300475, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
         type: 3}
       propertyPath: masterDialogueGraph
       value: 
       objectReference: {fileID: 11400000, guid: 6e4144a601cdae64483e333b620b4247,
         type: 2}
-    - target: {fileID: 5738094553196888131, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+    - target: {fileID: 7158740401635510714, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
         type: 3}
-      propertyPath: renderers.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738094553196888131, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
-        type: 3}
-      propertyPath: renderers.Array.data[0]
+      propertyPath: AudioEvent.WwiseObjectReference
       value: 
-      objectReference: {fileID: 473137320}
+      objectReference: {fileID: 11400000, guid: 52959dda676efc04bb6ebd9e56d50a35,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebbd9ea026178b54bbfa39ca16d6fa2b, type: 3}
 --- !u!4 &6642565533689280164 stripped

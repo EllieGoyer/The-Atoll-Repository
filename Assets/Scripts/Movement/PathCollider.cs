@@ -4,9 +4,9 @@ using UnityEngine;
 
 public abstract class PathCollider : MonoBehaviour
 {
-    public static Vector3 SegmentColliderCenter(Vector3 start, Vector3 end)
+    public static Vector3 SegmentColliderCenter(Vector3 start, Vector3 end, float verticalOffset)
     {
-        return (start + end) / 2;
+        return (start + end + Vector3.up * verticalOffset) / 2;
     }
 
     public static Vector3 SegmentColliderSize(Vector3 start, Vector3 end, float thickness, float height, float capLength)
@@ -18,15 +18,15 @@ public abstract class PathCollider : MonoBehaviour
     {
         Vector3 dvector = (start - end).normalized;
         dvector = new Vector3(-dvector.z, dvector.y, dvector.x);
-        return Quaternion.LookRotation(dvector, Vector3.up);
+        return Mathf.Approximately(0, dvector.sqrMagnitude) ? Quaternion.identity : Quaternion.LookRotation(dvector, Vector3.up);
     }
-    public static GameObject SegmentToCollider(Vector3 start, Vector3 end, float thickness, float height, float capLength)
+    public static GameObject SegmentToCollider(Vector3 start, Vector3 end, float thickness, float height, float capLength, float verticalOffset)
     {
         GameObject obj = new GameObject();
         BoxCollider result = obj.AddComponent<BoxCollider>();
         result.center = Vector3.zero;
         result.size = SegmentColliderSize(start, end, thickness, height, capLength);
-        obj.transform.position = SegmentColliderCenter(start, end);
+        obj.transform.position = SegmentColliderCenter(start, end, verticalOffset);
         obj.transform.rotation = SegmentColliderOrientation(start, end);
         return obj;
     }
@@ -43,6 +43,7 @@ public abstract class PathCollider : MonoBehaviour
     }
     public float Thickness;
     public float Height;
+    public float VerticalOffset;
     public float CapLength;
 
 
@@ -61,7 +62,7 @@ public abstract class PathCollider : MonoBehaviour
         Matrix4x4 baseTransform = gameObject.transform.localToWorldMatrix;
         for(int i = 0; i < segs.Length; i += 2)
         {
-            colliderObjects[i / 2] = SegmentToCollider(pts[segs[i]], pts[segs[i + 1]], Thickness, Height, CapLength);
+            colliderObjects[i / 2] = SegmentToCollider(pts[segs[i]], pts[segs[i + 1]], Thickness, Height, CapLength, VerticalOffset);
             colliderObjects[i / 2].transform.SetParent(gameObject.transform, true);
             colliderObjects[i / 2].layer = gameObject.layer;
         }
@@ -81,7 +82,7 @@ public abstract class PathCollider : MonoBehaviour
         {
             for (int i = 0; i < segs.Length; i += 2)
             {
-                Gizmos.matrix = Matrix4x4.TRS(SegmentColliderCenter(pts[segs[i]], pts[segs[i + 1]]), SegmentColliderOrientation(pts[segs[i]], pts[segs[i + 1]]), Vector3.one);
+                Gizmos.matrix = Matrix4x4.TRS(SegmentColliderCenter(pts[segs[i]], pts[segs[i + 1]], VerticalOffset), SegmentColliderOrientation(pts[segs[i]], pts[segs[i + 1]]), Vector3.one);
                 Gizmos.DrawWireCube(Vector3.zero, SegmentColliderSize(pts[segs[i]], pts[segs[i + 1]], Thickness, Height, CapLength));
             }
         }
