@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2777481784656995917}
   - component: {fileID: 2777481784658323053}
   - component: {fileID: 2777481784659289261}
+  - component: {fileID: 227333950548256667}
   m_Layer: 0
   m_Name: atoll_bird_flying
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &227333950548256667
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2777481784657361517}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.367794, y: 8.718443, z: 25.022072}
+  m_Center: {x: 0.5786319, y: 7.4885693, z: -0.00074386597}

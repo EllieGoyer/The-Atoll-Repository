@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2164728157678842449}
   - component: {fileID: 2164728157675975281}
   - component: {fileID: 2164728157676941489}
+  - component: {fileID: 3919848743766775777}
   m_Layer: 0
   m_Name: atoll_fish_1
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3919848743766775777
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2164728157678874225}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.2183323, y: 2.1488826, z: 0.94979584}
+  m_Center: {x: -0.033937216, y: 0.15094423, z: -0.00000017881393}

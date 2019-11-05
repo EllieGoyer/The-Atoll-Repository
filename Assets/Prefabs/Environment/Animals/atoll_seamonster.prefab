@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5037536282873663379}
   - component: {fileID: 5037536282874990515}
   - component: {fileID: 5037536282875956595}
+  - component: {fileID: 559222746406265999}
   m_Layer: 0
   m_Name: atoll_seamonster
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &559222746406265999
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5037536282873697203}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8273165, y: 0.80722654, z: 2.60778}
+  m_Center: {x: 0.000000014901161, y: 0.014295042, z: -0.20071489}
