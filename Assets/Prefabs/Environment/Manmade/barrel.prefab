@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 389702476912155157}
   - component: {fileID: 389702476909255221}
   - component: {fileID: 389702476910385397}
+  - component: {fileID: 7626062619607371882}
   m_Layer: 0
   m_Name: barrel
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 389702476912641589}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 748.14606, y: 90.08797, z: 79.44833}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7626062619607371882
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389702476912641589}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 23.7, y: 28.811996, z: 24.2}
+  m_Center: {x: -0.00000333786, y: 14.406, z: -0.000015258789}
