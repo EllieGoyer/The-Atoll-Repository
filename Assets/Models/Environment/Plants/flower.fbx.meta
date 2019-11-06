@@ -1,57 +1,158 @@
 fileFormatVersion: 2
 guid: 3bb7b09bb0db4bb49b50c59248604bff
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: pCylinder2
-    100004: pPlane2
-    100006: pPlane3
-    100008: pPlane4
-    100010: pPlane5
-    100012: pPlane6
-    100014: pPlane7
-    100016: pPlane8
-    100018: pSphere2
-    400000: //RootNode
-    400002: pCylinder2
-    400004: pPlane2
-    400006: pPlane3
-    400008: pPlane4
-    400010: pPlane5
-    400012: pPlane6
-    400014: pPlane7
-    400016: pPlane8
-    400018: pSphere2
-    2100000: final_map
-    2300000: pCylinder2
-    2300002: pPlane2
-    2300004: pPlane3
-    2300006: pPlane4
-    2300008: pPlane5
-    2300010: pPlane6
-    2300012: pPlane7
-    2300014: pPlane8
-    2300016: pSphere2
-    3300000: pCylinder2
-    3300002: pPlane2
-    3300004: pPlane3
-    3300006: pPlane4
-    3300008: pPlane5
-    3300010: pPlane6
-    3300012: pPlane7
-    3300014: pPlane8
-    3300016: pSphere2
-    4300000: pPlane7
-    4300002: pPlane6
-    4300004: pSphere2
-    4300006: pPlane5
-    4300008: pPlane4
-    4300010: pPlane3
-    4300012: pPlane2
-    4300014: pCylinder2
-    4300016: pPlane8
-  externalObjects: {}
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: pCylinder2
+  - first:
+      1: 100004
+    second: pPlane2
+  - first:
+      1: 100006
+    second: pPlane3
+  - first:
+      1: 100008
+    second: pPlane4
+  - first:
+      1: 100010
+    second: pPlane5
+  - first:
+      1: 100012
+    second: pPlane6
+  - first:
+      1: 100014
+    second: pPlane7
+  - first:
+      1: 100016
+    second: pPlane8
+  - first:
+      1: 100018
+    second: pSphere2
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: pCylinder2
+  - first:
+      4: 400004
+    second: pPlane2
+  - first:
+      4: 400006
+    second: pPlane3
+  - first:
+      4: 400008
+    second: pPlane4
+  - first:
+      4: 400010
+    second: pPlane5
+  - first:
+      4: 400012
+    second: pPlane6
+  - first:
+      4: 400014
+    second: pPlane7
+  - first:
+      4: 400016
+    second: pPlane8
+  - first:
+      4: 400018
+    second: pSphere2
+  - first:
+      21: 2100000
+    second: final_map
+  - first:
+      23: 2300000
+    second: pCylinder2
+  - first:
+      23: 2300002
+    second: pPlane2
+  - first:
+      23: 2300004
+    second: pPlane3
+  - first:
+      23: 2300006
+    second: pPlane4
+  - first:
+      23: 2300008
+    second: pPlane5
+  - first:
+      23: 2300010
+    second: pPlane6
+  - first:
+      23: 2300012
+    second: pPlane7
+  - first:
+      23: 2300014
+    second: pPlane8
+  - first:
+      23: 2300016
+    second: pSphere2
+  - first:
+      33: 3300000
+    second: pCylinder2
+  - first:
+      33: 3300002
+    second: pPlane2
+  - first:
+      33: 3300004
+    second: pPlane3
+  - first:
+      33: 3300006
+    second: pPlane4
+  - first:
+      33: 3300008
+    second: pPlane5
+  - first:
+      33: 3300010
+    second: pPlane6
+  - first:
+      33: 3300012
+    second: pPlane7
+  - first:
+      33: 3300014
+    second: pPlane8
+  - first:
+      33: 3300016
+    second: pSphere2
+  - first:
+      43: 4300000
+    second: pPlane7
+  - first:
+      43: 4300002
+    second: pPlane6
+  - first:
+      43: 4300004
+    second: pSphere2
+  - first:
+      43: 4300006
+    second: pPlane5
+  - first:
+      43: 4300008
+    second: pPlane4
+  - first:
+      43: 4300010
+    second: pPlane3
+  - first:
+      43: 4300012
+    second: pPlane2
+  - first:
+      43: 4300014
+    second: pCylinder2
+  - first:
+      43: 4300016
+    second: pPlane8
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: final_map
+    second: {fileID: 2100000, guid: 7227887e5817d9948b4ab204e4369b24, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -86,6 +187,7 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -93,18 +195,19 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -113,10 +216,11 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -126,6 +230,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

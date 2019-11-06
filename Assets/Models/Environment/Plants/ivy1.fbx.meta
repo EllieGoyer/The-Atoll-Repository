@@ -1,112 +1,323 @@
 fileFormatVersion: 2
 guid: c2776b1528cfbf74ca0f1075dd6d97c5
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: pCylinder4
-    100004: pPlane10
-    100006: pPlane11
-    100008: pPlane12
-    100010: pPlane13
-    100012: pPlane14
-    100014: pPlane15
-    100016: pPlane16
-    100018: pPlane17
-    100020: pPlane18
-    100022: pPlane19
-    100024: pPlane20
-    100026: pPlane21
-    100028: pPlane22
-    100030: pPlane24
-    100032: pPlane25
-    100034: pPlane26
-    100036: pPlane27
-    100038: pPlane54
-    100040: pPlane9
-    400000: //RootNode
-    400002: pCylinder4
-    400004: pPlane10
-    400006: pPlane11
-    400008: pPlane12
-    400010: pPlane13
-    400012: pPlane14
-    400014: pPlane15
-    400016: pPlane16
-    400018: pPlane17
-    400020: pPlane18
-    400022: pPlane19
-    400024: pPlane20
-    400026: pPlane21
-    400028: pPlane22
-    400030: pPlane24
-    400032: pPlane25
-    400034: pPlane26
-    400036: pPlane27
-    400038: pPlane54
-    400040: pPlane9
-    2100000: final_map
-    2300000: pCylinder4
-    2300002: pPlane10
-    2300004: pPlane11
-    2300006: pPlane12
-    2300008: pPlane13
-    2300010: pPlane14
-    2300012: pPlane15
-    2300014: pPlane16
-    2300016: pPlane17
-    2300018: pPlane18
-    2300020: pPlane19
-    2300022: pPlane20
-    2300024: pPlane21
-    2300026: pPlane22
-    2300028: pPlane24
-    2300030: pPlane25
-    2300032: pPlane26
-    2300034: pPlane27
-    2300036: pPlane54
-    2300038: pPlane9
-    3300000: pCylinder4
-    3300002: pPlane10
-    3300004: pPlane11
-    3300006: pPlane12
-    3300008: pPlane13
-    3300010: pPlane14
-    3300012: pPlane15
-    3300014: pPlane16
-    3300016: pPlane17
-    3300018: pPlane18
-    3300020: pPlane19
-    3300022: pPlane20
-    3300024: pPlane21
-    3300026: pPlane22
-    3300028: pPlane24
-    3300030: pPlane25
-    3300032: pPlane26
-    3300034: pPlane27
-    3300036: pPlane54
-    3300038: pPlane9
-    4300000: pPlane13
-    4300002: pPlane12
-    4300004: pPlane22
-    4300006: pCylinder4
-    4300008: pPlane9
-    4300010: pPlane17
-    4300012: pPlane19
-    4300014: pPlane16
-    4300016: pPlane15
-    4300018: pPlane14
-    4300020: pPlane10
-    4300022: pPlane11
-    4300024: pPlane18
-    4300026: pPlane21
-    4300028: pPlane20
-    4300030: pPlane27
-    4300032: pPlane24
-    4300034: pPlane26
-    4300036: pPlane25
-    4300038: pPlane54
-  externalObjects: {}
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: pCylinder4
+  - first:
+      1: 100004
+    second: pPlane10
+  - first:
+      1: 100006
+    second: pPlane11
+  - first:
+      1: 100008
+    second: pPlane12
+  - first:
+      1: 100010
+    second: pPlane13
+  - first:
+      1: 100012
+    second: pPlane14
+  - first:
+      1: 100014
+    second: pPlane15
+  - first:
+      1: 100016
+    second: pPlane16
+  - first:
+      1: 100018
+    second: pPlane17
+  - first:
+      1: 100020
+    second: pPlane18
+  - first:
+      1: 100022
+    second: pPlane19
+  - first:
+      1: 100024
+    second: pPlane20
+  - first:
+      1: 100026
+    second: pPlane21
+  - first:
+      1: 100028
+    second: pPlane22
+  - first:
+      1: 100030
+    second: pPlane24
+  - first:
+      1: 100032
+    second: pPlane25
+  - first:
+      1: 100034
+    second: pPlane26
+  - first:
+      1: 100036
+    second: pPlane27
+  - first:
+      1: 100038
+    second: pPlane54
+  - first:
+      1: 100040
+    second: pPlane9
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: pCylinder4
+  - first:
+      4: 400004
+    second: pPlane10
+  - first:
+      4: 400006
+    second: pPlane11
+  - first:
+      4: 400008
+    second: pPlane12
+  - first:
+      4: 400010
+    second: pPlane13
+  - first:
+      4: 400012
+    second: pPlane14
+  - first:
+      4: 400014
+    second: pPlane15
+  - first:
+      4: 400016
+    second: pPlane16
+  - first:
+      4: 400018
+    second: pPlane17
+  - first:
+      4: 400020
+    second: pPlane18
+  - first:
+      4: 400022
+    second: pPlane19
+  - first:
+      4: 400024
+    second: pPlane20
+  - first:
+      4: 400026
+    second: pPlane21
+  - first:
+      4: 400028
+    second: pPlane22
+  - first:
+      4: 400030
+    second: pPlane24
+  - first:
+      4: 400032
+    second: pPlane25
+  - first:
+      4: 400034
+    second: pPlane26
+  - first:
+      4: 400036
+    second: pPlane27
+  - first:
+      4: 400038
+    second: pPlane54
+  - first:
+      4: 400040
+    second: pPlane9
+  - first:
+      21: 2100000
+    second: final_map
+  - first:
+      23: 2300000
+    second: pCylinder4
+  - first:
+      23: 2300002
+    second: pPlane10
+  - first:
+      23: 2300004
+    second: pPlane11
+  - first:
+      23: 2300006
+    second: pPlane12
+  - first:
+      23: 2300008
+    second: pPlane13
+  - first:
+      23: 2300010
+    second: pPlane14
+  - first:
+      23: 2300012
+    second: pPlane15
+  - first:
+      23: 2300014
+    second: pPlane16
+  - first:
+      23: 2300016
+    second: pPlane17
+  - first:
+      23: 2300018
+    second: pPlane18
+  - first:
+      23: 2300020
+    second: pPlane19
+  - first:
+      23: 2300022
+    second: pPlane20
+  - first:
+      23: 2300024
+    second: pPlane21
+  - first:
+      23: 2300026
+    second: pPlane22
+  - first:
+      23: 2300028
+    second: pPlane24
+  - first:
+      23: 2300030
+    second: pPlane25
+  - first:
+      23: 2300032
+    second: pPlane26
+  - first:
+      23: 2300034
+    second: pPlane27
+  - first:
+      23: 2300036
+    second: pPlane54
+  - first:
+      23: 2300038
+    second: pPlane9
+  - first:
+      33: 3300000
+    second: pCylinder4
+  - first:
+      33: 3300002
+    second: pPlane10
+  - first:
+      33: 3300004
+    second: pPlane11
+  - first:
+      33: 3300006
+    second: pPlane12
+  - first:
+      33: 3300008
+    second: pPlane13
+  - first:
+      33: 3300010
+    second: pPlane14
+  - first:
+      33: 3300012
+    second: pPlane15
+  - first:
+      33: 3300014
+    second: pPlane16
+  - first:
+      33: 3300016
+    second: pPlane17
+  - first:
+      33: 3300018
+    second: pPlane18
+  - first:
+      33: 3300020
+    second: pPlane19
+  - first:
+      33: 3300022
+    second: pPlane20
+  - first:
+      33: 3300024
+    second: pPlane21
+  - first:
+      33: 3300026
+    second: pPlane22
+  - first:
+      33: 3300028
+    second: pPlane24
+  - first:
+      33: 3300030
+    second: pPlane25
+  - first:
+      33: 3300032
+    second: pPlane26
+  - first:
+      33: 3300034
+    second: pPlane27
+  - first:
+      33: 3300036
+    second: pPlane54
+  - first:
+      33: 3300038
+    second: pPlane9
+  - first:
+      43: 4300000
+    second: pPlane13
+  - first:
+      43: 4300002
+    second: pPlane12
+  - first:
+      43: 4300004
+    second: pPlane22
+  - first:
+      43: 4300006
+    second: pCylinder4
+  - first:
+      43: 4300008
+    second: pPlane9
+  - first:
+      43: 4300010
+    second: pPlane17
+  - first:
+      43: 4300012
+    second: pPlane19
+  - first:
+      43: 4300014
+    second: pPlane16
+  - first:
+      43: 4300016
+    second: pPlane15
+  - first:
+      43: 4300018
+    second: pPlane14
+  - first:
+      43: 4300020
+    second: pPlane10
+  - first:
+      43: 4300022
+    second: pPlane11
+  - first:
+      43: 4300024
+    second: pPlane18
+  - first:
+      43: 4300026
+    second: pPlane21
+  - first:
+      43: 4300028
+    second: pPlane20
+  - first:
+      43: 4300030
+    second: pPlane27
+  - first:
+      43: 4300032
+    second: pPlane24
+  - first:
+      43: 4300034
+    second: pPlane26
+  - first:
+      43: 4300036
+    second: pPlane25
+  - first:
+      43: 4300038
+    second: pPlane54
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: final_map
+    second: {fileID: 2100000, guid: 7227887e5817d9948b4ab204e4369b24, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -141,6 +352,7 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -148,18 +360,19 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -168,10 +381,11 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -181,6 +395,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
