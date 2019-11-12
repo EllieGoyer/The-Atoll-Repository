@@ -10,8 +10,6 @@ public class BoatTransitionHandler : MonoBehaviour {
     //public UnityEvent OnEnterOceanMode;
     //public UnityEvent OnEnterLandMode;
 
-    [HideInInspector]
-    protected CameraFollow cameraFollow;
     public WalkingMovement LandTarget;
     public GameObject LandPrefab;
     public Vector3 ShipDropoffOffset;
@@ -33,8 +31,7 @@ public class BoatTransitionHandler : MonoBehaviour {
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
-        cameraFollow = gameObject.GetComponent<CameraFollow>();
+        //DontDestroyOnLoad(gameObject);
         UpdateControllers();
     }
 
@@ -54,9 +51,10 @@ public class BoatTransitionHandler : MonoBehaviour {
     public void EnterLandMode(Transform LandSpawnPoint) {
         if (!IsOceanMode) return;
 
-        LandTarget = Instantiate(LandPrefab).GetComponent<WalkingMovement>();
-        LandTarget.transform.position = LandSpawnPoint.position;
-        LandTarget.transform.rotation = LandSpawnPoint.rotation;
+        LandTarget = Instantiate(LandPrefab, LandSpawnPoint.transform.position, LandSpawnPoint.transform.rotation).GetComponent<WalkingMovement>();
+        Debug.Log(LandSpawnPoint.position);
+        //LandTarget.transform.position = LandSpawnPoint.position;
+        //LandTarget.transform.rotation = LandSpawnPoint.rotation;
         LandTarget.gameObject.tag = "Player";
         OceanTarget.gameObject.tag = "Untagged";
 
@@ -68,23 +66,25 @@ public class BoatTransitionHandler : MonoBehaviour {
 
     public void UpdateControllers()
     {
+        CameraFollow cameraFollow = World.CURRENT.ActiveCameraFollow;
         if (IsOceanMode)
         {
-            cameraFollow.Target = OceanTarget.gameObject.GetComponent<CharacterController>();
+            World.CURRENT.ActivePlayer = OceanTarget.gameObject;
             cameraFollow.FollowDistance = OceanDistance;
             cameraFollow.FollowElevation = OceanAngle;
             cameraFollow.FollowHeightOffset = OceanHeightOffset;
-            OceanTarget.enabled = true;
-            LandTarget.enabled = false;
+            OceanTarget.AcceptingInput = true;
+            LandTarget.AcceptingInput = false;
         }
         else
         {
-            cameraFollow.Target = LandTarget.gameObject.GetComponent<CharacterController>();
+            World.CURRENT.ActivePlayer = LandTarget.gameObject;
             cameraFollow.FollowDistance = LandDistance;
             cameraFollow.FollowElevation = LandAngle;
             cameraFollow.FollowHeightOffset = LandHeightOffset;
-            OceanTarget.enabled = false;
-            LandTarget.enabled = true;
+            OceanTarget.AcceptingInput = false;
+            LandTarget.AcceptingInput = true;
         }
+
     }
 }

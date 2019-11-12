@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 [Serializable]
-public class SpectralWaveGenerationModel
+public class SpectralWaveGenerationModel : WaveGenerationModel
 {
     [SerializeField]
     public Wavelet[] wavelets;

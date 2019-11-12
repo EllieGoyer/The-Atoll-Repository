@@ -8,14 +8,15 @@ public class Interactable : MonoBehaviour
 {
     [HideInInspector] public Check[] Checks;
 
-    [HideInInspector] public bool AutoReset = false;
-    [HideInInspector] public float ResetCooldownTime = 0;
+    [SerializeField] [HideInInspector] public bool AutoReset = false;
+    [SerializeField] [HideInInspector] public float ResetCooldownTime = 0;
 
     public UnityEvent OnEnabled; // invoked when leaving the "disabled" state
     public UnityEvent OnDisabled; // invoked when entering the "disabled" state
     public UnityEvent OnActivated; // invoked when entering the "activate" state
     public UnityEvent OnDeactivated; // invoked when entering the "inactive" state
     public UnityEvent OnPerforming; // invoked when entering the "performing" state
+    [HideInInspector] public UnityEvent OnReset;
 
     Collider InsidePlayer = null;
     new Collider collider;
@@ -59,7 +60,6 @@ public class Interactable : MonoBehaviour
                 OnActivated.Invoke();
             }
             else { // if (value == STATE.Performing) {
-                OnDeactivated.Invoke();
                 OnPerforming.Invoke();
             }
 
@@ -71,12 +71,10 @@ public class Interactable : MonoBehaviour
     // DEFAULT UNITY METHODS
 
     private void Awake() {
+        OnReset = new UnityEvent();
         Checks = GetComponents<Check>();
         collider = GetComponent<Collider>();
         currentState = STATE.Inactive;
-        if(AutoReset) {
-            OnPerforming.AddListener(delegate { ResetDelayed(ResetCooldownTime); });
-        }
     }
 
 
@@ -105,9 +103,8 @@ public class Interactable : MonoBehaviour
 
         CheckInsidePlayer();
 
-        // hard-coded player input for the moment - if the player presses E on keyboard of A on controller
         if (Input.GetButtonDown("Interact")) {
-            TryActivate();
+            Interact();
         }
     }
 
@@ -134,6 +131,19 @@ public class Interactable : MonoBehaviour
         if (CurrentState != STATE.Active) return;
         
         CurrentState = STATE.Performing;
+        if (AutoReset) {
+            if(ResetCooldownTime > 0) {
+                ResetDelayed(ResetCooldownTime);
+            }
+            else {
+                OnReset.Invoke();
+            }
+
+            CurrentState = STATE.Active;
+        }
+        else {
+            CurrentState = STATE.Disabled;
+        }
     }
     /// <summary>
     /// set the interactable to the disabled state
@@ -152,27 +162,18 @@ public class Interactable : MonoBehaviour
             CurrentState = STATE.Inactive;
         }
     }
-    void TryActivate() {
-        if( CurrentState == STATE.Active) {
-            CurrentState = STATE.Performing;
-        }
-    }
 
     public void ResetDelayed(float delayTime) {
         StartCoroutine(ResetAfterDelay(delayTime));
     }
     IEnumerator ResetAfterDelay(float delayTime) {
-        if(delayTime > 0) {
             yield return new WaitForSeconds(delayTime);
-        }
-        else {
-            yield return new WaitForEndOfFrame();
-        }
         Reset();
     }
     public void Reset() {
         CurrentState = STATE.Inactive;
         ResetTrigger();
+        OnReset.Invoke();
     }
 
     /// <summary>

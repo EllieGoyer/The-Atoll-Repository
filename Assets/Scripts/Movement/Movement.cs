@@ -4,6 +4,20 @@ using UnityEngine;
 
 public abstract class Movement : MonoBehaviour
 {
+    bool acceptingInput = true;
+    public bool AcceptingInput {
+        get { return acceptingInput; }
+        set {
+            if (acceptingInput = value) return;
+
+            if(!acceptingInput) {
+                ForwardVelocity = 0;
+                AngularVelocity = 0;
+            }
+
+            value = acceptingInput;
+        }
+    }
     public float ForwardTopSpeed;
     public float ForwardAcceleration;
     public float ForwardDeceleration;
@@ -22,7 +36,8 @@ public abstract class Movement : MonoBehaviour
 
     protected virtual void Update()
     {
-        float forwardInput = Input.GetAxis(ForwardAxisInputName);
+        float forwardInput = AcceptingInput ? Input.GetAxis(ForwardAxisInputName) : 0;
+        float sideInput = AcceptingInput ? Input.GetAxis(SideAxisInputName) : 0;
 
         if (forwardInput > Mathf.Epsilon)
         {
@@ -44,18 +59,17 @@ public abstract class Movement : MonoBehaviour
             }
         }
 
-        float sideInput = Input.GetAxis(SideAxisInputName);
+        DoSideInput(sideInput);
+    }
 
-        if (sideInput > Mathf.Epsilon)
-        {
+    protected virtual void DoSideInput(float sideInput) {
+        if (sideInput > Mathf.Epsilon) {
             AngularVelocity = TurningRate;
         }
-        else if (sideInput < -Mathf.Epsilon)
-        {
+        else if (sideInput < -Mathf.Epsilon) {
             AngularVelocity = -TurningRate;
         }
-        else
-        {
+        else {
             AngularVelocity = 0;
         }
     }

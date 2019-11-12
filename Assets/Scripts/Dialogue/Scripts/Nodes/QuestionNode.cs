@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using XNode;
+using UnityEngine.Events;
 
 namespace Dialogue {
     [NodeTint("#CCFFFF")]
@@ -13,13 +14,9 @@ namespace Dialogue {
         private int activeBranchCount;
 
         public override DialogueFlowNode OnEnter() {
-            DialogueFlowNode d = base.OnEnter();
-
             SetupBranches();
 
-            DisplayActiveBranches();
-
-            return d;
+            return base.OnEnter();
         }
 
         /// <summary>
@@ -51,17 +48,31 @@ namespace Dialogue {
                 Debug.LogError("No valid branches from dialogue question node!!!");
             }
         }
-
-        public void DisplayActiveBranches() {
-            for(int n = 0; n < activeBranchCount; n++) {
-                Debug.Log((n + 1) + ": " + ActiveBranches[n].promptText);
+        
+        public string[] GetBranchesAsStrings() {
+            string[] texts = new string[activeBranchCount];
+            for (int n = 0; n < activeBranchCount; n++) {
+                texts[n] = ActiveBranches[n].promptText;
             }
+            return texts;
         }
 
         public override DialogueFlowNode Answer(int answerNumber) {
             if (answerNumber >= activeBranchCount) return null;
 
             return ActiveBranches[answerNumber];
+        }
+
+        public override void DisplayText() {
+            DialogueGraph dgraph = graph as DialogueGraph;
+
+            dgraph.dialogueController.RemovePlayerText();
+
+            UnityEvent onFinished = dgraph.dialogueController.DisplayNPCText(text, displayRate);
+            
+            onFinished.AddListener(delegate {
+                dgraph.dialogueController.MakePlayerChoice(GetBranchesAsStrings());
+            });
         }
     }
 }

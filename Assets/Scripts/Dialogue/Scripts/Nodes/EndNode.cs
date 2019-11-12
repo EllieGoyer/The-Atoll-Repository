@@ -6,13 +6,10 @@ using XNode;
 namespace Dialogue {
     [NodeTint("FFFFFF")]
     public class EndNode : DialogueFlowNode {
-
         public override DialogueFlowNode OnEnter() {
             DialogueGraph dgraph = graph as DialogueGraph;
 
-            Debug.Log("The NPC turns their attention away from you");
-
-            dgraph.Reset();
+            dgraph.dialogueController.CloseCurrentGraph();
 
             return null;
         }

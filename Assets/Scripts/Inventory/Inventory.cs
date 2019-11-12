@@ -12,6 +12,26 @@ public class Inventory : MonoBehaviour {
     public List<StoredGood> Goods;
     public List<StoredRelationship> Relationships;
 
+    public List<Tool> getTools()
+    {
+        return Tools;
+    }
+
+    public List<Collectable> GetCollectables()
+    {
+        return Collectables;
+    }
+
+    public List<StoredGood> GetGoods()
+    {
+        return Goods;
+    }
+
+    public List<StoredRelationship> GetRelationships()
+    {
+        return Relationships;
+    }
+
     private void Awake() {
         // set object up as a singleton
         if (Instance != null) {
@@ -19,7 +39,7 @@ public class Inventory : MonoBehaviour {
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     StoredGood FindStoredGood(Good good) {
@@ -119,6 +139,21 @@ public class Inventory : MonoBehaviour {
         OnInventoryUpdate.Invoke();
     }
     /// <summary>
+    /// Remove a collectable from the inventory
+    /// </summary>
+    /// <param name="collectable"></param>
+    public void LockCollectable(Collectable collectable) {
+        // if we don't have the collectable, return
+        if(!Collectables.Contains(collectable)) {
+            Debug.LogWarning("Collectable " + collectable.name + "is not unlocked");
+            return;
+        }
+
+        //remove the collectable
+        Collectables.Remove(collectable);
+        OnInventoryUpdate.Invoke();
+    }
+    /// <summary>
     /// Add a new good to the inventory
     /// </summary>
     /// <param name="good"></param>
@@ -138,6 +173,10 @@ public class Inventory : MonoBehaviour {
     /// </summary>
     /// <param name="relationship"></param>
     public void UnlockRelationship(Relationship relationship) {
+        if(relationship == null) {
+            throw new System.NullReferenceException("Parameter \"relationship\" cannot be null");
+        }
+
         // if we already have the relationship, return
         if (FindStoredRelationship(relationship) != null) {
             Debug.LogWarning("Relationship " + relationship.name + " already unlocked");
@@ -273,7 +312,9 @@ public class Inventory : MonoBehaviour {
 
         txt += "\nRelationships:------\n";
         foreach (StoredRelationship storedRelationship in Relationships) {
-            txt += storedRelationship.relationship.name + ": " + storedRelationship.amount + "\n";
+            //HACK null check just to deal with some uninitialized relation???
+            if(storedRelationship != null && storedRelationship.relationship != null)
+                txt += storedRelationship.relationship.name + ": " + storedRelationship.amount + "\n";
         }
 
         return txt;

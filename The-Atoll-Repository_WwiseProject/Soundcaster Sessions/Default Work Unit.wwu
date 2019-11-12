@@ -1,6 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{CCAC6D5F-B7FE-43A0-9998-453B1D36A253}" SchemaVersion="94">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{CCAC6D5F-B7FE-43A0-9998-453B1D36A253}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{CCAC6D5F-B7FE-43A0-9998-453B1D36A253}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Atoll_Soundcast_Main" ID="{16690A00-2291-4E4B-A4C1-75392C34B795}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Environment_Land_Start" ID="{549509EE-D332-438E-82F6-CCCF87175846}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Environment_Sea_Start" ID="{B01F230D-D413-41B3-8383-DABE75897F67}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Dialogue" ID="{4C3EC910-D0CA-4EE7-A149-6D1755AD2B76}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Environment_Land_Stop" ID="{1667DF77-E32C-48B5-BA6D-DACFA86F4968}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Environment_Sea_Stop" ID="{A23B73A9-57D8-49CF-A3A3-EF2B0860D785}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Dialogue_Baker" ID="{A9E5C191-3898-41C2-8660-C059BE980AAA}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Tree_Rustle" ID="{4BFE1560-DE02-407E-BBDF-809BFAE35AB6}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Dialogue_Farmer" ID="{77836F47-E29C-4DE9-88A8-77F2AA0A1251}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Dialogue_Lumberjack" ID="{1E98483F-8592-44D0-89A6-66E6A992BAAE}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Dialogue_Potter" ID="{A4702CDB-C091-411D-B2EA-0B5BC78382CE}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Dialogue_Taylor" ID="{83A2F02D-79F6-4CDD-8FFA-1B4FF54A65BC}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="5" Y="2"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="StormLevel" ID="{D49BCCF2-9952-44AB-B0EE-779C08825144}"/>
+							<Value>5.6282722513089</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="EnvironmentSwitch" ID="{D1E42D5C-0659-4B1C-9298-48E1ECDBF34D}"/>
+							<Value>2.71078296622987E-312</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>
