@@ -90,7 +90,7 @@ Shader "TranslucentWater" {
 						((frac(i.tint.g * tex2D(_FoamNoise, (i.uv / 20) + frac(_Time.x / 30)).r) + frac(i.tint.g * tex2D(_FoamNoise, (i.uv / 20) - frac(_Time.x / 30)).r) +
 							frac(i.tint.g * tex2D(_FoamNoise, (i.uv/100) + frac(_Time.x / 15)))) 
 						% (0.5 * fade_depth)) * fade_depth);
-					col = lerp(col, float4(col.r * 0.1,col.g * 0.1,col.b * 0.1,col.a), 1 - ((unity_AmbientSky.r + unity_AmbientSky.g + unity_AmbientSky.b - 0.304)/0.438));
+					col = lerp(col, float4(col.r * 0.3,col.g * 0.3,col.b * 0.3,col.a), 1 - ((unity_AmbientSky.r + unity_AmbientSky.g + unity_AmbientSky.b - 0.304)/0.438));
 
 					//	Foam Coloring
 					float foam_depth = saturate(fade_depth - (1 - _FoamDepth));
