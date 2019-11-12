@@ -114,6 +114,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tm: {fileID: 7546043142550705043}
   prefab: {fileID: 5836216271633042174, guid: 521651722ae963f479407f6128ad6ab6, type: 3}
+  port: {fileID: 8611108114112604353}
+  bake: {fileID: 2800000, guid: 8ced3cdf0f5484e4189ad773f4ada575, type: 3}
+  farmer: {fileID: 2800000, guid: 313dea544cb9c0649843986ac25d432b, type: 3}
+  luberjack: {fileID: 2800000, guid: 491115745ddb13c45ab7b4acdbd9cef9, type: 3}
+  potter: {fileID: 2800000, guid: 55563338a7379fa42bb7a94791791886, type: 3}
+  tailor: {fileID: 2800000, guid: e467e672f28a78848917a4e182255315, type: 3}
 --- !u!1 &1136336732027198873
 GameObject:
   m_ObjectHideFlags: 0
@@ -2073,7 +2079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.91372555, g: 0.89019614, b: 0.77647066, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
