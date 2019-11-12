@@ -63,22 +63,27 @@ public class DrawRelationships : MonoBehaviour
         {
             case 0:
                 port.texture = bake;
+                name.text = "Araba";
                 proffession.text = proff;
                 break;
             case 1:
                 port.texture = farmer;
+                name.text = "Cerci";
                 proffession.text = proff;
                 break;
             case 2:
                 port.texture = luberjack;
+                name.text = "Hal";
                 proffession.text = proff;
                 break;
             case 3:
                 port.texture = potter;
+                name.text = "Meryl";
                 proffession.text = proff;
                 break;
             case 4:
                 port.texture = tailor;
+                name.text = "Fid";
                 proffession.text = proff;
                 break;
 
