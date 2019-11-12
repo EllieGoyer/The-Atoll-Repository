@@ -8,6 +8,9 @@ public class DrawRelationships : MonoBehaviour
 {
     public TextMeshProUGUI tm;
 
+    public TextMeshProUGUI name;
+    public TextMeshProUGUI proffession;
+
     public static DrawRelationships _instance;
 
     public Button prefab;
@@ -21,6 +24,7 @@ public class DrawRelationships : MonoBehaviour
     public Texture potter;
     public Texture tailor;
     
+
     
 
 
@@ -53,24 +57,29 @@ public class DrawRelationships : MonoBehaviour
         
     }
 
-    void onCL(int i)
+    void onCL(int i, string proff)
     {
         switch (i)
         {
             case 0:
                 port.texture = bake;
+                proffession.text = proff;
                 break;
             case 1:
                 port.texture = farmer;
+                proffession.text = proff;
                 break;
             case 2:
                 port.texture = luberjack;
+                proffession.text = proff;
                 break;
             case 3:
                 port.texture = potter;
+                proffession.text = proff;
                 break;
             case 4:
                 port.texture = tailor;
+                proffession.text = proff;
                 break;
 
         }
@@ -101,19 +110,19 @@ public class DrawRelationships : MonoBehaviour
                 switch (newButton.name.ToLower()[0])
                 {
                     case 'b':
-                        newButton.onClick.AddListener(delegate { onCL(0); });
+                        newButton.onClick.AddListener(delegate { onCL(0, newButton.name); });
                         break;
                     case 'f':
-                        newButton.onClick.AddListener(delegate { onCL(1); });
+                        newButton.onClick.AddListener(delegate { onCL(1, newButton.name); });
                         break;
                     case 'l':
-                        newButton.onClick.AddListener(delegate { onCL(2); });
+                        newButton.onClick.AddListener(delegate { onCL(2, newButton.name); });
                         break;
                     case 'p':
-                        newButton.onClick.AddListener(delegate { onCL(3); });
+                        newButton.onClick.AddListener(delegate { onCL(3, newButton.name); });
                         break;
                     case 't':
-                        newButton.onClick.AddListener(delegate { onCL(4); });
+                        newButton.onClick.AddListener(delegate { onCL(4, newButton.name); });
                         break;
                 }
                 
