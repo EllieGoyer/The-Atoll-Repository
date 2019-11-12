@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DrawRelationships : MonoBehaviour
 {
     public TextMeshProUGUI tm;
 
     public static DrawRelationships _instance;
+
+    public Button prefab;
 
 
 
@@ -38,6 +41,9 @@ public class DrawRelationships : MonoBehaviour
 
     public void draw()
     {
+        Button newButton = (Button)Instantiate(prefab);
+        newButton.transform.SetParent(this.transform, false);
+
         string txt = "";
         foreach (StoredRelationship storedRelationship in Inventory.Instance.Relationships)
         {
