@@ -4,7 +4,7 @@ using UnityEngine;
 using XNode;
 
 namespace Dialogue {
-    [NodeTint("FFFFFF")]
+    [NodeTint("#FFFFFF")]
     public class StartNode : Node {
         [Output] public DialogueFlowNode startNode;
 

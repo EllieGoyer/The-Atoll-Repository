@@ -19,11 +19,13 @@ public class OceanMovement : Movement {
     protected float verticalVelocity = 0;
     public float AirDrag;
     public float WaterDrag;
+    public float FlippingPower;
 
     public OceanEngine Engine;
     public Winch AnchorWinch;
     public Anchor Anchor;
     public GameObject AnchorPrefab;
+    public Animator Animator;
 
     protected override float ForwardVelocity {
         get => Vector3.Project(controller.velocity, transform.forward).magnitude * Mathf.Sign(Vector3.Dot(controller.velocity, transform.forward));
@@ -52,38 +54,11 @@ public class OceanMovement : Movement {
         {
             float forwardAxis = Input.GetAxis(ForwardAxisInputName), sideAxis = Input.GetAxis(SideAxisInputName);
 
-            //Ad-hoc anchor controls
-            if(Input.GetKey(KeyCode.C))
+            if (Anchor != null)
             {
-                AnchorWinch.CurrentAction = Winch.Action.Retract;
-                if(Anchor != null && Mathf.Approximately(AnchorWinch.Position, AnchorWinch.MinLength))
-                {
-                    AnchorWinch.enabled = false;
-                    Destroy(Anchor.gameObject);
-                }
-            }
-            else if(Input.GetKey(KeyCode.V))
-            {
-                if(Anchor == null)
-                {
-                    Anchor = Instantiate(AnchorPrefab, AnchorWinch.transform.position - Vector3.up * AnchorWinch.MinLength, Quaternion.identity).GetComponent<Anchor>();
-                    Anchor.GetComponent<SpringJoint>().connectedBody = controller;
-                    AnchorWinch.Target = Anchor.GetComponent<SpringJoint>();
-                    AnchorWinch.enabled = true;
-                }
-                AnchorWinch.CurrentAction = Winch.Action.Extend;
-            }
-            else
-            {
-                AnchorWinch.CurrentAction = Winch.Action.None;
-            }
-
-            if(Input.GetKey(KeyCode.F))
-            {
-                if(Anchor != null)
-                {
-                    Anchor.Disengage();
-                }
+                Anchor.Disengage();
+                AnchorWinch.enabled = false;
+                Destroy(Anchor.gameObject);
             }
 
             if (forwardAxis > 0)
@@ -101,16 +76,41 @@ public class OceanMovement : Movement {
 
             if (sideAxis > 0)
             {
-                controller.AddTorque(0, 50000, 0);
+                controller.AddTorque(0, TurningRate, 0, ForceMode.Acceleration);
+                Animator.SetInteger("Direction", 1);
             }
             else if (sideAxis < 0)
             {
-                controller.AddTorque(0, -50000, 0);
+                controller.AddTorque(0, -TurningRate, 0, ForceMode.Acceleration);
+                Animator.SetInteger("Direction", -1);
+            }
+            else
+            {
+                Animator.SetInteger("Direction", 0);
+            }
+
+            //Emergency boat flipper
+            if(Input.GetKeyDown(KeyCode.F) && Vector3.Dot(Vector3.up, transform.up) < -0.5)
+            {
+                controller.AddRelativeTorque(0, 0, FlippingPower, ForceMode.VelocityChange);
             }
         }
         else
         {
             Engine.Direction = 0;
+            if (Anchor == null)
+            {
+                Anchor = Instantiate(AnchorPrefab, AnchorWinch.transform.position - Vector3.up * AnchorWinch.MinLength, Quaternion.identity).GetComponent<Anchor>();
+                Anchor.GetComponent<SpringJoint>().connectedBody = controller;
+                AnchorWinch.Target = Anchor.GetComponent<SpringJoint>();
+                AnchorWinch.enabled = true;
+            } else if (!Anchor.IsEngaged)
+            {
+                AnchorWinch.CurrentAction = Winch.Action.Extend;
+            } else
+            {
+                AnchorWinch.CurrentAction = Winch.Action.None;
+            }
         }
     }
 

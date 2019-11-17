@@ -12,6 +12,26 @@ public class Inventory : MonoBehaviour {
     public List<StoredGood> Goods;
     public List<StoredRelationship> Relationships;
 
+    public List<Tool> getTools()
+    {
+        return Tools;
+    }
+
+    public List<Collectable> GetCollectables()
+    {
+        return Collectables;
+    }
+
+    public List<StoredGood> GetGoods()
+    {
+        return Goods;
+    }
+
+    public List<StoredRelationship> GetRelationships()
+    {
+        return Relationships;
+    }
+
     private void Awake() {
         // set object up as a singleton
         if (Instance != null) {
@@ -116,6 +136,21 @@ public class Inventory : MonoBehaviour {
 
         //add as new collectable
         Collectables.Add(collectable);
+        OnInventoryUpdate.Invoke();
+    }
+    /// <summary>
+    /// Remove a collectable from the inventory
+    /// </summary>
+    /// <param name="collectable"></param>
+    public void LockCollectable(Collectable collectable) {
+        // if we don't have the collectable, return
+        if(!Collectables.Contains(collectable)) {
+            Debug.LogWarning("Collectable " + collectable.name + "is not unlocked");
+            return;
+        }
+
+        //remove the collectable
+        Collectables.Remove(collectable);
         OnInventoryUpdate.Invoke();
     }
     /// <summary>

@@ -6,7 +6,7 @@ using XNode;
 namespace Dialogue {
     public abstract class TextNode : DialogueFlowNode {
         [TextArea] public string text;
-        public float displayRate = 0.1f;
+        public float displayRate = 0.8f;
 
         public override DialogueFlowNode OnEnter() {
             DisplayText();

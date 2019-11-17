@@ -81,10 +81,12 @@ public class IntersectionPathColliderEditor : Editor
         EditorGUILayout.PropertyField(serializedObject.FindProperty("Terrain"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("Thickness"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("Height"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("VerticalOffset"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("CapLength"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("BaseLevel"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("BuildStep"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("LoopDistance"));
+
         EditorGUILayout.LabelField("Points: " + serializedObject.FindProperty("pts").arraySize);
         EditorGUILayout.LabelField("Segments: " + serializedObject.FindProperty("segs").arraySize / 2);
         serializedObject.ApplyModifiedProperties();

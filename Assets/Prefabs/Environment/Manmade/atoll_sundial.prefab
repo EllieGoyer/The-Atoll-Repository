@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 816492711254199219}
   - component: {fileID: 8507235325663228293}
   - component: {fileID: 2680569902900989308}
+  - component: {fileID: 5009910885065024494}
   m_Layer: 0
   m_Name: atoll_sundial
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5009910885065024494
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4399904769231452576}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 71.9, y: 127.50296, z: 74.8}
+  m_Center: {x: -0.000011444092, y: 63.75148, z: 0}

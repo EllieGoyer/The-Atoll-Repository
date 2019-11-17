@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\The Great Wappuchino\Documents\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\The Great Wappuchino\Documents\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\The Great Wappuchino\Documents\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\The Great Wappuchino\Documents\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -149,11 +149,36 @@
 				<Event Id="792665347" Name="Environment_Land_Stop" ObjectPath="\Events\Default Work Unit\Environment\Environment_Outside\Environment_Land_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1353736985" Name="Environment_Sea_Start" ObjectPath="\Events\Default Work Unit\Environment\Environment_Outside\Environment_Sea_Start" MaxAttenuation="100.000000" DurationType="Infinite"/>
 				<Event Id="3466662131" Name="Environment_Sea_Stop" ObjectPath="\Events\Default Work Unit\Environment\Environment_Outside\Environment_Sea_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2309730339" Name="Sea_Oneshot" ObjectPath="\Events\Default Work Unit\Environment\Environment_Outside\Sea_Oneshot" MaxAttenuation="100.000000" DurationType="OneShot" DurationMin="0.137792" DurationMax="0.655455"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="177788513" Language="SFX">
+					<ShortName>Atoll_Enviorment_Sea_Oneshot_4(Seagull).wav</ShortName>
+					<Path>SFX\Atoll_Enviorment_Sea_Oneshot_4(Seagull)_10C4C929.wem</Path>
+				</File>
+				<File Id="249002992" Language="SFX">
+					<ShortName>Atoll_Enviorment_Sea_Oneshot_1(BirdWing).wav</ShortName>
+					<Path>SFX\Atoll_Enviorment_Sea_Oneshot_1(BirdWing)_10C4C929.wem</Path>
+				</File>
+				<File Id="288966919" Language="SFX">
+					<ShortName>Atoll_Enviorment_Sea_Oneshot_2(BIrdWing).wav</ShortName>
+					<Path>SFX\Atoll_Enviorment_Sea_Oneshot_2(BIrdWing)_10C4C929.wem</Path>
+				</File>
 				<File Id="330302355" Language="SFX">
 					<ShortName>Atoll_enviorment_land, looped.wav</ShortName>
 					<Path>SFX\Atoll_enviorment_land, looped_D79FB2B7.wem</Path>
+				</File>
+				<File Id="433092165" Language="SFX">
+					<ShortName>Atoll_Enviorment_Sea_Oneshot_5(Seagull).wav</ShortName>
+					<Path>SFX\Atoll_Enviorment_Sea_Oneshot_5(Seagull)_10C4C929.wem</Path>
+				</File>
+				<File Id="876226826" Language="SFX">
+					<ShortName>Atoll_Enviorment_Sea_Oneshot_3(BirdWing).wav</ShortName>
+					<Path>SFX\Atoll_Enviorment_Sea_Oneshot_3(BirdWing)_10C4C929.wem</Path>
+				</File>
+				<File Id="935822094" Language="SFX">
+					<ShortName>Atoll_Enviorment_Sea_Oneshot_6(Seagull).wav</ShortName>
+					<Path>SFX\Atoll_Enviorment_Sea_Oneshot_6(Seagull)_10C4C929.wem</Path>
 				</File>
 				<File Id="984457753" Language="SFX">
 					<ShortName>Atoll_enviorment_ sounds_at sea.wav</ShortName>

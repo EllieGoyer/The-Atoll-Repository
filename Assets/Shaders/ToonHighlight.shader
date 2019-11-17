@@ -22,10 +22,16 @@ Shader "Custom/ToonHighlight"
 		_HighlightColor("Highlight", Color) = (0, 0, 0, 1)
 		_HighlightLineWidth("Highlight Line Width", Range (0, 10)) = 10
 		_HighlightFallSpeed("Highlight Fall Speed", Range (0, 60)) = 60
+
+		[Header(Outline Parameters)]
+		[KeywordEnum(Off,On)]_EnableOutline("Enable Outline", Float) = 0
+		_OutlineColor("Outline Color", Color) = (1,1,1,1)
+		_OutlineThickness("Outline Thickness", Range(0,0.1)) = 0.03
 	}
 
 	SubShader
 	{
+
 		Pass
 		{
 			Tags{ "RenderType" = "Transparent" "Queue" = "Transparent+1" }
@@ -62,15 +68,58 @@ Shader "Custom/ToonHighlight"
 			half4 frag(vertOutput output) : COLOR
 			{
 				float draw = step(((output.pos.y + (_Time.y * _HighlightFallSpeed)) % 10), (10 - _HighlightLineWidth));
-			if (draw == 0 || _EnableHighlight == 0)
-			{
-				discard;
-			}
-			half4 col = _HighlightColor * draw;
-			return col;
+				if (draw == 0 || _EnableHighlight == 0)
+				{
+					discard;
+				}
+				half4 col = _HighlightColor * draw;
+				return col;
 			}
 
 			ENDCG
+		}
+
+		// outline pass
+		Pass 
+		{
+			Cull Front
+
+			CGPROGRAM
+
+			#pragma vertex vert
+			#pragma fragment frag
+
+			float _EnableOutline;
+			half4 _OutlineColor;
+			float _OutlineThickness;
+
+			struct vertInput {
+				float4 pos : POSITION;
+				float3 normal : NORMAL;
+			};
+
+			struct vertOutput {
+				float4 pos : SV_POSITION;
+			};
+
+			vertOutput vert(vertInput input) {
+				// move each vertex out by our outline thickness along its normal
+				float3 position = input.pos + normalize(input.normal) * _OutlineThickness;
+				vertOutput o;
+				o.pos = UnityObjectToClipPos(position);
+				return o;
+			}
+
+			half4 frag(vertOutput output) : COLOR
+			{
+				if(_EnableOutline == 0) {
+					discard;
+				}
+				return _OutlineColor;
+			}
+
+			ENDCG
+
 		}
 
 		Tags{ "RenderType" = "Opaque" "Queue" = "Geometry+1" }

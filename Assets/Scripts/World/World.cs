@@ -51,7 +51,7 @@ public class World : MonoBehaviour
     {
         get { return activeCameraFollow; }
     }
-
+    public Light ActiveSun;
     private void Awake()
     {
         CURRENT = this;

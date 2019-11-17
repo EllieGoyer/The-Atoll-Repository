@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3268066489367847403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8716269261748808788}
+  m_Layer: 0
+  m_Name: Driftwood Toy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8716269261748808788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3268066489367847403}
+  m_LocalRotation: {x: -0.003444431, y: -0.25636476, z: -0.1112762, w: 0.9601473}
+  m_LocalPosition: {x: 304.0748, y: -16.04, z: 645.79004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 44946518262526881}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2007918561807585809
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8716269261748808788}
+    m_Modifications:
+    - target: {fileID: 1964169589966889392, guid: be1c554b0edb43d4f9fbcaebdc1d759b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964169589966889392, guid: be1c554b0edb43d4f9fbcaebdc1d759b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964169589966889392, guid: be1c554b0edb43d4f9fbcaebdc1d759b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964169589966889392, guid: be1c554b0edb43d4f9fbcaebdc1d759b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964169589966889392, guid: be1c554b0edb43d4f9fbcaebdc1d759b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964169589966889392, guid: be1c554b0edb43d4f9fbcaebdc1d759b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0000000027939677
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964169589966889392, guid: be1c554b0edb43d4f9fbcaebdc1d759b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964169589966889392, guid: be1c554b0edb43d4f9fbcaebdc1d759b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964169589966889392, guid: be1c554b0edb43d4f9fbcaebdc1d759b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -3.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964169589966889392, guid: be1c554b0edb43d4f9fbcaebdc1d759b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -29.507002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964169589966889392, guid: be1c554b0edb43d4f9fbcaebdc1d759b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -12.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964169589967191440, guid: be1c554b0edb43d4f9fbcaebdc1d759b,
+        type: 3}
+      propertyPath: m_Name
+      value: atoll_Driftwood
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: be1c554b0edb43d4f9fbcaebdc1d759b, type: 3}
+--- !u!4 &44946518262526881 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1964169589966889392, guid: be1c554b0edb43d4f9fbcaebdc1d759b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2007918561807585809}
+  m_PrefabAsset: {fileID: 0}

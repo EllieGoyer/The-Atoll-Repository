@@ -15,14 +15,11 @@ public class FluidForce : MonoBehaviour
     private void Awake()
     {
         bc = GetComponent<BoxCollider>();
-    }
-    private void Update()
-    {
-        if(WindParticles != null)
+        if (WindParticles != null)
         {
             ParticleSystem.MainModule main = WindParticles.main;
-            main.startSpeed = new ParticleSystem.MinMaxCurve(FluidSpeed);
-            main.startLifetime = bc.size.z / FluidSpeed;
+            main.startSpeed = new ParticleSystem.MinMaxCurve(FluidSpeed * 7);
+            main.startLifetime = bc.size.z / (FluidSpeed * 7);
         }
     }
 

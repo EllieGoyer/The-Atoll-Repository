@@ -1123,7 +1123,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 46ac0bafd5d13114e862b20b2aacf2cd, type: 2}
+  - {fileID: 2100000, guid: 7227887e5817d9948b4ab204e4369b24, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1665,7 +1665,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3953488263347822570}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4286,13 +4286,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8570017500868300475, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
         type: 3}
-      propertyPath: dialogueGraph
+      propertyPath: masterDialogueGraph
       value: 
       objectReference: {fileID: 11400000, guid: 8420db9428d3b8444994de4b1383dccf,
         type: 2}
-    - target: {fileID: 8570017500868300475, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+    - target: {fileID: 3883881804824359007, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
         type: 3}
-      propertyPath: masterDialogueGraph
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862758198390122110, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: renderers.Array.data[0]
+      value: 
+      objectReference: {fileID: 7963313844698178820}
+    - target: {fileID: 7158740401635510714, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: AudioEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 35f109b96cd93cc468caab314ed7dfb2,
+        type: 2}
+    - target: {fileID: 5738094553196888131, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: renderers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5738094553196888131, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: renderers.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 8420db9428d3b8444994de4b1383dccf,
         type: 2}
