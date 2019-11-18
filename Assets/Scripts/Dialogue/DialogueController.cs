@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DialogueController : MonoBehaviour
-{
+public class DialogueController : MonoBehaviour {
+    public string CharacterName;
     public Dialogue.DialogueGraph masterDialogueGraph;
 
     Stack<Dialogue.DialogueGraph> GraphStack;
@@ -16,22 +16,25 @@ public class DialogueController : MonoBehaviour
         }
     }
 
-    public GameObject DialogueDisplayBoxPrefab;
-    public GameObject ResponsePromptBoxesPrefab;
+    GameObject DialogueDisplayBoxPrefab;
+    GameObject ResponsePromptBoxesPrefab;
+    GameObject NametagPrefab;
     public Vector3 DialogueBoxPositionOffset;
     bool Active = false;
 
-    
+    DialogueDisplayBox npcNameTag;
     DialogueDisplayBox npcTextBox;
     DialogueDisplayBox playerTextBox;
     ResponsePromptBoxes playerResponseBoxes;
 
     private void Awake() {
-        
+        DialogueDisplayBoxPrefab = Resources.Load<GameObject>("Dialog_Box");
+        ResponsePromptBoxesPrefab = Resources.Load<GameObject>("ResponsePrompts");
+        NametagPrefab = Resources.Load<GameObject>("Nametag_Box");
     }
 
     private void Update() {
-        if(Active) {
+        if (Active) {
             if (Input.GetKeyDown(KeyCode.Alpha1)) {
                 CurrentGraph.TryAnswer(0);
             }
@@ -42,20 +45,18 @@ public class DialogueController : MonoBehaviour
                 CurrentGraph.TryAnswer(2);
             }
         }
-        
+
     }
 
     public void Interact() {
-        if(Active) {
-            if(!npcTextBox.isBuildingText)
-            {
+        if (Active) {
+            if (!npcTextBox.isBuildingText) {
                 TryAdvance();
             }
-            else
-            {
+            else {
                 npcTextBox.ForceCompleteText();
             }
-            
+
         }
         else {
             StartDialogue();
@@ -75,8 +76,8 @@ public class DialogueController : MonoBehaviour
 
     public void CloseCurrentGraph() {
         GraphStack.Pop();
-        
-        if(CurrentGraph == null) {
+
+        if (CurrentGraph == null) {
             EndDialogue();
         }
         else {
@@ -85,6 +86,8 @@ public class DialogueController : MonoBehaviour
     }
 
     public void StartDialogue() {
+        DisplayNameTag();
+
         GraphStack = new Stack<Dialogue.DialogueGraph>();
 
         OpenGraph(masterDialogueGraph);
@@ -93,12 +96,36 @@ public class DialogueController : MonoBehaviour
     }
 
     public void EndDialogue() {
+        RemoveNameTag();
         RemoveNPCText();
         RemovePlayerText();
         RemovePlayerChoice();
         Active = false;
     }
-    
+
+
+    public void DisplayNameTag() {
+        if(npcNameTag == null) {
+            GameObject g = Instantiate(NametagPrefab, GlobalCanvas.Instance.transform);
+
+            // set up the tracker component
+            UITransformTracker tracker = g.GetComponent<UITransformTracker>();
+
+            tracker.LocalPositionOffset = DialogueBoxPositionOffset;
+            tracker.TrackedTransform = transform;
+
+            npcNameTag = g.GetComponent<DialogueDisplayBox>();
+        }
+
+        npcNameTag.DisplayText(CharacterName,0.1f);
+    }
+    public void RemoveNameTag() {
+        if (npcNameTag != null) {
+            Destroy(npcNameTag.gameObject);
+        }
+
+    }
+
     /// <summary>
     /// make a text box to display some text, return an event that will 
     /// be called when the text finishes displaying
