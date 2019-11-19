@@ -59,6 +59,20 @@
 							<ObjectExclusionList/>
 							<GameSyncExclusionList/>
 						</SoundBank>
+						<SoundBank Name="Environment_Buildings" ID="{BBF8DA32-1919-4F8C-A51D-84F58357521A}">
+							<ObjectInclusionList>
+								<ObjectRef Name="Environment_Buildings" ID="{DE34345A-4272-422D-8E26-805BDD21AE7F}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
+							</ObjectInclusionList>
+							<ObjectExclusionList/>
+							<GameSyncExclusionList/>
+						</SoundBank>
+						<SoundBank Name="Environment_Wind" ID="{46DB7727-A316-4561-BAC9-28198B742A25}">
+							<ObjectInclusionList>
+								<ObjectRef Name="Environment_Wind" ID="{C4E380E5-AD4D-4B8C-996D-5555F9F60C99}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
+							</ObjectInclusionList>
+							<ObjectExclusionList/>
+							<GameSyncExclusionList/>
+						</SoundBank>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

@@ -27,10 +27,14 @@ namespace AK
         static const AkUniqueID DOCKLANDING = 3825949625U;
         static const AkUniqueID DOORCLOSE = 3638457343U;
         static const AkUniqueID DOOROPEN = 1404805401U;
+        static const AkUniqueID ENVIRONMENT_BAKERY_START = 2114846354U;
+        static const AkUniqueID ENVIRONMENT_BAKERY_STOP = 173441866U;
+        static const AkUniqueID ENVIRONMENT_FORGE_START = 1457011789U;
         static const AkUniqueID ENVIRONMENT_LAND_START = 2038259945U;
         static const AkUniqueID ENVIRONMENT_LAND_STOP = 792665347U;
         static const AkUniqueID ENVIRONMENT_SEA_START = 1353736985U;
         static const AkUniqueID ENVIRONMENT_SEA_STOP = 3466662131U;
+        static const AkUniqueID ENVIRONMENT_WIND = 752413197U;
         static const AkUniqueID H_FOOTSTEPS = 3575671711U;
         static const AkUniqueID JOURNALCLOSE = 3987853926U;
         static const AkUniqueID JOURNALFLIP = 2690803159U;
@@ -77,7 +81,9 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID ENVIORMENT_OUTSIDE = 2157951080U;
+        static const AkUniqueID ENVIRONMENT_BUILDINGS = 3689458646U;
         static const AkUniqueID ENVIRONMENT_OTHER = 3918401191U;
+        static const AkUniqueID ENVIRONMENT_WIND = 752413197U;
         static const AkUniqueID LAND_STORM = 1595190680U;
         static const AkUniqueID MAIN = 3161908922U;
         static const AkUniqueID NPC = 662417162U;
