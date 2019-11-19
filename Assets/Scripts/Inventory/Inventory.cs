@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class Inventory : MonoBehaviour {
+    GameObject InventoryNotificationPrefab;
+
     public static Inventory Instance; // singleton design pattern
     public UnityEvent OnInventoryUpdate;
 
@@ -39,7 +41,8 @@ public class Inventory : MonoBehaviour {
             return;
         }
         Instance = this;
-        //DontDestroyOnLoad(gameObject);
+
+        InventoryNotificationPrefab = Resources.Load<GameObject>("Notification");
     }
 
     StoredGood FindStoredGood(Good good) {
@@ -121,6 +124,7 @@ public class Inventory : MonoBehaviour {
 
         // add as new tool
         Tools.Add(tool);
+        CreateNotification(tool, InventoryNotification.EventType.Added);
         OnInventoryUpdate.Invoke();
     }
     /// <summary>
@@ -136,6 +140,9 @@ public class Inventory : MonoBehaviour {
 
         //add as new collectable
         Collectables.Add(collectable);
+        if (!collectable.HideInJournal) {
+            CreateNotification(collectable, InventoryNotification.EventType.Added);
+        }
         OnInventoryUpdate.Invoke();
     }
     /// <summary>
@@ -151,6 +158,9 @@ public class Inventory : MonoBehaviour {
 
         //remove the collectable
         Collectables.Remove(collectable);
+        if(!collectable.HideInJournal) {
+            CreateNotification(collectable, InventoryNotification.EventType.Removed);
+        }
         OnInventoryUpdate.Invoke();
     }
     /// <summary>
@@ -185,6 +195,8 @@ public class Inventory : MonoBehaviour {
 
         //add as new relationship
         Relationships.Add(new StoredRelationship(relationship));
+        CreateNotification(relationship, InventoryNotification.EventType.Added);
+
         OnInventoryUpdate.Invoke();
     }
 
@@ -223,6 +235,8 @@ public class Inventory : MonoBehaviour {
         }
 
         storedGood.amount += amount;
+
+        CreateNotification(good, InventoryNotification.EventType.AmountAdded, amount);
         OnInventoryUpdate.Invoke();
     }
     /// <summary>
@@ -239,6 +253,7 @@ public class Inventory : MonoBehaviour {
         }
 
         storedGood.amount = Mathf.Max(storedGood.amount-Mathf.Abs(amount),0);
+        CreateNotification(good, InventoryNotification.EventType.AmountRemoved, amount);
         OnInventoryUpdate.Invoke();
     }
 
@@ -273,6 +288,7 @@ public class Inventory : MonoBehaviour {
         }
         
         storedRelationship.amount = Relationship.ClampValue(storedRelationship.amount + amount);
+        CreateNotification(relationship, InventoryNotification.EventType.AmountAdded, amount);
         OnInventoryUpdate.Invoke();
     }
     /// <summary>
@@ -289,9 +305,28 @@ public class Inventory : MonoBehaviour {
         }
 
         storedRelationship.amount = Relationship.ClampValue(storedRelationship.amount - amount);
+        CreateNotification(relationship, InventoryNotification.EventType.AmountRemoved, amount);
+
         OnInventoryUpdate.Invoke();
     }
     
+    public void CreateNotification(NotebookItem item, InventoryNotification.EventType type, int amount = -1) {
+        InventoryNotification notif = InstantiateNotification();
+
+        notif.notebookItem = item;
+        notif.Event = type;
+        notif.amount = amount;
+
+        notif.UpdateDisplay();
+    }
+    
+    InventoryNotification InstantiateNotification() {
+        GameObject g = Instantiate(InventoryNotificationPrefab, GlobalCanvas.Instance.transform);
+
+        return g.GetComponent<InventoryNotification>();
+    }
+
+
     public string DebugString() {
         string txt = "****Inventory****\n";
 
