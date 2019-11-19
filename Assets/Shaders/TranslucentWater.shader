@@ -6,6 +6,7 @@ Shader "TranslucentWater" {
 		_FoamColor("Foam Color", Color) = (1,1,1,1)
 		_FoamDepth("Foam Depth", Range(0,1)) = 0.05
 		_FoamNoise("Foam Noise", 2D) = "white" {}
+		_SeaLevel("Sea Level", Range(0,100)) = 85
 
 		_Movement("Movement", Vector) = (0,0,0,0)
 	}
@@ -34,6 +35,7 @@ Shader "TranslucentWater" {
 				float _WaterDepth;
 				float _FoamDepth;
 				float2 _Movement;
+				float _SeaLevel;
 
 				struct appdata {
 					float4 vertex : POSITION;
@@ -88,12 +90,13 @@ Shader "TranslucentWater" {
 						((frac(i.tint.g * tex2D(_FoamNoise, (i.uv / 20) + frac(_Time.x / 30)).r) + frac(i.tint.g * tex2D(_FoamNoise, (i.uv / 20) - frac(_Time.x / 30)).r) +
 							frac(i.tint.g * tex2D(_FoamNoise, (i.uv/100) + frac(_Time.x / 15)))) 
 						% (0.5 * fade_depth)) * fade_depth);
+					col = lerp(col, float4(col.r * 0.3,col.g * 0.3,col.b * 0.3,col.a), 1 - ((unity_AmbientSky.r + unity_AmbientSky.g + unity_AmbientSky.b - 0.304)/0.438));
 
 					//	Foam Coloring
 					float foam_depth = saturate(fade_depth - (1 - _FoamDepth));
-					if (fade_depth < _FoamDepth * (1 - (foamStrength.r * foamStrength.r)))
+					if (fade_depth < _FoamDepth * (1 - (foamStrength.r * foamStrength.r) * (_SeaLevel / i.world_pos.y)))
 					{
-						col = _FoamColor;
+						col = lerp(_FoamColor, float4(_FoamColor.r * 0.1, _FoamColor.g * 0.1, _FoamColor.b * 0.1, _FoamColor.a), 1 - ((unity_AmbientSky.r + unity_AmbientSky.g + unity_AmbientSky.b - 0.304) / 0.438));
 					}
 
 					return col;
