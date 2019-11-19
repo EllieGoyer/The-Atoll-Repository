@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: Segment
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -264, y: -232}
+  position: {x: -264, y: -200}
   ports:
     keys:
     - nextNode
@@ -919,7 +919,7 @@ MonoBehaviour:
   m_Name: Instant Branch
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -504, y: -104}
+  position: {x: -824, y: -104}
   ports:
     keys:
     - Checks
@@ -966,8 +966,8 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: startNode
-        node: {fileID: 2271412912727905239}
+      - fieldName: Output
+        node: {fileID: 841568732254609825}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1033,12 +1033,6 @@ MonoBehaviour:
   - {fileID: 2617926241932677836}
   - {fileID: -656309833410552150}
   - {fileID: 5940593121087082982}
-  - {fileID: -5728720119470330469}
-  - {fileID: -3275753984221406874}
-  - {fileID: -2880823928492160858}
-  - {fileID: 6099654290294887972}
-  - {fileID: -8713923340514734797}
-  - {fileID: 510093390433454245}
   current: {fileID: 3365031104095925296}
   dialogueController: {fileID: 0}
   Active: 0
@@ -1073,54 +1067,6 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   previousNode: {fileID: 0}
---- !u!114 &510093390433454245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a70da5ad329be34daebb3e7bc801b39, type: 3}
-  m_Name: Trigger Modify Relationship
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 424, y: -24}
-  ports:
-    keys:
-    - Output
-    - previousNode
-    values:
-    - _fieldName: Output
-      _node: {fileID: 510093390433454245}
-      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: previousNode
-        node: {fileID: 2115098193670260881}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: previousNode
-      _node: {fileID: 510093390433454245}
-      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: nextNode
-        node: {fileID: -1148818775685675222}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  previousNode: {fileID: 0}
-  Output: {fileID: 0}
-  relationship: {fileID: 11400000, guid: 1e2adc2a4c45b7e40b0e6f0d5aadeb2a, type: 2}
-  ModificationType: 3
-  amount: 1
 --- !u!114 &1528509549435716585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1134,7 +1080,7 @@ MonoBehaviour:
   m_Name: Segment
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -264, y: -40}
+  position: {x: -392, y: -40}
   ports:
     keys:
     - nextNode
@@ -1353,7 +1299,7 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1048, y: -88}
+  position: {x: -1352, y: -104}
   ports:
     keys:
     - startNode
@@ -1364,7 +1310,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: previousNode
-        node: {fileID: -420185228659408816}
+        node: {fileID: 841568732254609825}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1408,10 +1354,10 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: nextNode
-        node: {fileID: -8376591497533525060}
+        node: {fileID: 1528509549435716585}
         reroutePoints: []
       - fieldName: nextNode
-        node: {fileID: 1528509549435716585}
+        node: {fileID: -8376591497533525060}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1638,7 +1584,7 @@ MonoBehaviour:
   m_Name: Check Relationship
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -504, y: -232}
+  position: {x: -824, y: -232}
   ports:
     keys:
     - branch
