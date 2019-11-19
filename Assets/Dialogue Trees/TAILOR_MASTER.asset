@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8713923340514734797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31123c96354d01740a9bd43d295c653e, type: 3}
+  m_Name: End
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1544, y: -88}
+  ports:
+    keys:
+    - previousNode
+    values:
+    - _fieldName: previousNode
+      _node: {fileID: -8713923340514734797}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: nextNode
+        node: {fileID: 6099654290294887972}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previousNode: {fileID: 0}
 --- !u!114 &-8376591497533525060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13,7 +44,7 @@ MonoBehaviour:
   m_Name: Segment
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -264, y: -200}
+  position: {x: -264, y: -232}
   ports:
     keys:
     - nextNode
@@ -212,6 +243,53 @@ MonoBehaviour:
   text: You're an angel of the seas, sailor. Thank you.
   displayRate: 0.025
   nextNode: {fileID: 0}
+--- !u!114 &-5728720119470330469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff1faa2f3f56e5e4c9465e609842060a, type: 3}
+  m_Name: Segment
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 872, y: 56}
+  ports:
+    keys:
+    - nextNode
+    - previousNode
+    values:
+    - _fieldName: nextNode
+      _node: {fileID: -5728720119470330469}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: previousNode
+        node: {fileID: -3275753984221406874}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: previousNode
+      _node: {fileID: -5728720119470330469}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: nextNode
+        node: {fileID: 1702358696158650066}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previousNode: {fileID: 0}
+  text: It's not like. She's right over there.
+  displayRate: 0.8
+  nextNode: {fileID: 0}
 --- !u!114 &-5711802480184632250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,6 +408,53 @@ MonoBehaviour:
   nextNode: {fileID: 0}
   promptText: No
   Checks: []
+--- !u!114 &-3275753984221406874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff1faa2f3f56e5e4c9465e609842060a, type: 3}
+  m_Name: Segment
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1096, y: 56}
+  ports:
+    keys:
+    - nextNode
+    - previousNode
+    values:
+    - _fieldName: nextNode
+      _node: {fileID: -3275753984221406874}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: previousNode
+        node: {fileID: -2880823928492160858}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: previousNode
+      _node: {fileID: -3275753984221406874}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: nextNode
+        node: {fileID: -5728720119470330469}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previousNode: {fileID: 0}
+  text: Really close by.
+  displayRate: 0.8
+  nextNode: {fileID: 0}
 --- !u!114 &-2933589045119935219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,6 +501,53 @@ MonoBehaviour:
   previousNode: {fileID: 0}
   text: Thank you! Here you are. She's right over next to me.
   displayRate: 0.025
+  nextNode: {fileID: 0}
+--- !u!114 &-2880823928492160858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff1faa2f3f56e5e4c9465e609842060a, type: 3}
+  m_Name: Segment
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1321.0076, y: -13.226952}
+  ports:
+    keys:
+    - nextNode
+    - previousNode
+    values:
+    - _fieldName: nextNode
+      _node: {fileID: -2880823928492160858}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: previousNode
+        node: {fileID: 6099654290294887972}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: previousNode
+      _node: {fileID: -2880823928492160858}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: nextNode
+        node: {fileID: -3275753984221406874}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previousNode: {fileID: 0}
+  text: Close enough where I can sense her.
+  displayRate: 0.8
   nextNode: {fileID: 0}
 --- !u!114 &-2628664667099640368
 MonoBehaviour:
@@ -556,7 +728,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: previousNode
-        node: {fileID: 2115098193670260881}
+        node: {fileID: 510093390433454245}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -849,7 +1021,6 @@ MonoBehaviour:
   - {fileID: 4300593131445738115}
   - {fileID: 3365031104095925296}
   - {fileID: 3963518895996823815}
-  - {fileID: 3216358541051761282}
   - {fileID: 3096981229846428748}
   - {fileID: -5711802480184632250}
   - {fileID: -4923134038507345562}
@@ -862,6 +1033,12 @@ MonoBehaviour:
   - {fileID: 2617926241932677836}
   - {fileID: -656309833410552150}
   - {fileID: 5940593121087082982}
+  - {fileID: -5728720119470330469}
+  - {fileID: -3275753984221406874}
+  - {fileID: -2880823928492160858}
+  - {fileID: 6099654290294887972}
+  - {fileID: -8713923340514734797}
+  - {fileID: 510093390433454245}
   current: {fileID: 3365031104095925296}
   dialogueController: {fileID: 0}
   Active: 0
@@ -896,6 +1073,54 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   previousNode: {fileID: 0}
+--- !u!114 &510093390433454245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a70da5ad329be34daebb3e7bc801b39, type: 3}
+  m_Name: Trigger Modify Relationship
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 424, y: -24}
+  ports:
+    keys:
+    - Output
+    - previousNode
+    values:
+    - _fieldName: Output
+      _node: {fileID: 510093390433454245}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: previousNode
+        node: {fileID: 2115098193670260881}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: previousNode
+      _node: {fileID: 510093390433454245}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: nextNode
+        node: {fileID: -1148818775685675222}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previousNode: {fileID: 0}
+  Output: {fileID: 0}
+  relationship: {fileID: 11400000, guid: 1e2adc2a4c45b7e40b0e6f0d5aadeb2a, type: 2}
+  ModificationType: 3
+  amount: 1
 --- !u!114 &1528509549435716585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -968,7 +1193,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: previousNode
-        node: {fileID: 3216358541051761282}
+        node: {fileID: -5728720119470330469}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -987,7 +1212,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   previousNode: {fileID: 0}
-  text: Check in later if you can, yeah?
+  text: But yeah, don't worry about it
   displayRate: 0.025
   nextNode: {fileID: 0}
 --- !u!114 &1720828569705085481
@@ -1034,7 +1259,7 @@ MonoBehaviour:
   m_Name: Segment
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 424, y: 56}
+  position: {x: 424, y: 136}
   ports:
     keys:
     - nextNode
@@ -1057,15 +1282,15 @@ MonoBehaviour:
       _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: nextNode
-        node: {fileID: -1148818775685675222}
+      - fieldName: Output
+        node: {fileID: 510093390433454245}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
   previousNode: {fileID: 0}
-  text: You disappoint me, sailor. I understand, though.
+  text: I made the shirt on your back, sailor. I'd be careful if I were you.
   displayRate: 0.025
   nextNode: {fileID: 0}
 --- !u!114 &2115433900236806874
@@ -1369,37 +1594,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!114 &3216358541051761282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31123c96354d01740a9bd43d295c653e, type: 3}
-  m_Name: End
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 872, y: 152}
-  ports:
-    keys:
-    - previousNode
-    values:
-    - _fieldName: previousNode
-      _node: {fileID: 3216358541051761282}
-      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: nextNode
-        node: {fileID: 1702358696158650066}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  previousNode: {fileID: 0}
 --- !u!114 &3365031104095925296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1561,6 +1755,53 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: ecea8b1574ebccf48894ff9a59fc73dd, type: 2}
   ModificationType: 2
   amount: 1
+--- !u!114 &6099654290294887972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff1faa2f3f56e5e4c9465e609842060a, type: 3}
+  m_Name: Segment
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1320, y: -184}
+  ports:
+    keys:
+    - nextNode
+    - previousNode
+    values:
+    - _fieldName: nextNode
+      _node: {fileID: 6099654290294887972}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: previousNode
+        node: {fileID: -8713923340514734797}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: previousNode
+      _node: {fileID: 6099654290294887972}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: nextNode
+        node: {fileID: -2880823928492160858}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previousNode: {fileID: 0}
+  text: Anyway. Just check in if you can later on, ok? Thanks.
+  displayRate: 0.8
+  nextNode: {fileID: 0}
 --- !u!114 &8032291062559155782
 MonoBehaviour:
   m_ObjectHideFlags: 0
