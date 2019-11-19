@@ -6,12 +6,14 @@ using UnityEngine.UI;
 
 public class DrawRelationships : MonoBehaviour
 {
+    // UI elements
     public TextMeshProUGUI tm;
 
     public TextMeshProUGUI name;
     public TextMeshProUGUI proffession;
     public TextMeshProUGUI relationshipStat;
 
+    // singleton
     public static DrawRelationships _instance;
 
     public Button prefab;
@@ -19,6 +21,7 @@ public class DrawRelationships : MonoBehaviour
     public RawImage port;
 
     
+    // pictures
     public Texture bake;
     public Texture farmer;
     public Texture luberjack;
@@ -26,6 +29,7 @@ public class DrawRelationships : MonoBehaviour
     public Texture tailor;
 
 
+    // current relationship status
     private string[] relationshisS = {"Terrible","Bad","Mild","Good","Excellent"};
 
 
@@ -58,6 +62,7 @@ public class DrawRelationships : MonoBehaviour
         
     }
 
+    // change the UI base on the person we clicked
     void onCL(int i, string proff, int rel)
     {
         switch (i)
@@ -95,7 +100,9 @@ public class DrawRelationships : MonoBehaviour
 
         }
     }
+    
 
+   // build the grid based on the charcaters we find
     public void draw()
     {
 
@@ -105,6 +112,7 @@ public class DrawRelationships : MonoBehaviour
         {
             
 
+            // check if we have the person
             bool contain = false;
             foreach(Button b in bb)
             {
@@ -139,7 +147,7 @@ public class DrawRelationships : MonoBehaviour
                 
 
                 
-
+                // add the new person
                 newButton.GetComponentInChildren<Text>().text = storedRelationship.relationship.name;
                 newButton.transform.SetParent(tm.transform, false);
             }
