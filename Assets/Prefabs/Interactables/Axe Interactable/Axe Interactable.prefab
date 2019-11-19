@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9164861868827291725}
   - component: {fileID: 144800417}
   - component: {fileID: 144800418}
+  - component: {fileID: 876140543990665480}
   - component: {fileID: 7888659295913304364}
   - component: {fileID: 8717322008562821123}
   - component: {fileID: 1727327696252694006}
@@ -114,6 +115,17 @@ MonoBehaviour:
           m_StringArgument: Activate
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 876140543990665480}
+        m_MethodName: Swap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   OnReset:
@@ -169,6 +181,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tool: {fileID: 11400000, guid: 6e36a24642239af48ad059d068a54054, type: 2}
   toolCheckType: 1
+--- !u!114 &876140543990665480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5944605474794488960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a52dee44206c9964c98a6e2d0d998260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  First: sailerRigged
+  Second: sailorAnimation_axePickup
+  Duration: 1.74
 --- !u!114 &7888659295913304364
 MonoBehaviour:
   m_ObjectHideFlags: 0
