@@ -2,12 +2,33 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DrawRelationships : MonoBehaviour
 {
     public TextMeshProUGUI tm;
 
+    public TextMeshProUGUI name;
+    public TextMeshProUGUI proffession;
+
     public static DrawRelationships _instance;
+
+    public Button prefab;
+
+    public RawImage port;
+
+    
+    public Texture bake;
+    public Texture farmer;
+    public Texture luberjack;
+    public Texture potter;
+    public Texture tailor;
+    
+
+    
+
+
+
 
 
 
@@ -36,16 +57,90 @@ public class DrawRelationships : MonoBehaviour
         
     }
 
+    void onCL(int i, string proff)
+    {
+        switch (i)
+        {
+            case 0:
+                port.texture = bake;
+                name.text = "Araba";
+                proffession.text = proff;
+                break;
+            case 1:
+                port.texture = farmer;
+                name.text = "Cerci";
+                proffession.text = proff;
+                break;
+            case 2:
+                port.texture = luberjack;
+                name.text = "Hal";
+                proffession.text = proff;
+                break;
+            case 3:
+                port.texture = potter;
+                name.text = "Meryl";
+                proffession.text = proff;
+                break;
+            case 4:
+                port.texture = tailor;
+                name.text = "Fid";
+                proffession.text = proff;
+                break;
+
+        }
+    }
+
     public void draw()
     {
-        string txt = "";
+
+        Button[] bb = tm.GetComponentsInChildren<Button>(true);
+
         foreach (StoredRelationship storedRelationship in Inventory.Instance.Relationships)
         {
-            //HACK null check just to deal with some uninitialized relation???
-            if (storedRelationship != null && storedRelationship.relationship != null)
-                txt += storedRelationship.relationship.name + ": " + storedRelationship.amount + "\n";
+            
+
+            bool contain = false;
+            foreach(Button b in bb)
+            {
+                if (b.name.Equals(storedRelationship.relationship.name))
+                {
+                    contain = true;
+                }
+            }
+            if (!contain)
+            {
+                Button newButton = (Button)Instantiate(prefab);
+                newButton.name = storedRelationship.relationship.name;
+
+                switch (newButton.name.ToLower()[0])
+                {
+                    case 'b':
+                        newButton.onClick.AddListener(delegate { onCL(0, newButton.name); });
+                        break;
+                    case 'f':
+                        newButton.onClick.AddListener(delegate { onCL(1, newButton.name); });
+                        break;
+                    case 'l':
+                        newButton.onClick.AddListener(delegate { onCL(2, newButton.name); });
+                        break;
+                    case 'p':
+                        newButton.onClick.AddListener(delegate { onCL(3, newButton.name); });
+                        break;
+                    case 't':
+                        newButton.onClick.AddListener(delegate { onCL(4, newButton.name); });
+                        break;
+                }
+                
+
+                
+
+                newButton.GetComponentInChildren<Text>().text = storedRelationship.relationship.name;
+                newButton.transform.SetParent(tm.transform, false);
+            }
+
         }
 
-        tm.text = txt;
+
+
     }
 }
