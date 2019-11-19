@@ -32,7 +32,7 @@ public class PageAreaController : MonoBehaviour
       
         if (x == 0)
         {
-            DrawTools._instance.draw();
+            DrawCollectibles._instance.draw();
         }
         if(x == 2)
         {

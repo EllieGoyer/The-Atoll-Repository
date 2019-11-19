@@ -12,6 +12,8 @@ public class DrawRelationships : MonoBehaviour
     public TextMeshProUGUI name;
     public TextMeshProUGUI proffession;
     public TextMeshProUGUI relationshipStat;
+    public TextMeshProUGUI descriptionT;
+    public TextMeshProUGUI collectab;
 
     // singleton
     public static DrawRelationships _instance;
@@ -63,41 +65,64 @@ public class DrawRelationships : MonoBehaviour
     }
 
     // change the UI base on the person we clicked
-    void onCL(int i, string proff, int rel)
+    void onCL(int i, string proff, StoredRelationship sr)
     {
+        // reset text and add collecables
+        collectab.text = "Collectables: ";
+        addCollectablesToUI(proff);
+
         switch (i)
         {
             case 0:
                 port.texture = bake;
                 name.text = "Araba";
                 proffession.text = proff;
-                relationshipStat.text = "Status: " + relationshisS[rel/2/10];
+                relationshipStat.text = "Status: " + relationshisS[sr.amount/2/10];
+                descriptionT.text = sr.relationship.Description;
                 break;
             case 1:
                 port.texture = farmer;
                 name.text = "Cerci";
                 proffession.text = proff;
-                relationshipStat.text = "Status: " + relationshisS[rel / 2 / 10];
+                relationshipStat.text = "Status: " + relationshisS[sr.amount / 2 / 10];
+                descriptionT.text = sr.relationship.Description;
                 break;
             case 2:
                 port.texture = luberjack;
                 name.text = "Hal";
                 proffession.text = proff;
-                relationshipStat.text = "Status: " + relationshisS[rel / 2 / 10];
+                relationshipStat.text = "Status: " + relationshisS[sr.amount / 2 / 10];
+                descriptionT.text = sr.relationship.Description;
                 break;
             case 3:
                 port.texture = potter;
                 name.text = "Meryl";
                 proffession.text = proff;
-                relationshipStat.text = "Status: " + relationshisS[rel / 2 / 10];
+                relationshipStat.text = "Status: " + relationshisS[sr.amount / 2 / 10];
+                descriptionT.text = sr.relationship.Description;
                 break;
             case 4:
                 port.texture = tailor;
                 name.text = "Fid";
                 proffession.text = proff;
-                relationshipStat.text = "Status: " + relationshisS[rel / 2 / 10];
+                relationshipStat.text = "Status: " + relationshisS[sr.amount / 2 / 10];
+                descriptionT.text = sr.relationship.Description;
                 break;
 
+        }
+    }
+
+    void addCollectablesToUI(string name)
+    {
+        foreach (Collectable collectable in Inventory.Instance.Collectables)
+        {
+           foreach(RelationshipEntry re in collectable.RelationshipEntries)
+            {
+                if(re.target.name.StartsWith(name[0]+""))
+                {
+                    collectab.text += collectable.name;
+                }
+            }
         }
     }
     
@@ -107,6 +132,13 @@ public class DrawRelationships : MonoBehaviour
     {
 
         Button[] bb = tm.GetComponentsInChildren<Button>(true);
+
+        foreach(Collectable c in Inventory.Instance.Collectables)
+        {
+            print(c.name);
+        }
+
+        
 
         foreach (StoredRelationship storedRelationship in Inventory.Instance.Relationships)
         {
@@ -125,23 +157,23 @@ public class DrawRelationships : MonoBehaviour
             {
                 Button newButton = (Button)Instantiate(prefab);
                 newButton.name = storedRelationship.relationship.name;
-
+                
                 switch (newButton.name.ToLower()[0])
                 {
                     case 'b':
-                        newButton.onClick.AddListener(delegate { onCL(0, newButton.name, storedRelationship.amount); });
+                        newButton.onClick.AddListener(delegate { onCL(0, newButton.name, storedRelationship); });
                         break;
                     case 'f':
-                        newButton.onClick.AddListener(delegate { onCL(1, newButton.name, storedRelationship.amount); });
+                        newButton.onClick.AddListener(delegate { onCL(1, newButton.name, storedRelationship); });
                         break;
                     case 'l':
-                        newButton.onClick.AddListener(delegate { onCL(2, newButton.name, storedRelationship.amount); });
+                        newButton.onClick.AddListener(delegate { onCL(2, newButton.name, storedRelationship); });
                         break;
                     case 'p':
-                        newButton.onClick.AddListener(delegate { onCL(3, newButton.name, storedRelationship.amount); });
+                        newButton.onClick.AddListener(delegate { onCL(3, newButton.name, storedRelationship); });
                         break;
                     case 't':
-                        newButton.onClick.AddListener(delegate { onCL(4, newButton.name, storedRelationship.amount); });
+                        newButton.onClick.AddListener(delegate { onCL(4, newButton.name, storedRelationship); });
                         break;
                 }
                 
