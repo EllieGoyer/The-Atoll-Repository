@@ -117,7 +117,7 @@
 			<ShortName>Environment_Wind</ShortName>
 			<Path>Environment_Wind.bnk</Path>
 			<IncludedEvents>
-				<Event Id="752413197" Name="Environment_Wind" ObjectPath="\Events\Default Work Unit\Environment\Environment_Other\Environment_Wind" MaxAttenuation="150.000000" DurationType="Infinite"/>
+				<Event Id="752413197" Name="Environment_Wind" ObjectPath="\Events\Default Work Unit\Environment\Environment_Other\Environment_Wind" MaxAttenuation="100.000000" DurationType="Infinite"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="542571468" Language="SFX">
@@ -219,9 +219,9 @@
 				<Event Id="3638457343" Name="DoorClose" ObjectPath="\Events\Default Work Unit\Interact\Door\DoorClose" DurationType="OneShot" DurationMin="0.649661" DurationMax="0.768067"/>
 				<Event Id="1404805401" Name="DoorOpen" ObjectPath="\Events\Default Work Unit\Interact\Door\DoorOpen" DurationType="OneShot" DurationMin="0.690798" DurationMax="0.899882"/>
 				<Event Id="3575671711" Name="H_Footsteps" ObjectPath="\Events\Default Work Unit\Player\Footsteps\H_Footsteps" DurationType="OneShot" DurationMin="0.106972" DurationMax="0.571187"/>
-				<Event Id="3987853926" Name="JournalClose" ObjectPath="\Events\Default Work Unit\UI\Journal\JournalClose" DurationType="OneShot" DurationMin="0.359167" DurationMax="0.359167"/>
-				<Event Id="2690803159" Name="JournalFlip" ObjectPath="\Events\Default Work Unit\UI\Journal\JournalFlip" DurationType="OneShot" DurationMin="1.126958" DurationMax="1.126958"/>
-				<Event Id="1738215602" Name="JournalOpen" ObjectPath="\Events\Default Work Unit\UI\Journal\JournalOpen" DurationType="OneShot" DurationMin="0.428375" DurationMax="0.428375"/>
+				<Event Id="3987853926" Name="JournalClose" ObjectPath="\Events\Default Work Unit\UI\Journal\JournalClose" DurationType="OneShot" DurationMin="0.269071" DurationMax="0.479430"/>
+				<Event Id="2690803159" Name="JournalFlip" ObjectPath="\Events\Default Work Unit\UI\Journal\JournalFlip" DurationType="OneShot" DurationMin="0.844265" DurationMax="1.504309"/>
+				<Event Id="1738215602" Name="JournalOpen" ObjectPath="\Events\Default Work Unit\UI\Journal\JournalOpen" DurationType="OneShot" DurationMin="0.320919" DurationMax="0.571812"/>
 				<Event Id="1730208058" Name="Player_Footsteps" ObjectPath="\Events\Default Work Unit\Player\Footsteps\Player_Footsteps" DurationType="OneShot" DurationMin="0.000000" DurationMax="1.220271"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -537,7 +537,7 @@
 			<ShortName>Environment_Other</ShortName>
 			<Path>Environment_Other.bnk</Path>
 			<IncludedEvents>
-				<Event Id="752413197" Name="Environment_Wind" ObjectPath="\Events\Default Work Unit\Environment\Environment_Other\Environment_Wind" MaxAttenuation="150.000000" DurationType="Infinite"/>
+				<Event Id="752413197" Name="Environment_Wind" ObjectPath="\Events\Default Work Unit\Environment\Environment_Other\Environment_Wind" MaxAttenuation="100.000000" DurationType="Infinite"/>
 				<Event Id="715294513" Name="Sea_Monster" ObjectPath="\Events\Default Work Unit\Environment\Environment_Other\Sea_Monster" MaxAttenuation="150.000000" DurationType="Infinite"/>
 				<Event Id="2775184934" Name="Seagull" ObjectPath="\Events\Default Work Unit\Environment\Environment_Other\Seagull" MaxAttenuation="200.000000" DurationType="Infinite"/>
 				<Event Id="4137946895" Name="Tree_Rustle" ObjectPath="\Events\Default Work Unit\Environment\Environment_Other\Tree_Rustle" MaxAttenuation="30.000000" DurationType="Infinite"/>

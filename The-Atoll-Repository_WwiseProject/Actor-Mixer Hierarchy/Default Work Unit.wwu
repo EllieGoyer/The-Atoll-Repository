@@ -1280,6 +1280,19 @@
 								<Sound Name="Atoll_UI_Journal_Close" ID="{10F22DDE-8017-4117-B57A-D16635F85DFD}" ShortID="1070861066">
 									<PropertyList>
 										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D90819C1-4D7A-4C79-8AA4-4FE12D9FFC85}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="500"/>
+															<Property Name="Min" Type="Real64" Value="-500"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1302,6 +1315,24 @@
 								<Sound Name="Atoll_UI_Journal_Flip" ID="{8FED90A6-3467-423B-914C-B65E3DC8B449}" ShortID="154851842">
 									<PropertyList>
 										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{DEEBC85C-ACE1-4A84-8AC2-7F8114A63A52}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="500"/>
+															<Property Name="Min" Type="Real64" Value="-500"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1324,6 +1355,24 @@
 								<Sound Name="Atoll_UI_Journal_Open" ID="{B19C349E-8E6C-4BCA-AA87-35E12B2B9D57}" ShortID="248990872">
 									<PropertyList>
 										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{5016E79E-7CF6-4512-8185-F44A983361EB}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="500"/>
+															<Property Name="Min" Type="Real64" Value="-500"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
