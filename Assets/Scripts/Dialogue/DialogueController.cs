@@ -27,13 +27,10 @@ public class DialogueController : MonoBehaviour {
     DialogueDisplayBox playerTextBox;
     ResponsePromptBoxes playerResponseBoxes;
 
-    Animator playerAnimator;
-
     private void Awake() {
         DialogueDisplayBoxPrefab = Resources.Load<GameObject>("Dialog_Box");
         ResponsePromptBoxesPrefab = Resources.Load<GameObject>("ResponsePrompts");
         NametagPrefab = Resources.Load<GameObject>("Nametag_Box");
-        playerAnimator = World.CURRENT.ActivePlayer.GetComponentInChildren<Animator>();
     }
 
     private void Update() {
@@ -194,7 +191,7 @@ public class DialogueController : MonoBehaviour {
             // listen for that onClick event to occur, and try the corresponding answer\
             int temp = n;
             events[n].AddListener(delegate {
-                playerAnimator.SetTrigger("Nod");
+                World.CURRENT.ActivePlayer.GetComponentInChildren<Animator>().SetTrigger("Nod");
                 CurrentGraph.TryAnswer(temp);
             });
         }
