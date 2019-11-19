@@ -945,7 +945,7 @@
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-5</Value>
+												<Value>-1</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1746,6 +1746,13 @@
 						<Folder Name="Anchor" ID="{04B4A77B-2654-4CBC-8281-C515DA325BD5}" ShortID="974725092">
 							<ChildrenList>
 								<Sound Name="Atoll_Anchor_Deploy_2" ID="{BEB8CA49-43F5-425A-9E8A-083000058078}" ShortID="641245724">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
@@ -1765,6 +1772,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Atoll_Anchor_Hit" ID="{F5C10A3F-73FA-45D4-90D9-0DD9943DB220}" ShortID="649764282">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>

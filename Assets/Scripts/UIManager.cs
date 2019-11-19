@@ -9,6 +9,8 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject _settingsMenu;
+    [SerializeField]
+    private GameObject _notebook;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,10 @@ public class UIManager : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             _settingsMenu.SetActive(!_settingsMenu.activeSelf);
+        }
+        if (Input.GetKeyUp(KeyCode.Tab))
+        {
+            _notebook.SetActive(!_notebook.activeSelf);
         }
     }
 

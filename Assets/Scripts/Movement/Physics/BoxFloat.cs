@@ -41,7 +41,7 @@ public class BoxFloat : Float
         for (float x = minX; x < maxX; x += xStep)
             for (float y = minY; y < maxY; y += yStep)
                 for (float z = minZ; z < maxZ; z += zStep)
-                    samples.Add(new Tuple<Vector3, float, float>(new Vector3(x, y, z), xStep * zStep, yStep));
+                    samples.Add(new Tuple<Vector3, float, float>(new Vector3(x, y, z) + box.center, xStep * zStep, yStep));
 
         return samples;
     }
@@ -52,6 +52,5 @@ public class BoxFloat : Float
 
         box = gameObject.GetComponent<BoxCollider>();
         sampleCache = GenerateSamples();
-        Debug.Log(sampleCache[0].Item1);
     }
 }

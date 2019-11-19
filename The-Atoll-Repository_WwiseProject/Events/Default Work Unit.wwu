@@ -191,20 +191,6 @@
 				</Folder>
 				<Folder Name="Environment" ID="{B9D6A7DC-7010-4B07-9500-F8055029CE96}" ShortID="911091591">
 					<ChildrenList>
-						<Event Name="Sea_Oneshot" ID="{AF84820C-32B3-497F-B6FC-F2E83AA6C638}">
-							<ChildrenList>
-								<Action Name="" ID="{C2A4AC40-C460-428C-A62A-35CF11A69011}" ShortID="335970038">
-									<PropertyList>
-										<Property Name="Probability" Type="Real64" Value="50"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Land_Calm_Oneshots" ID="{C7555530-EE3C-47DA-9AB1-DC32EF4A02D9}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Folder Name="Environment_Outside" ID="{F731B393-7C5B-49C8-9253-61BEF3BF0D97}" ShortID="525241174">
 							<ChildrenList>
 								<Event Name="Environment_Sea_Start" ID="{B01F230D-D413-41B3-8383-DABE75897F67}">
@@ -254,6 +240,17 @@
 											<ReferenceList>
 												<Reference Name="Target">
 													<ObjectRef Name="Atoll_enviorment_land, looped" ID="{88CB8E3C-5986-4BFE-AB1A-691A833F88F1}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Sea_Oneshot" ID="{AF84820C-32B3-497F-B6FC-F2E83AA6C638}">
+									<ChildrenList>
+										<Action Name="" ID="{C2A4AC40-C460-428C-A62A-35CF11A69011}" ShortID="335970038">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Land_Calm_Oneshots" ID="{C7555530-EE3C-47DA-9AB1-DC32EF4A02D9}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>

@@ -14,6 +14,12 @@ public class CameraFollow : MonoBehaviour
     public float CameraAcceleration;
     public float CameraDeceleration;
 
+    public bool IsDragging {
+        get {
+            return Input.GetButton(DragInputName);
+        }
+    }
+
     /// <summary>
     /// how far from the target to follow from
     /// </summary>
@@ -66,24 +72,27 @@ public class CameraFollow : MonoBehaviour
 
         Vector3 targetPosition = World.CURRENT.ActivePlayer.transform.position + Vector3.up * FollowHeightOffset;
 
-        if(Input.GetButton(DragInputName))
+        if(IsDragging)
         {
             float verticalDrag = Input.GetAxis(DragVerticalAxisName) * -1;
             float horizontalDrag = Input.GetAxis(DragHorizontalAxisName);
 
             Vector3 polarDirectionVector = new Vector3(horizontalDrag, verticalDrag, 0);
             float inputMagnitude = polarDirectionVector.magnitude;
+            //Debug.Log(polarDirectionVector + " " + polarDirectionVector.normalized);
             polarDirectionVector.Normalize();
-
+            cameraPolarVelocity = Vector3.MoveTowards(cameraPolarVelocity, polarDirectionVector * CameraTopSpeed, CameraAcceleration * Time.deltaTime);
+             
+            /*
             if (!Mathf.Approximately(inputMagnitude, 0))
             {
-                cameraPolarVelocity = Vector3.ClampMagnitude(cameraPolarVelocity + polarDirectionVector * CameraAcceleration, CameraTopSpeed * Mathf.Clamp01(inputMagnitude));
+                cameraPolarVelocity = polarDirectionVector *  CameraTopSpeed * Mathf.Clamp01(inputMagnitude));
             }
             else
             {
                 float newPolarSpeed = Mathf.Clamp(cameraPolarVelocity.magnitude - CameraDeceleration, 0, CameraTopSpeed * Mathf.Clamp01(inputMagnitude));
                 cameraPolarVelocity = cameraPolarVelocity.normalized * newPolarSpeed;
-            }
+            }*/
         }
         else if(!Mathf.Approximately(velocity, 0))
         {
