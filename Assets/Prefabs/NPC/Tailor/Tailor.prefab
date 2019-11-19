@@ -32,6 +32,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &5475872953740782162
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4239127867030415504}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 54baff834f3b65449bbff4e7e137e4cc, type: 3}
+  m_Controller: {fileID: 9100000, guid: 0aefbb8d5c96c9348b024994ee050862, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3059086109861277166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -99,16 +118,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 54baff834f3b65449bbff4e7e137e4cc,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0aefbb8d5c96c9348b024994ee050862, type: 2}
     - target: {fileID: 715014360203477492, guid: 54baff834f3b65449bbff4e7e137e4cc,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7227887e5817d9948b4ab204e4369b24, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -6057140222963153312, guid: 54baff834f3b65449bbff4e7e137e4cc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 54baff834f3b65449bbff4e7e137e4cc, type: 3}
 --- !u!4 &8002538464031885044 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 54baff834f3b65449bbff4e7e137e4cc,
+    type: 3}
+  m_PrefabInstance: {fileID: 3059086109861277166}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4239127867030415504 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1198070536841872766, guid: 54baff834f3b65449bbff4e7e137e4cc,
     type: 3}
   m_PrefabInstance: {fileID: 3059086109861277166}
   m_PrefabAsset: {fileID: 0}
@@ -195,6 +226,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570017500180553314, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: OnPerforming.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570017500180553314, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: OnPerforming.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570017500180553314, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: OnPerforming.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570017500180553314, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: OnPerforming.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 5475872953740782162}
+    - target: {fileID: 8570017500180553314, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: OnPerforming.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570017500180553314, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: OnPerforming.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570017500180553314, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
+        type: 3}
+      propertyPath: OnPerforming.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: Talk
       objectReference: {fileID: 0}
     - target: {fileID: 9120363554873002911, guid: ebbd9ea026178b54bbfa39ca16d6fa2b,
         type: 3}
