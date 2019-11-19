@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Segment
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -264, y: -200}
+  position: {x: -568, y: -216}
   ports:
     keys:
     - nextNode
@@ -747,7 +747,7 @@ MonoBehaviour:
   m_Name: Instant Branch
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -504, y: -104}
+  position: {x: -824, y: -104}
   ports:
     keys:
     - Checks
@@ -910,7 +910,7 @@ MonoBehaviour:
   m_Name: Trigger Modify Relationship
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -760, y: -104}
+  position: {x: -1064, y: -152}
   ports:
     keys:
     - Output
@@ -958,7 +958,7 @@ MonoBehaviour:
   m_Name: Segment
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -264, y: -40}
+  position: {x: -392, y: -40}
   ports:
     keys:
     - nextNode
@@ -1177,7 +1177,7 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1048, y: -88}
+  position: {x: -1352, y: -104}
   ports:
     keys:
     - startNode
@@ -1232,10 +1232,10 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: nextNode
-        node: {fileID: -8376591497533525060}
+        node: {fileID: 1528509549435716585}
         reroutePoints: []
       - fieldName: nextNode
-        node: {fileID: 1528509549435716585}
+        node: {fileID: -8376591497533525060}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1493,7 +1493,7 @@ MonoBehaviour:
   m_Name: Check Relationship
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -504, y: -232}
+  position: {x: -824, y: -232}
   ports:
     keys:
     - branch
