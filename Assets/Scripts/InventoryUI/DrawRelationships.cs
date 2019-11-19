@@ -10,6 +10,7 @@ public class DrawRelationships : MonoBehaviour
 
     public TextMeshProUGUI name;
     public TextMeshProUGUI proffession;
+    public TextMeshProUGUI relationshipStat;
 
     public static DrawRelationships _instance;
 
@@ -23,9 +24,9 @@ public class DrawRelationships : MonoBehaviour
     public Texture luberjack;
     public Texture potter;
     public Texture tailor;
-    
 
-    
+
+    private string[] relationshisS = {"Terrible","Bad","Mild","Good","Excellent"};
 
 
 
@@ -57,7 +58,7 @@ public class DrawRelationships : MonoBehaviour
         
     }
 
-    void onCL(int i, string proff)
+    void onCL(int i, string proff, int rel)
     {
         switch (i)
         {
@@ -65,26 +66,31 @@ public class DrawRelationships : MonoBehaviour
                 port.texture = bake;
                 name.text = "Araba";
                 proffession.text = proff;
+                relationshipStat.text = "Status: " + relationshisS[rel/2/10];
                 break;
             case 1:
                 port.texture = farmer;
                 name.text = "Cerci";
                 proffession.text = proff;
+                relationshipStat.text = "Status: " + relationshisS[rel / 2 / 10];
                 break;
             case 2:
                 port.texture = luberjack;
                 name.text = "Hal";
                 proffession.text = proff;
+                relationshipStat.text = "Status: " + relationshisS[rel / 2 / 10];
                 break;
             case 3:
                 port.texture = potter;
                 name.text = "Meryl";
                 proffession.text = proff;
+                relationshipStat.text = "Status: " + relationshisS[rel / 2 / 10];
                 break;
             case 4:
                 port.texture = tailor;
                 name.text = "Fid";
                 proffession.text = proff;
+                relationshipStat.text = "Status: " + relationshisS[rel / 2 / 10];
                 break;
 
         }
@@ -115,19 +121,19 @@ public class DrawRelationships : MonoBehaviour
                 switch (newButton.name.ToLower()[0])
                 {
                     case 'b':
-                        newButton.onClick.AddListener(delegate { onCL(0, newButton.name); });
+                        newButton.onClick.AddListener(delegate { onCL(0, newButton.name, storedRelationship.amount); });
                         break;
                     case 'f':
-                        newButton.onClick.AddListener(delegate { onCL(1, newButton.name); });
+                        newButton.onClick.AddListener(delegate { onCL(1, newButton.name, storedRelationship.amount); });
                         break;
                     case 'l':
-                        newButton.onClick.AddListener(delegate { onCL(2, newButton.name); });
+                        newButton.onClick.AddListener(delegate { onCL(2, newButton.name, storedRelationship.amount); });
                         break;
                     case 'p':
-                        newButton.onClick.AddListener(delegate { onCL(3, newButton.name); });
+                        newButton.onClick.AddListener(delegate { onCL(3, newButton.name, storedRelationship.amount); });
                         break;
                     case 't':
-                        newButton.onClick.AddListener(delegate { onCL(4, newButton.name); });
+                        newButton.onClick.AddListener(delegate { onCL(4, newButton.name, storedRelationship.amount); });
                         break;
                 }
                 
