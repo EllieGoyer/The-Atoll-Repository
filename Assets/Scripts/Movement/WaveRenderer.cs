@@ -13,9 +13,16 @@ public class WaveRenderer : MonoBehaviour
     [HideInInspector]
     protected Vector3[] vertices;
 
+    public float MinOceanDistance;
+    public float MaxOceanDistance;
+    public float OceanInterval;
+    public float OceanWidth;
+    public float DistanceScaling;
+
     void Start()
     {
         filter = gameObject.GetComponent<MeshFilter>();
+        filter.mesh = OceanMeshGenerator.MeshFromCamera(World.CURRENT.ActiveCamera.GetComponent<Camera>(), OceanInterval, MinOceanDistance, MaxOceanDistance, OceanWidth, DistanceScaling);
         vertices = filter.mesh.vertices;
     }
 
