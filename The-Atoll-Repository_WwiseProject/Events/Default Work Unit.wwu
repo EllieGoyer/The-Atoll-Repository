@@ -293,12 +293,52 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Environment_Wind" ID="{C4E380E5-AD4D-4B8C-996D-5555F9F60C99}">
+									<ChildrenList>
+										<Action Name="" ID="{8B9841B7-F4C3-4985-9D9B-4D6F9BCCFAB2}" ShortID="580489555">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Atoll_Environment_Wind" ID="{1C2416B2-916D-4ECD-A67E-1AE438FA3CC2}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
-						<Folder Name="Environment_Bakery" ID="{60CF90BE-56FF-40A9-9F95-29DDEB07A5B5}" ShortID="166964901">
+						<Folder Name="Environment_Buildings" ID="{DE34345A-4272-422D-8E26-805BDD21AE7F}" ShortID="954545032">
 							<ChildrenList>
-								<Event Name="Environment_Bakery_Start" ID="{FC5934C2-4E1D-4F36-A241-3F64158B9884}"/>
-								<Event Name="Environment_Bakery_Stop" ID="{E4921C6B-3999-4C4C-8961-C7F3493602D8}"/>
+								<Folder Name="Environment_Bakery" ID="{60CF90BE-56FF-40A9-9F95-29DDEB07A5B5}" ShortID="166964901">
+									<ChildrenList>
+										<Event Name="Environment_Bakery_Start" ID="{FC5934C2-4E1D-4F36-A241-3F64158B9884}">
+											<ChildrenList>
+												<Action Name="" ID="{E19C099A-FD48-4C04-9F6F-AC3A17232F9C}" ShortID="549148228">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Bakery_Environment" ID="{AA816B3B-9EFD-4E7E-A3FD-F53AD6C3EB3C}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Environment_Bakery_Stop" ID="{E4921C6B-3999-4C4C-8961-C7F3493602D8}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="Environment_Forge" ID="{C4034208-B5EC-43FB-8987-BB3DB7BEF957}" ShortID="470039900">
+									<ChildrenList>
+										<Event Name="Environment_Forge_Start" ID="{D6AE8F74-DCA9-4BDE-B8B2-7B02CC050C34}">
+											<ChildrenList>
+												<Action Name="" ID="{8ADB1971-0BFB-4C0E-908B-79F579B43D0F}" ShortID="861948882">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Atoll_Environment_Forge_Simpler" ID="{747FD04A-2FFB-4DF8-A9EE-FC28C846345D}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+									</ChildrenList>
+								</Folder>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>

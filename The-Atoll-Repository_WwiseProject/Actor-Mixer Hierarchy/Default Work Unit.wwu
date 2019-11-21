@@ -780,6 +780,11 @@
 								<Sound Name="Atoll_enviorment_land, looped" ID="{88CB8E3C-5986-4BFE-AB1A-691A833F88F1}" ShortID="457230679">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>8</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-12</Value>
@@ -837,8 +842,70 @@
 						</Folder>
 						<Folder Name="Buildings" ID="{3C80AD8B-F102-446A-AD91-CCFD89B9EA3B}" ShortID="130684018">
 							<ChildrenList>
-								<Folder Name="Bakery" ID="{D1A9100A-2136-4323-B7E6-A72AFE724ECE}" ShortID="138866810"/>
-								<Folder Name="Forge" ID="{AB7096DC-63DF-4C94-94AA-F46DC30A531B}" ShortID="858459040"/>
+								<Folder Name="Bakery" ID="{D1A9100A-2136-4323-B7E6-A72AFE724ECE}" ShortID="138866810">
+									<ChildrenList>
+										<Sound Name="Bakery_Environment" ID="{AA816B3B-9EFD-4E7E-A3FD-F53AD6C3EB3C}" ShortID="669913420">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>49</Value>
+													</ValueList>
+												</Property>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-13</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Building" ID="{F4D4E849-DC9A-44C7-9B22-54810DB5DE8B}" WorkUnitID="{50340E82-D163-4027-BB2D-BD73FD5AEE4D}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Environment" ID="{8866971F-B22F-4E25-B79F-0AE7A6720F46}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Atoll_Environment_Bakery" ID="{45D0A805-47DE-4B4D-9D22-6C91D6D84939}" ShortID="67332677">
+													<Language>SFX</Language>
+													<AudioFile>Atoll_Environment_Bakery.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Atoll_Environment_Bakery" ID="{45D0A805-47DE-4B4D-9D22-6C91D6D84939}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="Forge" ID="{AB7096DC-63DF-4C94-94AA-F46DC30A531B}" ShortID="858459040">
+									<ChildrenList>
+										<Sound Name="Atoll_Environment_Forge_Simpler" ID="{747FD04A-2FFB-4DF8-A9EE-FC28C846345D}" ShortID="511440733">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Environment" ID="{8866971F-B22F-4E25-B79F-0AE7A6720F46}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Atoll_Environment_Forge_Simpler" ID="{2E1B234C-4F6D-4AF0-9A19-A5C0734D17A0}" ShortID="661318769">
+													<Language>SFX</Language>
+													<AudioFile>Atoll_Environment_Forge_Simpler.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Atoll_Environment_Forge_Simpler" ID="{2E1B234C-4F6D-4AF0-9A19-A5C0734D17A0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</Folder>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Outside" ID="{FCCEAA1C-348D-4790-A42D-39D67CCBC4F5}" ShortID="992333665">
@@ -968,6 +1035,31 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="Atoll_Environment_TreeRustle_1" ID="{5CFAF8F1-8C1C-43A9-B396-3A4796F42753}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Atoll_Environment_Wind" ID="{1C2416B2-916D-4ECD-A67E-1AE438FA3CC2}" ShortID="576948761">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Building" ID="{F4D4E849-DC9A-44C7-9B22-54810DB5DE8B}" WorkUnitID="{50340E82-D163-4027-BB2D-BD73FD5AEE4D}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Environment" ID="{8866971F-B22F-4E25-B79F-0AE7A6720F46}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Atoll_Environment_Wind" ID="{B104A621-D223-4378-8592-35CDF8F329F2}" ShortID="542571468">
+											<Language>SFX</Language>
+											<AudioFile>Atoll_Environment_Wind.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Atoll_Environment_Wind" ID="{B104A621-D223-4378-8592-35CDF8F329F2}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -1186,6 +1278,22 @@
 						<Folder Name="Journal" ID="{B2F1CCCA-8A34-404C-BBBA-0C3C8441C821}" ShortID="543824117">
 							<ChildrenList>
 								<Sound Name="Atoll_UI_Journal_Close" ID="{10F22DDE-8017-4117-B57A-D16635F85DFD}" ShortID="1070861066">
+									<PropertyList>
+										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D90819C1-4D7A-4C79-8AA4-4FE12D9FFC85}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="500"/>
+															<Property Name="Min" Type="Real64" Value="-500"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
@@ -1194,8 +1302,38 @@
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Atoll_UI_Journal_Close_Normalized" ID="{39A399FD-9868-40AF-A540-BB584AB82487}" ShortID="638898551">
+											<Language>SFX</Language>
+											<AudioFile>Atoll_UI_Journal_Close_Normalized.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Atoll_UI_Journal_Close_Normalized" ID="{39A399FD-9868-40AF-A540-BB584AB82487}" Platform="Linked"/>
+									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Atoll_UI_Journal_Flip" ID="{8FED90A6-3467-423B-914C-B65E3DC8B449}" ShortID="154851842">
+									<PropertyList>
+										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{DEEBC85C-ACE1-4A84-8AC2-7F8114A63A52}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="500"/>
+															<Property Name="Min" Type="Real64" Value="-500"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
@@ -1204,8 +1342,38 @@
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Atoll_UI_Journal_Flip" ID="{927683B0-D40F-48BE-A8C2-CED07316BE14}" ShortID="953729291">
+											<Language>SFX</Language>
+											<AudioFile>Atoll_UI_Journal_Flip.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Atoll_UI_Journal_Flip" ID="{927683B0-D40F-48BE-A8C2-CED07316BE14}" Platform="Linked"/>
+									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Atoll_UI_Journal_Open" ID="{B19C349E-8E6C-4BCA-AA87-35E12B2B9D57}" ShortID="248990872">
+									<PropertyList>
+										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{5016E79E-7CF6-4512-8185-F44A983361EB}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="500"/>
+															<Property Name="Min" Type="Real64" Value="-500"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
@@ -1214,6 +1382,15 @@
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
 										</Reference>
 									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Atoll_UI_Journal_Open" ID="{CD4FFDF1-2D44-4423-AA92-8FA05D117CC5}" ShortID="258991528">
+											<Language>SFX</Language>
+											<AudioFile>Atoll_UI_Journal_Open .wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Atoll_UI_Journal_Open" ID="{CD4FFDF1-2D44-4423-AA92-8FA05D117CC5}" Platform="Linked"/>
+									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
 						</Folder>
@@ -1762,13 +1939,13 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Atoll_Anchor_Deploy_2" ID="{B13DA166-B7FB-4120-8192-E61C9AAE9015}" ShortID="778817284">
+										<AudioFileSource Name="Atoll_Tool_Anchor" ID="{E0396286-A333-429B-A4F4-613194FF5BE0}" ShortID="67607654">
 											<Language>SFX</Language>
-											<AudioFile>Atoll_Anchor_Deploy_2.wav</AudioFile>
+											<AudioFile>Atoll_Tool_Anchor.wav</AudioFile>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Atoll_Anchor_Deploy_2" ID="{B13DA166-B7FB-4120-8192-E61C9AAE9015}" Platform="Linked"/>
+										<ActiveSource Name="Atoll_Tool_Anchor" ID="{E0396286-A333-429B-A4F4-613194FF5BE0}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Atoll_Anchor_Hit" ID="{F5C10A3F-73FA-45D4-90D9-0DD9943DB220}" ShortID="649764282">
