@@ -726,10 +726,7 @@ MonoBehaviour:
       _node: {fileID: -1148818775685675222}
       _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: previousNode
-        node: {fileID: 510093390433454245}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -967,7 +964,10 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
-        node: {fileID: 841568732254609825}
+        node: {fileID: 0}
+        reroutePoints: []
+      - fieldName: startNode
+        node: {fileID: 2271412912727905239}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1033,6 +1033,11 @@ MonoBehaviour:
   - {fileID: 2617926241932677836}
   - {fileID: -656309833410552150}
   - {fileID: 5940593121087082982}
+  - {fileID: -8713923340514734797}
+  - {fileID: -5728720119470330469}
+  - {fileID: -3275753984221406874}
+  - {fileID: -2880823928492160858}
+  - {fileID: 6099654290294887972}
   current: {fileID: 3365031104095925296}
   dialogueController: {fileID: 0}
   Active: 0
@@ -1229,7 +1234,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: Output
-        node: {fileID: 510093390433454245}
+        node: {fileID: 0}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1310,7 +1315,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: previousNode
-        node: {fileID: 841568732254609825}
+        node: {fileID: -420185228659408816}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
