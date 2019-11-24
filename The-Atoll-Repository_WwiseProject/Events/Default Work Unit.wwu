@@ -339,6 +339,36 @@
 										</Event>
 									</ChildrenList>
 								</Folder>
+								<Folder Name="Environment_Farmer" ID="{F8E9713A-F7E2-4953-A555-6D4E0568C66C}" ShortID="812071808">
+									<ChildrenList>
+										<Event Name="Environment_Farmer_Start" ID="{02392C10-4AA0-4BD6-BA69-0B6B38B85D7B}">
+											<ChildrenList>
+												<Action Name="" ID="{0BAC71C1-C38E-4463-A8DE-E1C9EBE9C781}" ShortID="154866068">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Atoll_Environment_Chicken" ID="{EBE04940-4536-45FB-BF77-CA4D0E21FFE8}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="Environment_Taylor" ID="{92B696FE-E777-49DE-9141-B8A9FFFABD67}" ShortID="564716863">
+									<ChildrenList>
+										<Event Name="Environment_Taylor_Start" ID="{F2F782C2-3853-4F75-BAA6-A79EE51069B6}">
+											<ChildrenList>
+												<Action Name="" ID="{0EC10710-FCDC-4F12-931D-2AFBCED645EA}" ShortID="77961325">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Atoll_Environment_Taylor" ID="{74998387-A876-4964-A748-A8DE214BDE68}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+									</ChildrenList>
+								</Folder>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>

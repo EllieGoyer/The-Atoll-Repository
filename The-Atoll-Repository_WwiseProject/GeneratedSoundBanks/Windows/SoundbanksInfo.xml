@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>D:\Games\Pro\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -122,7 +122,7 @@
 			<IncludedMemoryFiles>
 				<File Id="542571468" Language="SFX">
 					<ShortName>Atoll_Environment_Wind.wav</ShortName>
-					<Path>SFX\Atoll_Environment_Wind_D79FB2B7.wem</Path>
+					<Path>SFX\Atoll_Environment_Wind_4E642330.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -519,16 +519,26 @@
 			<IncludedEvents>
 				<Event Id="2114846354" Name="Environment_Bakery_Start" ObjectPath="\Events\Default Work Unit\Environment\Environment_Buildings\Environment_Bakery\Environment_Bakery_Start" MaxAttenuation="100.000000" DurationType="Infinite"/>
 				<Event Id="173441866" Name="Environment_Bakery_Stop" ObjectPath="\Events\Default Work Unit\Environment\Environment_Buildings\Environment_Bakery\Environment_Bakery_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2798262655" Name="Environment_Farmer_Start" ObjectPath="\Events\Default Work Unit\Environment\Environment_Buildings\Environment_Farmer\Environment_Farmer_Start" MaxAttenuation="100.000000" DurationType="Infinite"/>
 				<Event Id="1457011789" Name="Environment_Forge_Start" ObjectPath="\Events\Default Work Unit\Environment\Environment_Buildings\Environment_Forge\Environment_Forge_Start" DurationType="OneShot" DurationMin="54.444019" DurationMax="54.444019"/>
+				<Event Id="3340551839" Name="Environment_Taylor_Start" ObjectPath="\Events\Default Work Unit\Environment\Environment_Buildings\Environment_Taylor\Environment_Taylor_Start" MaxAttenuation="100.000000" DurationType="Infinite"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="67332677" Language="SFX">
 					<ShortName>Atoll_Environment_Bakery.wav</ShortName>
 					<Path>SFX\Atoll_Environment_Bakery_4E642330.wem</Path>
 				</File>
+				<File Id="165232920" Language="SFX">
+					<ShortName>Atoll_Environment_Taylor.wav</ShortName>
+					<Path>SFX\Atoll_Environment_Taylor_4E642330.wem</Path>
+				</File>
 				<File Id="661318769" Language="SFX">
 					<ShortName>Atoll_Environment_Forge_Simpler.wav</ShortName>
 					<Path>SFX\Atoll_Environment_Forge_Simpler_10C4C929.wem</Path>
+				</File>
+				<File Id="774762416" Language="SFX">
+					<ShortName>Atoll_Environment_Chicken.wav</ShortName>
+					<Path>SFX\Atoll_Environment_Chicken_4E642330.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -553,7 +563,7 @@
 				</File>
 				<File Id="542571468" Language="SFX">
 					<ShortName>Atoll_Environment_Wind.wav</ShortName>
-					<Path>SFX\Atoll_Environment_Wind_D79FB2B7.wem</Path>
+					<Path>SFX\Atoll_Environment_Wind_4E642330.wem</Path>
 				</File>
 				<File Id="588576551" Language="SFX">
 					<ShortName>Atoll_Environment_Seagull.wav</ShortName>

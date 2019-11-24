@@ -29,11 +29,13 @@ namespace AK
         static const AkUniqueID DOOROPEN = 1404805401U;
         static const AkUniqueID ENVIRONMENT_BAKERY_START = 2114846354U;
         static const AkUniqueID ENVIRONMENT_BAKERY_STOP = 173441866U;
+        static const AkUniqueID ENVIRONMENT_FARMER_START = 2798262655U;
         static const AkUniqueID ENVIRONMENT_FORGE_START = 1457011789U;
         static const AkUniqueID ENVIRONMENT_LAND_START = 2038259945U;
         static const AkUniqueID ENVIRONMENT_LAND_STOP = 792665347U;
         static const AkUniqueID ENVIRONMENT_SEA_START = 1353736985U;
         static const AkUniqueID ENVIRONMENT_SEA_STOP = 3466662131U;
+        static const AkUniqueID ENVIRONMENT_TAYLOR_START = 3340551839U;
         static const AkUniqueID ENVIRONMENT_WIND = 752413197U;
         static const AkUniqueID H_FOOTSTEPS = 3575671711U;
         static const AkUniqueID JOURNALCLOSE = 3987853926U;

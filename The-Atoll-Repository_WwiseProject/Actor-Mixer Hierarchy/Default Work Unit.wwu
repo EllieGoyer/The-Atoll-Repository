@@ -906,6 +906,71 @@
 										</Sound>
 									</ChildrenList>
 								</Folder>
+								<Folder Name="Farm" ID="{1178D827-2110-4448-9FEA-A417F35BE466}" ShortID="422955275">
+									<ChildrenList>
+										<Sound Name="Atoll_Environment_Chicken" ID="{EBE04940-4536-45FB-BF77-CA4D0E21FFE8}" ShortID="751162431">
+											<PropertyList>
+												<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Building" ID="{F4D4E849-DC9A-44C7-9B22-54810DB5DE8B}" WorkUnitID="{50340E82-D163-4027-BB2D-BD73FD5AEE4D}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Environment" ID="{8866971F-B22F-4E25-B79F-0AE7A6720F46}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Atoll_Environment_Chicken" ID="{AA294E36-A3C1-4F13-81FF-E1EF9BEFBA38}" ShortID="774762416">
+													<Language>SFX</Language>
+													<AudioFile>Atoll_Environment_Chicken.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Atoll_Environment_Chicken" ID="{AA294E36-A3C1-4F13-81FF-E1EF9BEFBA38}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="Taylor" ID="{931F8487-44A9-4DB0-9318-2FCAA5E9CEBB}" ShortID="372337314">
+									<ChildrenList>
+										<Sound Name="Atoll_Environment_Taylor" ID="{74998387-A876-4964-A748-A8DE214BDE68}" ShortID="816479141">
+											<PropertyList>
+												<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-22</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Building" ID="{F4D4E849-DC9A-44C7-9B22-54810DB5DE8B}" WorkUnitID="{50340E82-D163-4027-BB2D-BD73FD5AEE4D}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Environment" ID="{8866971F-B22F-4E25-B79F-0AE7A6720F46}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Atoll_Environment_Taylor" ID="{5F1C6AAF-EBE7-415B-ABDF-A30F2074C0FB}" ShortID="165232920">
+													<Language>SFX</Language>
+													<AudioFile>Atoll_Environment_Taylor.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Atoll_Environment_Taylor" ID="{5F1C6AAF-EBE7-415B-ABDF-A30F2074C0FB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</Folder>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Outside" ID="{FCCEAA1C-348D-4790-A42D-39D67CCBC4F5}" ShortID="992333665">
@@ -1012,7 +1077,7 @@
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-1</Value>
+												<Value>-12</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1039,7 +1104,14 @@
 								</Sound>
 								<Sound Name="Atoll_Environment_Wind" ID="{1C2416B2-916D-4ECD-A67E-1AE438FA3CC2}" ShortID="576948761">
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
