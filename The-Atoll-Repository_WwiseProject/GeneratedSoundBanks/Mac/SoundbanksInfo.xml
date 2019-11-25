@@ -521,6 +521,7 @@
 				<Event Id="173441866" Name="Environment_Bakery_Stop" ObjectPath="\Events\Default Work Unit\Environment\Environment_Buildings\Environment_Bakery\Environment_Bakery_Stop" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="2798262655" Name="Environment_Farmer_Start" ObjectPath="\Events\Default Work Unit\Environment\Environment_Buildings\Environment_Farmer\Environment_Farmer_Start" MaxAttenuation="100.000000" DurationType="Infinite"/>
 				<Event Id="1457011789" Name="Environment_Forge_Start" ObjectPath="\Events\Default Work Unit\Environment\Environment_Buildings\Environment_Forge\Environment_Forge_Start" DurationType="OneShot" DurationMin="54.444019" DurationMax="54.444019"/>
+				<Event Id="630996975" Name="Environment_Lumberjack" ObjectPath="\Events\Default Work Unit\Environment\Environment_Buildings\Environment_Lumberjack\Environment_Lumberjack" MaxAttenuation="100.000000" DurationType="Infinite"/>
 				<Event Id="3340551839" Name="Environment_Taylor_Start" ObjectPath="\Events\Default Work Unit\Environment\Environment_Buildings\Environment_Taylor\Environment_Taylor_Start" MaxAttenuation="100.000000" DurationType="Infinite"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -539,6 +540,10 @@
 				<File Id="774762416" Language="SFX">
 					<ShortName>Atoll_Environment_Chicken.wav</ShortName>
 					<Path>SFX\Atoll_Environment_Chicken_4E642330.wem</Path>
+				</File>
+				<File Id="832471272" Language="SFX">
+					<ShortName>Atoll_Environment_Lumberjack.wav</ShortName>
+					<Path>SFX\Atoll_Environment_Lumberjack_D79FB2B7.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

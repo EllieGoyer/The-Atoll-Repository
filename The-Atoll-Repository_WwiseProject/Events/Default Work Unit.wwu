@@ -369,6 +369,21 @@
 										</Event>
 									</ChildrenList>
 								</Folder>
+								<Folder Name="Environment_Lumberjack" ID="{64C58A98-9E31-4F2E-8CD8-331FCEB9C984}" ShortID="883529224">
+									<ChildrenList>
+										<Event Name="Environment_Lumberjack" ID="{5BC58B4C-2F54-4DA0-8E13-E7FF5774B9B5}">
+											<ChildrenList>
+												<Action Name="" ID="{01092F1A-F29A-4FCD-89AD-36113E144791}" ShortID="826485044">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Atoll_Environment_Lumberjack" ID="{F364760D-BB50-4E5B-A493-B33710FB8BFD}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+									</ChildrenList>
+								</Folder>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>

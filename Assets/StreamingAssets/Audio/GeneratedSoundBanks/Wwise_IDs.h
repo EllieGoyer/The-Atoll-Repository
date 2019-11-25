@@ -33,6 +33,7 @@ namespace AK
         static const AkUniqueID ENVIRONMENT_FORGE_START = 1457011789U;
         static const AkUniqueID ENVIRONMENT_LAND_START = 2038259945U;
         static const AkUniqueID ENVIRONMENT_LAND_STOP = 792665347U;
+        static const AkUniqueID ENVIRONMENT_LUMBERJACK = 630996975U;
         static const AkUniqueID ENVIRONMENT_SEA_START = 1353736985U;
         static const AkUniqueID ENVIRONMENT_SEA_STOP = 3466662131U;
         static const AkUniqueID ENVIRONMENT_TAYLOR_START = 3340551839U;
