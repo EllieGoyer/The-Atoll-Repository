@@ -50,6 +50,7 @@ namespace AK
         static const AkUniqueID SEAGULL = 2775184934U;
         static const AkUniqueID SEASTORM_START = 875170180U;
         static const AkUniqueID SEASTORM_STOP = 2153236280U;
+        static const AkUniqueID SHIP_MOVE = 1985640185U;
         static const AkUniqueID SHIPCREAK = 2557820305U;
         static const AkUniqueID SHIPENTER = 2585523711U;
         static const AkUniqueID SHIPSTORM_START = 2475524499U;
@@ -77,6 +78,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID ENVIRONMENTSWITCH = 3780105948U;
+        static const AkUniqueID SHIPMOVE = 3861151932U;
         static const AkUniqueID STORMLEVEL = 2380834754U;
     } // namespace GAME_PARAMETERS
 

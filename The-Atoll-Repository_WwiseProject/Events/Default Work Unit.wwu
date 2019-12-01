@@ -528,6 +528,17 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Event Name="Ship_Move" ID="{996839A6-2AB9-4CC9-A0B3-5ED0F084D97E}">
+							<ChildrenList>
+								<Action Name="" ID="{1C3EA54E-F46B-4FE0-A8DF-A6F550174B18}" ShortID="575637168">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Atoll_Ship_Move" ID="{16D28C69-6A0E-4BA9-9C59-DC2B00A5B972}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="NPC" ID="{D058BD60-767E-4332-9D09-AA56C9429EDD}" ShortID="942187130">

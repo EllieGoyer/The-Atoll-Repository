@@ -1338,6 +1338,56 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<Sound Name="Atoll_Ship_Move" ID="{16D28C69-6A0E-4BA9-9C59-DC2B00A5B972}" ShortID="371945226">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{D9052406-17F9-47CA-893A-38859A78CBBD}" ShortID="451569509">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="ShipMove" ID="{C0ABC4D5-303F-4E0F-A08D-3FB45D1141CB}" WorkUnitID="{DF4FA145-A679-4276-B9D7-5ED205795645}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{3428CE24-EAB3-43CC-83D6-EDDA09E0A35B}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Atoll_Ship_Move" ID="{70882588-6F3E-4C49-8E18-4C8805B08AE6}" ShortID="697785040">
+									<Language>SFX</Language>
+									<AudioFile>Atoll_Ship_Move.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Atoll_Ship_Move" ID="{70882588-6F3E-4C49-8E18-4C8805B08AE6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{F11FA237-B96C-497E-9C11-8AC7D2E4B852}" ShortID="453864411">

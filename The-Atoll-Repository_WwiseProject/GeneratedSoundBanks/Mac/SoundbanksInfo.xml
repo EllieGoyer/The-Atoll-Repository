@@ -17,6 +17,7 @@
 			<Path>Ship.bnk</Path>
 			<IncludedEvents>
 				<Event Id="3825949625" Name="DockLanding" ObjectPath="\Events\Default Work Unit\Ship\Landing\DockLanding" DurationType="OneShot" DurationMin="0.624000" DurationMax="0.624000"/>
+				<Event Id="1985640185" Name="Ship_Move" ObjectPath="\Events\Default Work Unit\Ship\Ship_Move" DurationType="Infinite"/>
 				<Event Id="2557820305" Name="ShipCreak" ObjectPath="\Events\Default Work Unit\Ship\Other\ShipCreak" MaxAttenuation="100.000000" DurationType="Infinite"/>
 				<Event Id="2585523711" Name="ShipEnter" ObjectPath="\Events\Default Work Unit\Ship\Other\ShipEnter" DurationType="OneShot" DurationMin="1.066667" DurationMax="1.066667"/>
 				<Event Id="2475524499" Name="ShipStorm_Start" ObjectPath="\Events\Default Work Unit\Storm\ShipStorm\ShipStorm_Start" DurationType="OneShot" DurationMin="164.010666" DurationMax="164.010666"/>
@@ -38,6 +39,10 @@
 				<File Id="270062226" Language="SFX">
 					<ShortName>Atoll_Ship_Creak.wav</ShortName>
 					<Path>SFX\Atoll_Ship_Creak_D79FB2B7.wem</Path>
+				</File>
+				<File Id="697785040" Language="SFX">
+					<ShortName>Atoll_Ship_Move.wav</ShortName>
+					<Path>SFX\Atoll_Ship_Move_D79FB2B7.wem</Path>
 				</File>
 				<File Id="756840420" Language="SFX">
 					<ShortName>Atoll_Ship_Landing_Dock.wav</ShortName>
