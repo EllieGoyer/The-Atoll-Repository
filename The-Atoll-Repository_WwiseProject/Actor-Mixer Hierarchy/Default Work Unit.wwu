@@ -2328,6 +2328,70 @@
 								<Folder Name="Fishingrod" ID="{C9415EB7-FC8E-4F97-AEAF-BE2337FB267E}" ShortID="1063926379"/>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Quest" ID="{82473D99-920D-449F-9D00-B313E8CF6337}" ShortID="176708324">
+							<ChildrenList>
+								<Sound Name="Atoll_Feedback_Quest_Accepted v_1" ID="{2B7416D7-E01E-4190-9DE8-D2F40D5D35E3}" ShortID="797784075">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{18FF89F2-6BF2-4227-B48E-4523F3D76668}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="250"/>
+															<Property Name="Min" Type="Real64" Value="-250"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Atoll_Feedback_Quest_Accepted v_1" ID="{9B3CFAF2-145D-4FD5-A046-ACEB7EA4169C}" ShortID="373234411">
+											<Language>SFX</Language>
+											<AudioFile>Atoll_Feedback_Quest_Accepted v.1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Atoll_Feedback_Quest_Accepted v_1" ID="{9B3CFAF2-145D-4FD5-A046-ACEB7EA4169C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Atoll_Feedback_Quest_Complete" ID="{75D9EC90-4825-4B47-B741-C41C0D4F1F1B}" ShortID="258727943">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="select,positive,jingle" ID="{8F8C418C-DC3F-4BB1-86B1-E70C42D6624D}" ShortID="781258995">
+											<Language>SFX</Language>
+											<AudioFile>select,positive,jingle.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="select,positive,jingle" ID="{8F8C418C-DC3F-4BB1-86B1-E70C42D6624D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Footsteps" ID="{DE1C304F-5B0F-451B-88AA-DD52B5F95D5C}" ShortID="494236542">

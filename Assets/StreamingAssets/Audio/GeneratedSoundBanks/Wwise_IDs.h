@@ -45,6 +45,8 @@ namespace AK
         static const AkUniqueID LANDSTORM_START = 1930650448U;
         static const AkUniqueID LANDSTORM_STOP = 2869071164U;
         static const AkUniqueID PLAYER_FOOTSTEPS = 1730208058U;
+        static const AkUniqueID QUEST_ACCEPT = 465079464U;
+        static const AkUniqueID QUEST_COMPLETE = 3240473869U;
         static const AkUniqueID SEA_MONSTER = 715294513U;
         static const AkUniqueID SEA_ONESHOT = 2309730339U;
         static const AkUniqueID SEAGULL = 2775184934U;

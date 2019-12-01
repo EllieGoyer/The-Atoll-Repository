@@ -228,6 +228,8 @@
 				<Event Id="2690803159" Name="JournalFlip" ObjectPath="\Events\Default Work Unit\UI\Journal\JournalFlip" DurationType="OneShot" DurationMin="0.844265" DurationMax="1.504309"/>
 				<Event Id="1738215602" Name="JournalOpen" ObjectPath="\Events\Default Work Unit\UI\Journal\JournalOpen" DurationType="OneShot" DurationMin="0.320919" DurationMax="0.571812"/>
 				<Event Id="1730208058" Name="Player_Footsteps" ObjectPath="\Events\Default Work Unit\Player\Footsteps\Player_Footsteps" DurationType="OneShot" DurationMin="0.000000" DurationMax="1.220271"/>
+				<Event Id="465079464" Name="Quest_Accept" ObjectPath="\Events\Default Work Unit\Interact\Quest\Quest_Accept" DurationType="OneShot" DurationMin="0.911698" DurationMax="1.216972"/>
+				<Event Id="3240473869" Name="Quest_Complete" ObjectPath="\Events\Default Work Unit\Interact\Quest\Quest_Complete" DurationType="OneShot" DurationMin="2.250522" DurationMax="2.250522"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="7304331" Language="SFX">
@@ -334,6 +336,10 @@
 					<ShortName>Atoll_Footsteps_Wood_2.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Wood_2_10C4C929.wem</Path>
 				</File>
+				<File Id="373234411" Language="SFX">
+					<ShortName>Atoll_Feedback_Quest_Accepted v.1.wav</ShortName>
+					<Path>SFX\Atoll_Feedback_Quest_Accepted v.1_10C4C929.wem</Path>
+				</File>
 				<File Id="375539328" Language="SFX">
 					<ShortName>Atoll_Footsteps_Grass_5.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Grass_5_10C4C929.wem</Path>
@@ -429,6 +435,10 @@
 				<File Id="765917740" Language="SFX">
 					<ShortName>Atoll_Door_Open_1.wav</ShortName>
 					<Path>SFX\Atoll_Door_Open_1_BFB259A6.wem</Path>
+				</File>
+				<File Id="781258995" Language="SFX">
+					<ShortName>select,positive,jingle.wav</ShortName>
+					<Path>SFX\select,positive,jingle_10C4C929.wem</Path>
 				</File>
 				<File Id="848765229" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Wood_5.wav</ShortName>

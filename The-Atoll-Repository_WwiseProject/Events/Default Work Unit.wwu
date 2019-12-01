@@ -483,6 +483,32 @@
 								</Folder>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Quest" ID="{E73A8262-4781-4F84-9E9F-A7F6AF4DB544}" ShortID="144969284">
+							<ChildrenList>
+								<Event Name="Quest_Accept" ID="{20453543-481B-4168-94C3-878D31DC62A5}">
+									<ChildrenList>
+										<Action Name="" ID="{760B6406-1D50-43E5-94D2-62362A0FC0C4}" ShortID="314363225">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Atoll_Feedback_Quest_Accepted v_1" ID="{2B7416D7-E01E-4190-9DE8-D2F40D5D35E3}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Quest_Complete" ID="{82700886-B83A-4D5C-9D99-2CE88B2531CF}">
+									<ChildrenList>
+										<Action Name="" ID="{F2C29ED5-0BD1-4500-ADE9-F6573ED745DB}" ShortID="575671859">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Atoll_Feedback_Quest_Complete" ID="{75D9EC90-4825-4B47-B741-C41C0D4F1F1B}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ship" ID="{8D7D1C76-0117-4A08-B190-854C938F121F}" ShortID="974174486">
