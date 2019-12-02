@@ -191,6 +191,7 @@ public class DialogueController : MonoBehaviour {
             // listen for that onClick event to occur, and try the corresponding answer\
             int temp = n;
             events[n].AddListener(delegate {
+                World.CURRENT.ActivePlayer.GetComponentInChildren<Animator>().SetTrigger("Nod");
                 CurrentGraph.TryAnswer(temp);
             });
         }
