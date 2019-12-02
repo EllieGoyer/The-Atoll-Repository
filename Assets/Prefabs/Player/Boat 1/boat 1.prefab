@@ -564,6 +564,8 @@ GameObject:
   - component: {fileID: 1555689744}
   - component: {fileID: 1555689745}
   - component: {fileID: 8692219543113281828}
+  - component: {fileID: 6165453286558394997}
+  - component: {fileID: 3921961156432795600}
   m_Layer: 10
   m_Name: boat 1
   m_TagString: Untagged
@@ -742,6 +744,61 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.102173, y: 4.654358, z: 10.82634}
   m_Center: {x: -0.04067993, y: 1.7872543, z: 1.7178879}
+--- !u!114 &6165453286558394997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9219353242899759510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a314091093b5b24bab40179da4c7b9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 59df4f59979ffe74c9f85ac0a66a9b94,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  LargeModePositions: []
+  multiPositionArray: []
+--- !u!114 &3921961156432795600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9219353242899759510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6dc076539b35c344bd871d10d618868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Parameter:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 769b76a26f6bd044f955417db61066a7,
+      type: 2}
+  MinValue: 0
+  MaxValue: 100
+  MinSpeed: 0
+  MaxSpeed: 28
 --- !u!1001 &1014884891440110588
 PrefabInstance:
   m_ObjectHideFlags: 0

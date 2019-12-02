@@ -123,6 +123,23 @@ MonoBehaviour:
   DialogueBoxPositionOffset: {x: 0, y: 2.5, z: 0}
   DialogueDisplayBoxPrefab: {fileID: 4174129742870688660, guid: c6d9bc48bc340db499c858c0990a68bf,
     type: 3}
+--- !u!114 &2953847223601319975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6983613165123063803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38cbd7b6f8c5f1b4f9384f5ac44c70df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: cc797e60fdfe72c4688aed5fa6b5a7be,
+      type: 2}
 --- !u!54 &5462366435794867668
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -397,6 +414,12 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 98abd6c85040efe4ebe9665b33d7ff2d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12de89c663f54094cb4a416b4c221a74, type: 3}
+--- !u!1 &6983613165123063803 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 12de89c663f54094cb4a416b4c221a74,
+    type: 3}
+  m_PrefabInstance: {fileID: 1426280136359646962}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6246948931841834472 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 12de89c663f54094cb4a416b4c221a74,
@@ -420,11 +443,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 211f3173805bd964aa266ed42af1d06a,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: feae3f3f67d15c0469d328154cbe0924, type: 2}
     - target: {fileID: -4216859302048453862, guid: 211f3173805bd964aa266ed42af1d06a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -480,6 +498,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 211f3173805bd964aa266ed42af1d06a,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: feae3f3f67d15c0469d328154cbe0924, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 211f3173805bd964aa266ed42af1d06a, type: 3}
 --- !u!4 &1238071315973532535 stripped

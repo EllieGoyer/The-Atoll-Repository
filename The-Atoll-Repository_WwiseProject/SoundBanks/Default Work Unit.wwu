@@ -31,6 +31,7 @@
 				<SoundBank Name="Ship" ID="{36C0511F-8433-4C96-9633-184515CAE21F}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Enter_Ship" ID="{C5EF47FA-BE56-4436-9113-E906062601AE}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Ship" ID="{8D7D1C76-0117-4A08-B190-854C938F121F}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Ship" ID="{7069FB5A-2241-4A0D-A6A6-12817C1DC333}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
@@ -55,6 +56,20 @@
 						<SoundBank Name="Environment_Other" ID="{1C3DB086-3FEA-429D-8E28-D1D508817289}">
 							<ObjectInclusionList>
 								<ObjectRef Name="Environment_Other" ID="{40ED1186-23A0-4619-B95D-84DFE291A62C}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
+							</ObjectInclusionList>
+							<ObjectExclusionList/>
+							<GameSyncExclusionList/>
+						</SoundBank>
+						<SoundBank Name="Environment_Buildings" ID="{BBF8DA32-1919-4F8C-A51D-84F58357521A}">
+							<ObjectInclusionList>
+								<ObjectRef Name="Environment_Buildings" ID="{DE34345A-4272-422D-8E26-805BDD21AE7F}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
+							</ObjectInclusionList>
+							<ObjectExclusionList/>
+							<GameSyncExclusionList/>
+						</SoundBank>
+						<SoundBank Name="Environment_Wind" ID="{46DB7727-A316-4561-BAC9-28198B742A25}">
+							<ObjectInclusionList>
+								<ObjectRef Name="Environment_Wind" ID="{C4E380E5-AD4D-4B8C-996D-5555F9F60C99}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}" Filter="7" Origin="Manual"/>
 							</ObjectInclusionList>
 							<ObjectExclusionList/>
 							<GameSyncExclusionList/>

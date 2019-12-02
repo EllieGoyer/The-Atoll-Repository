@@ -293,12 +293,97 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Environment_Wind" ID="{C4E380E5-AD4D-4B8C-996D-5555F9F60C99}">
+									<ChildrenList>
+										<Action Name="" ID="{8B9841B7-F4C3-4985-9D9B-4D6F9BCCFAB2}" ShortID="580489555">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Atoll_Environment_Wind" ID="{1C2416B2-916D-4ECD-A67E-1AE438FA3CC2}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
-						<Folder Name="Environment_Bakery" ID="{60CF90BE-56FF-40A9-9F95-29DDEB07A5B5}" ShortID="166964901">
+						<Folder Name="Environment_Buildings" ID="{DE34345A-4272-422D-8E26-805BDD21AE7F}" ShortID="954545032">
 							<ChildrenList>
-								<Event Name="Environment_Bakery_Start" ID="{FC5934C2-4E1D-4F36-A241-3F64158B9884}"/>
-								<Event Name="Environment_Bakery_Stop" ID="{E4921C6B-3999-4C4C-8961-C7F3493602D8}"/>
+								<Folder Name="Environment_Bakery" ID="{60CF90BE-56FF-40A9-9F95-29DDEB07A5B5}" ShortID="166964901">
+									<ChildrenList>
+										<Event Name="Environment_Bakery_Start" ID="{FC5934C2-4E1D-4F36-A241-3F64158B9884}">
+											<ChildrenList>
+												<Action Name="" ID="{E19C099A-FD48-4C04-9F6F-AC3A17232F9C}" ShortID="549148228">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Bakery_Environment" ID="{AA816B3B-9EFD-4E7E-A3FD-F53AD6C3EB3C}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="Environment_Bakery_Stop" ID="{E4921C6B-3999-4C4C-8961-C7F3493602D8}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="Environment_Forge" ID="{C4034208-B5EC-43FB-8987-BB3DB7BEF957}" ShortID="470039900">
+									<ChildrenList>
+										<Event Name="Environment_Forge_Start" ID="{D6AE8F74-DCA9-4BDE-B8B2-7B02CC050C34}">
+											<ChildrenList>
+												<Action Name="" ID="{8ADB1971-0BFB-4C0E-908B-79F579B43D0F}" ShortID="861948882">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Atoll_Environment_Forge_Simpler" ID="{747FD04A-2FFB-4DF8-A9EE-FC28C846345D}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="Environment_Farmer" ID="{F8E9713A-F7E2-4953-A555-6D4E0568C66C}" ShortID="812071808">
+									<ChildrenList>
+										<Event Name="Environment_Farmer_Start" ID="{02392C10-4AA0-4BD6-BA69-0B6B38B85D7B}">
+											<ChildrenList>
+												<Action Name="" ID="{0BAC71C1-C38E-4463-A8DE-E1C9EBE9C781}" ShortID="154866068">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Atoll_Environment_Chicken" ID="{EBE04940-4536-45FB-BF77-CA4D0E21FFE8}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="Environment_Taylor" ID="{92B696FE-E777-49DE-9141-B8A9FFFABD67}" ShortID="564716863">
+									<ChildrenList>
+										<Event Name="Environment_Taylor_Start" ID="{F2F782C2-3853-4F75-BAA6-A79EE51069B6}">
+											<ChildrenList>
+												<Action Name="" ID="{0EC10710-FCDC-4F12-931D-2AFBCED645EA}" ShortID="77961325">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Atoll_Environment_Taylor" ID="{74998387-A876-4964-A748-A8DE214BDE68}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="Environment_Lumberjack" ID="{64C58A98-9E31-4F2E-8CD8-331FCEB9C984}" ShortID="883529224">
+									<ChildrenList>
+										<Event Name="Environment_Lumberjack" ID="{5BC58B4C-2F54-4DA0-8E13-E7FF5774B9B5}">
+											<ChildrenList>
+												<Action Name="" ID="{01092F1A-F29A-4FCD-89AD-36113E144791}" ShortID="826485044">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Atoll_Environment_Lumberjack" ID="{F364760D-BB50-4E5B-A493-B33710FB8BFD}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+									</ChildrenList>
+								</Folder>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
@@ -398,6 +483,32 @@
 								</Folder>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Quest" ID="{E73A8262-4781-4F84-9E9F-A7F6AF4DB544}" ShortID="144969284">
+							<ChildrenList>
+								<Event Name="Quest_Accept" ID="{20453543-481B-4168-94C3-878D31DC62A5}">
+									<ChildrenList>
+										<Action Name="" ID="{760B6406-1D50-43E5-94D2-62362A0FC0C4}" ShortID="314363225">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Atoll_Feedback_Quest_Accepted v_1" ID="{2B7416D7-E01E-4190-9DE8-D2F40D5D35E3}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Quest_Complete" ID="{82700886-B83A-4D5C-9D99-2CE88B2531CF}">
+									<ChildrenList>
+										<Action Name="" ID="{F2C29ED5-0BD1-4500-ADE9-F6573ED745DB}" ShortID="575671859">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Atoll_Feedback_Quest_Complete" ID="{75D9EC90-4825-4B47-B741-C41C0D4F1F1B}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ship" ID="{8D7D1C76-0117-4A08-B190-854C938F121F}" ShortID="974174486">
@@ -443,6 +554,17 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Event Name="Ship_Move" ID="{996839A6-2AB9-4CC9-A0B3-5ED0F084D97E}">
+							<ChildrenList>
+								<Action Name="" ID="{1C3EA54E-F46B-4FE0-A8DF-A6F550174B18}" ShortID="575637168">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Atoll_Ship_Move" ID="{16D28C69-6A0E-4BA9-9C59-DC2B00A5B972}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="NPC" ID="{D058BD60-767E-4332-9D09-AA56C9429EDD}" ShortID="942187130">
