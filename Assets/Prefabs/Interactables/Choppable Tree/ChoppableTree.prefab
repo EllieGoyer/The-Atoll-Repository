@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 73994887632731750}
   - component: {fileID: 2645652512422044639}
   - component: {fileID: 5209462321340477558}
-  - component: {fileID: 3963246671588307263}
   - component: {fileID: 567340977815790769}
   - component: {fileID: 3613875636882339416}
   - component: {fileID: 634242467874325717}
@@ -127,17 +126,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3963246671588307263}
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 8465775671199434214}
         m_MethodName: Swap
         m_Mode: 1
@@ -182,23 +170,6 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: af6b5e41047ad674a8bbdbd367aab8a7, type: 2}
   ModificationType: 2
   amount: 1
---- !u!114 &3963246671588307263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3553970362272207372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38cbd7b6f8c5f1b4f9384f5ac44c70df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AudioEvent:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: cc797e60fdfe72c4688aed5fa6b5a7be,
-      type: 2}
 --- !u!114 &567340977815790769
 MonoBehaviour:
   m_ObjectHideFlags: 0
