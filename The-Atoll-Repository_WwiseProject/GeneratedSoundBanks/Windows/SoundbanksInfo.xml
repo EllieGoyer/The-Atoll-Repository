@@ -221,6 +221,7 @@
 				<Event Id="688404286" Name="Dialogue_Lumberjack" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Lumberjack" DurationType="OneShot" DurationMin="1.155190" DurationMax="1.576870"/>
 				<Event Id="3640867316" Name="Dialogue_Potter" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Potter" DurationType="OneShot" DurationMin="0.653483" DurationMax="1.060727"/>
 				<Event Id="2409864631" Name="Dialogue_Taylor" ObjectPath="\Events\Default Work Unit\NPC\Dialogue_Taylor" DurationType="OneShot" DurationMin="0.867963" DurationMax="1.122702"/>
+				<Event Id="1457530179" Name="Doom_Bush" ObjectPath="\Events\Default Work Unit\Interact\Toys\Doom_Bush" DurationType="OneShot" DurationMin="2.500000" DurationMax="2.500000"/>
 				<Event Id="3638457343" Name="DoorClose" ObjectPath="\Events\Default Work Unit\Interact\Door\DoorClose" DurationType="OneShot" DurationMin="0.649661" DurationMax="0.768067"/>
 				<Event Id="1404805401" Name="DoorOpen" ObjectPath="\Events\Default Work Unit\Interact\Door\DoorOpen" DurationType="OneShot" DurationMin="0.690798" DurationMax="0.899882"/>
 				<Event Id="3575671711" Name="H_Footsteps" ObjectPath="\Events\Default Work Unit\Player\Footsteps\H_Footsteps" DurationType="OneShot" DurationMin="0.106972" DurationMax="0.571187"/>
@@ -230,6 +231,8 @@
 				<Event Id="1730208058" Name="Player_Footsteps" ObjectPath="\Events\Default Work Unit\Player\Footsteps\Player_Footsteps" DurationType="OneShot" DurationMin="0.000000" DurationMax="1.220271"/>
 				<Event Id="465079464" Name="Quest_Accept" ObjectPath="\Events\Default Work Unit\Interact\Quest\Quest_Accept" DurationType="OneShot" DurationMin="0.911698" DurationMax="1.216972"/>
 				<Event Id="3240473869" Name="Quest_Complete" ObjectPath="\Events\Default Work Unit\Interact\Quest\Quest_Complete" DurationType="OneShot" DurationMin="2.250522" DurationMax="2.250522"/>
+				<Event Id="2105357027" Name="Toy_1" ObjectPath="\Events\Default Work Unit\Interact\Toys\Toy_1" DurationType="OneShot" DurationMin="0.197007" DurationMax="0.197007"/>
+				<Event Id="2105357024" Name="Toy_2" ObjectPath="\Events\Default Work Unit\Interact\Toys\Toy_2" DurationType="OneShot" DurationMin="0.111179" DurationMax="0.111179"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="7304331" Language="SFX">
@@ -372,6 +375,10 @@
 					<ShortName>Atoll_Footsteps_Hooves_Wood_1.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Hooves_Wood_1_10C4C929.wem</Path>
 				</File>
+				<File Id="522998597" Language="SFX">
+					<ShortName>Alien voice 03.wav</ShortName>
+					<Path>SFX\Alien voice 03_10C4C929.wem</Path>
+				</File>
 				<File Id="534428675" Language="SFX">
 					<ShortName>Atoll_Footsteps_Grass_2.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Grass_2_10C4C929.wem</Path>
@@ -440,6 +447,10 @@
 					<ShortName>select,positive,jingle.wav</ShortName>
 					<Path>SFX\select,positive,jingle_10C4C929.wem</Path>
 				</File>
+				<File Id="790442299" Language="SFX">
+					<ShortName>Atoll_toy_2.wav</ShortName>
+					<Path>SFX\Atoll_toy_2_10C4C929.wem</Path>
+				</File>
 				<File Id="848765229" Language="SFX">
 					<ShortName>Atoll_Footsteps_Hooves_Wood_5.wav</ShortName>
 					<Path>SFX\Atoll_Footsteps_Hooves_Wood_5_10C4C929.wem</Path>
@@ -459,6 +470,10 @@
 				<File Id="898764709" Language="SFX">
 					<ShortName>Atoll_Dialogue_Taylor_1.wav</ShortName>
 					<Path>SFX\Atoll_Dialogue_Taylor_1_BFB259A6.wem</Path>
+				</File>
+				<File Id="900612851" Language="SFX">
+					<ShortName>Atoll_toy_1.wav</ShortName>
+					<Path>SFX\Atoll_toy_1_10C4C929.wem</Path>
 				</File>
 				<File Id="908164601" Language="SFX">
 					<ShortName>Atoll_Dialogue_Farmer_2.wav</ShortName>

@@ -25,6 +25,7 @@ namespace AK
         static const AkUniqueID DIALOGUE_POTTER = 3640867316U;
         static const AkUniqueID DIALOGUE_TAYLOR = 2409864631U;
         static const AkUniqueID DOCKLANDING = 3825949625U;
+        static const AkUniqueID DOOM_BUSH = 1457530179U;
         static const AkUniqueID DOORCLOSE = 3638457343U;
         static const AkUniqueID DOOROPEN = 1404805401U;
         static const AkUniqueID ENVIRONMENT_BAKERY_START = 2114846354U;
@@ -58,6 +59,8 @@ namespace AK
         static const AkUniqueID SHIPENTER = 2585523711U;
         static const AkUniqueID SHIPSTORM_START = 2475524499U;
         static const AkUniqueID SHIPSTORM_STOP = 4008905809U;
+        static const AkUniqueID TOY_1 = 2105357027U;
+        static const AkUniqueID TOY_2 = 2105357024U;
         static const AkUniqueID TREE_RUSTLE = 4137946895U;
     } // namespace EVENTS
 

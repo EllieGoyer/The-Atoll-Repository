@@ -5,8 +5,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	1339769741	AnchorHit			\Default Work Unit\Interact\Tools\Anchor\AnchorHit	
 	1399074927	Dialogue_Farmer			\Default Work Unit\NPC\Dialogue_Farmer	
 	1404805401	DoorOpen			\Default Work Unit\Interact\Door\DoorOpen	
+	1457530179	Doom_Bush			\Default Work Unit\Interact\Toys\Doom_Bush	
 	1730208058	Player_Footsteps			\Default Work Unit\Player\Footsteps\Player_Footsteps	
 	1738215602	JournalOpen			\Default Work Unit\UI\Journal\JournalOpen	
+	2105357024	Toy_2			\Default Work Unit\Interact\Toys\Toy_2	
+	2105357027	Toy_1			\Default Work Unit\Interact\Toys\Toy_1	
 	2157426783	AxeSwing			\Default Work Unit\Interact\Tools\Axe\AxeSwing	
 	2409864631	Dialogue_Taylor			\Default Work Unit\NPC\Dialogue_Taylor	
 	2690803159	JournalFlip			\Default Work Unit\UI\Journal\JournalFlip	
@@ -69,6 +72,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	442305733	Atoll_Dialouge_Baker_2	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\SFX\Atoll_Dialouge_Baker_2_BFB259A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC\Dialogue\Baker_Dialogue\Atoll_Dialouge_Baker_2		114264
 	495743890	Atoll_Footsteps_Wood_3	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\SFX\Atoll_Footsteps_Wood_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Footstep_Types\Footsteps_Wood\Atoll_Footsteps_Wood_3		117128
 	506916309	Atoll_Footsteps_Hooves_Wood_1	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\SFX\Atoll_Footsteps_Hooves_Wood_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\H_Footstep_Types\H_Footsteps_Wood\Atoll_Footsteps_Hooves_Wood_1		21056
+	522998597	Doom_Bush	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\SFX\Alien voice 03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Toys\Doom_Bush		240064
 	534428675	Atoll_Footsteps_Grass_2	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\SFX\Atoll_Footsteps_Grass_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Footstep_Types\Footsteps_Grass\Atoll_Footsteps_Grass_2		53524
 	563495648	Atoll_Footsteps_Hooves_Grass_6	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\SFX\Atoll_Footsteps_Hooves_Grass_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\H_Footstep_Types\H_Footsteps_Grass\Atoll_Footsteps_Hooves_Grass_6		42944
 	580597991	Atoll_Footsteps_Grass_4	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\SFX\Atoll_Footsteps_Grass_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\Footstep_Types\Footsteps_Grass\Atoll_Footsteps_Grass_4		66612
@@ -86,11 +90,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	755357321	Atoll_Anchor_Hit	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\SFX\Atoll_Anchor_Hit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Anchor\Atoll_Anchor_Hit		82752
 	765917740	Atoll_Door_Open_1	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\SFX\Atoll_Door_Open_1_BFB259A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Door\Door_Open\Atoll_Door_Open_1		70356
 	781258995	Atoll_Feedback_Quest_Complete	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\SFX\select,positive,jingle_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Quest\Atoll_Feedback_Quest_Complete		397056
+	790442299	Atoll_toy_2	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\SFX\Atoll_toy_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Toys\Atoll_toy_2		19676
 	848765229	Atoll_Footsteps_Hooves_Wood_5	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\SFX\Atoll_Footsteps_Hooves_Wood_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\H_Footstep_Types\H_Footsteps_Wood\Atoll_Footsteps_Hooves_Wood_5		25984
 	863248234	Atoll_Dialogue_Farmer_01	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\SFX\Atoll_Dialogue_Farmer_01_BFB259A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC\Dialogue\Farmer_Dialogue\Atoll_Dialogue_Farmer_01		215556
 	880753549	Atoll_Footsteps_Hooves_Sand_3	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\SFX\Atoll_Footsteps_Hooves_Sand_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\H_Footstep_Types\H_Footsteps_Sand\Atoll_Footsteps_Hooves_Sand_3		24768
 	886126818	Atoll_Tool_Axe_Select_1	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\SFX\Atoll_Tool_Axe_Select_1_BFB259A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Tools\Axe\Axe_Select\Atoll_Tool_Axe_Select_1		36740
 	898764709	Atoll_Dialogue_Taylor_1	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\SFX\Atoll_Dialogue_Taylor_1_BFB259A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC\Dialogue\Taylor_Dialogue\Atoll_Dialogue_Taylor_1		198276
+	900612851	Atoll_toy_1	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\SFX\Atoll_toy_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact\Toys\Atoll_toy_1		34816
 	908164601	Atoll_Dialogue_Farmer_2	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\SFX\Atoll_Dialogue_Farmer_2_BFB259A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC\Dialogue\Farmer_Dialogue\Atoll_Dialogue_Farmer_2		238080
 	921105110	Atoll_Dialogue_Potter_1	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\SFX\Atoll_Dialogue_Potter_1_BFB259A6.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC\Dialogue\Potter_Dialogue\Atoll_Dialogue_Potter_1		111876
 	939921997	Atoll_Footsteps_Hooves_Rock_2	C:\Games\pro games\edit\Atoll\The-Atoll-Repository\The-Atoll-Repository_WwiseProject\.cache\Windows\SFX\Atoll_Footsteps_Hooves_Rock_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps\H_Footstep_Types\H_Footsteps_Rock\Atoll_Footsteps_Hooves_Rock_2		29636
