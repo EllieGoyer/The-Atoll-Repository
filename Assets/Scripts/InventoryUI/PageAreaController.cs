@@ -24,15 +24,15 @@ public class PageAreaController : MonoBehaviour
         
         for (int i = 0; i < tabs.Length; i++)
         {
-            
+           
             tabs[i].enabled = false;
         }
         tabs[x].enabled = true;
-        
 
-        if(x == 0)
+      
+        if (x == 0)
         {
-            DrawTools._instance.draw();
+            DrawCollectibles._instance.draw();
         }
         if(x == 2)
         {
