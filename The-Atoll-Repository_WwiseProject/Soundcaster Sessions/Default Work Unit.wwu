@@ -34,16 +34,44 @@
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Music_Start" ID="{D0EC4CA6-B4FB-4B0D-BE0E-DC3CDAE7AA9B}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Dialogue_Farmer" ID="{77836F47-E29C-4DE9-88A8-77F2AA0A1251}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
 							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Environment_Bakery_Start" ID="{FC5934C2-4E1D-4F36-A241-3F64158B9884}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Environment_Farmer_Start" ID="{02392C10-4AA0-4BD6-BA69-0B6B38B85D7B}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="3" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Dialogue_Lumberjack" ID="{1E98483F-8592-44D0-89A6-66E6A992BAAE}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
 							<Position X="3" Y="2"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Environment_Bakery_Stop" ID="{E4921C6B-3999-4C4C-8961-C7F3493602D8}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Atoll_enviorment_land, looped" ID="{88CB8E3C-5986-4BFE-AB1A-691A833F88F1}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Dialogue_Potter" ID="{A4702CDB-C091-411D-B2EA-0B5BC78382CE}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>
 							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Atoll_Ship_Move" ID="{16D28C69-6A0E-4BA9-9C59-DC2B00A5B972}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+							<Position X="5" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Atoll_enviorment_ sounds_at sea" ID="{3828788F-F6B7-4D69-973D-BAA5B186A175}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+							<Position X="5" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Dialogue_Taylor" ID="{83A2F02D-79F6-4CDD-8FFA-1B4FF54A65BC}" WorkUnitID="{16053E92-0843-431F-BBA1-8BF3C068D477}"/>

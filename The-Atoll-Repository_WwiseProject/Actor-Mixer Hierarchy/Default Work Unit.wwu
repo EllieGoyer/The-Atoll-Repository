@@ -501,7 +501,7 @@
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-15</Value>
+												<Value>-14</Value>
 											</ValueList>
 											<RTPCList>
 												<RTPC Name="" ID="{E4DC51D7-C891-46F6-9E3A-A3C2B58C69A4}" ShortID="16932819">
@@ -537,6 +537,9 @@
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<ObjectRef Name="Boost_3dB_100Hz" ID="{3EA7C9BD-6F9A-4000-A227-F86B5B4328EE}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Environment" ID="{8866971F-B22F-4E25-B79F-0AE7A6720F46}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
@@ -787,7 +790,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-12</Value>
+												<Value>-20</Value>
 											</ValueList>
 											<RTPCList>
 												<RTPC Name="" ID="{AB20D79B-C960-4751-AEC7-8813835B1317}" ShortID="283814443">
@@ -1283,6 +1286,11 @@
 								<Sound Name="Atoll_Ship_Creak" ID="{12A6AE7E-1BFA-4DBA-AD24-46C375CA22EA}" ShortID="135869741">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-12</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -1341,7 +1349,38 @@
 						<Sound Name="Atoll_Ship_Move" ID="{16D28C69-6A0E-4BA9-9C59-DC2B00A5B972}" ShortID="371945226">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<RTPCList>
+										<RTPC Name="" ID="{CC72D01C-B2A8-4D17-80C4-0585AEEB95F4}" ShortID="501576479">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="ShipMove" ID="{C0ABC4D5-303F-4E0F-A08D-3FB45D1141CB}" WorkUnitID="{DF4FA145-A679-4276-B9D7-5ED205795645}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{8F68E192-260F-4D92-A533-3AD53C387025}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-148</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{D9052406-17F9-47CA-893A-38859A78CBBD}" ShortID="451569509">
 											<ReferenceList>
@@ -1373,6 +1412,9 @@
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+									<ObjectRef Name="New_Wwise_Parametric_EQ" ID="{A45BEF6B-11B6-40EC-B548-792ABCAB339F}" WorkUnitID="{5365817E-3BC7-4ADE-A4AE-70089B71A643}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
@@ -2077,7 +2119,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>-4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -3445,7 +3487,15 @@
 				</Folder>
 				<Folder Name="Music" ID="{6CA26730-EFF3-4A21-90CB-05888A0D21F1}" ShortID="683410856">
 					<ChildrenList>
-						<Sound Name="New Sound SFX" ID="{B38B03ED-4D2B-4E55-AF27-AEF9657BAF4C}" ShortID="697479690">
+						<Sound Name="Atoll_Music_Song1" ID="{15F38F41-406D-482D-8E3A-5F37FD9ECB8B}" ShortID="628120170">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
@@ -3454,6 +3504,15 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Atoll_Music_Song1" ID="{0BB665CA-360F-4047-939F-797AB125B79B}" ShortID="853543377">
+									<Language>SFX</Language>
+									<AudioFile>Atoll_Music_Song1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Atoll_Music_Song1" ID="{0BB665CA-360F-4047-939F-797AB125B79B}" Platform="Linked"/>
+							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
 				</Folder>

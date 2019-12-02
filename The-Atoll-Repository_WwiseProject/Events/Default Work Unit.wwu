@@ -637,6 +637,21 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Music" ID="{F3EC6EB5-5987-4181-AE12-1A988F828822}" ShortID="132298648">
+					<ChildrenList>
+						<Event Name="Music_Start" ID="{D0EC4CA6-B4FB-4B0D-BE0E-DC3CDAE7AA9B}">
+							<ChildrenList>
+								<Action Name="" ID="{3D6C4A8D-C469-4D89-AA09-93C879DEA06A}" ShortID="469912844">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Atoll_Music_Song1" ID="{15F38F41-406D-482D-8E3A-5F37FD9ECB8B}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
