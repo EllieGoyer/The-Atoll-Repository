@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5150468495134423139}
   - component: {fileID: 5150468495134423136}
   - component: {fileID: 5150468495134423138}
+  - component: {fileID: 3944904933182756000}
   - component: {fileID: 3553771184301956218}
   - component: {fileID: 1856508421217387635}
   - component: {fileID: 1410511675255683428}
@@ -107,6 +108,22 @@ MonoBehaviour:
   DragInputName: Camera Drag
   DragVerticalAxisName: Mouse Y
   DragHorizontalAxisName: Mouse X
+--- !u!114 &3944904933182756000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5150468495134423142}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d297d21635fe38d449ad8a600c4f02c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FollowHeightOffset: 0
+  YawElasticity: 0
+  PitchElasticity: 0
+  FocalPoint: {fileID: 0}
 --- !u!114 &3553771184301956218
 MonoBehaviour:
   m_ObjectHideFlags: 0

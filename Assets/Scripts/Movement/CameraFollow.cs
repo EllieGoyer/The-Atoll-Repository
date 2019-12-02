@@ -123,4 +123,20 @@ public class CameraFollow : MonoBehaviour
         Vector3 targetForward = (targetPosition - gameObject.transform.position).normalized;
         gameObject.transform.forward = targetForward;
     }
+
+    public void BeginFixedCamera(FixedCameraTrigger t) {
+        enabled = false;
+        FixedCameraFollow fixedCam = GetComponent<FixedCameraFollow>();
+        fixedCam.YawElasticity = t.YawElasticity;
+        fixedCam.PitchElasticity = t.PitchElasticity;
+        fixedCam.FocalPoint = t.FocalPoint;
+        transform.position = t.transform.position;
+        fixedCam.enabled = true;
+    }
+
+    public void EndFixedCamera() {
+        FixedCameraFollow fixedCam = GetComponent<FixedCameraFollow>();
+        fixedCam.enabled = false;
+        enabled = true;
+    }
 }
