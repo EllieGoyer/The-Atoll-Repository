@@ -7,9 +7,9 @@ using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
 
-public class DrawTools : MonoBehaviour
+public class DrawCollectibles : MonoBehaviour
 {
-    public static DrawTools _instance;
+    public static DrawCollectibles _instance;
 
    // public Image box;
     public TextMeshProUGUI tm;
@@ -28,6 +28,7 @@ public class DrawTools : MonoBehaviour
 
     public void draw()
     {
+        /*
         string txt = "";
       
         foreach (Tool tool in Inventory.Instance.Tools)
