@@ -14,7 +14,9 @@ public class TimeDilator : MonoBehaviour
     public bool IsDayTime = true;
     public float TimeOffset = 0;
     public float LengthOfDay = 90;
-    
+
+    public Material Skybox;
+
     public void FastForward(float amount)
     {
         TimeOffset = (TimeOffset + amount) % LengthOfDay;
@@ -31,6 +33,7 @@ public class TimeDilator : MonoBehaviour
         World.CURRENT.ActiveSun.color = Color.Lerp(NightColor, DayColor, t);
         RenderSettings.ambientLight = Color.Lerp(NightAmbient, DayAmbient, t);
         RenderSettings.ambientIntensity = Mathf.Lerp(NightAmbientIntensity, DayAmbientIntensity, t);
+        Skybox.SetFloat("_Blend", t);
         /*
         if (IsDayTime)
         {

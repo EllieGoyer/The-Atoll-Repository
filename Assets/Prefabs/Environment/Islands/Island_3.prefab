@@ -58,7 +58,7 @@ Terrain:
   m_DrawInstanced: 0
   m_DrawTreesAndFoliage: 1
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_MaterialTemplate: {fileID: 2100000, guid: 01706996a23328d4f9572de611e365ea, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
@@ -73,7 +73,7 @@ TerrainCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591074158558686}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c2815a7ab32e42c4bb42f59caacb8ec1, type: 2}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: e370f00b685f2bf4bbc7cff83cbafefc, type: 2}
   m_EnableTreeColliders: 1
@@ -121,7 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Thickness: 1
-  Height: 10
+  Height: 100
+  VerticalOffset: 40
   CapLength: 1
   BaseLevel: 79
   BuildStep: 5
@@ -338,7 +339,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Thickness: 1
-  Height: 10
+  Height: 100
+  VerticalOffset: 40
   CapLength: 1
   BaseLevel: 85.5
   BuildStep: 5
