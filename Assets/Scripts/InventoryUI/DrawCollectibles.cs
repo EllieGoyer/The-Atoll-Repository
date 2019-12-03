@@ -4,7 +4,6 @@ using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
 
 public class DrawCollectibles : MonoBehaviour
@@ -13,6 +12,9 @@ public class DrawCollectibles : MonoBehaviour
 
    // public Image box;
     public TextMeshProUGUI tm;
+    public Button prefab;
+
+  
 
     private void Awake()
     {
@@ -28,29 +30,45 @@ public class DrawCollectibles : MonoBehaviour
 
     public void draw()
     {
-        /*
-        string txt = "";
-      
-        foreach (Tool tool in Inventory.Instance.Tools)
+        Button[] bb = tm.GetComponentsInChildren<Button>(true);
+
+
+        foreach (Collectable c in Inventory.Instance.Collectables)
         {
-            txt += tool.name + ", ";
-        }
 
-        tm.text = txt;
-
-
-        /* foreach (Tool t in Inventory.Instance.Tools)
-              {
-                  print(t.name);
-              }
-
-
-
-             for(int i =0; i < num; i++)
+            // check if we have the person
+            bool contain = false;
+            foreach (Button b in bb)
+            {
+                if (b.name.Equals(c.name))
                 {
-                    box.sprite = Sprite.Create(AssetPreview.GetAssetPreview(t.prefab), new Rect(0, 0, 128, 128), new Vector2());
-                     newObj = (GameObject)Instantiate(prefab, transform);
-                     newObj.GetComponent<Image>().color = Random.ColorHSV();
-                }*/
+                    contain = true;
+                }
+            }
+
+            if (!contain)
+            {
+                Button newButton = (Button)Instantiate(prefab);
+                newButton.name = c.name;
+
+                newButton.GetComponentInChildren<Text>().text = c.name;
+                newButton.transform.SetParent(tm.transform, false);
+            }
+
+
+        }
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+
     }
 }
