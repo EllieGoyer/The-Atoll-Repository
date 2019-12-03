@@ -12,6 +12,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private GameObject _notebook;
 
+
+    public AK.Wwise.Event journalOC;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +31,7 @@ public class UIManager : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Tab))
         {
             _notebook.SetActive(!_notebook.activeSelf);
+            journalOC.Post(_notebook);
         }
     }
 
