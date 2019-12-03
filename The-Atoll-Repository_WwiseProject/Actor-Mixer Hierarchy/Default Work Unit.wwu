@@ -40,7 +40,7 @@
 												<Property Name="BlendBehavior" Type="int16" Value="1"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-3</Value>
+														<Value>-10</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -501,7 +501,7 @@
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-15</Value>
+												<Value>-12</Value>
 											</ValueList>
 											<RTPCList>
 												<RTPC Name="" ID="{E4DC51D7-C891-46F6-9E3A-A3C2B58C69A4}" ShortID="16932819">
@@ -538,6 +538,9 @@
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
 										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<ObjectRef Name="Boost_3dB_100Hz" ID="{3EA7C9BD-6F9A-4000-A227-F86B5B4328EE}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Environment" ID="{8866971F-B22F-4E25-B79F-0AE7A6720F46}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
 										</Reference>
@@ -562,6 +565,11 @@
 										<BlendContainer Name="Land_Storm_Levels" ID="{E2012B81-59EF-47F7-A495-14B910F18E2B}" ShortID="492650000">
 											<PropertyList>
 												<Property Name="BlendBehavior" Type="int16" Value="1"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-96</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -787,7 +795,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-12</Value>
+												<Value>-20</Value>
 											</ValueList>
 											<RTPCList>
 												<RTPC Name="" ID="{AB20D79B-C960-4751-AEC7-8813835B1317}" ShortID="283814443">
@@ -976,6 +984,11 @@
 										<Sound Name="Atoll_Environment_Lumberjack" ID="{F364760D-BB50-4E5B-A493-B33710FB8BFD}" ShortID="615194390">
 											<PropertyList>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-12</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Attenuation">
@@ -1283,6 +1296,11 @@
 								<Sound Name="Atoll_Ship_Creak" ID="{12A6AE7E-1BFA-4DBA-AD24-46C375CA22EA}" ShortID="135869741">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-12</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -1318,6 +1336,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="Atoll_Ship_Enter_v_2" ID="{026D9BB0-2C50-486C-9969-0010C915C7B3}" ShortID="287137919">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
@@ -1341,7 +1366,38 @@
 						<Sound Name="Atoll_Ship_Move" ID="{16D28C69-6A0E-4BA9-9C59-DC2B00A5B972}" ShortID="371945226">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<RTPCList>
+										<RTPC Name="" ID="{CC72D01C-B2A8-4D17-80C4-0585AEEB95F4}" ShortID="501576479">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="ShipMove" ID="{C0ABC4D5-303F-4E0F-A08D-3FB45D1141CB}" WorkUnitID="{DF4FA145-A679-4276-B9D7-5ED205795645}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{8F68E192-260F-4D92-A533-3AD53C387025}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-148</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{D9052406-17F9-47CA-893A-38859A78CBBD}" ShortID="451569509">
 											<ReferenceList>
@@ -1373,6 +1429,9 @@
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+									<ObjectRef Name="New_Wwise_Parametric_EQ" ID="{A45BEF6B-11B6-40EC-B548-792ABCAB339F}" WorkUnitID="{5365817E-3BC7-4ADE-A4AE-70089B71A643}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
@@ -2077,7 +2136,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>-4</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2345,6 +2404,11 @@
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-14</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -2368,7 +2432,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-9</Value>
+												<Value>-6</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2388,6 +2452,81 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="select,positive,jingle" ID="{8F8C418C-DC3F-4BB1-86B1-E70C42D6624D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Toys" ID="{81E2D550-8888-4CAF-B24E-9BCB15580BF3}" ShortID="767116044">
+							<ChildrenList>
+								<Sound Name="Atoll_toy_1" ID="{ABB8D096-2086-409B-BE12-2CB08AFF0098}" ShortID="974495553">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Atoll_toy_1" ID="{575BCAD7-5326-4D72-BDE9-32189BCFF612}" ShortID="900612851">
+											<Language>SFX</Language>
+											<AudioFile>Atoll_toy_1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Atoll_toy_1" ID="{575BCAD7-5326-4D72-BDE9-32189BCFF612}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Atoll_toy_2" ID="{6F1F1EB1-3035-4DDC-B311-48C6769F9E5E}" ShortID="703936292">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Atoll_toy_2" ID="{1D3FCBB5-0E4E-4D5D-B90C-ABB044B44752}" ShortID="790442299">
+											<Language>SFX</Language>
+											<AudioFile>Atoll_toy_2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Atoll_toy_2" ID="{1D3FCBB5-0E4E-4D5D-B90C-ABB044B44752}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Doom_Bush" ID="{A9D1F8A7-22AC-4FBD-9095-0055B6C14D1A}" ShortID="309274024">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Alien voice 03" ID="{B09BB052-53D0-45D8-AC7C-5FEE24EE82E8}" ShortID="522998597">
+											<Language>SFX</Language>
+											<AudioFile>Alien voice 03.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Alien voice 03" ID="{B09BB052-53D0-45D8-AC7C-5FEE24EE82E8}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -2538,78 +2677,6 @@
 											<ActiveSourceList>
 												<ActiveSource Name="Atoll_Footsteps_Wood_6" ID="{CBAB72D5-9028-4BA6-893B-C2F677F6C072}" Platform="Linked"/>
 											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="Footsteps_Rock" ID="{C40AD9E2-B3E9-4D5F-AFE7-F2CFB0DB12E3}" ShortID="752787267">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Atoll_Footsteps_Rock_1" ID="{7E2F231D-9ACE-4584-A596-02FF6F4835D7}" ShortID="726659531">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
-												</Reference>
-											</ReferenceList>
-										</Sound>
-										<Sound Name="Atoll_Footsteps_Rock_2" ID="{0F0DADD5-133F-42BA-A67C-2A72E2D8B96D}" ShortID="457675003">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
-												</Reference>
-											</ReferenceList>
-										</Sound>
-										<Sound Name="Atoll_Footsteps_Rock_3" ID="{EDD1E450-1B52-478C-90DC-27F85509AE8A}" ShortID="909327535">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
-												</Reference>
-											</ReferenceList>
-										</Sound>
-										<Sound Name="Atoll_Footsteps_Rock_4" ID="{8431C658-C5C2-4DE4-885A-B6F5E731CAA4}" ShortID="176820839">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
-												</Reference>
-											</ReferenceList>
-										</Sound>
-										<Sound Name="Atoll_Footsteps_Rock_5" ID="{BBEF5851-D6D9-4A7F-9BEA-5A703BF14BCA}" ShortID="910005750">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
-												</Reference>
-											</ReferenceList>
-										</Sound>
-										<Sound Name="Atoll_Footsteps_Rock_6" ID="{101867B1-13B7-4EA0-8024-2913010E2B99}" ShortID="440687804">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
-												</Reference>
-											</ReferenceList>
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
@@ -2821,9 +2888,6 @@
 										<ItemRef Name="Footsteps_Wood" ID="{DE6F1ADE-7211-4436-AEC3-8A612659C019}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
-										<ItemRef Name="Footsteps_Rock" ID="{C40AD9E2-B3E9-4D5F-AFE7-F2CFB0DB12E3}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
 										<ItemRef Name="Footsteps_Sand" ID="{3D29C1E9-F5AD-4A0E-A140-AD1F3357B68C}"/>
 									</GroupingBehavior>
 								</GroupingBehaviorList>
@@ -2832,12 +2896,6 @@
 										<SwitchRef Name="Grass" ID="{77ACFB44-D427-404A-9E94-32B16719A437}"/>
 										<ItemList>
 											<ItemRef Name="Footsteps_Grass" ID="{CF494F18-9DE3-4DC3-9D22-B972C6094ABB}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="Rock" ID="{2E3A38A7-0038-42C6-9E80-71AC04F6B17D}"/>
-										<ItemList>
-											<ItemRef Name="Footsteps_Rock" ID="{C40AD9E2-B3E9-4D5F-AFE7-F2CFB0DB12E3}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
@@ -3008,132 +3066,6 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="Atoll_Footsteps_Hooves_Grass_6" ID="{6CB2EACC-D532-4034-B64C-4D226CE1BE0B}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</RandomSequenceContainer>
-								<RandomSequenceContainer Name="H_Footsteps_Rock" ID="{D8661DE1-8D19-46A7-91A2-F9E517A3408B}" ShortID="916948716">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="Atoll_Footsteps_Hooves_Rock_1" ID="{E683BF4D-0866-418D-9479-DD7176FC4299}" ShortID="208239648">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Atoll_Footsteps_Hooves_Rock_1" ID="{B726EAB5-5E05-4393-99E3-CD893EC02527}" ShortID="99678389">
-													<Language>SFX</Language>
-													<AudioFile>Atoll_Footsteps_Hooves_Rock_1.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Atoll_Footsteps_Hooves_Rock_1" ID="{B726EAB5-5E05-4393-99E3-CD893EC02527}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Atoll_Footsteps_Hooves_Rock_2" ID="{CEF5C5F0-201F-49FE-ABFC-D5A304F1F6E6}" ShortID="326680778">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Atoll_Footsteps_Hooves_Rock_2" ID="{8C040E14-2951-4997-BF3E-F05589980287}" ShortID="939921997">
-													<Language>SFX</Language>
-													<AudioFile>Atoll_Footsteps_Hooves_Rock_2.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Atoll_Footsteps_Hooves_Rock_2" ID="{8C040E14-2951-4997-BF3E-F05589980287}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Atoll_Footsteps_Hooves_Rock_3" ID="{08B77217-6338-43D8-9B14-8DDFD3711D1E}" ShortID="1048709023">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Atoll_Footsteps_Hooves_Rock_3" ID="{460AFDFE-F8E7-4CA8-BA7A-B11A164F2638}" ShortID="728836962">
-													<Language>SFX</Language>
-													<AudioFile>Atoll_Footsteps_Hooves_Rock_3.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Atoll_Footsteps_Hooves_Rock_3" ID="{460AFDFE-F8E7-4CA8-BA7A-B11A164F2638}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Atoll_Footsteps_Hooves_Rock_4" ID="{AC6BDF1A-66AC-4CA8-9D84-FFEE2FCB7ED5}" ShortID="809007322">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Atoll_Footsteps_Hooves_Rock_4" ID="{D1C66B32-C7C7-4108-BFB0-CD000489501C}" ShortID="131044773">
-													<Language>SFX</Language>
-													<AudioFile>Atoll_Footsteps_Hooves_Rock_4.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Atoll_Footsteps_Hooves_Rock_4" ID="{D1C66B32-C7C7-4108-BFB0-CD000489501C}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Atoll_Footsteps_Hooves_Rock_5" ID="{83320D52-0877-4939-A852-1A923858B268}" ShortID="315399760">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Atoll_Footsteps_Hooves_Rock_5" ID="{951F0906-4E68-4EFD-B1D4-00E88C40FE4E}" ShortID="692538491">
-													<Language>SFX</Language>
-													<AudioFile>Atoll_Footsteps_Hooves_Rock_5.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Atoll_Footsteps_Hooves_Rock_5" ID="{951F0906-4E68-4EFD-B1D4-00E88C40FE4E}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Atoll_Footsteps_Hooves_Rock_6" ID="{731FC5F9-6CEB-4056-9BBD-6A3B253BAF11}" ShortID="257692480">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Atoll_Footsteps_Hooves_Rock_6" ID="{4F0E094E-54CF-4316-BD15-4E5D1BD6B767}" ShortID="7304331">
-													<Language>SFX</Language>
-													<AudioFile>Atoll_Footsteps_Hooves_Rock_6.wav</AudioFile>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Atoll_Footsteps_Hooves_Rock_6" ID="{4F0E094E-54CF-4316-BD15-4E5D1BD6B767}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -3407,9 +3339,6 @@
 										<ItemRef Name="H_Footsteps_Sand" ID="{9DE917AE-CA4D-415D-B972-09B19F600B5D}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
-										<ItemRef Name="H_Footsteps_Rock" ID="{D8661DE1-8D19-46A7-91A2-F9E517A3408B}"/>
-									</GroupingBehavior>
-									<GroupingBehavior>
 										<ItemRef Name="H_Footsteps_Wood" ID="{B33A88F4-FC11-4E2A-93D9-9A28205609FA}"/>
 									</GroupingBehavior>
 								</GroupingBehaviorList>
@@ -3418,12 +3347,6 @@
 										<SwitchRef Name="Grass" ID="{77ACFB44-D427-404A-9E94-32B16719A437}"/>
 										<ItemList>
 											<ItemRef Name="H_Footsteps_Grass" ID="{8344AA2C-FB09-4A62-A5FF-8E6BD353ED88}"/>
-										</ItemList>
-									</Grouping>
-									<Grouping>
-										<SwitchRef Name="Rock" ID="{2E3A38A7-0038-42C6-9E80-71AC04F6B17D}"/>
-										<ItemList>
-											<ItemRef Name="H_Footsteps_Rock" ID="{D8661DE1-8D19-46A7-91A2-F9E517A3408B}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
@@ -3441,11 +3364,217 @@
 								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
+						<RandomSequenceContainer Name="H_Footsteps_Rock" ID="{D8661DE1-8D19-46A7-91A2-F9E517A3408B}" ShortID="916948716">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Footsteps" ID="{6FE6D4FF-CBF7-4CE6-A812-3E3AECB4C0BE}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Atoll_Footsteps_Hooves_Rock_1" ID="{E683BF4D-0866-418D-9479-DD7176FC4299}" ShortID="208239648">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Atoll_Footsteps_Hooves_Rock_1" ID="{B726EAB5-5E05-4393-99E3-CD893EC02527}" ShortID="99678389">
+											<Language>SFX</Language>
+											<AudioFile>Atoll_Footsteps_Hooves_Rock_1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Atoll_Footsteps_Hooves_Rock_1" ID="{B726EAB5-5E05-4393-99E3-CD893EC02527}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Atoll_Footsteps_Hooves_Rock_2" ID="{CEF5C5F0-201F-49FE-ABFC-D5A304F1F6E6}" ShortID="326680778">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Atoll_Footsteps_Hooves_Rock_2" ID="{8C040E14-2951-4997-BF3E-F05589980287}" ShortID="939921997">
+											<Language>SFX</Language>
+											<AudioFile>Atoll_Footsteps_Hooves_Rock_2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Atoll_Footsteps_Hooves_Rock_2" ID="{8C040E14-2951-4997-BF3E-F05589980287}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Atoll_Footsteps_Hooves_Rock_3" ID="{08B77217-6338-43D8-9B14-8DDFD3711D1E}" ShortID="1048709023">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Atoll_Footsteps_Hooves_Rock_3" ID="{460AFDFE-F8E7-4CA8-BA7A-B11A164F2638}" ShortID="728836962">
+											<Language>SFX</Language>
+											<AudioFile>Atoll_Footsteps_Hooves_Rock_3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Atoll_Footsteps_Hooves_Rock_3" ID="{460AFDFE-F8E7-4CA8-BA7A-B11A164F2638}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Atoll_Footsteps_Hooves_Rock_4" ID="{AC6BDF1A-66AC-4CA8-9D84-FFEE2FCB7ED5}" ShortID="809007322">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Atoll_Footsteps_Hooves_Rock_4" ID="{D1C66B32-C7C7-4108-BFB0-CD000489501C}" ShortID="131044773">
+											<Language>SFX</Language>
+											<AudioFile>Atoll_Footsteps_Hooves_Rock_4.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Atoll_Footsteps_Hooves_Rock_4" ID="{D1C66B32-C7C7-4108-BFB0-CD000489501C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Atoll_Footsteps_Hooves_Rock_5" ID="{83320D52-0877-4939-A852-1A923858B268}" ShortID="315399760">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Atoll_Footsteps_Hooves_Rock_5" ID="{951F0906-4E68-4EFD-B1D4-00E88C40FE4E}" ShortID="692538491">
+											<Language>SFX</Language>
+											<AudioFile>Atoll_Footsteps_Hooves_Rock_5.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Atoll_Footsteps_Hooves_Rock_5" ID="{951F0906-4E68-4EFD-B1D4-00E88C40FE4E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Atoll_Footsteps_Hooves_Rock_6" ID="{731FC5F9-6CEB-4056-9BBD-6A3B253BAF11}" ShortID="257692480">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Atoll_Footsteps_Hooves_Rock_6" ID="{4F0E094E-54CF-4316-BD15-4E5D1BD6B767}" ShortID="7304331">
+											<Language>SFX</Language>
+											<AudioFile>Atoll_Footsteps_Hooves_Rock_6.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Atoll_Footsteps_Hooves_Rock_6" ID="{4F0E094E-54CF-4316-BD15-4E5D1BD6B767}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Footsteps_Rock" ID="{C40AD9E2-B3E9-4D5F-AFE7-F2CFB0DB12E3}" ShortID="752787267">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Footsteps" ID="{6FE6D4FF-CBF7-4CE6-A812-3E3AECB4C0BE}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Atoll_Footsteps_Rock_1" ID="{7E2F231D-9ACE-4584-A596-02FF6F4835D7}" ShortID="726659531">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+								</Sound>
+								<Sound Name="Atoll_Footsteps_Rock_2" ID="{0F0DADD5-133F-42BA-A67C-2A72E2D8B96D}" ShortID="457675003">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+								</Sound>
+								<Sound Name="Atoll_Footsteps_Rock_3" ID="{EDD1E450-1B52-478C-90DC-27F85509AE8A}" ShortID="909327535">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+								</Sound>
+								<Sound Name="Atoll_Footsteps_Rock_4" ID="{8431C658-C5C2-4DE4-885A-B6F5E731CAA4}" ShortID="176820839">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+								</Sound>
+								<Sound Name="Atoll_Footsteps_Rock_5" ID="{BBEF5851-D6D9-4A7F-9BEA-5A703BF14BCA}" ShortID="910005750">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+								</Sound>
+								<Sound Name="Atoll_Footsteps_Rock_6" ID="{101867B1-13B7-4EA0-8024-2913010E2B99}" ShortID="440687804">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
+										</Reference>
+									</ReferenceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Music" ID="{6CA26730-EFF3-4A21-90CB-05888A0D21F1}" ShortID="683410856">
 					<ChildrenList>
-						<Sound Name="New Sound SFX" ID="{B38B03ED-4D2B-4E55-AF27-AEF9657BAF4C}" ShortID="697479690">
+						<Sound Name="Atoll_Music_Song1" ID="{15F38F41-406D-482D-8E3A-5F37FD9ECB8B}" ShortID="628120170">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
@@ -3454,6 +3583,15 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Atoll_Music_Song1" ID="{0BB665CA-360F-4047-939F-797AB125B79B}" ShortID="853543377">
+									<Language>SFX</Language>
+									<AudioFile>Atoll_Music_Song1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Atoll_Music_Song1" ID="{0BB665CA-360F-4047-939F-797AB125B79B}" Platform="Linked"/>
+							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
 				</Folder>

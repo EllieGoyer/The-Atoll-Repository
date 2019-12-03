@@ -117,10 +117,10 @@
 							<ChildrenList>
 								<Event Name="Player_Footsteps" ID="{0C658398-6F91-4F0C-BFCE-7C2CA639BDEF}">
 									<ChildrenList>
-										<Action Name="" ID="{5A5BF297-4148-458A-A201-A666F347A25F}" ShortID="572928175">
+										<Action Name="" ID="{497444AA-6ECA-4579-B1FD-6EB0CC13A75E}" ShortID="124937720">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="Footstep_Types" ID="{A2860F3A-9379-43B9-B3CF-6E4F31FE9B2A}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+													<ObjectRef Name="Footsteps_Rock" ID="{C40AD9E2-B3E9-4D5F-AFE7-F2CFB0DB12E3}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -128,10 +128,10 @@
 								</Event>
 								<Event Name="H_Footsteps" ID="{4914CF63-36D0-4925-AB49-3A1B967F2227}">
 									<ChildrenList>
-										<Action Name="" ID="{7D84DB16-7408-48EA-952B-CB4203465FBB}" ShortID="741263595">
+										<Action Name="" ID="{E0E62F1C-0DAD-44CD-9E7F-2DD97CFEB1AC}" ShortID="1016132578">
 											<ReferenceList>
 												<Reference Name="Target">
-													<ObjectRef Name="H_Footstep_Types" ID="{3AA4AE4C-1BF2-464E-9A27-3BA7F1303C22}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+													<ObjectRef Name="H_Footsteps_Rock" ID="{D8661DE1-8D19-46A7-91A2-F9E517A3408B}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
 												</Reference>
 											</ReferenceList>
 										</Action>
@@ -509,6 +509,43 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="Toys" ID="{040031D0-A777-4BD0-BCB3-D9A5C29B6500}" ShortID="1008933787">
+							<ChildrenList>
+								<Event Name="Toy_1" ID="{9E3067E5-1706-4A25-9BB3-BA2ED5611F90}">
+									<ChildrenList>
+										<Action Name="" ID="{0F2E4F78-9500-407D-B6ED-8BE57C054FB6}" ShortID="200671117">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Atoll_toy_1" ID="{ABB8D096-2086-409B-BE12-2CB08AFF0098}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Toy_2" ID="{2DCA280A-E45F-4673-8347-60DD78991E05}">
+									<ChildrenList>
+										<Action Name="" ID="{C5558850-6CA0-4B3E-BF85-9934D2C7F2AB}" ShortID="566347509">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Atoll_toy_2" ID="{6F1F1EB1-3035-4DDC-B311-48C6769F9E5E}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Doom_Bush" ID="{97D8D334-F570-46E0-A743-CEAE06715627}">
+									<ChildrenList>
+										<Action Name="" ID="{3BC7912A-9711-4318-A191-87FF66C6515D}" ShortID="106908756">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Doom_Bush" ID="{A9D1F8A7-22AC-4FBD-9095-0055B6C14D1A}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Ship" ID="{8D7D1C76-0117-4A08-B190-854C938F121F}" ShortID="974174486">
@@ -630,6 +667,21 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Lumberjack_Dialogue" ID="{581F6466-EE5B-4560-B2DA-E4B2B4D573C4}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{F3EC6EB5-5987-4181-AE12-1A988F828822}" ShortID="132298648">
+					<ChildrenList>
+						<Event Name="Music_Start" ID="{D0EC4CA6-B4FB-4B0D-BE0E-DC3CDAE7AA9B}">
+							<ChildrenList>
+								<Action Name="" ID="{3D6C4A8D-C469-4D89-AA09-93C879DEA06A}" ShortID="469912844">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Atoll_Music_Song1" ID="{15F38F41-406D-482D-8E3A-5F37FD9ECB8B}" WorkUnitID="{E370E1D4-81B9-4C7F-9DB6-B4B7A01FA78B}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
