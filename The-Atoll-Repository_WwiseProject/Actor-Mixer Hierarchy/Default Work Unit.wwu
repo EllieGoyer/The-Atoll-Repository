@@ -40,7 +40,7 @@
 												<Property Name="BlendBehavior" Type="int16" Value="1"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-10</Value>
+														<Value>-20</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -171,9 +171,6 @@
 												<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-2</Value>
-													</ValueList>
 													<RTPCList>
 														<RTPC Name="" ID="{4BF59332-32D3-4865-BB17-A6E0833E6DED}" ShortID="128458662">
 															<ReferenceList>
@@ -504,7 +501,7 @@
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-12</Value>
+												<Value>-15</Value>
 											</ValueList>
 											<RTPCList>
 												<RTPC Name="" ID="{E4DC51D7-C891-46F6-9E3A-A3C2B58C69A4}" ShortID="16932819">
@@ -793,12 +790,12 @@
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
-												<Value>8</Value>
+												<Value>30</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-20</Value>
+												<Value>-23</Value>
 											</ValueList>
 											<RTPCList>
 												<RTPC Name="" ID="{AB20D79B-C960-4751-AEC7-8813835B1317}" ShortID="283814443">
@@ -834,6 +831,9 @@
 										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7CD00E32-22AD-492D-BACC-5F0BDBBE54A8}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<ObjectRef Name="New_Wwise_Parametric_EQ_01" ID="{B419BCE3-C8A0-4D58-A804-FB723DAC7A1A}" WorkUnitID="{5365817E-3BC7-4ADE-A4AE-70089B71A643}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Environment" ID="{8866971F-B22F-4E25-B79F-0AE7A6720F46}" WorkUnitID="{3DAE49F3-8ECD-4BBB-9ACB-1D2DA29F812D}"/>
@@ -955,7 +955,7 @@
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-22</Value>
+														<Value>-15</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -989,7 +989,7 @@
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
-														<Value>-12</Value>
+														<Value>-6</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1164,7 +1164,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-14</Value>
+												<Value>-18</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
