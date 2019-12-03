@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8716269261748808788}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Driftwood Toy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,6 +38,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8716269261748808788}
     m_Modifications:
+    - target: {fileID: 1964169589967191440, guid: be1c554b0edb43d4f9fbcaebdc1d759b,
+        type: 3}
+      propertyPath: m_Name
+      value: atoll_Driftwood
+      objectReference: {fileID: 0}
     - target: {fileID: 1964169589966889392, guid: be1c554b0edb43d4f9fbcaebdc1d759b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -92,11 +97,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -12.26
-      objectReference: {fileID: 0}
-    - target: {fileID: 1964169589967191440, guid: be1c554b0edb43d4f9fbcaebdc1d759b,
-        type: 3}
-      propertyPath: m_Name
-      value: atoll_Driftwood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be1c554b0edb43d4f9fbcaebdc1d759b, type: 3}

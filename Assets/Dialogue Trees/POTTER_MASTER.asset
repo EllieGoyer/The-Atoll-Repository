@@ -265,7 +265,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   previousNode: {fileID: 0}
-  text: Dark hair, sullen eyes, piercing stare - TOTAL babe.
+  text: Dark hair, sullen eyes, piercing stare, bitta blood on her clothes - TOTAL
+    babe.
   displayRate: 0.025
   nextNode: {fileID: 0}
 --- !u!114 &-7907874012967721941
@@ -611,7 +612,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: previousNode
-        node: {fileID: -2582151584747698458}
+        node: {fileID: 8307214097907416706}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -623,7 +624,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: nextNode
-        node: {fileID: 4847766462328815508}
+        node: {fileID: -1848935735018697960}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -631,7 +632,7 @@ MonoBehaviour:
       _dynamic: 0
   previousNode: {fileID: 0}
   text: Ah, well you're busy. Don't worry bout it, yeah?
-  displayRate: 0.8
+  displayRate: 0.025
   nextNode: {fileID: 0}
 --- !u!114 &-6269814611772065571
 MonoBehaviour:
@@ -1366,7 +1367,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: nextNode
-        node: {fileID: -6849867474435913940}
+        node: {fileID: 8307214097907416706}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1374,7 +1375,7 @@ MonoBehaviour:
       _dynamic: 0
   previousNode: {fileID: 0}
   text: I got nothin for ya, sailor.
-  displayRate: 0.8
+  displayRate: 0.025
   nextNode: {fileID: 0}
 --- !u!114 &-2345723406711740779
 MonoBehaviour:
@@ -1401,6 +1402,9 @@ MonoBehaviour:
       connections:
       - fieldName: previousNode
         node: {fileID: 4289600693093129006}
+        reroutePoints: []
+      - fieldName: previousNode
+        node: {fileID: 7668220014885835806}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1452,6 +1456,53 @@ MonoBehaviour:
       _dynamic: 0
   previousNode: {fileID: 0}
   text: Since it seems you've for-got-ten about our history, she's my wife! Haha
+  displayRate: 0.025
+  nextNode: {fileID: 0}
+--- !u!114 &-1848935735018697960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b4a1233294ca5a4ab051cb8e7a210e5, type: 3}
+  m_Name: Player Segment
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 680, y: -1016}
+  ports:
+    keys:
+    - nextNode
+    - previousNode
+    values:
+    - _fieldName: nextNode
+      _node: {fileID: -1848935735018697960}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: previousNode
+        node: {fileID: -6849867474435913940}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: previousNode
+      _node: {fileID: -1848935735018697960}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: nextNode
+        node: {fileID: 4847766462328815508}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previousNode: {fileID: 0}
+  text: Ooh! Food!
   displayRate: 0.025
   nextNode: {fileID: 0}
 --- !u!114 &-1511201722663905251
@@ -2061,6 +2112,18 @@ MonoBehaviour:
   - {fileID: -2713079127614862119}
   - {fileID: -7993936932360542326}
   - {fileID: -4425658670660405611}
+  - {fileID: 2775077670271382081}
+  - {fileID: -4283489171560584088}
+  - {fileID: -5679716397980931486}
+  - {fileID: -2582151584747698458}
+  - {fileID: -6849867474435913940}
+  - {fileID: 1809928324129879895}
+  - {fileID: 4847766462328815508}
+  - {fileID: 3390401438866229073}
+  - {fileID: 4289600693093129006}
+  - {fileID: 7778719957806069472}
+  - {fileID: -1848935735018697960}
+  - {fileID: 8307214097907416706}
   current: {fileID: 8046935250699968030}
   dialogueController: {fileID: 0}
   Active: 0
@@ -2265,7 +2328,7 @@ MonoBehaviour:
       _dynamic: 0
   previousNode: {fileID: 0}
   text: Didn't I already tell you this? I'm a potter by trade.
-  displayRate: 0.8
+  displayRate: 0.025
   nextNode: {fileID: 0}
 --- !u!114 &2775077670271382081
 MonoBehaviour:
@@ -2538,7 +2601,7 @@ MonoBehaviour:
       _dynamic: 0
   previousNode: {fileID: 0}
   text: Huh... Well, I don't really.
-  displayRate: 0.8
+  displayRate: 0.025
   nextNode: {fileID: 0}
 --- !u!114 &3413081222352456677
 MonoBehaviour:
@@ -2565,7 +2628,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: previousNode
-        node: {fileID: 7340455852640420900}
+        node: {fileID: 7778719957806069472}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3045,7 +3108,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: previousNode
-        node: {fileID: -6849867474435913940}
+        node: {fileID: -1848935735018697960}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3065,7 +3128,7 @@ MonoBehaviour:
       _dynamic: 0
   previousNode: {fileID: 0}
   text: I guess I could use you to help us make food sometime later, but
-  displayRate: 0.8
+  displayRate: 0.025
   nextNode: {fileID: 0}
 --- !u!114 &4872676639163223160
 MonoBehaviour:
@@ -3476,7 +3539,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: nextNode
-        node: {fileID: 3413081222352456677}
+        node: {fileID: 7778719957806069472}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -3644,6 +3707,9 @@ MonoBehaviour:
       - fieldName: Output
         node: {fileID: 4289600693093129006}
         reroutePoints: []
+      - fieldName: startNode
+        node: {fileID: -2345723406711740779}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -3665,6 +3731,53 @@ MonoBehaviour:
   - {fileID: 0}
   PassPath: {fileID: 0}
   FailPath: {fileID: 0}
+--- !u!114 &7778719957806069472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b4a1233294ca5a4ab051cb8e7a210e5, type: 3}
+  m_Name: Player Segment
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1784, y: 1144}
+  ports:
+    keys:
+    - nextNode
+    - previousNode
+    values:
+    - _fieldName: nextNode
+      _node: {fileID: 7778719957806069472}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: previousNode
+        node: {fileID: 7340455852640420900}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: previousNode
+      _node: {fileID: 7778719957806069472}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: nextNode
+        node: {fileID: 3413081222352456677}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previousNode: {fileID: 0}
+  text: But... I...
+  displayRate: 0.025
+  nextNode: {fileID: 0}
 --- !u!114 &7998617333483380259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3903,6 +4016,53 @@ MonoBehaviour:
   previousNode: {fileID: 0}
   text: Things changed when this beautiful woman came into the joint I was always
     found in.
+  displayRate: 0.025
+  nextNode: {fileID: 0}
+--- !u!114 &8307214097907416706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b4a1233294ca5a4ab051cb8e7a210e5, type: 3}
+  m_Name: Player Segment
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 920, y: -1016}
+  ports:
+    keys:
+    - nextNode
+    - previousNode
+    values:
+    - _fieldName: nextNode
+      _node: {fileID: 8307214097907416706}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: previousNode
+        node: {fileID: -2582151584747698458}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: previousNode
+      _node: {fileID: 8307214097907416706}
+      _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: nextNode
+        node: {fileID: -6849867474435913940}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previousNode: {fileID: 0}
+  text: Oh. Yeah, you're right.
   displayRate: 0.025
   nextNode: {fileID: 0}
 --- !u!114 &8408951562335510422

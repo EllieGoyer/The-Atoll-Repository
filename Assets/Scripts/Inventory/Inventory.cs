@@ -328,6 +328,7 @@ public class Inventory : MonoBehaviour {
 
 
     public string DebugString() {
+        /*
         string txt = "****Inventory****\n";
 
         txt += "Tools: ";
@@ -353,5 +354,7 @@ public class Inventory : MonoBehaviour {
         }
 
         return txt;
+        */
+        return "";
     }
 }

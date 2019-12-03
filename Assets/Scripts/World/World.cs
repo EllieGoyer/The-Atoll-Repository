@@ -55,6 +55,10 @@ public class World : MonoBehaviour
     private void Awake()
     {
         CURRENT = this;
-        activeCamera.GetComponent<Camera>().depthTextureMode = DepthTextureMode.Depth;
+        Camera camera = activeCamera.GetComponent<Camera>();
+        camera.depthTextureMode = DepthTextureMode.Depth;
+        float[] culls = new float[32];
+        culls[13] = 200;
+        camera.layerCullDistances = culls;
     }
 }

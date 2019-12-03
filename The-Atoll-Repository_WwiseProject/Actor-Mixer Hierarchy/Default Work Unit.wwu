@@ -171,6 +171,9 @@
 												<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
 													<RTPCList>
 														<RTPC Name="" ID="{4BF59332-32D3-4865-BB17-A6E0833E6DED}" ShortID="128458662">
 															<ReferenceList>
@@ -1117,6 +1120,11 @@
 								<Sound Name="Atoll_Environment_TreeRustle_1" ID="{7F0CAB5D-BA57-48BC-AABE-9757DFDE6E5A}" ShortID="14471841">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OutputBusVolume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-12</Value>
@@ -1149,9 +1157,14 @@
 										<Property Name="3DSpatialization" Type="int16" Value="1"/>
 										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OutputBusVolume" Type="Real64">
+											<ValueList>
+												<Value>-4</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-1</Value>
+												<Value>-14</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1366,6 +1379,11 @@
 						<Sound Name="Atoll_Ship_Move" ID="{16D28C69-6A0E-4BA9-9C59-DC2B00A5B972}" ShortID="371945226">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OutputBusVolume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<RTPCList>
 										<RTPC Name="" ID="{CC72D01C-B2A8-4D17-80C4-0585AEEB95F4}" ShortID="501576479">
@@ -1396,7 +1414,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-12</Value>
+										<Value>-8</Value>
 									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{D9052406-17F9-47CA-893A-38859A78CBBD}" ShortID="451569509">
@@ -3569,10 +3587,20 @@
 						<Sound Name="Atoll_Music_Song1" ID="{15F38F41-406D-482D-8E3A-5F37FD9ECB8B}" ShortID="628120170">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OutputBusVolume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-10</Value>
+										<Value>-15</Value>
 									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{04FD7146-3631-4A04-ADEC-F26B61903EE1}"/>
+										</ModifierInfo>
+									</ModifierList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>

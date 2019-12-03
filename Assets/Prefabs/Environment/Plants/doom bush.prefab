@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3542456600398844496}
   - component: {fileID: 6470639310012879477}
   - component: {fileID: 443379058160509215}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: doom bush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,23 +68,15 @@ MonoBehaviour:
   OnEnabled:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnDisabled:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnActivated:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnDeactivated:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnPerforming:
     m_PersistentCalls:
       m_Calls:
@@ -110,13 +102,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnReset:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!95 &573268839679163183
 Animator:
   serializedVersion: 3
@@ -195,8 +183,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &5407275678030154323
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +194,7 @@ GameObject:
   - component: {fileID: 6175841947336872659}
   - component: {fileID: 6181093632391546324}
   - component: {fileID: 5227285822375729798}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: pCube3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
