@@ -19,6 +19,7 @@ public class DrawGoods : MonoBehaviour
 
     // pictures goods
     public Texture rocks;
+    public Texture wood;
 
     // raw imagePre
     public RawImage prefab;
@@ -102,7 +103,10 @@ public class DrawGoods : MonoBehaviour
                 {
                     newButton1.texture = rocks;
                 }
-              
+                else
+                {
+                    newButton1.texture = wood;
+                }
 
                 newButton1.transform.SetParent(tm2.transform, false);
 
