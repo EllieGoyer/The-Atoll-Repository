@@ -38,8 +38,13 @@ public class PageAreaController : MonoBehaviour
         {
             DrawRelationships._instance.draw();
         }
-        
+        if (x == 3)
+        {
+            DrawGoods._instance.draw();
+        }
        
+
+
     }
 
     // Update is called once per frame
