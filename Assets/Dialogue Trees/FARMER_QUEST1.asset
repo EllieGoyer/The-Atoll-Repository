@@ -1272,7 +1272,10 @@ MonoBehaviour:
       _node: {fileID: -4542339565626853982}
       _typeQualifiedName: Dialogue.DialogueFlowNode, Assembly-CSharp, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: previousNode
+        node: {fileID: -3766326071357718605}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -1701,6 +1704,9 @@ MonoBehaviour:
       connections:
       - fieldName: FailPath
         node: {fileID: 1737279122048169964}
+        reroutePoints: []
+      - fieldName: nextNode
+        node: {fileID: -4542339565626853982}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
